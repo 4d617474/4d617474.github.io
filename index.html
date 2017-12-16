@@ -1,7 +1,31 @@
 <!DOCTYPE html>
 <html>
-<body>
-<h1>hey</h1>
-<p>aaaaaaa</p>
-</body>
+	<head>
+		<meta charset="utf-8">
+		<title id="title">4d617474</title>
+		<link rel="stylesheet" href="style.css">		
+		<link rel="shortcut icon" href="icon.png">
+		<meta name="theme-color" content="#333a4a">
+	</head>
+	
+	<body>
+		<div id="main">
+			<h1>Welcome</h1>
+			<p id="intro">Here is a collection of startpages I've made</p>
+			<div onmousedown="toggleSP(1,0)" class="startpages" id="sp1">
+				<div class="startpages-description">Simple Startpage</div>
+			</div>
+			<div onmousedown="toggleSP(2,0)" class="startpages" id="sp2">
+				<div class="startpages-description">Star Citizen Style</div>
+			</div>
+		</div>
+		<div id="spFrame">
+			<div id="spFrame-settings">
+				<div id="spFrame-settings-github" onmousedown="">See on Github</div>
+				<div id="spFrame-settings-close" onmousedown="toggleSP(0,1)">Go back</div>
+			</div>
+			<iframe id="spFrame-In" src=""></iframe>
+		</div>
+	</body>
+	 <script src="script.js" type="text/javascript"></script>
 </html>
