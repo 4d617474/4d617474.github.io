@@ -76,17 +76,18 @@ h1
 }
 #sp1
 {
-	left: calc(50% - 220px);
+	left: calc(50% - 340px);
   background-image: url('sp1.png');
 }
 #sp2
 {
-	left: calc(50% + 20px);
+	left: calc(50% - 100px);
   background-image: url('sp2.png');
 }
 #sp3
 {
-	right:0px;
+	left: calc(50% + 140px);
+  background-image: url('sp3.png');
 }
 #spFrame
 {
