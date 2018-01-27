@@ -10,8 +10,8 @@ function toggleSP(p1, p2) {
 		spFrameIn.src = "startpages/hpstarcitizen/hpsc.html";	
 		spFrameLink.href = "https://github.com/4d617474/hpstarcitizen";
 	} else if (p1 == 3) {
-		spFrameIn.src = "startpages/hpOwo/hpOwo.html";	
-		spFrameLink.href = "https://github.com/4d617474/hpOwo";
+		spFrameIn.src = "startpages/startpage-Squared/Squared.html";	
+		spFrameLink.href = "https://github.com/4d617474/startpage-Squared";
 	}
 	if (p2 == 0) {
 		//expanding...
