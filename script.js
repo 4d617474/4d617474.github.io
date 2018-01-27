@@ -10,14 +10,18 @@ function toggleSP(p1, p2) {
 		spFrameIn.src = "startpages/hpstarcitizen/hpsc.html";	
 		spFrameLink.href = "https://github.com/4d617474/hpstarcitizen";
 	} else if (p1 == 3) {
-		spFrameIn.src = "startpages/startpage-Squared/Squared.html";	
-		spFrameLink.href = "https://github.com/4d617474/startpage-Squared";
+		spFrameIn.src = "startpages/hpOwo/hpOwo.html";	
+		spFrameLink.href = "https://github.com/4d617474/hpOwo";
 	}
 	if (p2 == 0) {
 		//expanding...
-		spFrame.style.top = "20px";
+		//spFrame.style.top = "20px";
+		spFrame.style.zIndex = "3";
+		spFrame.style.opacity = "1";
 	} else {
 		//retracting...
-		spFrame.style.top = "-100%";
+		//spFrame.style.top = "-100%";
+		spFrame.style.zIndex = "-5";
+		spFrame.style.opacity = "0";
 	}
 	}
