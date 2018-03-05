@@ -1,3 +1,4 @@
+var r1 = 1;
 toggleSP(1,1);
 function toggleSP(p1, p2) {
 	var spFrame = document.getElementById("spFrame");
@@ -12,7 +13,11 @@ function toggleSP(p1, p2) {
 	} else if (p1 == 3) {
 		spFrameIn.src = "startpages/startpage-Squared/Squared.html";	
 		spFrameLink.href = "https://github.com/4d617474/startpage-Squared";
+	} else if (p1 == 4) {
+		spFrameIn.src = "";	
+		spFrameLink.href = "";
 	}
+
 	if (p2 == 0) {
 		//expanding...
 		//spFrame.style.top = "20px";
@@ -24,4 +29,4 @@ function toggleSP(p1, p2) {
 		spFrame.style.zIndex = "-5";
 		spFrame.style.opacity = "0";
 	}
-	}
+}

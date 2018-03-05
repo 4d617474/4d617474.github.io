@@ -12,22 +12,22 @@
 		<div id="background"></div>
 		<div id="welcome">Welcome</div>
 		<div id="intro">Here is a collection of startpages I've made</div>
-		<div id="main">			
-			<div onmousedown="toggleSP(1,0)" class="startpages" id="sp1">
+		<!-- <img id="logo4d" src="icon.png"> -->
+		<div id="main">				
+			<div onmousedown="toggleSP(1,0)" class="startpages" id="sp1"></div>
+			<div onmousedown="toggleSP(2,0)" class="startpages" id="sp2"></div>
+			<div onmousedown="toggleSP(3,0)" class="startpages" id="sp3"></div>
+			<div id="descriptions">
 				<div class="startpages-description">Simple Startpage</div>
-			</div>
-			<div onmousedown="toggleSP(2,0)" class="startpages" id="sp2">
 				<div class="startpages-description">Star Citizen Style</div>
-			</div>
-			<div onmousedown="toggleSP(3,0)" class="startpages" id="sp3">
 				<div class="startpages-description">Squary</div>
 			</div>
 		</div>
 		<div id="spFrame">
 			<div id="spFrame-settings">
-				<a id="spFrame-settings-reload" href="">Reload</a>
+				<!-- <a id="spFrame-settings-reload" onmousedown="">Reload</a> -->
 				<a id="spFrame-settings-github" href="">See on Github</a>
-				<div id="spFrame-settings-close" onmousedown="toggleSP(0,1)">Go back</div>
+				<div id="spFrame-settings-close" onmousedown="toggleSP(4,1)">Go back</div>
 			</div>
 			<iframe id="spFrame-In" src=""></iframe>
 		</div>
