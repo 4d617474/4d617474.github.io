@@ -1,7 +1,5 @@
 body
-{
-	
-	/background-image: url('bg1small.png');
+{	
 	font-family: 'Roboto Thin';
 	text-decoration: none;
 	background-color:rgb(11,12,15);
@@ -25,7 +23,7 @@ body
 	left:0px;
 	height:100%;
 	width:100%;
-	background-color: #050505;
+	background-color: #101014;
 	z-index: 1;
 }
 #welcome
@@ -77,21 +75,13 @@ body
 	90% {opacity: 0;}
 	99% {opacity: 0;}
 }
-#logo4d{
-	position:absolute;
-	top:calc(75% - 0%);
-	left:calc(50% - 6%);
-	height:calc(20% + 0px);
-	z-index: 1;
-}
 #main
 {
 	position:absolute;
-	top:calc(25% - 0%);
-	left:calc(50% - 400px);
-	height:calc(50% + 0px);
-	width:calc(800px);
-	background-color:black;
+	top:calc(50% - 125px);
+	left:calc(50% - 500px);
+	height:250px;
+	width:1000px;
 	z-index: 2;	
 	animation-name: main;
 	animation-duration: 8s;
@@ -108,59 +98,80 @@ body
 }
 .startpages
 {
-	position:absolute;
-	height:100%;
-	width:calc(100% / 3);
-	background-color:red;
+	position:relative;
+	float:left;
+	height:150px;
+	width:150px;
+	background-color:#000005;
+	border-radius:999px;
+	margin-top: 50px;
+	margin-left:50px;
+	margin-right:50px;
 	background-size: 300%;
 	background-position-x: 50%;
-	transition:transform .3s, filter .3s;
+	transition:transform .2s, filter .3s;
 	transition-timing-function: ease;
 	cursor: pointer;
-	filter:brightness(60%);
+	filter:brightness(70%);
+	overflow: hidden;
 }
 .startpages:hover
 {
 	filter:brightness(100%);
-	transform:scale(1.05,1.05);
+	transform:scale(1.20,1.20);
 	z-index: 2;
 }
-#descriptions{	
-	position: absolute;
+.spImg{
+	position:absolute;
+	top:-50%;
+	left:-50%;
+	height: 100%;
+	width: 100%;
+	padding-left:110%;
+	padding-top:120%;
+	background-attachment:fixed;
+	background-position:center;
+	background-size:cover;
+	-webkit-filter: blur(20px);
+	z-index: -1;
+}
+.startpages-description
+{
+	position: relative;
 	height: 25px;
 	width:100%;
-	bottom:0px;
-	left:0px;
+	top:calc(50% - 25px);
+	left:0%;
 	background-color:rgba(0,0,0,0.0);
 	color:white;
 	padding-top:8px;
 	padding-bottom:8px;
-	text-shadow: 0px 0px 3px black;
 	font-size:20px;
 	text-align:center;
 	font-family: 'Roboto THICC';
 	z-index: 2;
 }
-.startpages-description
+/*#spImg1
 {
-	float: left;
-	width: calc(100% / 3);
-}
-#sp1
-{
-	left: 0px;
   background-image: url('sp1.png');
-}
-#sp2
+}*/
+#spImg1
 {
-	left: calc(100% / 3);
-  background-image: url('sp2.png');
+  background: #9089E8;
 }
-#sp3
+#spImg2
 {
-	left: calc(200% / 3);
-  background-image: url('sp3.png');
+	background: #FFA3BA;
 }
+#spImg3
+{
+  background: #E8C489;
+}
+#spImg4
+{
+  background: #D6FF96;
+}
+
 #spFrame
 {
 	position: absolute;
@@ -169,7 +180,7 @@ body
 	top:20px;
 	left:20px;
 	transition-timing-function:ease ; 
-	transition:top .8s, opacity 0s;
+	transition:top .8s, opacity .5s, transform .5s;
 }
 #spFrame-settings
 {

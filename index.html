@@ -3,34 +3,41 @@
 	<head>
 		<meta charset="utf-8">
 		<title id="title">4d617474</title>
-		<link rel="stylesheet" href="style.css">		
+		<link rel="stylesheet" href="style.css">
 		<link rel="shortcut icon" href="icon.png">
 		<meta name="theme-color" content="#333a4a">
 	</head>
-	
+
 	<body>
 		<div id="background"></div>
-		<div id="welcome">Welcome</div>
-		<div id="intro">Here is a collection of startpages I've made</div>
-		<!-- <img id="logo4d" src="icon.png"> -->
-		<div id="main">				
-			<div onmousedown="toggleSP(1,0)" class="startpages" id="sp1"></div>
-			<div onmousedown="toggleSP(2,0)" class="startpages" id="sp2"></div>
-			<div onmousedown="toggleSP(3,0)" class="startpages" id="sp3"></div>
-			<div id="descriptions">
-				<div class="startpages-description">Simple Startpage</div>
-				<div class="startpages-description">Star Citizen Style</div>
-				<div class="startpages-description">Squary</div>
+		<div id="welcome">Hello there, I'm 4d</div>
+		<div id="intro">Here is what l've made so far</div>
+		<div id="main">
+			<div onclick="toggleSP(1,0)" class="startpages" id="sp1">
+				<div id="spImg1" class="spImg"></div>
+				<div class="startpages-description"></div>
+			</div>
+			<div onclick="toggleSP(2,0)" class="startpages" id="sp2">
+				<div id="spImg2" class="spImg"></div>
+				<div class="startpages-description"></div>
+			</div>
+			<div onclick="toggleSP(3,0)" class="startpages" id="sp3">
+				<div id="spImg3" class="spImg"></div>
+				<div class="startpages-description"></div>
+			</div>
+			<div onclick="toggleSP(4,0)" class="startpages" id="sp4">
+				<div id="spImg4" class="spImg"></div>
+				<div class="startpages-description"></div>
 			</div>
 		</div>
 		<div id="spFrame">
 			<div id="spFrame-settings">
-				<!-- <a id="spFrame-settings-reload" onmousedown="">Reload</a> -->
+				<div id="spFrame-settings-reload" onclick="reloadSP()">Reload</div>
 				<a id="spFrame-settings-github" href="">See on Github</a>
-				<div id="spFrame-settings-close" onmousedown="toggleSP(4,1)">Go back</div>
+				<div id="spFrame-settings-close" onclick="toggleSP(4,1)">Go back</div>
 			</div>
 			<iframe id="spFrame-In" src=""></iframe>
 		</div>
 	</body>
-	 <script src="script.js" type="text/javascript"></script>
+	<script src="script.js" type="text/javascript"></script>
 </html>
