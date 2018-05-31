@@ -1,43 +1,82 @@
-<!DOCTYPE html>
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title id="title">4d617474</title>
 		<link rel="stylesheet" href="style.css">
-		<link rel="shortcut icon" href="icon.png">
-		<meta name="theme-color" content="#333a4a">
+		<link rel="stylesheet" href="theme.css">
+		<title> </title>
+		<link rel="shortcut icon" href="mico.png">
+		<meta name="theme-color" content="blue">
 	</head>
 
 	<body>
-		<div id="background"></div>
-		<div id="welcome">Hello there, I'm 4d</div>
-		<div id="intro">Here is what l've made so far</div>
-		<div id="main">
-			<div onclick="toggleSP(1,0)" class="startpages" id="sp1">
-				<div id="spImg1" class="spImg"></div>
-				<div class="startpages-description"></div>
-			</div>
-			<div onclick="toggleSP(2,0)" class="startpages" id="sp2">
-				<div id="spImg2" class="spImg"></div>
-				<div class="startpages-description"></div>
-			</div>
-			<div onclick="toggleSP(3,0)" class="startpages" id="sp3">
-				<div id="spImg3" class="spImg"></div>
-				<div class="startpages-description"></div>
-			</div>
-			<div onclick="toggleSP(4,0)" class="startpages" id="sp4">
-				<div id="spImg4" class="spImg"></div>
-				<div class="startpages-description"></div>
-			</div>
-		</div>
+		<div id="bg"></div>
+		<p id="ts">too small :(</p>
 		<div id="spFrame">
 			<div id="spFrame-settings">
 				<div id="spFrame-settings-reload" onclick="reloadSP()">Reload</div>
-				<a id="spFrame-settings-github" href="">See on Github</a>
+				<a id="spFrame-settings-github" href="">View on Github</a>
 				<div id="spFrame-settings-close" onclick="toggleSP(4,1)">Go back</div>
 			</div>
 			<iframe id="spFrame-In" src=""></iframe>
 		</div>
+		<header>
+			<div id="logo4d"></div>
+			<div id="categories">
+				<a class="category" href="home.html">HOME</a>
+				<a class="category" href="startpages.html">STARTPAGES</a>
+				<a class="category" href="other.html">OTHER.</a>
+				<a class="category" href="about.html">ABOUT</a>
+			</div>
+		</header>
+		<div id="Main">
+			<div class="post">
+				<div class="desc">
+					<div class="innerdesc title">■■■ Smile
+						<a class="linksto" href=""></a>
+					</div>
+					<div class="innerdesc descri">:)</div>
+				</div>
+				<img src="facmile2.png" onmousedown="toggleIM(4,0)">
+			</div>
+
+			<div class="post">
+				<div class="desc">
+					<div class="innerdesc title">■■■ Ko
+						<a class="linksto" href="https://github.com/4d617474/ko">View on Github</a>
+					</div>
+					<div class="innerdesc descri">Yet another minimalist startpage, only two button to save your precious time.</div>
+				</div>
+				<img src="sp4.png" onmousedown="toggleSP(4,0)">
+			</div>
+
+			<div class="post">
+				<div class="desc">
+					<div class="innerdesc title">■■■ Squared</div>
+					<div class="innerdesc descri">Minimalist and customable startpage, tried a few things with the animations.</div>
+				</div>
+				<img src="sp3.png">
+			</div>
+
+			<div class="post">
+				<div class="desc">
+					<div class="innerdesc title">■■■ Star Citzen startpage</div>
+					<div class="innerdesc descri">Startpage made based on Star Citzen UI.</div>
+				</div>
+				<img src="sp2.png">
+			</div>
+
+			<div class="post">
+				<div class="desc">
+					<div class="innerdesc title">■■■ Startpage1</div>
+					<div class="innerdesc descri">A simple startpage, nothing more.</div>
+				</div>
+				<img src="sp1.png">
+			</div>
+		</div>
 	</body>
+
 	<script src="script.js" type="text/javascript"></script>
+	<script>
+	</script>
+
 </html>
