@@ -1,0 +1,129 @@
+:root {
+  --color1: #101015;
+}	
+body
+{	
+	font-family: 'Raleway', Arial;
+	text-decoration: none;
+	background-color:#1a1d1a;
+	-moz-user-select: none;
+	user-select:none;
+}
+#background
+{
+	position: fixed;
+	height: 100%;
+	width: 100%;
+	top:-0%;
+	left:-0%;
+	background-size: 120% 120%;
+	background-position: center;
+	background-attachment:fixed ;
+	background-image: url('bg.png');
+	filter:grayscale(10%) blur(10px);
+}
+@media (max-width: 400px)
+{
+	#operatorSelectBoard
+	{
+  	top:0px !important;
+  	left:0px !important;
+  	height:100% !important;;
+  	width:100% !important;;
+	}
+}
+#operatorSelectBoard
+{
+	z-index: 100;
+	position:absolute;
+	top:calc(50% - 250px);
+	left:calc(50% - 225px);
+	height:550px;
+	width:450px;
+	display: block;
+	background-color:var(--color1);
+	box-shadow:0px 10px 20px 0px rgba(0, 0, 0, 0.27);
+}
+.operatorSelect
+{
+	height: 90px;
+	display: block;
+	float: left;
+}
+#buttonRST:hover,#buttonATK:hover#buttonDEF:hover
+{
+	box-shadow: 0px 0px 0px 99px rgba(255,255,255,.1) inset;
+	transition:box-shadow .2s;
+}
+#buttonRST
+{
+	z-index: 101;
+	position: absolute;
+	bottom:0px;
+	height: 50px;
+	width: 100%;
+	background:#202028;	
+	color:white;
+	text-align: center;
+	text-indent: 0px;
+	cursor:pointer;
+	font-size:15px;
+}
+#buttonATK,#buttonDEF
+{
+	z-index: 101;
+	position: relative;
+	float: left;
+	height: 50px;
+	width: 50%;
+	background:#202028;	
+	color:white;
+	text-align: center;
+	text-indent: 0px;
+	cursor:pointer;
+	font-size:15px;
+}
+#buttonATK
+{
+	background:#eb7116;
+}
+#buttonDEF
+{
+	background:#1489e0;
+}
+#operatorsAttack,#operatorsDefense
+{
+	display: none;
+	position: absolute;
+	top:50px;
+	height:auto;
+	width:auto;
+}
+#operatorsAttack
+{
+	box-shadow: 0px 0px 0px 2px #eb7116 inset;
+	/background:#eb7116;
+}
+#operatorsDefense
+{
+	box-shadow: 0px 0px 0px 2px #1489e0 inset;
+	/background:#1489e0;
+}
+.operatorBadge
+{
+	height: 100%;
+	display: block;
+	float: left;
+	margin:;
+	cursor: pointer;
+	/filter:grayscale(100%) invert(1);
+	transition:.1s;
+}
+.operatorBadge:hover
+{
+	/background:rgba(250, 250, 250, 0.5);
+	/box-shadow:0px 0px 5px 2px rgba(0, 0, 0, 0.27) inset;
+	/box-shadow:0px 0px 5px 8px #7f7f7f inset,
+		         0px 0px 0px 25px rgba(0,0,0,.5) inset;
+	filter:grayscale(0%);
+}
