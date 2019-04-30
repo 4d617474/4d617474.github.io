@@ -3,8 +3,18 @@ finka,vigil,dokkaebi,zofia,ela,ying,lesion,mira,jackal,hibana,echo,caveira,
 capitao,blackbeard,buck,frost,mute,sledge,smoke,thatcher,ash,castle,pulse,
 thermite,montagne,rook,twitch,doc,rook,jager,bandit,blitz,iq,fuze,glaz,
 tachanka,kapkan];*/
-//ABCDEFGHIJKLMNOPQRSTUVWXYZ
+var operators = [
+//Attacking Side
+"Gridlock","Nomad","Maverick","Lion","Finka","Dokkaebi","Zofia","Ying","Jackal",
+"Hibana","Capitao","Blackbeard","Buck","Sledge","Thatcher","Ash","Thermite",
+"Montagne","Twitch","Blitz","Iq","Fuze","Glaz",
+//Defending Side
+"Mozzie","Kaid","Clash","Maestro","Alibi","Vigil","Ela","Lesion","Mira","Echo",
+"Caveira","Frost","Mute","Smoke","Castle","Pulse","Rook","Doc","Jager",
+"Bandit","Tachanka","Kapkan"];
 
+//ABCDEFGHIJKLMNOPQRSTUVWXYZ
+/*
 var AA,AB,AC,AD,AE,AF,AG,AH,AI,AJ,AK,AL,AM,AN,AO,AP,AQ,AR,AS,AT,AU,AV,AW,
   AX,AY,AZ,BA,BB,BC,BD,BE,BF,BG,BH,BI,BJ,BK,BL,BM,BN,BO,BP,BQ,BR,BS,BT;
 AA = ["kapkan"];//DEF
@@ -59,3 +69,4 @@ var operatorsATK = [AC,AD,AE,AF,AK,AL,AM,AP,AQ,AS,AV,AX,AY,BB,BC,BF,BH,BI,BK,BL,
 
 var operatorsDEF = ["","","","","","","","","","","","","","","","","","","","",
 "","","",AA,AB,AG,AH,AI,AJ,AN,AO,AR,AT,AU,AW,AZ,BA,BD,BE,BG,BJ,BM,BN,BP,BQ,BT];
+*/

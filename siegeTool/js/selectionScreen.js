@@ -6,38 +6,26 @@ var defSide = document.getElementById("operatorsDefense");
 
 function setOperators()
 {
-  var lll,mmm,rrr;
-  for (i = 0; i < operatorsDEF.length; i++)
+  for (i = 0; i < operators.length; i++)
   {
-    if (i > operatorsATK.length - 1){
-      lll = operatorsDEF[i];
-      mmm = operatorsDEF;
-      rrr = mmm[i];
-    } else {
-    lll = operatorsATK[i];
-    mmm = operatorsATK;
-    rrr = mmm[i];
-    }
-    operatorBadge[i].src = "badges/" + lll[0] + ".png";
-    operatorBadge[i].alt = lll[0];
-    operatorBadge[i].title = lll[0];
+    operatorBadge[i].src = "badges/" + operators[i] + ".png";
+    //console.log(i);
   }
 }
 function reset()
 {
-  for (i = 0; i < operatorsDEF.length; i++){
-    operatorBadge[i].style.boxShadow = "none";
+  for (i = 0; i < operators.length; i++){
+    operatorBadge[i].style.background = "none";
   }
 }
 this.onclick = function(event) {
     if (event.target.className != 'operatorBadge') return;
 
     var pane = event.target.closest('.operatorBadge');
-    pane.style.filter = "grayscale(0%)";
     if (atkSide.style.display == "block") {
-    pane.style.boxShadow="0px 0px 0px 50px #eb7116 inset";
+    pane.style.background="#eb7116";
     } else {
-    pane.style.boxShadow="0px 0px 0px 50px #1489e0 inset";
+    pane.style.background="#1489e0";
     }
   };
 
