@@ -5,7 +5,7 @@ body
 {	
 	font-family: 'Raleway', Arial;
 	text-decoration: none;
-	background-color:#1a1d1a;
+	background-color:#15191e;
 	-moz-user-select: none;
 	user-select:none;
 }
@@ -19,7 +19,8 @@ body
 	background-size: 100% 100%;
 	background-position: center;
 	background-attachment:fixed ;
-	background-image: url('bg.png');
+	/*background-image: url('bg.png');*/
+ 	background-image: linear-gradient(to left top, #1e0f17, #221520, #241b2b, #232235, #1e293f);
 }
 @media (max-width: 400px)
 {
