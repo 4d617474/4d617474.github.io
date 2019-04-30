@@ -1,5 +1,6 @@
 :root {
-  --color1: #101015;
+  --color1:rgba(10,10,15,.5);
+	/*#101015*/;
 }	
 body
 {	
@@ -38,11 +39,13 @@ body
 	position:absolute;
 	top:calc(50% - 250px);
 	left:calc(50% - 225px);
-	height:550px;
-	width:450px;
+	height:calc(550px + 2px);
+	width:calc(450px + 2px);
 	display: block;
 	background-color:var(--color1);
 	box-shadow:0px 10px 20px 0px rgba(0, 0, 0, 0.27);
+	/*overflow: hidden;
+	border-radius:4px;*/
 }
 .operatorSelect
 {
@@ -68,6 +71,7 @@ body
 	text-indent: 0px;
 	cursor:pointer;
 	font-size:15px;
+	/*border-radius:0px 0px 4px 4px;*/
 }
 #buttonATK,#buttonDEF
 {
@@ -97,17 +101,16 @@ body
 	position: absolute;
 	top:50px;
 	height:auto;
-	width:auto;
+	width:auto; 
 }
 #operatorsAttack
 {
-	box-shadow: 0px 0px 0px 2px #eb7116 inset;
-	/background:#eb7116;
+	border:1px solid #eb7116;
+	/*box-shadow: 0px 0px 0px 2px #eb7116 inset;*/
 }
 #operatorsDefense
-{
-	box-shadow: 0px 0px 0px 2px #1489e0 inset;
-	/background:#1489e0;
+{	
+	border:1px solid #1489e0;
 }
 .operatorBadge
 {
