@@ -5,6 +5,6 @@ var operators = [
 "Montagne","Twitch","Blitz","Iq","Fuze","Glaz",
 //Defending Side
 "Mozzie","Kaid","Clash","Maestro","Alibi","Vigil","Ela","Lesion","Mira","Echo",
-"Caveira","Frost","Mute","Smoke","Castle","Pulse","Rook","Doc","Jager",
+"Caveira","Valkyrie","Frost","Mute","Smoke","Castle","Pulse","Rook","Doc","Jager",
 "Bandit","Tachanka","Kapkan"];
 //44
