@@ -1,6 +1,6 @@
 var operators = [
 //Attacking Side
-"Gridlock","Nomad","Maverick","Lion","Finka","Dokkaebi","Zofia","Ying","Jackal",
+"gridlock","Nomad","Maverick","Lion","Finka","Dokkaebi","Zofia","Ying","Jackal",
 "Hibana","Capitao","Blackbeard","Buck","Sledge","Thatcher","Ash","Thermite",
 "Montagne","Twitch","Blitz","Iq","Fuze","Glaz",
 //Defending Side
