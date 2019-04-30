@@ -1,10 +1,10 @@
 var operators = [
-//Attacking Side
-"gridlock","Nomad","Maverick","Lion","Finka","Dokkaebi","Zofia","Ying","Jackal",
-"Hibana","Capitao","Blackbeard","Buck","Sledge","Thatcher","Ash","Thermite",
-"Montagne","Twitch","Blitz","Iq","Fuze","Glaz",
-//Defending Side
-"Mozzie","Kaid","Clash","Maestro","Alibi","Vigil","Ela","Lesion","Mira","Echo",
-"Caveira","Valkyrie","Frost","Mute","Smoke","Castle","Pulse","Rook","Doc","Jager",
-"Bandit","Tachanka","Kapkan"];
+//Attacking side
+"gridlock","nomad","maverick","lion","finka","dokkaebi","zofia","ying","jackal",
+"hibana","capitao","blackbeard","buck","sledge","thatcher","ash","thermite",
+"montagne","twitch","blitz","iq","fuze","glaz",
+//Defending side
+"mozzie","kaid","clash","maestro","alibi","vigil","ela","lesion","mira","echo",
+"caveira","valkyrie","frost","mute","smoke","castle","pulse","rook","doc","jager",
+"bandit","tachanka","kapkan"];
 //44
