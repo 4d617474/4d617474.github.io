@@ -245,20 +245,82 @@
 			</div>
 
 			<div id="resultScreen">
-				<p class="" id="rsBombSite">objective site:(ifbomb)</p>
-				<p class="">hatches:</p>
-				<p class="">celling:</p>
-				<p class="rsResults" id="rs"></p>
-				<p class="">floor:</p>
-				<p class="">walls:</p>
-				<p class="">windows:</p>
-				<p class="">doors:</p>
-				<p class="">connectors:(ifbomb)</p>
-				<p class="">hatches:</p>
-				<p class="">celling:</p>
-				<p class="">walls:</p>
-				<p class="">windows:</p>
-				<p class="">doors:</p>
+				<div id="rsHostageSecure">
+					<table>
+						<tr class="rsTr">
+							<td class="rsTd">Celling hatches</td>
+							<td class="rsTd" id="rsCellingHatch">x</td>
+						</tr>
+						<tr class="rsTr">
+							<td class="rsTd">Floor hatches</td>
+							<td class="rsTd" id="rsFloorHatch">x</td>
+						</tr>
+						<tr class="rsTr">
+							<td class="rsTd">Reinforcable walls</td>
+							<td class="rsTd" id="rsReinforcableWall">x</td>
+						</tr>
+						<tr class="rsTr">
+							<td class="rsTd">Windows</td>
+							<td class="rsTd" id="rsWindow">x</td>
+						</tr>
+						<tr class="rsTr">
+							<td class="rsTd" id="rsDoor">Doors</td>
+							<td class="rsTd">x</td>
+						</tr>
+					</table>
+				</div>
+				<div id="rsBomb">
+					<table>
+						<tr>
+							<th>Bomb Sites</th>
+						</tr>
+						<tr>
+							<td>Celling hatches</td>
+							<td id="rsCellingHatchA">x</td>
+						</tr>
+						<tr>
+							<td>Floor hatches</td>
+							<td id="rsFloorHatchA">x</td>
+						</tr>
+						<tr>
+							<td>Reinforcable walls</td>
+							<td id="rsReinforcableWallA">x</td>
+						</tr>
+						<tr>
+							<td>Windows</td>
+							<td id="rsWindowA">x</td>
+						</tr>
+						<tr>
+							<td id="rsDoorA">Doors</td>
+							<td>x</td>
+						</tr>
+					</table>
+					<table>
+						<tr>
+							<th>Connectors</th>
+						</tr>
+						<tr>
+							<td>Celling hatches</td>
+							<td id="rsCellingHatchB">x</td>
+						</tr>
+						<tr>
+							<td>Floor hatches</td>
+							<td id="rsFloorHatchB">x</td>
+						</tr>
+						<tr>
+							<td>Reinforcable walls</td>
+							<td id="rsReinforcableWallB">x</td>
+						</tr>
+						<tr>
+							<td>Windows</td>
+							<td id="rsWindowB">x</td>
+						</tr>
+						<tr>
+							<td id="rsDoorB">Doors</td>
+							<td>x</td>
+						</tr>
+					</table>
+				</div>
 			</div>
 		</div>
 	</body>
@@ -275,6 +337,7 @@
 				if (event.target.id == 'menuOperators' || event.target.id == 'menuMap'){menuSelect()};
 				if (event.target.className == 'mapThumb'){mapSelection()};
 				if (event.target.id == 'modeHostage' || event.target.id == 'modeSecure' || event.target.id == 'modeBomb'){modeSelection()};
+				if (event.target.className == 'spawnLocations'){spawnSelection()};
 		}
 		document.getElementById("menuOperators").click();
 	</script>

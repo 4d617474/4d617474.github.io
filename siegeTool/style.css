@@ -1,5 +1,5 @@
 :root {
-  --color1:rgba(10,10,15,.5);
+  --color1:rgba(10,10,15,.2);
   --color2:#202028;
 	--color2hover:#353540;
 	/*#101015*/;
@@ -205,11 +205,10 @@ body
 	margin-top:50px;
 	height: calc(450px + 2px);
 	width: 100%;
-	background:var(--color2);
+	background:var(--color1);
 	color:white;
 	text-align: center;
 	text-indent: 0px;
-	cursor:pointer;
 	font-size:15px;
 	transition:0.2s;
 	/*
@@ -221,13 +220,20 @@ body
 .mapThumb
 {
 	z-index: 102;
-	height: 64.58px;
-	width: 150.5px;
+	position: relative;
+	height: calc(100% / 7);
+	width:calc(100% / 3);
 	float: left;
 	background-size: 100%;
 	background-repeat: no-repeat;
 	background-position: center;
+	cursor: pointer;
+	text-align: center;
+	text-transform: capitalize;	
+	text-shadow:1px 1px 5px black, -1px -1px 5px black; 
+	line-height: 100px;
 }
+/*
 .mapName
 {
 	position: relative;
@@ -240,7 +246,7 @@ body
 	text-shadow:1px 1px 3px black, -1px -1px 3px black; 
 	text-transform: capitalize;
 }
-
+*/
 #modeHostage,#modeSecure,#modeBomb
 {
 	z-index: 101;
@@ -250,6 +256,10 @@ body
 	width: 100%;
 	background-size: 100%;
 	transition:0.2s;
+	text-transform: capitalize;
+	cursor: pointer;
+	font-size:40px;
+	line-height:150px;
 }
 #modeHostage
 {
@@ -275,4 +285,45 @@ body
 	width: 100%;
 	background-size: 100%;
 	transition:0.2s;
+	cursor: pointer;
+}
+.rsNames,.rsResults
+{
+	position: relative;
+  float: left;
+	margin-top:0px;
+	height: 90.5px;
+	width: 50%;
+	font-size: 24px;
+}
+.rsNamesB,.rsResultsB,#rsSiteA,#rsSiteB
+{
+	position: relative;
+  float: left;
+	font-size: 15px;
+	height: 38px;
+}
+.rsNamesB,.rsResultsB
+{
+	width: 50%;
+}
+#rsSiteA,#rsSiteB
+{
+	width: 100%;
+}
+table
+{
+	width: 100%;
+	table-layout:fixed ;
+	border-spacing: 0px;
+	border-collapse: collapse;
+}
+td,th,tr
+{
+	padding:9.9px;
+}
+.rsTd,.rsTr
+{
+	padding:31px;
+	font-size:20px;
 }

@@ -5,6 +5,9 @@ var miMapSelection = document.getElementById("mapSelection");
 var miModeSelection = document.getElementById("modeSelection");
 var miSpawnSelection = document.getElementById("spawnSelection");
 var miResultScreen = document.getElementById("resultScreen");
+var miSpawnLocations = document.getElementsByClassName("spawnLocations");
+var miHostageSecure = document.getElementById("rsHostageSecure");
+var miBomb = document.getElementById("rsBomb");
 var mapSelected, modeSelected;
 resetB();
 setMaps();
@@ -14,6 +17,8 @@ function resetB(){
   miModeSelection.style.display = "none";
   miResultScreen.style.display = "none";
   miSpawnSelection.style.display = "none";
+  miHostageSecure.style.display = "none";
+  miBomb.style.display = "none";
   miMapSelection.style.display = "block";
   miTitleA.innerHTML = "<br>" + "Select a map";
 }
@@ -31,6 +36,14 @@ function setMaps()
     //mapName[i].innerHTML = maps[i];
   }
 }
+function setSpawnLocations()
+{
+  for (i = 0; i < 4; i++)
+  {
+    var dubby = miSpawnLocations[i];
+    dubby.style.backgroundImage = 'url("thumbnails/locations/' + mapSelected + "/" + modeSelected + i  + '.png")';
+  }
+}
 function mapSelection()
 {
   //console.log(event.target.innerHTML);
@@ -44,6 +57,7 @@ function modeSelection()
 {
   //console.log(event.target.innerHTML);
   modeSelected = event.target.innerHTML;
+  setSpawnLocations();
   document.getElementById("modeSelection").style.display = "none";
   document.getElementById("spawnSelection").style.display = "block";
   miTitleA.innerHTML = "<br>" + "Select a location";
@@ -52,6 +66,12 @@ function modeSelection()
 function spawnSelection()
 {
   spawnSelected = event.target.innerHTML;
+  if (modeSelected == "hostage" || spawnSelected == "secure")
+  {
+    miHostageSecure.style.display = "block";
+  } else {
+    miBomb.style.display = "block";
+  }
   document.getElementById("spawnSelection").style.display = "none";
   document.getElementById("resultScreen").style.display = "block";
   miTitleA.innerHTML = "<br>" + "Result";
