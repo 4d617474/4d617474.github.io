@@ -7,4 +7,4 @@ var operators = [
 "mozzie","kaid","clash","maestro","alibi","vigil","ela","lesion","mira","echo",
 "caveira","valkyrie","frost","mute","smoke","castle","pulse","rook","doc","jager",
 "bandit","tachanka","kapkan"];
-//44
+//46
