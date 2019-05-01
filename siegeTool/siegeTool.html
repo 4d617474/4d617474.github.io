@@ -165,7 +165,8 @@
 		</div>
 
 		<div id="mapInfo">
-			<div id="mapInfoTitle"></div>
+			<div id="mapInfoTitleA"></div>
+			<div id="mapInfoTitleB"></div>
 			<div id="buttonRST" onclick="resetB()"><br>Reset</div><!--reset-->
 			<div id="mapSelection">
 				<div class="mapThumb">
@@ -229,14 +230,21 @@
 					<p class="mapName"></p>
 				</div>
 			</div>
+
 			<div id="modeSelection">
-				<div id="modeHostage" class="modes"></div>
-				<div id="modeSecure" class="modes"></div>
-				<div id="modeBomb" class="modes"></div>
+				<div id="modeHostage">hostage</div>
+				<div id="modeSecure">secure</div>
+				<div id="modeBomb">bomb</div>
 			</div>
+
+			<div id="spawnSelection">
+				<div class="spawnLocations"></div>
+				<div class="spawnLocations"></div>
+				<div class="spawnLocations"></div>
+				<div class="spawnLocations"></div>
+			</div>
+
 			<div id="resultScreen">
-				<p class="" id="rsMap">bank</p>
-				<p class="" id="rsMode">hostage</p>
 				<p class="" id="rsBombSite">objective site:(ifbomb)</p>
 				<p class="">hatches:</p>
 				<p class="">celling:</p>
@@ -252,7 +260,7 @@
 				<p class="">windows:</p>
 				<p class="">doors:</p>
 			</div>
-			</div>
+		</div>
 	</body>
 	<script src="js/operatorsList.js"></script>
 	<script src="js/mapsList.js"></script>
@@ -264,8 +272,9 @@
 		setOperators();
 		this.onclick = function(event) {
 		    if (event.target.className == 'operatorBadge'){clickOperator()};
-				if (event.target.className == 'operatorBadge'){clickOperator()};
 				if (event.target.id == 'menuOperators' || event.target.id == 'menuMap'){menuSelect()};
+				if (event.target.className == 'mapThumb'){mapSelection()};
+				if (event.target.id == 'modeHostage' || event.target.id == 'modeSecure' || event.target.id == 'modeBomb'){modeSelection()};
 		}
 		document.getElementById("menuOperators").click();
 	</script>
