@@ -1,9 +1,29 @@
 :root {
   --color1:rgba(10,10,15,.5);
+  --color2:#202028;
+	--color2hover:#353540;
 	/*#101015*/;
-}	
+}
+@media (max-width: 500px)
+{
+	#operatorSelectBoard
+	{
+  	top:0px !important;
+  	left:0px !important;
+  	height:100% !important;;
+  	width:100% !important;;
+	}
+	#buttonRST
+  {
+		position: fixed !important;
+	}
+	.operatorBadge
+	{
+		height: 80% !important;
+	}
+}
 body
-{	
+{
 	font-family: 'Raleway', Arial;
 	text-decoration: none;
 	background-color:#15191e;
@@ -24,23 +44,28 @@ body
 	background-image: url('bg.png');*/
  	background-image: linear-gradient(to left top, #1e0f17, #221520, #241b2b, #232235, #1e293f);
 }
-@media (max-width: 500px)
+#menu
 {
-	#operatorSelectBoard
-	{
-  	top:0px !important;
-  	left:0px !important;
-  	height:100% !important;;
-  	width:100% !important;;
-	}
-	#buttonRST
-  { 
-		position: fixed !important;
-		
-	.operatorBadge
-	{
-		height: 80% !important;
-	}
+	position:absolute;
+	top:calc(50% - 250px);
+	left:calc(50% - 225px - 20px - 50px);
+	height:calc(500px + 2px);
+	width:50px;
+	display: block;
+	background-color:var(--color2);
+	box-shadow:0px 10px 20px 0px rgba(0, 0, 0, 0.2);
+}
+#menuOperators, #menuMap
+{
+	position: relative;
+	height: 50%;
+	width: ;
+	transition: 0.2s;
+	cursor:pointer;
+}
+#menuOperators:hover, #menuMap:hover
+{
+	background:var(--color2hover);
 }
 #operatorSelectBoard
 {
@@ -62,10 +87,9 @@ body
 	display: block;
 	float: left;
 }
-#buttonRST:hover,#buttonATK:hover#buttonDEF:hover
+#buttonRST:hover
 {
-	background:#353540;
-	transition:background 0.2s;
+	background:var(--color2hover);
 }
 #buttonRST
 {
@@ -74,12 +98,13 @@ body
 	bottom:0px;
 	height: 50px;
 	width: 100%;
-	background:#202028;	
+	background:var(--color2);
 	color:white;
 	text-align: center;
 	text-indent: 0px;
 	cursor:pointer;
 	font-size:15px;
+	transition:0.2s;
 	/*border-radius:0px 0px 4px 4px;*/
 }
 #buttonATK,#buttonDEF
@@ -89,7 +114,7 @@ body
 	float: left;
 	height: 50px;
 	width: 50%;
-	background:#202028;	
+	background:#202028;
 	color:white;
 	text-align: center;
 	text-indent: 0px;
@@ -110,7 +135,7 @@ body
 	position: absolute;
 	top:50px;
 	height:auto;
-	width:auto; 
+	width:auto;
 }
 #operatorsAttack
 {
@@ -118,7 +143,7 @@ body
 	/*box-shadow: 0px 0px 0px 2px #eb7116 inset;*/
 }
 #operatorsDefense
-{	
+{
 	border:1px solid #1489e0;
 }
 .operatorBadge
@@ -133,4 +158,21 @@ body
 }
 .operatorBadge:hover
 {
+}
+
+
+
+#mapInfo
+{
+	z-index: 100;
+	position:absolute;
+	top:calc(50% - 250px);
+	left:calc(50% - 225px);
+	height:calc(550px + 2px);
+	width:calc(450px + 2px);
+	display: block;
+	background-color:var(--color1);
+	box-shadow:0px 10px 20px 0px rgba(0, 0, 0, 0.2);
+	/*overflow: hidden;
+	border-radius:4px;*/
 }

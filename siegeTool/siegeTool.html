@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<link rel="stylesheet" href="style.css">
-		<link rel="stylesheet" href="preload.css">		
+		<link rel="stylesheet" href="preload.css">
 		<link href="https://fonts.googleapis.com/css?family=Raleway:100,400" rel="stylesheet">
 		<link rel="shortcut icon" href="mico.png">
 		<title>Siege Tool</title>
@@ -12,10 +12,14 @@
 	<body>
 		<div id="preloadImages"></div>
 		<div id="background"></div>
+		<div id="menu">
+			<div id="menuOperators"></div><!--onclick="menu(0)"-->
+			<div id="menuMap"></div>
+		</div>
 		<div id="operatorSelectBoard">
 			<div id="buttonATK" onclick="switchSide(0)"><br>Attack</div>
 			<div id="buttonDEF" onclick="switchSide(1)"><br>Defense</div>
-			<div id="buttonRST" onclick="reset()"><br>Reset</div><!--reset-->
+			<div id="buttonRST" onclick="resetA()"><br>Reset</div><!--reset-->
 			<div id="operatorsAttack">
 				<div class="operatorSelect">
 					<img class="operatorBadge">
@@ -159,13 +163,49 @@
 				</div>
 			</div>
 		</div>
+
+		<div id="mapInfo">
+			<div id="buttonRST" onclick="resetB()"><br>Reset</div><!--reset-->
+			<div id="mapSelection">
+				<div class="map"></div>
+			</div>
+			<div id="modeSelection">
+				<div id="modeHostage" class="modes"></div>
+				<div id="modeSecure" class="modes"></div>
+				<div id="modeBomb" class="modes"></div>
+			</div>
+			<div id="resultScreen">
+				<p class="" id="rsMap">bank</p>
+				<p class="" id="rsMode">hostage</p>
+				<p class="" id="rsBombSite">objective site:(ifbomb)</p>
+				<p class="">hatches:</p>
+				<p class="">celling:</p>
+				<p class="rsResults" id="rs"></p>
+				<p class="">floor:</p>
+				<p class="">walls:</p>
+				<p class="">windows:</p>
+				<p class="">doors:</p>
+				<p class="">connectors:(ifbomb)</p>
+				<p class="">hatches:</p>
+				<p class="">celling:</p>
+				<p class="">walls:</p>
+				<p class="">windows:</p>
+				<p class="">doors:</p>
+			</div>
+			</div>
 	</body>
 	<script src="js/operatorsList.js"></script>
 	<script src="js/selectionScreen.js"></script>
+	<script src="js/menu.js"></script>
 	<script>
-		setOperators();
-		switchSide(1);
 		switchSide(0);
+		setOperators();
+		this.onclick = function(event) {
+		    if (event.target.className == 'operatorBadge'){clickOperator()};
+				if (event.target.className == 'operatorBadge'){clickOperator()};
+				if (event.target.id == 'menuOperators' || event.target.id == 'menuMap'){menuSelect()};
+		}
+		document.getElementById("menuOperators").click();
 	</script>
 
 </html>

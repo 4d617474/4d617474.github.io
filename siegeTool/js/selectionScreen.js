@@ -12,23 +12,20 @@ function setOperators()
     //console.log(i);
   }
 }
-function reset()
+function resetA()
 {
   for (i = 0; i < operators.length; i++){
     operatorBadge[i].style.background = "none";
   }
 }
-this.onclick = function(event) {
-    if (event.target.className != 'operatorBadge') return;
-
-    var pane = event.target.closest('.operatorBadge');
-    if (atkSide.style.display == "block") {
-    pane.style.background="#eb7116";
-    } else {
-    pane.style.background="#1489e0";
-    }
-  };
-
+function clickOperator(){
+  var pane = event.target.closest('.operatorBadge');
+  if (atkSide.style.display == "block") {
+  pane.style.background="#eb7116";
+  } else {
+  pane.style.background="#1489e0";
+  }
+}
 function switchSide(isdefside){
 defSide.style.display = "none";
 atkSide.style.display = "none";
