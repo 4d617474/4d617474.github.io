@@ -3,6 +3,7 @@ var miTitleA = document.getElementById("mapInfoTitleA");
 var miTitleB = document.getElementById("mapInfoTitleB");
 var miMapSelection = document.getElementById("mapSelection");
 var miModeSelection = document.getElementById("modeSelection");
+var miSpawnSelection = document.getElementById("spawnSelection");
 var miResultScreen = document.getElementById("resultScreen");
 var mapSelected, modeSelected;
 resetB();
@@ -12,6 +13,7 @@ function resetB(){
   miMapSelection.style.display = "none";
   miModeSelection.style.display = "none";
   miResultScreen.style.display = "none";
+  miSpawnSelection.style.display = "none";
   miMapSelection.style.display = "block";
   miTitleA.innerHTML = "<br>" + "Select a map";
 }
