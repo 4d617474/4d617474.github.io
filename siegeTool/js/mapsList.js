@@ -1,4 +1,4 @@
-var mapBank,mapBorder,mapChalet,mapClubHouse,mapCoastLine,mapConsulate,
+var mapBank,mapBorder,mapChalet,mapClubHouse,mapCoastline,mapConsulate,
 mapFavela,mapFortress,mapHerefordBase,mapHouse,mapKafeDostoyevsky,mapKanal
 ,mapOregon,mapOutback,mapPresidentialPlane,mapSkyscraper,mapThemePark,mapTower
 ,mapVilla,mapYacht;
@@ -23,14 +23,60 @@ mapBank = ["bank",
 "Basement CCTV Room and Basement Lockers",1,0,"14(6)",0,0,
 1,0,"9(2)",0,"4(2)"
 ];
+mapBorder = ["border",
+"2nd Floor Security Room",0,0,0,0,0,
+" 2nd Floor Offices",0,0,0,0,0,
+"1st Floor Workshop",0,0,0,0,0,
+"1st Floor Customs Desk",0,0,0,0,0,
 
-// "1st Floor Open Area","0","0","7","1","2",
-// "1st Floor Archives","2","0","7","1","3",
-// "Basement Lockers","0","0","8","1","1"];
-mapBorder = ["border"];
+"2nd Floor Offices",0,0,0,0,0,
+"2nd Floor Armory Lockers",0,0,0,0,0,
+"1st Floor Tellers",0,0,0,0,0,
+"1st Floor Workshop",0,0,0,0,0,
+
+"1st Floor Supply Room and 1st Floor Customs Inspection",
+0,0,0,0,0,
+0,0,0,0,0,
+"1st Floor Workshop and 1st Floor Ventilation Room",
+0,0,0,0,0,
+0,0,0,0,0,
+"1st Floor Bathroom and 1st Floor Tellers",
+0,0,0,0,0,
+0,0,0,0,0,
+"2nd Floor Armory Lockers and 2nd Floor Archives",
+0,0,0,0,0,
+0,0,0,0,0
+];
+
+//map = ["",
+//"",,,,,,
+//"",,,,,,
+//"",,,,,,
+//"",,,,,,
+
+//"",,,,,,
+//"",,,,,,
+//"",,,,,,
+//"",,,,,,
+
+//"",
+//,,,,,
+//,,,,,
+//"",
+//,,,,,
+//,,,,,
+//"",
+//,,,,,
+//,,,,,
+//"",
+//,,,,,
+//,,,,
+//];
+
+//mapBorder = ["border"];
 mapChalet = ["chalet"];
 mapClubHouse = ["club house"];
-mapCoastLine = ["coast line"];
+mapCoastline = ["coastline"];
 mapConsulate = ["consulate"];
 mapFavela = ["favela"];
 mapFortress = ["fortress"];
@@ -47,7 +93,7 @@ mapTower = ["tower"];
 mapVilla = ["villa"];
 mapYacht = ["yacht"];
 
-var maps = [mapBank,mapBorder,mapChalet,mapClubHouse,mapCoastLine,mapConsulate,
+var maps = [mapBank,mapBorder,mapChalet,mapClubHouse,mapCoastline,mapConsulate,
 mapFavela,mapFortress,mapHerefordBase,mapHouse,mapKafeDostoyevsky,mapKanal
 ,mapOregon,mapOutback,mapPresidentialPlane,mapSkyscraper,mapThemePark,mapTower
 ,mapVilla,mapYacht];

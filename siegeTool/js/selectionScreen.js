@@ -14,16 +14,19 @@ function setOperators()
 function resetA()
 {
   for (i = 0; i < operators.length; i++){
-    operatorBadge[i].style.background = "none";
+    operatorBadge[i].style.backgroundColor = "transparent";
   }
 }
 function clickOperator(){
   var pane = event.target.closest('.operatorBadge');
-  if (atkSide.style.display == "block") {
-  pane.style.background="#eb7116";
+  if (pane.style.backgroundColor == "transparent"){
+    if (atkSide.style.display == "block") {
+      pane.style.backgroundColor="#eb7116";
+    } else {
+      pane.style.backgroundColor="#1489e0";
+    }
   } else {
-  pane.style.background="#1489e0";
-  }
+    pane.style.backgroundColor="transparent";}
 }
 function switchSide(isdefside){
 defSide.style.display = "none";

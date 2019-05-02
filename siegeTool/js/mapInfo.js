@@ -24,8 +24,6 @@ var rsFloorHatchB = document.getElementById("rsFloorHatchB");
 var rsReinforcableWallB = document.getElementById("rsReinforcableWallB");
 var rsWindowB = document.getElementById("rsWindowB");
 var rsDoorB = document.getElementById("rsDoorB");
-resetB();
-setMaps();
 
 function resetB(){
   miMapSelection.style.display = "none";
@@ -35,8 +33,9 @@ function resetB(){
   miHostageSecure.style.display = "none";
   miBomb.style.display = "none";
   miMapSelection.style.display = "block";
-  miTitleA.innerHTML = "Select a map";
+  miTitleA.innerHTML = "";
   miTitleB.innerHTML = "";
+  showBackButton(0);
 }
 function setMaps()
 {
@@ -86,18 +85,20 @@ function mapSelection()
   mapNo = event.target.title;
   document.getElementById("mapSelection").style.display = "none";
   document.getElementById("modeSelection").style.display = "block";
-  miTitleA.innerHTML = "Select a mode";
-  miTitleB.innerHTML =  mapSelected;
+  miTitleA.innerHTML = mapSelected;
+  miTitleB.innerHTML = "";
 }
 function modeSelection()
 {
   //console.log(event.target.classList);
-  modeSelected = event.target.innerHTML;
+  if (event.target.id  != buttonBCK) {
+     modeSelected = event.target.innerHTML;
+   }
   setSpawnLocations();
   document.getElementById("modeSelection").style.display = "none";
   document.getElementById("spawnSelection").style.display = "block";
-  miTitleA.innerHTML = "Select a location";
-  miTitleB.innerHTML = mapSelected + " " + modeSelected;
+  miTitleA.innerHTML = mapSelected + " " + modeSelected;
+  miTitleB.innerHTML = "";
 }
 function spawnSelection()
 {
@@ -122,10 +123,10 @@ function spawnSelection()
 }
 function resultScreen(id)
 {
-  showBackButton();
+  showBackButton(1);
   var dunny;
-  //console.log(dunny);
   var durry = maps[mapNo];
+  console.log(durry);
   if (modeSelected == "hostage" || modeSelected == "secure"){
     if (spawnNo == "0"){
       dunny = id + 0;
@@ -165,11 +166,11 @@ function resultScreen(id)
   }
 }
 
-function showBackButton() {
+function showBackButton(isHidden) {
 
   var buttonBack = document.getElementById("buttonBCK");
   var buttonResetB = document.getElementById("buttonRSTB");
-  if(buttonBack.style.width == "0%"){
+  if(isHidden == 1){
     buttonBack.style.width = "30%";
     buttonBack.style.color = "rgba(255,255,255,1)";
     buttonResetB.style.width = "70%";
@@ -178,4 +179,11 @@ function showBackButton() {
     buttonBack.style.color = "rgba(0,0,0,0)";
     buttonResetB.style.width = "100%";
   }
+}
+function goBack() {
+  miResultScreen.style.display = "none";
+  miSpawnSelection.style.display = "block";
+  miTitleA.innerHTML = mapSelected + " " + modeSelected;
+  miTitleB.innerHTML = "";
+  showBackButton(0);
 }

@@ -164,7 +164,7 @@
 			</div>
 		</div>
 
-		<div id="mapInfo">
+		<div id="mapInfo" style="display:none;">
 			<!-- <div id="mapInfoTitleA"></div>
 			<div id="mapInfoTitleB"></div> -->
 			<table>
@@ -174,7 +174,7 @@
 				</tr>
 			</table>
 			<div id="buttonRSTB" onclick="resetB()"><br>Reset</div><!--reset-->
-			<div id="buttonBCK" onclick="back()"><br><-</div><!--reset-->
+			<div id="buttonBCK"><br><-</div><!--reset-->
 			<div id="mapSelection">
 				<div class="mapThumb"></div>
 				<div class="mapThumb"></div>
@@ -298,15 +298,18 @@
 	<script src="js/mapInfo.js"></script>
 	<script>
 		showBackButton();
-		showBackButton();
 		switchSide(0);
 		setOperators();
+		resetA();
+		resetB();
+		setMaps();
 		this.onclick = function(event) {
 		    if (event.target.className == 'operatorBadge'){clickOperator()};
 				if (event.target.id == 'menuOperators' || event.target.id == 'menuMap'){menuSelect()};
 				if (event.target.className == 'mapThumb'){mapSelection()};
 				if (event.target.id == 'modeHostage' || event.target.id == 'modeSecure' || event.target.id == 'modeBomb'){modeSelection()};
 				if (event.target.className == 'spawnLocations'){spawnSelection()};
+				if (event.target.id == 'buttonBCK'){goBack()};
 		}
 		document.getElementById("menuOperators").click();
 	</script>

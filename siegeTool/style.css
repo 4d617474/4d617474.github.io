@@ -278,20 +278,15 @@ tr#mapInfoTitle
 }
 #modeHostage
 {
-	background:red;
 	background-image:url("thumbnails/mode/hostage.png");
 }
 #modeSecure
 {
-	background:green;
-	background-image:url("thumbnails/mode/secure.png")
-		;	
+	background-image:url("thumbnails/mode/secure.png");	
 }
 #modeBomb
 {
-	background:blue;
-	background-image:url("thumbnails/mode/bomb.png")
-		;	
+	background-image:url("thumbnails/mode/bomb.png");	
 }
 .spawnLocations
 {
