@@ -3,26 +3,49 @@ mapFavela,mapFortress,mapHerefordBase,mapHouse,mapKafeDostoyevsky,mapKanal
 ,mapOregon,mapOutback,mapPresidentialPlane,mapSkyscraper,mapThemePark,mapTower
 ,mapVilla,mapYacht;
 
-mapBank = [0,"bank","2nd Floor CEO Office","0","2","4","1","5"];
-mapBorder = [1,"border"];
-mapChalet = [2,"chalet"];
-mapClubHouse = [3,"club house"];
-mapCoastLine = [4,"coastLine"];
-mapConsulate = [5,"consulate"];
-mapFavela = [6,"favela"];
-mapFortress = [7,"fortress"];
-mapHerefordBase = [8,"hereford base"];
-mapHouse = [9,"house"];
-mapKafeDostoyevsky = [10,"kafe dostoyevsky"];
-mapKanal = [11,"kanal"];
-mapOregon = [12,"oregon"];
-mapOutback = [13,"outback"];
-mapPresidentialPlane = [14,"presidential plane"];
-mapSkyscraper = [15,"skyscrapper"];
-mapThemePark = [16,"theme park"];
-mapTower = [17,"tower"];
-mapVilla = [18,"villa"];
-mapYacht = [19,"yacht"];
+mapBank = ["bank",
+"2nd Floor CEO Office",0,0,11,2,2,
+"1st Floor Staff Room",0,0,12,0,2,
+"1st Floor Tellers' Office",0,0,8,0,3,
+"Basement Vault",1,0,2,0,1,
+
+"2nd Floor CEO Office",0,0,11,2,2,
+"1st Floor Open Area",0,1,7,1,2,
+"1st Floor Archives",2,0,7,1,3,
+"Basement Lockers",0,0,8,1,1,
+
+"2nd Floor CEO Office and 2nd Floor Executive Lounge",0,0,"13(10)",4,"4(3)",
+0,0,0,"4(2)","2(1)",
+"1st Floor Open Area and 1st Floor Staff Room",2,1,"13(10)",0,0,
+1,1,"5(3)",0,"1(0)",
+"1st Floor Tellers' Office and 1st Floor Archives",0,0,"11(7)",1,"4(3)",
+"x","x","x","x","x",
+"Basement CCTV Room and Basement Lockers",1,0,"14(6)",0,0,
+1,0,"9(2)",0,"4(2)"
+];
+
+// "1st Floor Open Area","0","0","7","1","2",
+// "1st Floor Archives","2","0","7","1","3",
+// "Basement Lockers","0","0","8","1","1"];
+mapBorder = ["border"];
+mapChalet = ["chalet"];
+mapClubHouse = ["club house"];
+mapCoastLine = ["coastLine"];
+mapConsulate = ["consulate"];
+mapFavela = ["favela"];
+mapFortress = ["fortress"];
+mapHerefordBase = ["hereford base"];
+mapHouse = ["house"];
+mapKafeDostoyevsky = ["kafe dostoyevsky"];
+mapKanal = ["kanal"];
+mapOregon = ["oregon"];
+mapOutback = ["outback"];
+mapPresidentialPlane = ["presidential plane"];
+mapSkyscraper = ["skyscrapper"];
+mapThemePark = ["theme park"];
+mapTower = ["tower"];
+mapVilla = ["villa"];
+mapYacht = ["yacht"];
 
 var maps = [mapBank,mapBorder,mapChalet,mapClubHouse,mapCoastLine,mapConsulate,
 mapFavela,mapFortress,mapHerefordBase,mapHouse,mapKafeDostoyevsky,mapKanal

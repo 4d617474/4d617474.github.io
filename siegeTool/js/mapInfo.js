@@ -8,7 +8,22 @@ var miResultScreen = document.getElementById("resultScreen");
 var miSpawnLocations = document.getElementsByClassName("spawnLocations");
 var miHostageSecure = document.getElementById("rsHostageSecure");
 var miBomb = document.getElementById("rsBomb");
-var mapSelected, modeSelected;
+var mapNo, mapSelected, modeSelected, spawnNo;
+var rsCellingHatch = document.getElementById("rsCellingHatch");
+var rsFloorHatch = document.getElementById("rsFloorHatch");
+var rsReinforcableWall = document.getElementById("rsReinforcableWall");
+var rsWindow = document.getElementById("rsWindow");
+var rsDoor = document.getElementById("rsDoor");
+var rsCellingHatchA = document.getElementById("rsCellingHatchA");
+var rsFloorHatchA = document.getElementById("rsFloorHatchA");
+var rsReinforcableWallA = document.getElementById("rsReinforcableWallA");
+var rsWindowA = document.getElementById("rsWindowA");
+var rsDoorA = document.getElementById("rsDoorA");
+var rsCellingHatchB = document.getElementById("rsCellingHatchB");
+var rsFloorHatchB = document.getElementById("rsFloorHatchB");
+var rsReinforcableWallB = document.getElementById("rsReinforcableWallB");
+var rsWindowB = document.getElementById("rsWindowB");
+var rsDoorB = document.getElementById("rsDoorB");
 resetB();
 setMaps();
 
@@ -20,7 +35,8 @@ function resetB(){
   miHostageSecure.style.display = "none";
   miBomb.style.display = "none";
   miMapSelection.style.display = "block";
-  miTitleA.innerHTML = "<br>" + "Select a map";
+  miTitleA.innerHTML = "Select a map";
+  miTitleB.innerHTML = "";
 }
 function setMaps()
 {
@@ -32,67 +48,118 @@ function setMaps()
   {
     dummy = mapThumb[i];
     dukky = maps[i];
-    dummy.style.backgroundImage = 'url("thumbnails/maps/' + dukky[1] + '.png")';
-    dummy.innerHTML = dukky[1];
-    //console.log(dukky[0]);
+    dummy.style.backgroundImage = 'url("thumbnails/maps/' + dukky[0] + '.png")';
+    dummy.innerHTML = dukky[0];
+    dummy.title = i;
+    //console.log(dummy.title);
   }
 }
 function setSpawnLocations()
 {
-  //map name comes from innerHTML find alternative//
-  //////////////////////////////////////////////////
-  var dubby,duccy;
+  var dubby,duccy,numberOfSteps;
   var dully = 0;
   if (modeSelected == "hostage"){
-    dully += 2
+    dully += 1;
+    numberOfSteps = 6;
   } else if (modeSelected == "secure"){
+    dully += 25;
+    numberOfSteps = 6;
   } else if (modeSelected == "bomb"){
+    dully += 49;
+    numberOfSteps = 11;
   }
   for (i = 0; i < 4; i++)
   {
-    var duggy = mapSelected[0];
-    duccy = maps[duggy];
-    console.log(duggy);
+    duccy = maps[mapNo];
+    //console.log(duggy);
     dubby = miSpawnLocations[i];
     dubby.style.backgroundImage = 'url("thumbnails/locations/' + mapSelected + "/" + modeSelected + i  + '.png")';
     dubby.innerHTML = duccy[dully];
-    dully++;
+    dubby.title = i;
+    dully += numberOfSteps;
   }
 }
 function mapSelection()
 {
   //console.log(event.target.innerHTML);
   mapSelected = event.target.innerHTML;
+  mapNo = event.target.title;
   document.getElementById("mapSelection").style.display = "none";
   document.getElementById("modeSelection").style.display = "block";
-  miTitleA.innerHTML = "<br>" + "Select a mode";
-  miTitleB.innerHTML = "<br>" + mapSelected;
+  miTitleA.innerHTML = "Select a mode";
+  miTitleB.innerHTML =  mapSelected;
 }
 function modeSelection()
 {
-  //console.log(event.target.innerHTML);
+  //console.log(event.target.classList);
   modeSelected = event.target.innerHTML;
   setSpawnLocations();
   document.getElementById("modeSelection").style.display = "none";
   document.getElementById("spawnSelection").style.display = "block";
-  miTitleA.innerHTML = "<br>" + "Select a location";
-  miTitleB.innerHTML = "<br>" + mapSelected + " " + modeSelected;
+  miTitleA.innerHTML = "Select a location";
+  miTitleB.innerHTML = mapSelected + " " + modeSelected;
 }
 function spawnSelection()
 {
+  spawnNo = event.target.title;
   spawnSelected = event.target.innerHTML;
-  if (modeSelected == "hostage" || spawnSelected == "secure")
+  if (modeSelected == "hostage")
   {
     miHostageSecure.style.display = "block";
-  } else {
+    resultScreen(2);
+  } else if (modeSelected == "secure")
+  {
+    miHostageSecure.style.display = "block";
+    resultScreen(26);
+  } else  {
     miBomb.style.display = "block";
+    resultScreen(50);
   }
   document.getElementById("spawnSelection").style.display = "none";
   document.getElementById("resultScreen").style.display = "block";
-  miTitleA.innerHTML = "<br>" + "Result";
-  miTitleB.innerHTML = "<br>" + mapSelected + " " + modeSelected + " " + spawnSelected;
+  miTitleA.innerHTML = mapSelected + " " + modeSelected;
+  miTitleB.innerHTML = spawnSelected;
 }
-function resultScreen()
+function resultScreen(id)
 {
+  var dunny;
+  console.log(dunny);
+  var durry = maps[mapNo];
+  if (modeSelected == "hostage" || modeSelected == "secure"){
+    if (spawnNo == "0"){
+      dunny = id + 0;
+    } else if (spawnNo == "1"){
+      dunny = id + 6;
+    } else if (spawnNo == "2"){
+      dunny = id + 12;
+    } else if (spawnNo == "3"){
+      dunny = id + 18;
+    }
+    rsCellingHatch.innerHTML = durry[dunny];
+    rsFloorHatch.innerHTML = durry[dunny + 1];
+    rsReinforcableWall.innerHTML = durry[dunny + 2];
+    rsWindow.innerHTML = durry[dunny + 3];
+    rsDoor.innerHTML = durry[dunny + 4];
+  } else if (modeSelected == "bomb"){
+    if (spawnNo == "0"){
+      dunny = id + 0;
+    } else if (spawnNo == "1"){
+      dunny = id + 11;
+    } else if (spawnNo == "2"){
+      dunny = id + 22;
+    } else if (spawnNo == "3"){
+      dunny = id + 33;
+    }
+    rsCellingHatchA.innerHTML = durry[dunny];
+    rsFloorHatchA.innerHTML = durry[dunny + 1];
+    rsReinforcableWallA.innerHTML = durry[dunny + 2];
+    rsWindowA.innerHTML = durry[dunny + 3];
+    rsDoorA.innerHTML = durry[dunny + 4];
 
+    rsCellingHatchB.innerHTML = durry[dunny + 5];
+    rsFloorHatchB.innerHTML = durry[dunny + 6];
+    rsReinforcableWallB.innerHTML = durry[dunny + 7];
+    rsWindowB.innerHTML = durry[dunny + 8];
+    rsDoorB.innerHTML = durry[dunny + 9];
+  }
 }
