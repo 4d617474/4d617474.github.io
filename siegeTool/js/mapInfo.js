@@ -26,22 +26,37 @@ function setMaps()
 {
   var mapThumb = document.getElementsByClassName("mapThumb");
   var mapName = document.getElementsByClassName("mapName");
+  var dukky, dummy;
   for (i = 0; i < maps.length; i++)
   //for (i = 0; i < 3; i++)
   {
-    //console.log(mapsThumb[i]);
-    var dummy = mapThumb[i];
-    dummy.style.backgroundImage = 'url("thumbnails/maps/' + maps[i] + '.png")';
-    dummy.innerHTML = maps[i];
-    //mapName[i].innerHTML = maps[i];
+    dummy = mapThumb[i];
+    dukky = maps[i];
+    dummy.style.backgroundImage = 'url("thumbnails/maps/' + dukky[1] + '.png")';
+    dummy.innerHTML = dukky[1];
+    //console.log(dukky[0]);
   }
 }
 function setSpawnLocations()
 {
+  //map name comes from innerHTML find alternative//
+  //////////////////////////////////////////////////
+  var dubby,duccy;
+  var dully = 0;
+  if (modeSelected == "hostage"){
+    dully += 2
+  } else if (modeSelected == "secure"){
+  } else if (modeSelected == "bomb"){
+  }
   for (i = 0; i < 4; i++)
   {
-    var dubby = miSpawnLocations[i];
+    var duggy = mapSelected[0];
+    duccy = maps[duggy];
+    console.log(duggy);
+    dubby = miSpawnLocations[i];
     dubby.style.backgroundImage = 'url("thumbnails/locations/' + mapSelected + "/" + modeSelected + i  + '.png")';
+    dubby.innerHTML = duccy[dully];
+    dully++;
   }
 }
 function mapSelection()

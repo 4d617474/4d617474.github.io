@@ -1,36 +1,37 @@
-var mapBank,mapBorder,mapChalet,mapClubHouse,mapCoastline,mapConsulate,
+var mapBank,mapBorder,mapChalet,mapClubHouse,mapCoastLine,mapConsulate,
 mapFavela,mapFortress,mapHerefordBase,mapHouse,mapKafeDostoyevsky,mapKanal
 ,mapOregon,mapOutback,mapPresidentialPlane,mapSkyscraper,mapThemePark,mapTower
 ,mapVilla,mapYacht;
 
-mapBank = ["bank","2nd Floor CEO Office","0","2","4","1","5"];
-mapBorder = ["border"];
-mapChalet = ["chalet"];
-mapClubHouse = ["clubHouse"];
-mapCoastLine = ["coastLine"];
-mapConsulate = ["consulate"];
-mapFavela = ["favela"];
-mapFortress = ["fortress"];
-mapHerefordBase = ["hereford base"];
-mapHouse = ["house"];
-mapKafeDostoyevsky = ["kafe dostoyevsky"];
-mapKanal = ["kanal"];
-mapOregon = ["oregon"];
-mapOutback = ["outback"];
-mapOutback = ["outback"];
-mapPresidentialPlane = ["presidential plane"];
-mapSkyscraper = ["skyscraper"];
-mapThemePark = ["theme park"];
-mapTower = ["tower"];
-mapVilla = ["villa"];
-mapYacht = ["yacht"];
+mapBank = [0,"bank","2nd Floor CEO Office","0","2","4","1","5"];
+mapBorder = [1,"border"];
+mapChalet = [2,"chalet"];
+mapClubHouse = [3,"club house"];
+mapCoastLine = [4,"coastLine"];
+mapConsulate = [5,"consulate"];
+mapFavela = [6,"favela"];
+mapFortress = [7,"fortress"];
+mapHerefordBase = [8,"hereford base"];
+mapHouse = [9,"house"];
+mapKafeDostoyevsky = [10,"kafe dostoyevsky"];
+mapKanal = [11,"kanal"];
+mapOregon = [12,"oregon"];
+mapOutback = [13,"outback"];
+mapPresidentialPlane = [14,"presidential plane"];
+mapSkyscraper = [15,"skyscrapper"];
+mapThemePark = [16,"theme park"];
+mapTower = [17,"tower"];
+mapVilla = [18,"villa"];
+mapYacht = [19,"yacht"];
 
-var maps = [mapBank,mapBorder,mapChalet,mapClubHouse,mapCoastline,mapConsulate,
+var maps = [mapBank,mapBorder,mapChalet,mapClubHouse,mapCoastLine,mapConsulate,
 mapFavela,mapFortress,mapHerefordBase,mapHouse,mapKafeDostoyevsky,mapKanal
 ,mapOregon,mapOutback,mapPresidentialPlane,mapSkyscraper,mapThemePark,mapTower
 ,mapVilla,mapYacht];
 //20
-//map = [
+//map+mapName = [
+//mapNo
+//mapName
   //modeHostage
   //site1
 //"floor & name",
