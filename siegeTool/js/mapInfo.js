@@ -122,8 +122,9 @@ function spawnSelection()
 }
 function resultScreen(id)
 {
+  showBackButton();
   var dunny;
-  console.log(dunny);
+  //console.log(dunny);
   var durry = maps[mapNo];
   if (modeSelected == "hostage" || modeSelected == "secure"){
     if (spawnNo == "0"){
@@ -161,5 +162,20 @@ function resultScreen(id)
     rsReinforcableWallB.innerHTML = durry[dunny + 7];
     rsWindowB.innerHTML = durry[dunny + 8];
     rsDoorB.innerHTML = durry[dunny + 9];
+  }
+}
+
+function showBackButton() {
+
+  var buttonBack = document.getElementById("buttonBCK");
+  var buttonResetB = document.getElementById("buttonRSTB");
+  if(buttonBack.style.width == "0%"){
+    buttonBack.style.width = "30%";
+    buttonBack.style.color = "rgba(255,255,255,1)";
+    buttonResetB.style.width = "70%";
+  } else {
+    buttonBack.style.width = "0%";
+    buttonBack.style.color = "rgba(0,0,0,0)";
+    buttonResetB.style.width = "100%";
   }
 }

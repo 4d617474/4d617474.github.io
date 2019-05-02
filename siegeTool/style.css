@@ -97,17 +97,12 @@ body
 	display: block;
 	float: left;
 }
-#buttonRST:hover
-{
-	background:var(--color2hover);
-}
-#buttonRST
+#buttonRST,#buttonRSTB,#buttonBCK
 {
 	z-index: 101;
 	position: absolute;
 	bottom:0px;
 	height: 50px;
-	width: 100%;
 	background:var(--color2);
 	color:white;
 	text-align: center;
@@ -116,6 +111,14 @@ body
 	font-size:15px;
 	transition:0.2s;
 	/*border-radius:0px 0px 4px 4px;*/
+}
+#buttonRST
+{	
+	width: 100%;
+}
+#buttonRST:hover,#buttonRSTB:hover,#buttonBCK:hover
+{
+	background:var(--color2hover);
 }
 #buttonATK,#buttonDEF
 {
@@ -170,8 +173,16 @@ body
 {
 }
 
-
-
+#buttonRSTB
+{	
+	left:0px;
+	width: 70%;
+}
+#buttonBCK
+{
+	right: 0px;
+	width: 30%;
+}
 #mapInfo
 {
 	z-index: 100;
