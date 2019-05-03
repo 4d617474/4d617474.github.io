@@ -8,7 +8,7 @@ function setOperators()
 {
   for (i = 0; i < operators.length; i++)
   {
-    operatorBadge[i].src = "thumbnails/badges/" + operators[i] + ".png";
+    operatorBadge[i].src = "thumbnails/badges/" + operators[i] + ".svg";
   }
 }
 function resetA()
