@@ -73,7 +73,10 @@ function setSpawnLocations()
     //console.log(duggy);
     dubby = miSpawnLocations[i];
     dubby.style.backgroundImage = 'url("thumbnails/locations/' + mapSelected + "/" + modeSelected + i  + '.png")';
-    dubby.innerHTML = "<br>" + "<br>" + duccy[dully];
+    //dubby.innerHTML =
+    dubby.innerHTML = "<div class='spawnName'>" + duccy[dully] + "</div>"
+    //"<br>" + "<br>" +
+    //duccy[dully];
     dubby.title = i;
     dully += numberOfSteps;
   }
@@ -103,7 +106,9 @@ function modeSelection()
 function spawnSelection()
 {
   spawnNo = event.target.title;
-  spawnSelected = event.target.innerHTML;
+  var dutty = event.target.closest('.spawnName');
+  console.log(event.target.closest('.spawnName'));
+  //spawnSelected = event.target.closest('.spawnName').innerHTML;
   if (modeSelected == "hostage")
   {
     miHostageSecure.style.display = "block";

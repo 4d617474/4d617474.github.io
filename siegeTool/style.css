@@ -317,8 +317,14 @@ tr#mapInfoTitle
 {
 	background-image:url("thumbnails/mode/bomb.png");	
 }
+#spawnSelection
+{
+	display: inline-block;
+}
 .spawnLocations
 {
+	vertical-align:middle;
+	display:inline-block;
 	z-index: 101;
 	position: relative;
 	float:top;

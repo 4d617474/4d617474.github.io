@@ -4,49 +4,74 @@ mapFavela,mapFortress,mapHerefordBase,mapHouse,mapKafeDostoyevsky,mapKanal
 ,mapVilla,mapYacht;
 
 mapBank = ["bank",
-"2nd Floor CEO Office",0,0,11,2,2,
-"1st Floor Staff Room",0,0,12,0,2,
-"1st Floor Tellers' Office",0,0,8,0,3,
-"Basement Vault",1,0,2,0,1,
+"2F CEO Office",0,0,11,2,2,
+"1F Staff Room",0,0,12,0,2,
+"1F Tellers' Office",0,0,8,0,3,
+"B Vault",1,0,2,0,1,
 
-"2nd Floor CEO Office",0,0,11,2,2,
-"1st Floor Open Area",0,1,7,1,2,
-"1st Floor Archives",2,0,7,1,3,
-"Basement Lockers",0,0,8,1,1,
+"2F CEO Office",0,0,11,2,2,
+"1F Open Area",0,1,7,1,2,
+"1F Archives",2,0,7,1,3,
+"B Lockers",0,0,8,1,1,
 
-"2nd Floor CEO Office and 2nd Floor Executive Lounge",0,0,"13(10)",4,"4(3)",
+"2F CEO Office and 2F Executive Lounge",0,0,"13(10)",4,"4(3)",
 0,0,0,"4(2)","2(1)",
-"1st Floor Open Area and 1st Floor Staff Room",2,1,"13(10)",0,0,
+"1F Open Area and 1F Staff Room",2,1,"13(10)",0,0,
 1,1,"5(3)",0,"1(0)",
-"1st Floor Tellers' Office and 1st Floor Archives",0,0,"11(7)",1,"4(3)",
+"1F Tellers' Office and 1F Archives",0,0,"11(7)",1,"4(3)",
 "x","x","x","x","x",
-"Basement CCTV Room and Basement Lockers",1,0,"14(6)",0,0,
+"B CCTV Room and B Lockers",1,0,"14(6)",0,0,
 1,0,"9(2)",0,"4(2)"
 ];
-mapBorder = ["border",
-"2nd Floor Security Room",0,0,0,0,0,
-" 2nd Floor Offices",0,0,0,0,0,
-"1st Floor Workshop",0,0,0,0,0,
-"1st Floor Customs Desk",0,0,0,0,0,
+// mapBorder = ["border",
+// "2nd Floor Security Room",0,0,0,0,0,
+// "2nd Floor Offices",0,0,0,0,0,
+// "1st Floor Workshop",0,0,0,0,0,
+// "1st Floor Customs Desk",0,0,0,0,0,
+//
+// "2nd Floor Offices",0,0,0,0,0,
+// "2nd Floor Armory Lockers",0,0,0,0,0,
+// "1st Floor Tellers",0,0,0,0,0,
+// "1st Floor Workshop",0,0,0,0,0,
+//
+// "1st Floor Supply Room and 1st Floor Customs Inspection",
+// 0,0,0,0,0,
+// 0,0,0,0,0,
+// "1st Floor Workshop and 1st Floor Ventilation Room",
+// 0,0,0,0,0,
+// 0,0,0,0,0,
+// "1st Floor Bathroom and 1st Floor Tellers",
+// 0,0,0,0,0,
+// 0,0,0,0,0,
+// "2nd Floor Armory Lockers and 2nd Floor Archives",
+// 0,0,0,0,0,
+// 0,0,0,0,0
+// ];
 
-"2nd Floor Offices",0,0,0,0,0,
-"2nd Floor Armory Lockers",0,0,0,0,0,
-"1st Floor Tellers",0,0,0,0,0,
-"1st Floor Workshop",0,0,0,0,0,
+//map = ["chalet",
+//"2nd Floor Master Bedroom",,,,,,
+//"2nd Floor Library",,,,,,
+//"1st Floor Kitchen",,,,,,
+//"Basement Wine Cellar",,,,,,
 
-"1st Floor Supply Room and 1st Floor Customs Inspection",
-0,0,0,0,0,
-0,0,0,0,0,
-"1st Floor Workshop and 1st Floor Ventilation Room",
-0,0,0,0,0,
-0,0,0,0,0,
-"1st Floor Bathroom and 1st Floor Tellers",
-0,0,0,0,0,
-0,0,0,0,0,
-"2nd Floor Armory Lockers and 2nd Floor Archives",
-0,0,0,0,0,
-0,0,0,0,0
-];
+//"2nd Floor Library",,,,,,
+//"1st Floor Dining Room",,,,,,
+//"1st Floor Bar",,,,,,
+//"Basement Snowmobile Garage",,,,,,
+
+//"2nd Floor Office and 2nd Floor Master Bedroom",
+//,,,,,
+//,,,,,
+//"1st Floor Gaming Room and 1st Floor Bar",
+//,,,,,
+//,,,,,
+//"1st Floor Kitchen and 1st Floor Trophy Room",
+//,,,,,
+//,,,,,
+//"Basement Wine Cellar and Basement Snowmobile Garage",
+//,,,,,
+//,,,,
+//];
 
 //map = ["",
 //"",,,,,,
@@ -73,7 +98,31 @@ mapBorder = ["border",
 //,,,,
 //];
 
-//mapBorder = ["border"];
+//map = ["",
+//"",,,,,,
+//"",,,,,,
+//"",,,,,,
+//"",,,,,,
+
+//"",,,,,,
+//"",,,,,,
+//"",,,,,,
+//"",,,,,,
+
+//"",
+//,,,,,
+//,,,,,
+//"",
+//,,,,,
+//,,,,,
+//"",
+//,,,,,
+//,,,,,
+//"",
+//,,,,,
+//,,,,
+//];
+mapBorder = ["border"];
 mapChalet = ["chalet"];
 mapClubHouse = ["club house"];
 mapCoastline = ["coastline"];
