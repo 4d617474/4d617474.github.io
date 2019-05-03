@@ -73,7 +73,7 @@ function setSpawnLocations()
     //console.log(duggy);
     dubby = miSpawnLocations[i];
     dubby.style.backgroundImage = 'url("thumbnails/locations/' + mapSelected + "/" + modeSelected + i  + '.png")';
-    dubby.innerHTML = duccy[dully];
+    dubby.innerHTML = "<br>" + "<br>" + duccy[dully];
     dubby.title = i;
     dully += numberOfSteps;
   }

@@ -1,7 +1,9 @@
 :root {
   --color1:rgba(10,10,15,.2);
-  --color2:#202028;
+  --color2:#212129;
 	--color2hover:#353540;
+  --color3:#252533;
+	--color3hover:#393950;
 	/*#101015*/;
 }
 @media (max-width: 500px)
@@ -10,16 +12,47 @@
 	{
   	top:0px !important;
   	left:0px !important;
-  	height:100% !important;;
-  	width:100% !important;;
-	}
-	#buttonRST
-  {
-		position: fixed !important;
+  	height:100% !important;
+  	width:calc(100% - 50px) !important;
 	}
 	.operatorBadge
 	{
-		height: 80% !important;
+		height: 80px !important;
+	}
+	#mapInfo
+	{
+		top:0px !important;
+  	left:0px !important;
+  	height:100% !important;
+  	width:calc(100% - 50px) !important;
+	}
+	.mapThumb
+	{
+		line-height: 100px !important;
+	}
+	.spawnLocations,#modeBomb,#modeHostage,#modeSecure
+	{		
+		background-size:220% !important;
+		background-position: center; 
+	}
+	#modeBomb,#modeHostage,#modeSecure
+	{
+		line-height: 200px !important;
+	}
+	#menu
+	{
+		top:0% !important;
+		height: calc(100% - 0px) !important;
+		left:unset !important;
+		right:0% !important;
+	}
+  #menuOperators,#menuMap
+	{
+		background-color:var(--color3) !important;;	
+	}
+  #menuOperators:hover,#menuMap:hover
+	{
+		background-color:var(--color3hover) !important;	
 	}
 }
 body
@@ -141,7 +174,7 @@ body
 	display: none;
 	position: absolute;
 	top:50px;
-	height:auto;
+	height:calc(100% - 102px);
 	width:auto;
 }
 #operatorsAttack
@@ -209,14 +242,14 @@ tr#mapInfoTitle
 #mapInfoTitleB
 {
 }
-#mapSelection,#modeSelection,#spawnSelection,#resultScreen
+#mapSelection,#spawnSelection,#resultScreen,#modeSelection
 {
 	z-index: 101;
 	position: relative;
-	height: calc(450px + 2px);
+	height: calc(100% - 100px)/*calc(450px + 2px)*/;
 	width: 100%;
 	background:var(--color1);
-	color:white;
+	color:rgb(220,220,220);
 	text-align: center;
 	text-indent: 0px;
 	font-size:15px;
@@ -242,19 +275,20 @@ tr#mapInfoTitle
 	text-transform: capitalize;	
 	text-shadow:1px 1px 5px black, -1px -1px 5px black; 
 	box-shadow: 0px -30px 20px rgba(0,0,0,.7) inset;
-	line-height: 100px;
+	line-height: 65px;
 	transition: 0.2s;
 }
 .mapThumb:hover
 {
 	box-shadow: 0px -30px 20px rgba(250,250,250,.0) inset;
 }
+
 #modeHostage,#modeSecure,#modeBomb
 {
 	z-index: 101;
 	position: relative;
 	float:top;
-	height:calc((450px / 3) + 2px);
+	height:calc(100% / 3);
 	width: 100%;
 	background-size: 100%;
 	transition:0.2s;
@@ -262,7 +296,8 @@ tr#mapInfoTitle
 	cursor: pointer;
 	font-size:40px;
 	line-height:150px;
-	background-size:100% !important;
+	background-size:100%;
+	background-repeat: no-repeat;
 	text-shadow:1px 1px 15px black; 
 	box-shadow: 0px -50px 20px rgba(255,255,255,.03) inset, 0px -105px 20px rgba(0,0,0,.3) inset;
 }
@@ -287,16 +322,16 @@ tr#mapInfoTitle
 	z-index: 101;
 	position: relative;
 	float:top;
-	height:calc((450px / 4) + 2px);
+	height:calc(100% / 4);
 	width: 100%;
 	background-size: 100%;
 	font-size:20px;
 	transition:0.2s;
 	cursor: pointer;
-	line-height:125px;
-	background-size:100% !important;
+	background-size:100%;
+	background-repeat: no-repeat;
 	text-shadow:1px 1px 2px black,-1px -1px 2px black; 
-	box-shadow: 0px 0px 80px 35px rgba(255,255,255,.05) inset, 0px -150px 0px 0px rgba(0,0,0,.5) inset;
+	box-shadow: 0px 0px 80px 35px rgba(255,255,255,.05) inset, 0px -400px 0px 0px rgba(0,0,0,.5) inset;
 }
 .spawnLocations:hover
 {
@@ -329,9 +364,9 @@ tr#mapInfoTitle
 table
 {
 	width: 100%;
-	table-layout:fixed ;
+	table-layout:fixed;
 	border-spacing: 0px;
-	border-collapse: collapse;
+	border-collapse:collapse;
 }
 td.rsBTd,th.rsBTh,tr.rsBTr
 {
