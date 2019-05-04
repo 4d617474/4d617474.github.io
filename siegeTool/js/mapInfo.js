@@ -47,7 +47,7 @@ function setMaps()
   {
     dummy = mapThumb[i];
     dukky = maps[i];
-    dummy.style.backgroundImage = 'url("thumbnails/maps/' + dukky[0] + '.png")';
+    dummy.style.backgroundImage = 'url("thumbnails/maps/' + dukky[0] + '.jpg")';
     dummy.innerHTML = dukky[0];
     dummy.title = i;
     //console.log(dummy.title);
@@ -72,7 +72,7 @@ function setSpawnLocations()
     duccy = maps[mapNo];
     //console.log(duggy);
     dubby = miSpawnLocations[i];
-    dubby.style.backgroundImage = 'url("thumbnails/locations/' + mapSelected + "/" + modeSelected + i  + '.png")';
+    dubby.style.backgroundImage = 'url("thumbnails/locations/' + mapSelected + "/" + modeSelected + i  + '.jpg")';
     //dubby.innerHTML =
     dubby.innerHTML = "<div class='spawnName'>" + duccy[dully] + "</div>"
     //"<br>" + "<br>" +

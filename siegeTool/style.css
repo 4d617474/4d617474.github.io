@@ -307,15 +307,15 @@ tr#mapInfoTitle
 }
 #modeHostage
 {
-	background-image:url("thumbnails/mode/hostage.png");
+	background-image:url("thumbnails/mode/hostage.jpg");
 }
 #modeSecure
 {
-	background-image:url("thumbnails/mode/secure.png");	
+	background-image:url("thumbnails/mode/secure.jpg");	
 }
 #modeBomb
 {
-	background-image:url("thumbnails/mode/bomb.png");	
+	background-image:url("thumbnails/mode/bomb.jpg");	
 }
 #spawnSelection
 {
