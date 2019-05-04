@@ -34,9 +34,11 @@ body
 	left:calc(50% - 100px);
 	height: 200px;
 	width: 200px;
-	z-index: 200;
+	z-index: 1;
 	opacity: 0;
-	background: url("siegeToolIcon.png");
+	background: url("siegeToolLoading.png");
+	background-size: 200px;
+	background-position: center;
 	animation-name: loadingScreen;
 	animation-duration: 1.5s;
 	animation-iteration-count:2;	
@@ -178,10 +180,7 @@ body
 	margin:;
 	cursor: pointer;
 	/filter:grayscale(100%) invert(1);
-	transition:0.2s;
-}
-.operatorBadge:hover
-{
+	transition:0s;
 }
 
 #buttonRSTB
