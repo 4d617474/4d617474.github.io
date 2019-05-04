@@ -1,4 +1,4 @@
-@media (max-width: 500px)
+@media (max-width: 590px),(max-height: 605px) 
 {
 	#operatorSelectBoard
 	{
@@ -7,10 +7,10 @@
   	height:100% !important;
   	width:calc(100% - 50px) !important;
 	}
-	#operatorsAttack,#operatorsDefense
+	/*#operatorsAttack,#operatorsDefense
 	{
 		overflow: scroll !important;
-	}
+	}*/
 	.operatorBadge
 	{
 		height: 70px !important;
