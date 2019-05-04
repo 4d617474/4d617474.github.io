@@ -42,6 +42,7 @@
 		left:unset !important;
 		right:0% !important;
 	}
+	/*
   #menuOperators,#menuMap
 	{
 		background-color:var(--color3) !important;;
@@ -49,5 +50,5 @@
   #menuOperators:hover,#menuMap:hover
 	{
 		background-color:var(--color3hover) !important;
-	}
+	}*/
 }
