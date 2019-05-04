@@ -2,8 +2,9 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<link rel="stylesheet" href="preload.css">
 		<link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" href="mobileStyle.css">
+		<link rel="stylesheet" href="preload.css">
 		<link href="https://fonts.googleapis.com/css?family=Raleway:100,400" rel="stylesheet">
 		<link rel="shortcut icon" href="siegeToolIcon.png">
 		<title>Siege Tool</title>
@@ -11,203 +12,204 @@
 	</head>
 	<body>
 		<div id="preloadImages"></div>
+		<div id="loadingScreen"></div>
 		<div id="background"></div>
-		<div id="menu">
-			<div id="menuOperators"></div><!--onclick="menu(0)"-->
-			<div id="menuMap"></div>
-		</div>
-		<div id="operatorSelectBoard">
-			<div id="buttonATK" onclick="switchSide(0)"><br>Attack</div>
-			<div id="buttonDEF" onclick="switchSide(1)"><br>Defense</div>
-			<div id="buttonRST" onclick="resetA()"><br>Reset</div><!--reset-->
-			<div id="operatorsAttack">
-				<img class="operatorBadge">
-				<img class="operatorBadge">
-				<img class="operatorBadge">
-				<img class="operatorBadge">
-				<img class="operatorBadge">
-				<img class="operatorBadge">
-				<img class="operatorBadge">
-				<img class="operatorBadge">
-				<img class="operatorBadge">
-				<img class="operatorBadge">
-				<img class="operatorBadge">
-				<img class="operatorBadge">
-				<img class="operatorBadge">
-				<img class="operatorBadge">
-				<img class="operatorBadge">
-				<img class="operatorBadge">
-				<img class="operatorBadge">
-				<img class="operatorBadge">
-				<img class="operatorBadge">
-				<img class="operatorBadge">
-				<img class="operatorBadge">
-				<img class="operatorBadge">
-				<img class="operatorBadge">
+		<div id="siegeTool">
+			<div id="menu">
+				<div id="menuOperators"></div><!--onclick="menu(0)"-->
+				<div id="menuMap"></div>
 			</div>
-			<div id="operatorsDefense">
-				<img class="operatorBadge">
-				<img class="operatorBadge">
-				<img class="operatorBadge">
-				<img class="operatorBadge">
-				<img class="operatorBadge">
-				<img class="operatorBadge">
-				<img class="operatorBadge">
-				<img class="operatorBadge">
-				<img class="operatorBadge">
-				<img class="operatorBadge">
-				<img class="operatorBadge">
-				<img class="operatorBadge">
-				<img class="operatorBadge">
-				<img class="operatorBadge">
-				<img class="operatorBadge">
-				<img class="operatorBadge">
-				<img class="operatorBadge">
-				<img class="operatorBadge">
-				<img class="operatorBadge">
-				<img class="operatorBadge">
-				<img class="operatorBadge">
-				<img class="operatorBadge">
-				<img class="operatorBadge">
-			</div>
-		</div>
-
-		<div id="mapInfo" style="display:none;">
-			<!-- <div id="mapInfoTitleA"></div>
-			<div id="mapInfoTitleB"></div> -->
-			<table>
-				<tr id="mapInfoTitle">
-					<td id="mapInfoTitleA"></td>
-					<td id="mapInfoTitleB"></td>
-				</tr>
-			</table>
-			<div id="buttonRSTB" onclick="resetB()"><br>Reset</div><!--reset-->
-			<div id="buttonBCK"><br><-</div><!--reset-->
-			<div id="mapSelection">
-				<div class="mapThumb"></div>
-				<div class="mapThumb"></div>
-				<div class="mapThumb"></div>
-				<div class="mapThumb"></div>
-				<div class="mapThumb"></div>
-				<div class="mapThumb"></div>
-				<div class="mapThumb"></div>
-				<div class="mapThumb"></div>
-				<div class="mapThumb"></div>
-				<div class="mapThumb"></div>
-				<div class="mapThumb"></div>
-				<div class="mapThumb"></div>
-				<div class="mapThumb"></div>
-				<div class="mapThumb"></div>
-				<div class="mapThumb"></div>
-				<div class="mapThumb"></div>
-				<div class="mapThumb"></div>
-				<div class="mapThumb"></div>
-				<div class="mapThumb"></div>
-				<div class="mapThumb"></div>
+			<div id="operatorSelectBoard">
+				<div id="buttonATK" onclick="switchSide(0)"><br>Attack</div>
+				<div id="buttonDEF" onclick="switchSide(1)"><br>Defense</div>
+				<div id="buttonRST" onclick="resetA()"><br>Reset</div><!--reset-->
+				<div id="operatorsAttack">
+					<img class="operatorBadge">
+					<img class="operatorBadge">
+					<img class="operatorBadge">
+					<img class="operatorBadge">
+					<img class="operatorBadge">
+					<img class="operatorBadge">
+					<img class="operatorBadge">
+					<img class="operatorBadge">
+					<img class="operatorBadge">
+					<img class="operatorBadge">
+					<img class="operatorBadge">
+					<img class="operatorBadge">
+					<img class="operatorBadge">
+					<img class="operatorBadge">
+					<img class="operatorBadge">
+					<img class="operatorBadge">
+					<img class="operatorBadge">
+					<img class="operatorBadge">
+					<img class="operatorBadge">
+					<img class="operatorBadge">
+					<img class="operatorBadge">
+					<img class="operatorBadge">
+					<img class="operatorBadge">
+				</div>
+				<div id="operatorsDefense">
+					<img class="operatorBadge">
+					<img class="operatorBadge">
+					<img class="operatorBadge">
+					<img class="operatorBadge">
+					<img class="operatorBadge">
+					<img class="operatorBadge">
+					<img class="operatorBadge">
+					<img class="operatorBadge">
+					<img class="operatorBadge">
+					<img class="operatorBadge">
+					<img class="operatorBadge">
+					<img class="operatorBadge">
+					<img class="operatorBadge">
+					<img class="operatorBadge">
+					<img class="operatorBadge">
+					<img class="operatorBadge">
+					<img class="operatorBadge">
+					<img class="operatorBadge">
+					<img class="operatorBadge">
+					<img class="operatorBadge">
+					<img class="operatorBadge">
+					<img class="operatorBadge">
+					<img class="operatorBadge">
+				</div>
 			</div>
 
-			<div id="modeSelection">
-				<div id="modeHostage">hostage</div>
-				<div id="modeSecure">secure</div>
-				<div id="modeBomb">bomb</div>
-			</div>
-			<!-- <div id="modeSelection">
+			<div id="mapInfo" style="display:none;">
 				<table>
-					<tr class="msTr">
-						<td class="msTd" id="modeHostage">hostage</td>
-					</tr>
-					<tr class="msTr">
-						<td class="msTd" id="modeBomb">bomb</td>
-					</tr>
-					<tr class="msTr">
-						<td class="msTd" id="modeSecure">secure</td>
+					<tr id="mapInfoTitle">
+						<td id="mapInfoTitleA"></td>
+						<td id="mapInfoTitleB"></td>
 					</tr>
 				</table>
-			</div> -->
-
-			<div id="spawnSelection">
-				<div class="spawnLocations"></div>
-				<div class="spawnLocations"></div>
-				<div class="spawnLocations"></div>
-				<div class="spawnLocations"></div>
-			</div>
-
-			<div id="resultScreen">
-				<div id="rsHostageSecure">
-					<table>
-						<tr class="rsTr">
-							<td class="rsTd">Celling hatches</td>
-							<td class="rsTd" id="rsCellingHatch">x</td>
-						</tr>
-						<tr class="rsTr">
-							<td class="rsTd">Floor hatches</td>
-							<td class="rsTd" id="rsFloorHatch">x</td>
-						</tr>
-						<tr class="rsTr">
-							<td class="rsTd">Reinforcable walls</td>
-							<td class="rsTd" id="rsReinforcableWall">x</td>
-						</tr>
-						<tr class="rsTr">
-							<td class="rsTd">Windows</td>
-							<td class="rsTd" id="rsWindow">x</td>
-						</tr>
-						<tr class="rsTr">
-							<td class="rsTd">Doors</td>
-							<td class="rsTd" id="rsDoor">x</td>
-						</tr>
-					</table>
+				<div id="buttonRSTB" onclick="resetB()"><br>Reset</div><!--reset-->
+				<div id="buttonBCK"><br><-</div><!--reset-->
+				<div id="mapSelection">
+					<div class="mapThumb"></div>
+					<div class="mapThumb"></div>
+					<div class="mapThumb"></div>
+					<div class="mapThumb"></div>
+					<div class="mapThumb"></div>
+					<div class="mapThumb"></div>
+					<div class="mapThumb"></div>
+					<div class="mapThumb"></div>
+					<div class="mapThumb"></div>
+					<div class="mapThumb"></div>
+					<div class="mapThumb"></div>
+					<div class="mapThumb"></div>
+					<div class="mapThumb"></div>
+					<div class="mapThumb"></div>
+					<div class="mapThumb"></div>
+					<div class="mapThumb"></div>
+					<div class="mapThumb"></div>
+					<div class="mapThumb"></div>
+					<div class="mapThumb"></div>
+					<div class="mapThumb"></div>
 				</div>
-				<div id="rsBomb">
+
+				<div id="modeSelection">
+					<div id="modeHostage">hostage</div>
+					<div id="modeSecure">secure</div>
+					<div id="modeBomb">bomb</div>
+				</div>
+				<!-- <div id="modeSelection">
 					<table>
-						<tr class="rsBTr">
-							<th class="rsBTh">Bomb Sites</th>
+						<tr class="msTr">
+							<td class="msTd" id="modeHostage">hostage</td>
 						</tr>
-						<tr class="rsBTr">
-							<td class="rsBTd">Celling hatches</td>
-							<td class="rsBTd" id="rsCellingHatchA">x</td>
+						<tr class="msTr">
+							<td class="msTd" id="modeBomb">bomb</td>
 						</tr>
-						<tr class="rsBTr">
-							<td class="rsBTd">Floor hatches</td>
-							<td class="rsBTd" id="rsFloorHatchA">x</td>
-						</tr>
-						<tr class="rsBTr">
-							<td class="rsBTd">Reinforcable walls</td>
-							<td class="rsBTd" id="rsReinforcableWallA">x</td>
-						</tr>
-						<tr class="rsBTr">
-							<td class="rsBTd">Windows</td>
-							<td class="rsBTd" id="rsWindowA">x</td>
-						</tr>
-						<tr class="rsBTr">
-							<td class="rsBTd">Doors</td>
-							<td class="rsBTd" id="rsDoorA">x</td>
+						<tr class="msTr">
+							<td class="msTd" id="modeSecure">secure</td>
 						</tr>
 					</table>
-					<table>
-						<tr class="rsBTr">
-							<th class="rsBTh">Connectors</th>
-						</tr>
-						<tr class="rsBTr">
-							<td class="rsBTd">Celling hatches</td>
-							<td class="rsBTd" id="rsCellingHatchB">x</td>
-						</tr>
-						<tr class="rsBTr">
-							<td class="rsBTd">Floor hatches</td>
-							<td class="rsBTd" id="rsFloorHatchB">x</td>
-						</tr>
-						<tr class="rsBTr">
-							<td class="rsBTd">Reinforcable walls</td>
-							<td class="rsBTd" id="rsReinforcableWallB">x</td>
-						</tr>
-						<tr class="rsBTr">
-							<td class="rsBTd">Windows</td>
-							<td class="rsBTd" id="rsWindowB">x</td>
-						</tr>
-						<tr class="rsBTr">
-							<td class="rsBTd">Doors</td>
-							<td class="rsBTd" id="rsDoorB">x</td>
-						</tr>
-					</table>
+				</div> -->
+
+				<div id="spawnSelection">
+					<div class="spawnLocations"></div>
+					<div class="spawnLocations"></div>
+					<div class="spawnLocations"></div>
+					<div class="spawnLocations"></div>
+				</div>
+
+				<div id="resultScreen">
+					<div id="rsHostageSecure">
+						<table>
+							<tr class="rsTr">
+								<td class="rsTd">Celling hatches</td>
+								<td class="rsTd" id="rsCellingHatch">x</td>
+							</tr>
+							<tr class="rsTr">
+								<td class="rsTd">Floor hatches</td>
+								<td class="rsTd" id="rsFloorHatch">x</td>
+							</tr>
+							<tr class="rsTr">
+								<td class="rsTd">Reinforcable walls</td>
+								<td class="rsTd" id="rsReinforcableWall">x</td>
+							</tr>
+							<tr class="rsTr">
+								<td class="rsTd">Windows</td>
+								<td class="rsTd" id="rsWindow">x</td>
+							</tr>
+							<tr class="rsTr">
+								<td class="rsTd">Doors</td>
+								<td class="rsTd" id="rsDoor">x</td>
+							</tr>
+						</table>
+					</div>
+					<div id="rsBomb">
+						<table>
+							<tr class="rsBTr">
+								<th class="rsBTh">Bomb Sites</th>
+							</tr>
+							<tr class="rsBTr">
+								<td class="rsBTd">Celling hatches</td>
+								<td class="rsBTd" id="rsCellingHatchA">x</td>
+							</tr>
+							<tr class="rsBTr">
+								<td class="rsBTd">Floor hatches</td>
+								<td class="rsBTd" id="rsFloorHatchA">x</td>
+							</tr>
+							<tr class="rsBTr">
+								<td class="rsBTd">Reinforcable walls</td>
+								<td class="rsBTd" id="rsReinforcableWallA">x</td>
+							</tr>
+							<tr class="rsBTr">
+								<td class="rsBTd">Windows</td>
+								<td class="rsBTd" id="rsWindowA">x</td>
+							</tr>
+							<tr class="rsBTr">
+								<td class="rsBTd">Doors</td>
+								<td class="rsBTd" id="rsDoorA">x</td>
+							</tr>
+						</table>
+						<table>
+							<tr class="rsBTr">
+								<th class="rsBTh">Connectors</th>
+							</tr>
+							<tr class="rsBTr">
+								<td class="rsBTd">Celling hatches</td>
+								<td class="rsBTd" id="rsCellingHatchB">x</td>
+							</tr>
+							<tr class="rsBTr">
+								<td class="rsBTd">Floor hatches</td>
+								<td class="rsBTd" id="rsFloorHatchB">x</td>
+							</tr>
+							<tr class="rsBTr">
+								<td class="rsBTd">Reinforcable walls</td>
+								<td class="rsBTd" id="rsReinforcableWallB">x</td>
+							</tr>
+							<tr class="rsBTr">
+								<td class="rsBTd">Windows</td>
+								<td class="rsBTd" id="rsWindowB">x</td>
+							</tr>
+							<tr class="rsBTr">
+								<td class="rsBTd">Doors</td>
+								<td class="rsBTd" id="rsDoorB">x</td>
+							</tr>
+						</table>
+					</div>
 				</div>
 			</div>
 		</div>
