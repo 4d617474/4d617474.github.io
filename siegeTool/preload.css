@@ -1,4 +1,78 @@
 
+body::after {
+  content :
+   url("/badges/alibi.svg")
+   url("/badges/ash.svg")
+   url("/badges/bandit.svg")
+   url("/badges/blackbeard.svg")
+   url("/badges/blitz.svg")
+   url("/badges/buck.svg")
+   url("/badges/capitao.svg")
+   url("/badges/castle.svg")
+   url("/badges/caveira.svg")
+   url("/badges/clash.svg")
+   url("/badges/doc.svg")
+   url("/badges/dokkaebi.svg")
+   url("/badges/echo.svg")
+   url("/badges/ela.svg")
+   url("/badges/finka.svg")
+   url("/badges/frost.svg")
+   url("/badges/fuze.svg")
+   url("/badges/glaz.svg")
+   url("/badges/gridlock.svg")
+   url("/badges/hibana.svg")
+   url("/badges/iq.svg")
+   url("/badges/jackal.svg")
+   url("/badges/jager.svg")
+   url("/badges/kaid.svg")
+   url("/badges/kapkan.svg")
+   url("/badges/lesion.svg")
+   url("/badges/lion.svg")
+   url("/badges/maestro.svg")
+   url("/badges/maverick.svg")
+   url("/badges/mira.svg")
+   url("/badges/montagne.svg")
+   url("/badges/mozzie.svg")
+   url("/badges/mute.svg")
+   url("/badges/nomad.svg")
+   url("/badges/pulse.svg")
+   url("/badges/rook.svg")
+   url("/badges/sledge.svg")
+   url("/badges/smoke.svg")
+   url("/badges/tachanka.svg")
+   url("/badges/thatcher.svg")
+   url("/badges/thermite.svg")
+   url("/badges/twitch.svg")
+   url("/badges/valkyrie.svg")
+   url("/badges/vigil.svg")
+   url("/badges/ying.svg")
+   url("/badges/zofia.svg")
+   url("thumbnails/maps/bank.jpg")
+   url("thumbnails/maps/border.jpg")
+   url("thumbnails/maps/chalet.jpg")
+   url("thumbnails/maps/club house.jpg")
+   url("thumbnails/maps/coastline.jpg")
+   url("thumbnails/maps/consulate.jpg")
+   url("thumbnails/maps/favela.jpg")
+   url("thumbnails/maps/fortress.jpg")
+   url("thumbnails/maps/hereford base.jpg")
+   url("thumbnails/maps/house.jpg")
+   url("thumbnails/maps/kafe dostoyevsky.jpg")
+   url("thumbnails/maps/kanal.jpg")
+   url("thumbnails/maps/oregon.jpg")
+   url("thumbnails/maps/outback.jpg")
+   url("thumbnails/maps/presidential plane.jpg")
+   url("thumbnails/maps/skyscrapper.jpg")
+   url("thumbnails/maps/theme park.jpg")
+   url("thumbnails/maps/tower.jpg")
+   url("thumbnails/maps/villa.jpg")
+   url("thumbnails/maps/yacht.jpg")
+   url("thumbnails/mode/hostage.jpg")
+   url("thumbnails/mode/secure.jpg")
+   url("thumbnails/mode/bomb.jpg");
+  display:none;
+}
+/*
 #preloadImages {
   position: absolute;
   height:0px;
@@ -75,4 +149,4 @@
   background-image: url("thumbnails/mode/secure.jpg");
   background-image: url("thumbnails/mode/bomb.jpg");
   background-image: url();
-}
+} */
