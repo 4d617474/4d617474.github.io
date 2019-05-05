@@ -27,30 +27,30 @@ mapBank = ["bank",
 "B CCTV Room & B Lockers",1,0,"14(6)",0,0,
 1,0,"9(2)",0,"4(2)"
 ];
-// mapBorder = ["border",
-// "2F Security Room",0,0,0,0,0,
-// "2F Offices",0,0,0,0,0,
-// "1F Workshop",0,0,0,0,0,
-// "1F Customs Desk",0,0,0,0,0,
-//
-// "2F Offices",0,0,0,0,0,
-// "2F Armory Lockers",0,0,0,0,0,
-// "1F Tellers",0,0,0,0,0,
-// "1F Workshop",0,0,0,0,0,
-//
-// "1F Supply Room & 1F Customs Inspection",
-// 0,0,0,0,0,
-// 0,0,0,0,0,
-// "1F Workshop & 1F Ventilation Room",
-// 0,0,0,0,0,
-// 0,0,0,0,0,
-// "1F Bathroom & 1F Tellers",
-// 0,0,0,0,0,
-// 0,0,0,0,0,
-// "2F Armory Lockers & 2F Archives",
-// 0,0,0,0,0,
-// 0,0,0,0,0
-// ];
+mapBorder = ["border",
+"2F Offices",0,1,"12(9)",1,2,
+"2F Security Room",0,2,12,1,3,
+"1F Workshop",2,0,12,0,2,
+"1F Customs inspections",2,0,7,"1(0)","4(3)",
+
+"1F Tellers",1,0,7,3,1,
+"1F Workshop",2,0,12,0,2,
+"2F Offices",0,1,"12(9)",1,2,
+"2F Armory Lockers",0,1,"6(4)","2(1)","4(3)",
+
+"1F Customs Inspection & 1F Supply Room",
+2,0,"11(6)","2(1)","4(2)",
+0,0,"2(0)","3(1)","1",
+"1F Ventilation Room & 1F Workshop",
+2,0,"12(8)",1,"3(1)",
+0,0,0,0,"4(2)",
+"1F Bathroom & 1F Tellers",
+1,0,"10(7)",3,"2(0)",
+"-","-","-","-","2(0)",
+"2F Armory Lockers & 2F Archives",
+0,2,"10(6)","3(2)","6(4)",
+"-","-","-","-","-"
+];
 
 //map = ["chalet",
 //"2F Master Bedroom",,,,,,
@@ -477,7 +477,7 @@ mapBank = ["bank",
 //,,,,
 //];
 
-mapBorder = ["border"];
+//mapBorder = ["border"];
 mapChalet = ["chalet"];
 mapClubHouse = ["club house"];
 mapCoastline = ["coastline"];
