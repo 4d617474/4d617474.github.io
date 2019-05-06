@@ -106,9 +106,9 @@ function modeSelection()
 function spawnSelection()
 {
   spawnNo = event.target.title;
-  var dutty = event.target.closest('.spawnName');
-  console.log(event.target.closest('.spawnName'));
-  //spawnSelected = event.target.closest('.spawnName').innerHTML;
+  //var dutty = event.target.closest('.spawnName');
+  //console.log(event.target.closest('.spawnName'));
+  spawnSelected = event.target.innerHTML;
   if (modeSelected == "hostage")
   {
     miHostageSecure.style.display = "block";

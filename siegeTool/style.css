@@ -4,6 +4,8 @@
 	--color2hover:#353540;
   --color3:#252533;
 	--color3hover:#393950;
+  --color4:rgba(255,255,255,0.05);
+  --color5:rgba(255,255,255,0.03);
 	/*#101015*/;
 }
 body
@@ -71,8 +73,8 @@ body
 	height:calc(500px + 2px);
 	width:50px;
 	display: block;
-	background-color:var(--color2);
-	box-shadow:0px 10px 20px 0px rgba(0, 0, 0, 0.2);
+	background:var(--color4);
+	box-shadow:0px 10px 20px 0px rgba(0, 0, 0, 0.2), 0px 0px 0px 1px var(--color4) inset;
 }
 #menuOperators, #menuMap
 {
@@ -81,6 +83,7 @@ body
 	width: ;
 	transition: 0.2s;
 	cursor:pointer;
+	background-color:var(--color4);
 	background-position: center;
 	background-repeat: no-repeat;
 }
@@ -116,13 +119,14 @@ body
 	position: absolute;
 	bottom:0px;
 	height: 50px;
-	background:var(--color2);
 	color:white;
 	text-align: center;
 	text-indent: 0px;
 	cursor:pointer;
 	font-size:15px;
 	transition:0.2s;
+	background:var(--color4);
+	box-shadow: 0px 0px 0px 1px var(--color4) inset;
 	/*border-radius:0px 0px 4px 4px;*/
 }
 #buttonRST
@@ -221,6 +225,8 @@ tr#mapInfoTitle
 	font-size:15px;
 	text-align: center;
 	text-transform: capitalize;
+	background:var(--color4);
+	box-shadow: 0px 0px 0px 1px var(--color4) inset;
 }
 #mapInfoTitleB
 {
@@ -231,7 +237,7 @@ tr#mapInfoTitle
 	position: relative;
 	height: calc(100% - 100px)/*calc(450px + 2px)*/;
 	width: 100%;
-	background:var(--color1);
+	background:var(--color5);
 	color:rgb(220,220,220);
 	text-align: center;
 	text-indent: 0px;
