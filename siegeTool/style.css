@@ -6,6 +6,7 @@
 	--color3hover:#393950;
   --color4:rgba(255,255,255,0.05);
   --color5:rgba(255,255,255,0.03);
+  --color5hover:rgba(255,255,255,0.1);
 	/*#101015*/;
 }
 body
@@ -135,7 +136,7 @@ body
 }
 #buttonRST:hover,#buttonRSTB:hover,#buttonBCK:hover
 {
-	background:var(--color2hover);
+	background:var(--color5hover);
 }
 #buttonATK,#buttonDEF
 {
