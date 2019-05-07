@@ -78,14 +78,14 @@ mapBorder = ["border",
 //];
 
 //map = ["club house",
-//"2F Bedroom",,,,,,
-//"2F Cash Room",,,,,,
-//"1F Strip Club",,,,,,
-//"B Church",,,,,,
+//"2F Bedroom",0,0,"6(8)",1,"3(2)",
+//"2F Cash Room",0,0,7,0,2,
+//"1F Strip Club",0,0,6,0,3,
+//"B Church",0,0,6,0,2,
 
+//"1F Garage",0,0,8,1,2,
+//"1F Bar","0[2]",1,,,, //decide if []recommanded should be a thing
 //"2F Bedroom",,,,,,
-//"1F Garage",,,,,,
-//"1F Bar",,,,,,
 //"B Arsenal Room",,,,,,
 
 //"2F Bedroom & 2F Gym",
