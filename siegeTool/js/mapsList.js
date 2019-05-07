@@ -2,10 +2,29 @@ var mapBank,mapBorder,mapChalet,mapClubHouse,mapCoastline,mapConsulate,
 mapFavela,mapFortress,mapHerefordBase,mapHouse,mapKafeDostoyevsky,mapKanal
 ,mapOregon,mapOutback,mapPresidentialPlane,mapSkyscraper,mapThemePark,mapTower
 ,mapVilla,mapYacht;
-
+//R U L E S
 //Hostage
+//only mention whats is in the same room as the hostage
 //Secure
+// only mention
 //Bomb
+
+// bombsite A walls/doors/windows = a
+// bombsite B walls/doors/windows = b
+// connectors walls/doors/windows = c
+//  bomb
+// number outside brackets = a + b
+// number inside brackets = a - b
+//  connectors
+// number outside brackets = c
+// number inside brackets = c - (a - b)
+
+// // if connectors is separating the two bombs
+//if connectors does not exists, put "-"
+//walls : put the total number of walls
+
+
+//defusehelp clubhouse 1F Bar & 1F Stock Room
 
 mapBank = ["bank",
 "2F CEO Office",0,0,11,2,2,
@@ -84,22 +103,22 @@ mapBorder = ["border",
 //"B Church",0,0,6,0,2,
 
 //"1F Garage",0,0,8,1,2,
-//"1F Bar","0[2]",1,,,, //decide if []recommanded should be a thing
-//"2F Bedroom",,,,,,
-//"B Arsenal Room",,,,,,
+//"1F Bar","0(2)",1,"4(10)","0(1)",3,
+//"2F Bedroom",0,0,"6(8)",1,"3(2)",
+//"B Arsenal Room",1,0,7,0,3,
 
-//"2F Bedroom & 2F Gym",
-//,,,,,
-//,,,,,
-//"2F Cash Room & 2F CCTV Room",
-//,,,,,
-//,,,,,
+//"2F Gym & 2F Bedroom",
+//0,1,"8(2)",2,"3(0)",
+//0,0,"4(2)",0,"3(1)",
+//"2F CCTV Room & 2F Cash Room",
+//0,0,"11(9)",1,"3(2)",
+//0,0,"3(0)",0,0,
 //"1F Bar & 1F Stock Room",
-//,,,,,
+//1,,,,,
 //,,,,,
 //"B Church & B Arsenal Room",
-//,,,,,
-//,,,,
+//0,1,13,0,"5(3)",
+//0,0,"8(0)",0,"4(2)"
 //];
 
 //map = ["coastline",
