@@ -138,10 +138,22 @@
 				</div> -->
 
 				<div id="spawnSelection">
-					<div class="spawnLocations"></div>
-					<div class="spawnLocations"></div>
-					<div class="spawnLocations"></div>
-					<div class="spawnLocations"></div>
+					<div class="spawnLocations" onclick="spawnSelection(1)">
+							<img class="spawnLocationsImages">
+							<div class="spawnLocationsNames"></div>
+					</div>
+					<div class="spawnLocations">
+							<img class="spawnLocationsImages" onclick="spawnSelection(2)">
+							<div class="spawnLocationsNames"></div>
+					</div>
+					<div class="spawnLocations">
+							<img class="spawnLocationsImages" onclick="spawnSelection(3)">
+							<div class="spawnLocationsNames"></div>
+					</div>
+					<div class="spawnLocations">
+							<img class="spawnLocationsImages" onclick="spawnSelection(4)">
+							<div class="spawnLocationsNames"></div>
+					</div>
 				</div>
 
 				<div id="resultScreen">
@@ -237,12 +249,15 @@
 		resetA();
 		resetB();
 		setMaps();
+		// for (i = 0;i < miSpawnLocations.length; i++){
+		// 	miSpawnLocations[i].addEventListener('click', spawnSelection(i))
+		// }
 		this.onclick = function(event) {
 		    if (event.target.className == 'operatorBadge'){clickOperator()};
 				if (event.target.id == 'menuOperators' || event.target.id == 'menuMap'){menuSelect()};
 				if (event.target.className == 'mapThumb'){mapSelection()};
 				if (event.target.id == 'modeHostage' || event.target.id == 'modeSecure' || event.target.id == 'modeBomb'){modeSelection()};
-				if (event.target.className == 'spawnLocations'){spawnSelection()};
+				// if (event.target.className == 'spawnLocations'){spawnSelection()};
 				if (event.target.id == 'buttonBCK'){goBack()};
 		}
 		document.getElementById("menuOperators").click();

@@ -24,6 +24,9 @@ var rsFloorHatchB = document.getElementById("rsFloorHatchB");
 var rsReinforcableWallB = document.getElementById("rsReinforcableWallB");
 var rsWindowB = document.getElementById("rsWindowB");
 var rsDoorB = document.getElementById("rsDoorB");
+var spawnLocationsImagesF = document.getElementsByClassName("spawnLocationsImages");
+var spawnLocationsNamesF = document.getElementsByClassName("spawnLocationsNames");
+
 
 function resetB(){
   miMapSelection.style.display = "none";
@@ -71,13 +74,15 @@ function setSpawnLocations()
   {
     duccy = maps[mapNo];
     //console.log(duggy);
-    dubby = miSpawnLocations[i];
-    dubby.style.backgroundImage = 'url("thumbnails/locations/' + mapSelected + "/" + modeSelected + i  + '.jpg")';
+    //dubby = miSpawnLocations[i];
+    spawnLocationsImagesF[i].src = 'thumbnails/locations/' + mapSelected + "/" + modeSelected + i  + '.jpg';
+    spawnLocationsNamesF[i].innerHTML = duccy[dully];
+    //'url("thumbnails/locations/' + mapSelected + "/" + modeSelected + i  + '.jpg")';
     //dubby.innerHTML =
-    dubby.innerHTML = "<div class='spawnName'>" + duccy[dully] + "</div>"
+    //miSpawnLocations[i].innerHTML = "<div class='spawnName'>" + duccy[dully] + "</div>"
     //"<br>" + "<br>" +
     //duccy[dully];
-    dubby.title = i;
+    //dubby.title = i;
     dully += numberOfSteps;
   }
 }
@@ -103,12 +108,14 @@ function modeSelection()
   miTitleA.innerHTML = mapSelected + " " + modeSelected;
   miTitleB.innerHTML = "";
 }
-function spawnSelection()
+function spawnSelection(spawnNumber,spawnLocationSelected)
 {
-  spawnNo = event.target.title;
+  //console.log("hey");
+  spawnNo = spawnNumber;
   //var dutty = event.target.closest('.spawnName');
   //console.log(event.target.closest('.spawnName'));
-  spawnSelected = event.target.innerHTML;
+  //spawnSelected = event.target.innerHTML;
+  spawnSelected = spawnLocationSelected;
   if (modeSelected == "hostage")
   {
     miHostageSecure.style.display = "block";
@@ -126,12 +133,13 @@ function spawnSelection()
   miTitleA.innerHTML = mapSelected + " " + modeSelected;
   miTitleB.innerHTML = spawnSelected;
 }
+
 function resultScreen(id)
 {
   showBackButton(1);
   var dunny;
   var durry = maps[mapNo];
-  console.log(durry);
+  //console.log(durry);
   if (modeSelected == "hostage" || modeSelected == "secure"){
     if (spawnNo == "0"){
       dunny = id + 0;
