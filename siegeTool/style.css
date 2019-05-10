@@ -186,7 +186,7 @@ body
 	margin:;
 	cursor: pointer;
 	/filter:grayscale(100%) invert(1);
-	transition:0s;
+	transition:0.1s;
 }
 
 #buttonRSTB
@@ -326,15 +326,21 @@ tr#mapInfoTitle
 	background-repeat: no-repeat;
 	box-shadow: 0px 0px 80px 35px rgba(255,255,255,.05) inset, 0px -400px 0px 0px rgba(0,0,0,.5) inset;
 	cursor: pointer;
-}
-.spawnLocationsImages:hover
-{
-	box-shadow:0px -50px 20px rgba(255,255,255,0) inset, 0px -105px 20px rgba(0,0,0,0) inset;
+	overflow: hidden;
 }
 .spawnLocationsImages
 {
+	position: absolute;
+	top:0%;
+	left:0%;
 	z-index: 1;
 	width: 100%;
+	transition:0.2s;
+}
+.spawnLocationsImages:hover
+{
+	transform: scale3d(1.2,1.2,1);
+	box-shadow:0px -50px 20px rgba(255,255,255,0) inset, 0px -105px 20px rgba(0,0,0,0) inset;
 }
 .spawnLocationsNames
 {
@@ -344,7 +350,7 @@ tr#mapInfoTitle
 	width:100%;
 	z-index: 102;
 	font-weight: bold;
-	color:#c0c0c0;
+	text-align:center;
 	/*text-shadow:1px 1px 2px black,-1px -1px 2px black;*/
 	text-shadow:
 		2px 2px 2px var(--textShadowColor),-2px -2px 2px var(--textShadowColor),
