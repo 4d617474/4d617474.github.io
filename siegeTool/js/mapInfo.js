@@ -131,7 +131,7 @@ function spawnSelection(spawnNumber,spawnLocationSelected)
   document.getElementById("spawnSelection").style.display = "none";
   document.getElementById("resultScreen").style.display = "block";
   miTitleA.innerHTML = mapSelected + " " + modeSelected;
-  miTitleB.innerHTML = spawnSelected;
+  miTitleB.innerHTML = spawnLocationsNamesF[spawnNumber].innerHTML;
 }
 
 function resultScreen(id)
