@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-	<head><!-- hi -->
+	<head>
 		<!-- Global site tag (gtag.js) - Google Analytics -->
 		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-139706710-1"></script>
 		<script>
@@ -26,10 +26,6 @@
 		<div id="loadingScreen"></div>
 		<div id="background"></div>
 		<div id="siegeTool">
-			<div id="menu">
-				<div id="menuOperators"></div>
-				<div id="menuMap"></div>
-			</div>
 			<div id="operatorSelectBoard">
 				<div id="buttonATK" onclick="switchSide(0)"><br>Attack</div>
 				<div id="buttonDEF" onclick="switchSide(1)"><br>Defense</div>
@@ -85,170 +81,14 @@
 					<img class="operatorBadge">
 				</div>
 			</div>
-
-			<div id="mapInfo" style="display:none;">
-				<table>
-					<tr id="mapInfoTitle">
-						<td id="mapInfoTitleA"></td>
-						<td id="mapInfoTitleB"></td>
-					</tr>
-				</table>
-				<div id="buttonRSTB" onclick="resetB()"><br>Reset</div><!--reset-->
-				<div id="buttonBCK"><br><-</div><!--reset-->
-				<div id="mapSelection">
-					<div class="mapThumb"></div>
-					<div class="mapThumb"></div>
-					<div class="mapThumb"></div>
-					<div class="mapThumb"></div>
-					<div class="mapThumb"></div>
-					<div class="mapThumb"></div>
-					<div class="mapThumb"></div>
-					<div class="mapThumb"></div>
-					<div class="mapThumb"></div>
-					<div class="mapThumb"></div>
-					<div class="mapThumb"></div>
-					<div class="mapThumb"></div>
-					<div class="mapThumb"></div>
-					<div class="mapThumb"></div>
-					<div class="mapThumb"></div>
-					<div class="mapThumb"></div>
-					<div class="mapThumb"></div>
-					<div class="mapThumb"></div>
-					<div class="mapThumb"></div>
-					<div class="mapThumb"></div>
-				</div>
-
-				<div id="modeSelection">
-					<div id="modeHostage">hostage</div>
-					<div id="modeSecure">secure</div>
-					<div id="modeBomb">bomb</div>
-				</div>
-				<!-- <div id="modeSelection">
-					<table>
-						<tr class="msTr">
-							<td class="msTd" id="modeHostage">hostage</td>
-						</tr>
-						<tr class="msTr">
-							<td class="msTd" id="modeBomb">bomb</td>
-						</tr>
-						<tr class="msTr">
-							<td class="msTd" id="modeSecure">secure</td>
-						</tr>
-					</table>
-				</div> -->
-
-				<div id="spawnSelection">
-					<div class="spawnLocations" onclick="spawnSelection(0)">
-							<img class="spawnLocationsImages">
-							<div class="spawnLocationsNames"></div>
-					</div>
-					<div class="spawnLocations">
-							<img class="spawnLocationsImages" onclick="spawnSelection(1)">
-							<div class="spawnLocationsNames"></div>
-					</div>
-					<div class="spawnLocations">
-							<img class="spawnLocationsImages" onclick="spawnSelection(2)">
-							<div class="spawnLocationsNames"></div>
-					</div>
-					<div class="spawnLocations">
-							<img class="spawnLocationsImages" onclick="spawnSelection(3)">
-							<div class="spawnLocationsNames"></div>
-					</div>
-				</div>
-
-				<div id="resultScreen">
-					<div id="rsHostageSecure">
-						<table>
-							<tr class="rsTr">
-								<td class="rsTd">Celling hatches</td>
-								<td class="rsTd" id="rsCellingHatch">x</td>
-							</tr>
-							<tr class="rsTr">
-								<td class="rsTd">Floor hatches</td>
-								<td class="rsTd" id="rsFloorHatch">x</td>
-							</tr>
-							<tr class="rsTr">
-								<td class="rsTd">Reinforcable walls</td>
-								<td class="rsTd" id="rsReinforcableWall">x</td>
-							</tr>
-							<tr class="rsTr">
-								<td class="rsTd">Windows</td>
-								<td class="rsTd" id="rsWindow">x</td>
-							</tr>
-							<tr class="rsTr">
-								<td class="rsTd">Doors</td>
-								<td class="rsTd" id="rsDoor">x</td>
-							</tr>
-						</table>
-					</div>
-					<div id="rsBomb">
-						<table>
-							<tr class="rsBTr">
-								<th class="rsBTh">Bomb Sites</th>
-							</tr>
-							<tr class="rsBTr">
-								<td class="rsBTd">Celling hatches</td>
-								<td class="rsBTd" id="rsCellingHatchA">x</td>
-							</tr>
-							<tr class="rsBTr">
-								<td class="rsBTd">Floor hatches</td>
-								<td class="rsBTd" id="rsFloorHatchA">x</td>
-							</tr>
-							<tr class="rsBTr">
-								<td class="rsBTd">Reinforcable walls</td>
-								<td class="rsBTd" id="rsReinforcableWallA">x</td>
-							</tr>
-							<tr class="rsBTr">
-								<td class="rsBTd">Windows</td>
-								<td class="rsBTd" id="rsWindowA">x</td>
-							</tr>
-							<tr class="rsBTr">
-								<td class="rsBTd">Doors</td>
-								<td class="rsBTd" id="rsDoorA">x</td>
-							</tr>
-						</table>
-						<table>
-							<tr class="rsBTr">
-								<th class="rsBTh">Connectors</th>
-							</tr>
-							<tr class="rsBTr">
-								<td class="rsBTd">Celling hatches</td>
-								<td class="rsBTd" id="rsCellingHatchB">x</td>
-							</tr>
-							<tr class="rsBTr">
-								<td class="rsBTd">Floor hatches</td>
-								<td class="rsBTd" id="rsFloorHatchB">x</td>
-							</tr>
-							<tr class="rsBTr">
-								<td class="rsBTd">Reinforcable walls</td>
-								<td class="rsBTd" id="rsReinforcableWallB">x</td>
-							</tr>
-							<tr class="rsBTr">
-								<td class="rsBTd">Windows</td>
-								<td class="rsBTd" id="rsWindowB">x</td>
-							</tr>
-							<tr class="rsBTr">
-								<td class="rsBTd">Doors</td>
-								<td class="rsBTd" id="rsDoorB">x</td>
-							</tr>
-						</table>
-					</div>
-				</div>
-			</div>
 		</div>
 	</body>
 	<script src="js/operatorsList.js"></script>
-	<script src="js/mapsList.js"></script>
 	<script src="js/selectionScreen.js"></script>
-	<script src="js/menu.js"></script>
-	<script src="js/mapInfo.js"></script>
 	<script>
-		showBackButton();
 		switchSide(0);
 		setOperators();
 		resetA();
-		resetB();
-		setMaps();
 		// for (i = 0;i < miSpawnLocations.length; i++){
 		// 	miSpawnLocations[i].addEventListener('click', spawnSelection(i))
 		// }
@@ -260,7 +100,6 @@
 				// if (event.target.className == 'spawnLocations'){spawnSelection()};
 				if (event.target.id == 'buttonBCK'){goBack()};
 		}
-		document.getElementById("menuOperators").click();
 	</script>
 
 </html>
