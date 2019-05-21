@@ -1,152 +1,50 @@
-
 body::after {
   content :
-   url("/badges/alibi.svg")
-   url("/badges/ash.svg")
-   url("/badges/bandit.svg")
-   url("/badges/blackbeard.svg")
-   url("/badges/blitz.svg")
-   url("/badges/buck.svg")
-   url("/badges/capitao.svg")
-   url("/badges/castle.svg")
-   url("/badges/caveira.svg")
-   url("/badges/clash.svg")
-   url("/badges/doc.svg")
-   url("/badges/dokkaebi.svg")
-   url("/badges/echo.svg")
-   url("/badges/ela.svg")
-   url("/badges/finka.svg")
-   url("/badges/frost.svg")
-   url("/badges/fuze.svg")
-   url("/badges/glaz.svg")
-   url("/badges/gridlock.svg")
-   url("/badges/hibana.svg")
-   url("/badges/iq.svg")
-   url("/badges/jackal.svg")
-   url("/badges/jager.svg")
-   url("/badges/kaid.svg")
-   url("/badges/kapkan.svg")
-   url("/badges/lesion.svg")
-   url("/badges/lion.svg")
-   url("/badges/maestro.svg")
-   url("/badges/maverick.svg")
-   url("/badges/mira.svg")
-   url("/badges/montagne.svg")
-   url("/badges/mozzie.svg")
-   url("/badges/mute.svg")
-   url("/badges/nomad.svg")
-   url("/badges/pulse.svg")
-   url("/badges/rook.svg")
-   url("/badges/sledge.svg")
-   url("/badges/smoke.svg")
-   url("/badges/tachanka.svg")
-   url("/badges/thatcher.svg")
-   url("/badges/thermite.svg")
-   url("/badges/twitch.svg")
-   url("/badges/valkyrie.svg")
-   url("/badges/vigil.svg")
-   url("/badges/ying.svg")
-   url("/badges/zofia.svg")
-   url("thumbnails/maps/bank.jpg")
-   url("thumbnails/maps/border.jpg")
-   url("thumbnails/maps/chalet.jpg")
-   url("thumbnails/maps/club house.jpg")
-   url("thumbnails/maps/coastline.jpg")
-   url("thumbnails/maps/consulate.jpg")
-   url("thumbnails/maps/favela.jpg")
-   url("thumbnails/maps/fortress.jpg")
-   url("thumbnails/maps/hereford base.jpg")
-   url("thumbnails/maps/house.jpg")
-   url("thumbnails/maps/kafe dostoyevsky.jpg")
-   url("thumbnails/maps/kanal.jpg")
-   url("thumbnails/maps/oregon.jpg")
-   url("thumbnails/maps/outback.jpg")
-   url("thumbnails/maps/presidential plane.jpg")
-   url("thumbnails/maps/skyscrapper.jpg")
-   url("thumbnails/maps/theme park.jpg")
-   url("thumbnails/maps/tower.jpg")
-   url("thumbnails/maps/villa.jpg")
-   url("thumbnails/maps/yacht.jpg")
-   url("thumbnails/mode/hostage.jpg")
-   url("thumbnails/mode/secure.jpg")
-   url("thumbnails/mode/bomb.jpg");
+   url("/thumbnails/badges/alibi.svg")
+   url("/thumbnails/badges/ash.svg")
+   url("/thumbnails/badges/bandit.svg")
+   url("/thumbnails/thumbnails/badges/blackbeard.svg")
+   url("/thumbnails/badges/blitz.svg")
+   url("/thumbnails/badges/buck.svg")
+   url("/thumbnails/badges/capitao.svg")
+   url("/thumbnails/badges/castle.svg")
+   url("/thumbnails/badges/caveira.svg")
+   url("/thumbnails/badges/clash.svg")
+   url("/thumbnails/badges/doc.svg")
+   url("/thumbnails/badges/dokkaebi.svg")
+   url("/thumbnails/badges/echo.svg")
+   url("/thumbnails/badges/ela.svg")
+   url("/thumbnails/badges/finka.svg")
+   url("/thumbnails/badges/frost.svg")
+   url("/thumbnails/badges/fuze.svg")
+   url("/thumbnails/badges/glaz.svg")
+   url("/thumbnails/badges/gridlock.svg")
+   url("/thumbnails/badges/hibana.svg")
+   url("/thumbnails/badges/iq.svg")
+   url("/thumbnails/badges/jackal.svg")
+   url("/thumbnails/badges/jager.svg")
+   url("/thumbnails/badges/kaid.svg")
+   url("/thumbnails/badges/kapkan.svg")
+   url("/thumbnails/badges/lesion.svg")
+   url("/thumbnails/badges/lion.svg")
+   url("/thumbnails/badges/maestro.svg")
+   url("/thumbnails/badges/maverick.svg")
+   url("/thumbnails/badges/mira.svg")
+   url("/thumbnails/badges/montagne.svg")
+   url("/thumbnails/badges/mozzie.svg")
+   url("/thumbnails/badges/mute.svg")
+   url("/thumbnails/badges/nomad.svg")
+   url("/thumbnails/badges/pulse.svg")
+   url("/thumbnails/badges/rook.svg")
+   url("/thumbnails/badges/sledge.svg")
+   url("/thumbnails/badges/smoke.svg")
+   url("/thumbnails/badges/tachanka.svg")
+   url("/thumbnails/badges/thatcher.svg")
+   url("/thumbnails/badges/thermite.svg")
+   url("/thumbnails/badges/twitch.svg")
+   url("/thumbnails/badges/valkyrie.svg")
+   url("/thumbnails/badges/vigil.svg")
+   url("/thumbnails/badges/ying.svg")
+   url("/thumbnails/badges/zofia.svg");
   display:none;
 }
-/*
-#preloadImages {
-  position: absolute;
-  height:0px;
-  width:0px;
-  display:inline;
-  background-image: url("/badges/alibi.svg");
-  background-image: url("/badges/ash.svg");
-  background-image: url("/badges/bandit.svg");
-  background-image: url("/badges/blackbeard.svg");
-  background-image: url("/badges/blitz.svg");
-  background-image: url("/badges/buck.svg");
-  background-image: url("/badges/capitao.svg");
-  background-image: url("/badges/castle.svg");
-  background-image: url("/badges/caveira.svg");
-  background-image: url("/badges/clash.svg");
-  background-image: url("/badges/doc.svg");
-  background-image: url("/badges/dokkaebi.svg");
-  background-image: url("/badges/echo.svg");
-  background-image: url("/badges/ela.svg");
-  background-image: url("/badges/finka.svg");
-  background-image: url("/badges/frost.svg");
-  background-image: url("/badges/fuze.svg");
-  background-image: url("/badges/glaz.svg");
-  background-image: url("/badges/gridlock.svg");
-  background-image: url("/badges/hibana.svg");
-  background-image: url("/badges/iq.svg");
-  background-image: url("/badges/jackal.svg");
-  background-image: url("/badges/jager.svg");
-  background-image: url("/badges/kaid.svg");
-  background-image: url("/badges/kapkan.svg");
-  background-image: url("/badges/lesion.svg");
-  background-image: url("/badges/lion.svg");
-  background-image: url("/badges/maestro.svg");
-  background-image: url("/badges/maverick.svg");
-  background-image: url("/badges/mira.svg");
-  background-image: url("/badges/montagne.svg");
-  background-image: url("/badges/mozzie.svg");
-  background-image: url("/badges/mute.svg");
-  background-image: url("/badges/nomad.svg");
-  background-image: url("/badges/pulse.svg");
-  background-image: url("/badges/rook.svg");
-  background-image: url("/badges/sledge.svg");
-  background-image: url("/badges/smoke.svg");
-  background-image: url("/badges/tachanka.svg");
-  background-image: url("/badges/thatcher.svg");
-  background-image: url("/badges/thermite.svg");
-  background-image: url("/badges/twitch.svg");
-  background-image: url("/badges/valkyrie.svg");
-  background-image: url("/badges/vigil.svg");
-  background-image: url("/badges/ying.svg");
-  background-image: url("/badges/zofia.svg");
-  background-image: url("thumbnails/maps/bank.jpg");
-  background-image: url("thumbnails/maps/border.jpg");
-  background-image: url("thumbnails/maps/chalet.jpg");
-  background-image: url("thumbnails/maps/club house.jpg");
-  background-image: url("thumbnails/maps/coastline.jpg");
-  background-image: url("thumbnails/maps/consulate.jpg");
-  background-image: url("thumbnails/maps/favela.jpg");
-  background-image: url("thumbnails/maps/fortress.jpg");
-  background-image: url("thumbnails/maps/hereford base.jpg");
-  background-image: url("thumbnails/maps/house.jpg");
-  background-image: url("thumbnails/maps/kafe dostoyevsky.jpg");
-  background-image: url("thumbnails/maps/kanal.jpg");
-  background-image: url("thumbnails/maps/oregon.jpg");
-  background-image: url("thumbnails/maps/outback.jpg");
-  background-image: url("thumbnails/maps/presidential plane.jpg");
-  background-image: url("thumbnails/maps/skyscrapper.jpg");
-  background-image: url("thumbnails/maps/theme park.jpg");
-  background-image: url("thumbnails/maps/tower.jpg");
-  background-image: url("thumbnails/maps/villa.jpg");
-  background-image: url("thumbnails/maps/yacht.jpg");
-
-  background-image: url("thumbnails/mode/hostage.jpg");
-  background-image: url("thumbnails/mode/secure.jpg");
-  background-image: url("thumbnails/mode/bomb.jpg");
-  background-image: url();
-} */
