@@ -31,54 +31,56 @@
 				<div id="buttonDEF" onclick="switchSide(1)"><br>Defense</div>
 				<div id="buttonRST" onclick="resetA()"><br>Reset</div><!--reset-->
 				<div id="operatorsAttack">
-					<object type="image/svg+xml" class="operatorBadge"></object>
-					<object type="image/svg+xml" class="operatorBadge"></object>
-					<object type="image/svg+xml" class="operatorBadge"></object>
-					<object type="image/svg+xml" class="operatorBadge"></object>
-					<object type="image/svg+xml" class="operatorBadge"></object>
-					<object type="image/svg+xml" class="operatorBadge"></object>
-					<object type="image/svg+xml" class="operatorBadge"></object>
-					<object type="image/svg+xml" class="operatorBadge"></object>
-					<object type="image/svg+xml" class="operatorBadge"></object>
-					<object type="image/svg+xml" class="operatorBadge"></object>
-					<object type="image/svg+xml" class="operatorBadge"></object>
-					<object type="image/svg+xml" class="operatorBadge"></object>
-					<object type="image/svg+xml" class="operatorBadge"></object>
-					<object type="image/svg+xml" class="operatorBadge"></object>
-					<object type="image/svg+xml" class="operatorBadge"></object>
-					<object type="image/svg+xml" class="operatorBadge"></object>
-					<object type="image/svg+xml" class="operatorBadge"></object>
-					<object type="image/svg+xml" class="operatorBadge"></object>
-					<object type="image/svg+xml" class="operatorBadge"></object>
-					<object type="image/svg+xml" class="operatorBadge"></object>
-					<object type="image/svg+xml" class="operatorBadge"></object>
-					<object type="image/svg+xml" class="operatorBadge"></object>
-					<object type="image/svg+xml" class="operatorBadge"></object>
+					<img class="operatorBadge">
+					<img class="operatorBadge">
+					<img class="operatorBadge">
+					<img class="operatorBadge">
+					<img class="operatorBadge">
+					<img class="operatorBadge">
+					<img class="operatorBadge">
+					<img class="operatorBadge">
+					<img class="operatorBadge">
+					<img class="operatorBadge">
+					<img class="operatorBadge">
+					<img class="operatorBadge">
+					<img class="operatorBadge">
+					<img class="operatorBadge">
+					<img class="operatorBadge">
+					<img class="operatorBadge">
+					<img class="operatorBadge">
+					<img class="operatorBadge">
+					<img class="operatorBadge">
+					<img class="operatorBadge">
+					<img class="operatorBadge">
+					<img class="operatorBadge">
+					<img class="operatorBadge">
+					<img class="operatorBadge">
 				</div>
 				<div id="operatorsDefense">
-					<object type="image/svg+xml" class="operatorBadge"></object>
-					<object type="image/svg+xml" class="operatorBadge"></object>
-					<object type="image/svg+xml" class="operatorBadge"></object>
-					<object type="image/svg+xml" class="operatorBadge"></object>
-					<object type="image/svg+xml" class="operatorBadge"></object>
-					<object type="image/svg+xml" class="operatorBadge"></object>
-					<object type="image/svg+xml" class="operatorBadge"></object>
-					<object type="image/svg+xml" class="operatorBadge"></object>
-					<object type="image/svg+xml" class="operatorBadge"></object>
-					<object type="image/svg+xml" class="operatorBadge"></object>
-					<object type="image/svg+xml" class="operatorBadge"></object>
-					<object type="image/svg+xml" class="operatorBadge"></object>
-					<object type="image/svg+xml" class="operatorBadge"></object>
-					<object type="image/svg+xml" class="operatorBadge"></object>
-					<object type="image/svg+xml" class="operatorBadge"></object>
-					<object type="image/svg+xml" class="operatorBadge"></object>
-					<object type="image/svg+xml" class="operatorBadge"></object>
-					<object type="image/svg+xml" class="operatorBadge"></object>
-					<object type="image/svg+xml" class="operatorBadge"></object>
-					<object type="image/svg+xml" class="operatorBadge"></object>
-					<object type="image/svg+xml" class="operatorBadge"></object>
-					<object type="image/svg+xml" class="operatorBadge"></object>
-					<object type="image/svg+xml" class="operatorBadge"></object>
+					<img class="operatorBadge">
+					<img class="operatorBadge">
+					<img class="operatorBadge">
+					<img class="operatorBadge">
+					<img class="operatorBadge">
+					<img class="operatorBadge">
+					<img class="operatorBadge">
+					<img class="operatorBadge">
+					<img class="operatorBadge">
+					<img class="operatorBadge">
+					<img class="operatorBadge">
+					<img class="operatorBadge">
+					<img class="operatorBadge">
+					<img class="operatorBadge">
+					<img class="operatorBadge">
+					<img class="operatorBadge">
+					<img class="operatorBadge">
+					<img class="operatorBadge">
+					<img class="operatorBadge">
+					<img class="operatorBadge">
+					<img class="operatorBadge">
+					<img class="operatorBadge">
+					<img class="operatorBadge">
+					<img class="operatorBadge">
 				</div>
 			</div>
 		</div>
@@ -94,10 +96,6 @@
 		// }
 		this.onclick = function(event) {
 		    if (event.target.className == 'operatorBadge'){clickOperator()};
-				if (event.target.id == 'menuOperators' || event.target.id == 'menuMap'){menuSelect()};
-				if (event.target.className == 'mapThumb'){mapSelection()};
-				if (event.target.id == 'modeHostage' || event.target.id == 'modeSecure' || event.target.id == 'modeBomb'){modeSelection()};
-				// if (event.target.className == 'spawnLocations'){spawnSelection()};
 				if (event.target.id == 'buttonBCK'){goBack()};
 		}
 	</script>
