@@ -21,18 +21,20 @@ function toggleSP(p1, p2) {
 		spFrameIn.src = "startpages/ko/Ko.html";
 		spFrameLink.href = "https://github.com/4d617474/ko";
 		currentPage = 4;
+	} else if (p1 == 5) {
+		spFrameIn.src = "https://4d617474.github.io/siegeTool/";
+		spFrameLink.href = "https://github.com/4d617474/siegeTool";
+		currentPage = 5;
 	}
 	if (p2 == 0) {
 		//expanding...
 		//spFrame.style.top = "20px";
-		spFrame.style.zIndex = "60";
-		spFrame.style.opacity = "1";
+		spFrame.style.display = "block";
 		spFrame.style.transform = "scale(1,1)";
 	} else {
 		//retracting...
 		//spFrame.style.top = "-100%";
-		spFrame.style.zIndex = "-1";
-		spFrame.style.opacity = "0";
+		spFrame.style.display = "none";
 		spFrame.style.transform = "scale(.9,.9)";
 	}
 }
@@ -48,6 +50,9 @@ function reloadSP() {
 	}
 	if (currentPage == 4){
 		toggleSP(4,0);
+	}
+	if (currentPage == 5){
+		toggleSP(5,0);
 	}
 }
 function toggleIM(i1) {
