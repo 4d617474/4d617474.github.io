@@ -1,0 +1,38 @@
+@media (max-height:200px){
+	header,#Main{
+		visibility:hidden;
+	}
+	#ts{
+		visibility:visible !important;
+	}
+}
+@media (max-width: 1081px){
+	header{
+		right:calc(50% - 200px) !important;
+		width: 400px !important;
+  	height:120px !important;
+		background:#080808 !important;
+	 box-shadow: 10px 10px 0px rgba(0,0,0,.5) !important;
+	}
+	#Main{
+  	top:180px !important;
+	}
+	#logo4d{
+		left:10px !important;
+		width:140px !important;
+		height:140px !important;;
+	}
+	#categories{
+	  top:0px !important;
+		left:160px !important;
+		width:calc(100% - 165px) !important;
+		text-align: left !important;
+	}
+	.category{
+		font-size:21.8px !important;
+		text-indent:0px !important;
+	}
+	.category:hover{
+		text-indent:20px !important;
+	}
+}
