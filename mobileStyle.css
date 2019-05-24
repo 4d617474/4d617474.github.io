@@ -8,25 +8,24 @@
 }
 @media (max-width: 1081px){
 	header{
-		right:calc(50% - 200px) !important;
-		width: 400px !important;
+		left:0px;
+		width: 100%;
   	height:120px !important;
-		background:#080808 !important;
-	 box-shadow: 10px 10px 0px rgba(0,0,0,.5) !important;
+		transform: none;
 	}
 	#Main{
+		transform: none;
   	top:180px !important;
 	}
 	#logo4d{
-		left:10px !important;
-		width:140px !important;
-		height:140px !important;;
+	float:left;
+	height:100%;
+	width:20%;
 	}
 	#categories{
-	  top:0px !important;
-		left:160px !important;
-		width:calc(100% - 165px) !important;
-		text-align: left !important;
+		float: left;
+		text-align: left ;
+		width:60%;
 	}
 	.category{
 		font-size:21.8px !important;
