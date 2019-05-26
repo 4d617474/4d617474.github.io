@@ -11,12 +11,12 @@
 		top:0px;
 		left:0%;
 		width: 100%;
-  	height:20%;
+		height: auto;
 		transform: none;
 	}
 	#Main{
 		transform: none;
-  	top:180px !important;
+  	top:200px;
 		width:80%;
 		left:10%;
 	}
@@ -24,17 +24,16 @@
 		top:10%;
 	float:left;
 	margin-left:10%;
-	height:100%;
-		height:100%;
-	width:40%;
+		width:35%;
+	background-size: auto 100%;
 
 	}
 	#categories{
-		top:20%;
-		right:10%;
+		margin-top:30px;
+		margin-right:15%;
 		float: left;
 		text-align: right ;
-		width:40%;
+		width:35%;
 	}
 	.category{
 		font-size:21.8px !important;

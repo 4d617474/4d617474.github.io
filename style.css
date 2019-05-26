@@ -1,6 +1,8 @@
 :root{
-	--firstColor:#080808 ;
+	--firstColor:#0C0C0C;
+	--bgColor:#050505;
 	--shadowColor: #120009;
+	--shadowColor2: rgba(0,0,0,.25);
 }
 @font-face
 {
@@ -22,7 +24,7 @@
 body
 {
 	font-family: 'robotothin';
-	background:black;
+	background-color:var(--bgColor);
 }
 #bg{
 	position: fixed;
@@ -126,7 +128,7 @@ header{
 	padding:10px;
 	background-color:var(--firstColor);
 	transition: box-shadow .2s;
-	box-shadow: 10px 10px 0px rgba(0,0,0,.5);
+	box-shadow: 10px 10px 0px var(--shadowColor2);
 }
 
 /*
