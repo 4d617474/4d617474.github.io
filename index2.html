@@ -1,0 +1,71 @@
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, intial-scale=1.0">
+		<!--<link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" href="mobileStyle.css">-->
+    <link rel="stylesheet" href="style2.css">
+		<title>~[55](-)</title>
+		<link rel="shortcut icon" href="logo.png">
+		<meta charset="utf-8">
+    <meta name="theme-color" content="#bd1458">
+	</head>
+
+  <body>
+
+    <div id="previewPage">
+      <div id="previewExit" onclick="document.getElementById('previewPage').style.display='none';document.getElementById('previewContent').src=''"></div>
+      <iframe id="previewContent" src=""></iframe>
+    </div>
+
+    <div class="post">
+      <video class="postContent" src="render_4.mp4"></video>
+      <div class="desc"><b>all by itself</b> because l don't fucking know</div>
+    </div>
+
+    <div class="post">
+      <video class="postContent" src="Composition 1_4.mp4"></video>
+    </div>
+
+    <div class="post">
+      <img class="postContent" src="lll.png">
+      <div class="desc"><b>III</b> there's three of them</div>
+    </div>
+    <div class="post">
+      <img class="postContent" src="fttm.png">
+    </div>
+
+  <script>
+    this.onclick  = function(event){
+    /*if (event.target.closest('img')){previewStuff(event.target.src);};*/
+    if ((event.target.closest('img')) || (event.target.closest('video'))){
+      /*previewStuff(event.target.src);*/
+      document.getElementById("previewPage").style.display = "block";
+      document.getElementById("previewContent").src = event.target.src;
+
+    };
+    }
+    randTitle();
+    function randTitle() {
+    document.title = Math.floor((Math.random() * 10000) + 1);
+    }
+    postSize();
+    function postSize() {
+      var posts = document.getElementsByClassName("post");
+      for(i=0;i<posts.length;i++){
+        var heightP = Math.floor((Math.random() * 200) + 200);
+        var widthP = Math.floor((Math.random() * 200) + 200);
+        var topP = Math.floor((Math.random() * 200));
+        var leftP = Math.floor((Math.random() * 200));
+        console.log(leftP);
+        posts[i].style.height = heightP;
+        posts[i].style.width = widthP;
+        posts[i].style.marginTop = topP;
+        posts[i].style.marginLeft = leftP;
+      }
+    }
+    function previewStuff(altP){
+      console.log(altP);
+
+    }
+  </script>
+  </body>

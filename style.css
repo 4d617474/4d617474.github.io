@@ -45,7 +45,7 @@ header{
 	height:auto;
 	/*background:linear-gradient(black, #020001);*/
 	z-index: 50;
-  transform:skewY(-5deg);
+    transform:skewY(-5deg);
 	background-color:var(--firstColor);
 	box-shadow: 10px 10px 0px rgba(0,0,0,.2);
 	-moz-user-select: none;
@@ -118,7 +118,7 @@ header{
 	margin-bottom: 2px;
 	padding-bottom:20px;
 	width:calc(400px);
-  transform:skewY(-5deg);
+    /*transform:skewY(-5deg);*/
 }
 .post{
 	margin-bottom:20px;
@@ -161,23 +161,23 @@ img:hover{
 		-71px 71px 0px -70px rgba(255,255,255,5),
 		71px -71px 0px -70px rgba(255,255,255,5);
 }*/
-img{
+img,video{
 	width: 100%;
 	z-index: 20;
-	box-shadow:
+	/*box-shadow:
 		72px 72px 0px -70px white,
 		-72px -72px 0px -70px white;
 	transition:box-shadow .2s, width .2s, transform .2s;
 	cursor:pointer;
-	border-radius:2px;
+	border-radius:2px;*/
 }
-img:hover{
-	transform:translate(-20px,-20px);
+img:hover,video:hover{
+	/*transform:translate(-20px,-20px);
 	box-shadow:
 		-72px 72px 0px -70px white,
 		72px -72px 0px -70px white,
 		10px 10px 0px rgba(189,0,89,.2),
-		20px 20px 0px rgba(189,0,89,.2);
+		20px 20px 0px rgba(189,0,89,.2);*/
 }
 .desc{
 	font-size:13px;
