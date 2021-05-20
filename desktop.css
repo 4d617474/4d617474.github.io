@@ -1,0 +1,63 @@
+@media (min-width: 700px){
+	.intro.hey{
+		width:auto;
+		height:100%;
+		margin-left:calc(50% - 450px  / 2);
+	}
+	#intro{
+		width: 80%;
+		left:10%;
+	}
+	#videoWrapper
+	{
+		position:absolute;
+		top:0;
+		left:0%;
+		height: 100%;
+		width: 100%;
+		overflow: hidden;
+		z-index: 2;
+	}
+	#img00{
+		background-size:contain;
+	}
+	.tabTitle{
+
+		padding-top: 1.8vw;
+		padding-bottom: 1.8vw;
+		width:50%;
+		left:25%;
+		font-size:1.8vw;
+		bottom:0%;
+
+	}
+	.menu.button{
+		font-size:2.3vw !important;
+	}
+	#exit,#previous,#next{
+	height: 5vw;
+	width: 5vw;
+	bottom:3vw;
+	}
+	#exit:hover,#previous:hover,#next:hover{
+	filter:invert(0);
+}
+
+#exit{
+		left:calc(50% - 2.5vw);
+}
+#previous{	
+		left:calc(45% - 2.5vw - 10px);
+}
+#next{
+	left:calc(55% - 2.5vw + 10px);
+}
+	#menu{
+		width:50%;
+		left:25%;
+	}
+	.tabContent{
+		width: 80%;
+		left:10%;
+	}
+}

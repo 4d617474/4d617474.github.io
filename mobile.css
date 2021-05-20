@@ -1,0 +1,58 @@
+@media (max-width: 700px){
+  #intro{
+	height:;
+}
+.intro.hey{
+	position: relative;
+  margin:4%;
+	width: 92%;
+	height:auto;
+}
+.intro.iam{
+	position: relative;
+  left:0px;
+	top:0px;
+	text-align: center;
+	width:90%;
+}
+
+
+.tabContent{
+	left:0%;
+	width: 100%;
+}
+
+.menu.image{
+	box-shadow: inset 0px 0px 5px 0px rgba(255, 255, 255, 0.25);
+}
+#First{
+	background-color:blue;
+}
+#Second{
+	background-color:yellow;
+}
+#Third{
+	background-color:Orange;
+}
+
+#videoWrapper
+{
+	display:none;
+  position:absolute;
+	top:0;
+	left:0;
+	height: 500px;
+	width: 100%;
+	overflow: hidden;
+	z-index: 2;
+}	
+#exit:hover,#previous:hover,#next:hover{
+	filter:none;
+}
+#exit:active,#previous:active,#next:active{
+		filter:invert(0);
+	  transition:filter .2s;
+}
+	
+	
+}

@@ -1,82 +1,131 @@
 <html>
 	<head>
-		<meta name="viewport" content="width=device-width, intial-scale=1.0">
-		<link rel="stylesheet" href="style.css">
-		<link rel="stylesheet" href="mobileStyle.css">
-		<title>4d617474</title>
-		<link rel="shortcut icon" href="logo.png">
 		<meta charset="utf-8">
-		<meta name="theme-color" content="#bd1458">
+		<link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" href="theme.css">
+		<link rel="stylesheet" href="desktop.css">
+		<link rel="stylesheet" href="mobile.css">
+		<!-- <link rel="stylesheet" href="dark.css"> -->
+		<title> </title>
+		<link rel="shortcut icon" href="mico.png">
+		<meta name="theme-color" content="blue">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	</head>
 
 	<body>
+
+		<div id="modalBlock" class="modal">
+			<div id="previous"></div>
+			<div id="exit"></div>
+			<div id="next"></div>
+			<div class="modal-content" id="img00" style="background-image:none;"></div>
+		</div>
+
+		<div id="intro">
+			<video class="intro hey" autoplay loop muted>
+				<source src="heyy.mp4">
+			</video>
+			<div id="videoWrapper">
+				<video class="intro heyB" autoplay loop muted>
+					<source src="heyy.mp4">
+				</video>
+			</div>
+			<div class="intro iam">Hey! I'm Matt</br>blablabla blabal blaabl?</br>blqblq hahabblabala</div>
+		</div>
+		<div class="tabTitle" id="MeA">@oddbeep</div>
+		<div class="tabTitle" id="MeB">@crustiestthoughts</div>
+		<div class="tabTitle" id="MeC">ithinkilikenature</div>
+		<div class="tabTitle" id="MeD">cute animals</div>
+		<div id="menu">
+			<button id="defaultOpen" class="menu button first" onclick="switchTab('First',this ,'MeA')">
+				<img src="B.png" class="menuImage first">ob
+			</button>
+			<button class="menu button second" onclick="switchTab('Second',this ,'MeB')">
+				<img src="C.png" class="menuImage second">ct
+			</button>
+			<button class="menu button third" onclick="switchTab('Third',this ,'MeC')">
+				<img src="A.png" class="menuImage third">ph
+			</button>
+			<button class="menu button fourth" onclick="switchTab('Fourth',this ,'MeD')">
+				<img src="A.png" class="menuImage fourth">an
+			</button>
+		</div>
 		<div id="bg"></div>
 		<p id="ts">too small :(</p>
-		<div id="spFrame">
-			<div id="spFrame-settings">
-				<div id="spFrame-settings-reload" onclick="reloadSP()">Reload</div>
-				<a id="spFrame-settings-github" href="">View on Github</a>
-				<div id="spFrame-settings-close" onclick="toggleSP(4,1)">Go back</div>
-			</div>
-			<iframe id="spFrame-In" src=""></iframe>
-		</div>
-		<header>
-			<div id="logo4d" onclick="eheh()"></div>
-			<div id="categories">
-				<a class="category" href="index.html">HOME</a>
-				<a class="category" href="https://4d617474.github.io/siegeTool/">SIEGETOOL</a>
-				<a class="category" href="startpages.html">STARTPAGES</a>
-				<a class="category" href="about.html">ABOUT</a>
-			</div>
-		</header>
-		<div id="Main">
 
-			<div class="post">
-				<div class="desc">
-					<div class="innerdesc title">■■■ Siege Tool
-						<a class="linksto" href="https://github.com/4d617474/siegeTool/">View on Github</a>
-					</div>
-					<div class="innerdesc descri">A small tool I made to help people remember what the enemy picked in the game Rainbow Six: Siege.</div>
+		<div id="First" class="tabContent">
+			<div class="row">
+				<div class="column">
+					<img src="posts/ob/ob000.png" class="post">
+					<img src="posts/ob/ob001.png" class="post">
+					<img src="posts/ob/ob002.png" class="post">
+					<img src="posts/ob/ob002.png" class="post">
 				</div>
-				<img src="siegetool.png" onmousedown="toggleSP(5,0)">
-			</div>
-			<div class="post">
-				<div class="desc">
-					<div class="innerdesc title">■■■ Ko 
-						<a class="linksto" href="https://github.com/4d617474/ko">View on Github</a>
-					</div>
-					<div class="innerdesc descri">Yet another minimalist startpage, only two button to save your precious time.</div>
+				<div class="column">
+					<video src="posts/ob/ob006.mp4" class="post"></video>
+					<img src="posts/ob/ob003.png" class="post">
+					<img src="posts/ob/ob004.png" class="post">
+					<img src="posts/ob/ob005.png" class="post">
 				</div>
-				<img src="sp4.png" onmousedown="toggleSP(4,0)">
-			</div>
-
-			<div class="post">
-				<div class="desc">
-					<div class="innerdesc title">■■■ Squared 
-						<a class="linksto" href="https://github.com/4d617474/startpage-Squared">View on Github</a></div>
-					<div class="innerdesc descri">Minimalist and customable startpage, tried a few things with the animations.</div>
-				</div>
-				<img src="sp3.png" onmousedown="toggleSP(3,0)">
-			</div>
-
-			<div class="post">
-				<div class="desc">
-					<div class="innerdesc title">■■■ Star Citzen startpage 
-						<a class="linksto" href="https://github.com/4d617474/hpstarcitizen">View on Github</a></div>
-					<div class="innerdesc descri">Startpage made based on Star Citzen UI.</div>
-				</div>
-				<img src="sp2.png" onmousedown="toggleSP(2,0)">
-			</div>
-
-			<div class="post">
-				<div class="desc">
-					<div class="innerdesc title">■■■ Startpage1 
-						<a class="linksto" href="https://github.com/4d617474/startpage1">View on Github</a></div>
-					<div class="innerdesc descri">A simple startpage, nothing more.</div>
-				</div>
-				<img src="sp1.png" onmousedown="toggleSP(1,0)">
 			</div>
 		</div>
+		<div id="Second" class="tabContent">
+			<div class="row">
+
+				<div class="column">
+					<img src="posts/ct/ct000.png" class="post" alt="000">
+					<img src="posts/ct/ct001.png" class="post" alt="001">
+					<img src="posts/ct/ct002.png" class="post" alt="002">
+				</div>
+				<div class="column">
+					<img src="posts/ct/ct003.png" class="post" alt="003">
+					<img src="posts/ct/ct004.png" class="post" alt="004">
+					<img src="posts/ct/ct005.png" class="post" alt="005">
+					<img src="posts/ct/ct006.png" class="post" alt="006">
+				</div>
+			</div>
+		</div>
+		<div id="Third" class="tabContent">
+			<div class="row">
+  			<div class="column">
+					<img src="posts/ph/ph020.JPG" class="post">
+					<img src="posts/ph/ph018.JPG" class="post">
+					<img src="posts/ph/ph016.JPG" class="post">
+					<img src="posts/ph/ph014.JPG" class="post">
+					<img src="posts/ph/ph012.JPG" class="post">
+					<img src="posts/ph/ph010.JPG" class="post">
+					<img src="posts/ph/ph008.JPG" class="post">
+					<img src="posts/ph/ph006.JPG" class="post">
+					<img src="posts/ph/ph004.JPG" class="post">
+					<img src="posts/ph/ph002.JPG" class="post">
+				</div>
+				<div class="column">
+					<img src="posts/ph/ph019.JPG" class="post">
+					<img src="posts/ph/ph017.JPG" class="post">
+					<img src="posts/ph/ph015.JPG" class="post">
+					<img src="posts/ph/ph013.JPG" class="post">
+					<img src="posts/ph/ph011.JPG" class="post">
+					<img src="posts/ph/ph009.JPG" class="post">
+					<img src="posts/ph/ph007.JPG" class="post">
+					<img src="posts/ph/ph005.JPG" class="post">
+					<img src="posts/ph/ph003.JPG" class="post">
+					<img src="posts/ph/ph001.JPG" class="post">
+				</div>
+			</div>
+		</div>
+		<div id="Fourth" class="tabContent">
+			<div class="row">
+				<div class="column">
+					<img src="posts/an/an004.gif" class="post">
+					<img src="posts/an/an002.gif" class="post">
+				</div>
+				<div class="column">
+					<img src="posts/an/an003.gif" class="post">
+					<img src="posts/an/an001.gif" class="post">
+				</div>
+			</div>
+		</div>
+
 	</body>
 
 	<script src="script.js" type="text/javascript"></script>
