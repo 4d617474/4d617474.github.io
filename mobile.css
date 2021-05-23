@@ -53,6 +53,8 @@
 		filter:invert(0);
 	  transition:filter .2s;
 }
-	
+	#vid00{
+		width:100%;
+	}
 	
 }

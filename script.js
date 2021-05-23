@@ -9,6 +9,11 @@ postThumb.onclick = function(event) {
 	};
 window.onscroll = function() {scrollFunction()};
 
+column = document.getElementsByClassName("column");
+function sortPosts() {
+
+}
+
 function scrollFunction() {
   if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
 		document.getElementsByClassName("tabTitle")[0].style.bottom = "10%";
@@ -31,12 +36,19 @@ var modalImg = document.getElementById("img00");
 var pane;
 this.onclick = function(event) {
     if (event.target.className != 'post') return;
+		modalImg.firstElementChild.src = "none";
+		modalImg.style.backgroundImage = "none";
 		pane = event.target.closest('.post');
     // var paneNext = pane.nextElementSibling;
 		// console.log(paneNext);
 		modal.style.display = "block";
 		modal.style.opacity = "1";
-		modalImg.style.backgroundImage = "url('" + pane.src + "')";
+		if (pane.nodeName == "VIDEO") {
+			modalImg.firstElementChild.src = pane.src;
+		} else {
+			modalImg.style.backgroundImage = "url('" + pane.src + "')";
+			// modalImg.src = pane.src;
+		}
 };
 
 document.getElementById("previous").onclick = function(){
