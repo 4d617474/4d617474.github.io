@@ -1,14 +1,15 @@
 <html>
 	<head>
 		<meta charset="utf-8">
+		<link rel="stylesheet" href="preload.css">
 		<link rel="stylesheet" href="style.css">
 		<link rel="stylesheet" href="theme.css">
-		<link rel="stylesheet" href="desktop.css">
+		<!-- <link rel="stylesheet" href="desktop.css"> -->
 		<link rel="stylesheet" href="mobile.css">
-		<!-- <link rel="stylesheet" href="dark.css"> -->
-		<title> </title>
-		<link rel="shortcut icon" href="mico.png">
-		<meta name="theme-color" content="blue">
+		<link id="Astyle" rel="stylesheet" href="light.css">
+		<title>Hey!</title>
+		<link rel="icon" href="4v.svg">
+		<meta name="theme-color" content="black">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	</head>
 
@@ -32,25 +33,61 @@
 					<source src="heyy.mp4">
 				</video>
 			</div>
-			<div class="intro iam">Hey! I'm Matt</br>blablabla blabal blaabl?</br>blqblq hahabblabala</div>
+			<div class="intro iam">Hey! I'm Matt</br>This place is [still] under construction</br>But in the meantime, you can take a look around! aaaaaaaaaaaaaaaaaaa</div>
 		</div>
 		<div class="tabTitle" id="MeA">@oddbeep</div>
 		<div class="tabTitle" id="MeB">@crustiestthoughts</div>
 		<div class="tabTitle" id="MeC">ithinkilikenature</div>
 		<div class="tabTitle" id="MeD">cute animals</div>
 		<div id="menu">
-			<button id="defaultOpen" class="menu button first" onclick="switchTab('First',this ,'MeA')">
-				<img src="B.png" class="menuImage first">ob
-			</button>
-			<button class="menu button second" onclick="switchTab('Second',this ,'MeB')">
-				<img src="C.png" class="menuImage second">ct
-			</button>
-			<button class="menu button third" onclick="switchTab('Third',this ,'MeC')">
-				<img src="A.png" class="menuImage third">ph
-			</button>
-			<button class="menu button fourth" onclick="switchTab('Fourth',this ,'MeD')">
-				<img src="A.png" class="menuImage fourth">an
-			</button>
+			<a href="">
+				<button id="menuRowTitle" class="menuRow">
+					v click on any of those ! v
+				</button>
+			</a>
+			<div class="menuRow">
+				<button id="defaultOpen" class="menu button first" onclick="switchTab('First',this ,'@oddbeep','https://www.instagram.com/oddbeep/')">
+					<img src="" class="menuImage first">
+					ob
+				</button>
+				<button class="menu button second" onclick="switchTab('Second',this ,'@crustiestthoughts' ,'https://www.instagram.com/crustiestthoughts/')">
+					<img src="" class="menuImage second">ct
+				</button>
+				<button class="menu button third" onclick="switchTab('Third',this ,'bird pictures', '')">
+					<img src="" class="menuImage third">ph
+				</button>
+				<button class="menu button mtheme" onclick="darkMode()">
+					<img src="" class="menuImage third">
+				</button>
+			</div>
+			<div class="menuRow">
+				<button class="menu button third" onclick="switchTab('Fourth',this ,'cute animal gifs', '')">
+					<img src="" class="menuImage third">an
+				</button>
+				<button class="menu button third" onclick="switchTab('Fith',this ,'nothing yet ¯\\_(ツ)_/¯', '')">
+					<img src="" class="menuImage third">..
+				</button>
+				<button class="menu button third" onclick="switchTab('Sixth',this ,'nothing yet ¯\\_(ツ)_/¯', '')">
+					<img src="" class="menuImage third">..
+				</button>
+				<button class="menu button third">
+					<img src="" class="menuImage third">
+				</button>
+			</div>
+			<div class="menuRow">
+				<button class="menu button third" onclick="switchTab('Seventh',this ,'nothing yet ¯\\_(ツ)_/¯', '')">
+					<img src="" class="menuImage third">..
+				</button>
+				<button class="menu button third" onclick="switchTab('Eighth',this ,'nothing yet ¯\\_(ツ)_/¯', '')">
+					<img src="" class="menuImage third">..
+				</button>
+				<button class="menu button third" onclick="switchTab('Ninth',this ,'( ͡° ͜ʖ ͡°)', '')">
+					<img src="" class="menuImage third">..
+				</button>
+				<button class="menu button ninth" onclick="menuToggle()">
+					<img src="up.svg" class="menuImage" id="toggl">
+				</button>
+			</div>
 		</div>
 		<div id="bg"></div>
 		<p id="ts">too small :(</p>
@@ -115,40 +152,57 @@
 		<div id="Third" class="tabContent">
 			<div class="row">
   			<div class="column">
+					<img src="posts/ph/ph0024.JPG" class="post">
+					<img src="posts/ph/ph0022.JPG" class="post">
+					<img src="posts/ph/ph0020.JPG" class="post">
+					<img src="posts/ph/ph001E.JPG" class="post">
+					<img src="posts/ph/ph001C.JPG" class="post">
+					<img src="posts/ph/ph001A.JPG" class="post">
+					<img src="posts/ph/ph0018.JPG" class="post">
+					<img src="posts/ph/ph0016.JPG" class="post">
+					<img src="posts/ph/ph0014.JPG" class="post">
+					<img src="posts/ph/ph0012.JPG" class="post">
+					<img src="posts/ph/ph0010.JPG" class="post">
+					<img src="posts/ph/ph000E.JPG" class="post">
+					<img src="posts/ph/ph000C.JPG" class="post">
+					<img src="posts/ph/ph000A.JPG" class="post">
+					<img src="posts/ph/ph0008.JPG" class="post">
 					<img src="posts/ph/ph0006.JPG" class="post">
 					<img src="posts/ph/ph0004.JPG" class="post">
 					<img src="posts/ph/ph0002.JPG" class="post">
-					<img src="posts/ph/ph014.JPG" class="post">
-					<img src="posts/ph/ph012.JPG" class="post">
-					<img src="posts/ph/ph010.JPG" class="post">
-					<img src="posts/ph/ph008.JPG" class="post">
-					<img src="posts/ph/ph006.JPG" class="post">
-					<img src="posts/ph/ph004.JPG" class="post">
-					<img src="posts/ph/ph002.JPG" class="post">
+					<img src="posts/ph/ph0000.JPG" class="post">
 				</div>
 				<div class="column">
+					<img src="posts/ph/ph0023.JPG" class="post">
+					<img src="posts/ph/ph0021.JPG" class="post">
+					<img src="posts/ph/ph001F.JPG" class="post">
+					<img src="posts/ph/ph001D.JPG" class="post">
+					<img src="posts/ph/ph001B.JPG" class="post">
+					<img src="posts/ph/ph0019.JPG" class="post">
+					<img src="posts/ph/ph0017.JPG" class="post">
+					<img src="posts/ph/ph0015.JPG" class="post">
+					<img src="posts/ph/ph0013.JPG" class="post">
+					<img src="posts/ph/ph0011.JPG" class="post">
+					<img src="posts/ph/ph000F.JPG" class="post">
+					<img src="posts/ph/ph000D.JPG" class="post">
+					<img src="posts/ph/ph000B.JPG" class="post">
+					<img src="posts/ph/ph0009.JPG" class="post">
+					<img src="posts/ph/ph0007.JPG" class="post">
 					<img src="posts/ph/ph0005.JPG" class="post">
 					<img src="posts/ph/ph0003.JPG" class="post">
 					<img src="posts/ph/ph0001.JPG" class="post">
-					<img src="posts/ph/ph013.JPG" class="post">
-					<img src="posts/ph/ph011.JPG" class="post">
-					<img src="posts/ph/ph009.JPG" class="post">
-					<img src="posts/ph/ph007.JPG" class="post">
-					<img src="posts/ph/ph005.JPG" class="post">
-					<img src="posts/ph/ph003.JPG" class="post">
-					<img src="posts/ph/ph001.JPG" class="post">
 				</div>
 			</div>
 		</div>
 		<div id="Fourth" class="tabContent">
 			<div class="row">
 				<div class="column">
-					<img src="posts/an/an004.gif" class="post">
-					<img src="posts/an/an002.gif" class="post">
+					<img src="posts/an/an0002.gif" class="post">
+					<img src="posts/an/an0000.gif" class="post">
 				</div>
 				<div class="column">
-					<img src="posts/an/an003.gif" class="post">
-					<img src="posts/an/an001.gif" class="post">
+					<img src="posts/an/an0003.gif" class="post">
+					<img src="posts/an/an0001.gif" class="post">
 				</div>
 			</div>
 		</div>

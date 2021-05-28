@@ -13,21 +13,58 @@ column = document.getElementsByClassName("column");
 function sortPosts() {
 
 }
+function darkMode(){
+	var stylS = document.getElementById("Astyle");
+	if (stylS.href == "dark.css"){
+		stylS.href = "light.css";
+	} else if (stylS.href == "light.css"){
+		stylS.href = "dark.css";
+	}
+}
+// setInterval(titleGlitch, 1000);
+var option = "closed";
+var toggl = document.getElementById("toggl");
+var menuRowTitle = document.getElementById("menuRowTitle");
+function menuToggle(){
+	if (option == 'open'){
+		menu.style.bottom = '-10%';
+		toggl.style.top = '-200%';
+		toggl.style.transform = 'rotate(0deg)';
+		option = "close";
+	}else{
+		toggl.style.transform = 'rotateX(180deg)';
+		toggl.style.top = '0%';
+		menu.style.bottom = '10%';
+		option = "open";
+	}
+}
+function titleGlitch() {
+	var x = Math.floor((Math.random() * 2));
+	console.log(x);
+	if (x == 0)document.title = "4D617474";
+	if (x == 1)document.title = "Matt";
+}
+function aboutMe(){
 
+	document.getElementsByClassName("tabTitle")[0].style.bottom = "10%";
+}
 function scrollFunction() {
   if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-		document.getElementsByClassName("tabTitle")[0].style.bottom = "10%";
-		document.getElementsByClassName("tabTitle")[1].style.bottom = "10%";
-		document.getElementsByClassName("tabTitle")[2].style.bottom = "10%";
-		document.getElementsByClassName("tabTitle")[3].style.bottom = "10%";
+		// document.getElementsByClassName("tabTitle")[0].style.bottom = "10%";
+		// document.getElementsByClassName("tabTitle")[1].style.bottom = "10%";
+		// document.getElementsByClassName("tabTitle")[2].style.bottom = "10%";
+		// document.getElementsByClassName("tabTitle")[3].style.bottom = "10%";
+		menuRowTitle.style.opacity = "100%";
+
   } else {
-		document.getElementsByClassName("tabTitle")[0].style.bottom = "0";
-		document.getElementsByClassName("tabTitle")[1].style.bottom = "0";
-		document.getElementsByClassName("tabTitle")[2].style.bottom = "0";
-		document.getElementsByClassName("tabTitle")[3].style.bottom = "0";
+		menuRowTitle.style.opacity = "0%";
+		// document.getElementsByClassName("tabTitle")[0].style.bottom = "0";
+		// document.getElementsByClassName("tabTitle")[1].style.bottom = "0";
+		// document.getElementsByClassName("tabTitle")[2].style.bottom = "0";
+		// document.getElementsByClassName("tabTitle")[3].style.bottom = "0";
   }
 }
-
+var menu = document.getElementById("menu");
 var modal = document.getElementById("modalBlock");
 var img = document.getElementById("myImg");
 var modalImg = document.getElementById("img00");
@@ -93,9 +130,9 @@ document.getElementById("exit").onclick = function(){
 	modal.style.opacity = "0";
 	modal.style.display = "none";
 }
-function switchTab(pageName, elmnt, state) {
-  // Hide all elements with class="tabcontent" by default */
-	console.log(event.target.closest('.menuImage'));
+function switchTab(pageName, elmnt, state, link) {
+	// console.log(event.target.closest('.menuImage'));
+	if (option == "open") menuToggle();
 	buttonImage = event.target.closest('.menuImage');
 	allButtonImage = document.getElementsByClassName("menuImage");
   var i, tabcontent, tablinks;
@@ -118,7 +155,9 @@ function switchTab(pageName, elmnt, state) {
   }
 
   // Show the specific tab content
-	document.getElementById(state).style.display = "block";
+	// document.getElementById(state).style.display = "block";
+	document.getElementById("menuRowTitle").innerHTML = state;
+	document.getElementById("menuRowTitle").parentNode.href = link;
   document.getElementById(pageName).style.display = "block";
 
   // Add the specific color to the button used to open the tab content

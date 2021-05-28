@@ -4,7 +4,7 @@
 }
 /*debug*/
 #intro,.tabContent{
-	background:none !important;
+	ackground:none;
 }
 html{
 	scroll-behavior: smooth;
@@ -12,7 +12,7 @@ html{
 #modalBlock{
 	position: fixed;
 	height:100%;
-	width: 100%;	
+	width: 100%;
 	z-index: 101;
 	display: none;
 	transition: opacity .3s;
@@ -51,7 +51,7 @@ html{
 	background-image:url('cross.svg');
 }
 #previous{
-	
+
 		left:calc(20% - 10px);
 	background-image:url('previous.svg');
 }
@@ -61,7 +61,7 @@ html{
 }
 .post{
 	cursor: pointer;
-	nimation: IMGappear .1s;	
+	nimation: IMGappear .1s ;
 }
 @keyframes IMGappear {
 	from {opacity: 0;}
@@ -119,8 +119,7 @@ body
 	width: 92%;
 	height:450px;
 	background-color:#252525;
-	border-radius:2px;
-
+  padding-bottom:10%;
 }
 .intro.hey{
 	position: absolute;
@@ -163,14 +162,24 @@ body
 #menu{
 	position: fixed;
 	width: 100%;
+	height: 30%;
+	left: 0px;
+	bottom:-10%;
+	background-color:green;
+	transition: bottom .3s;
+	z-index:100;
+}
+/* #menu{
+	position: fixed;
+	width: 100%;
 	height: 10%;
 	left: 0px;
 	bottom: -100px;
 	bottom:0px;
 	background-color:green;
 	transition: bottom .3s;
-	z-index:100
-}
+	z-index:100;
+} */
 .tabTitle{
 	position: fixed;
   text-align: center;
@@ -182,10 +191,10 @@ body
 	bottom:0%;
 	color:white;
 	background-color:#414141;
- box-shadow: inset 0px 26px 40px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0px 26px 40px rgba(0, 0, 0, 0.3);
 	z-index: 9;
 	transition: bottom .3s;
-	
+
 }
 .menu{
 	position: relative;
@@ -200,9 +209,15 @@ body
 	/* OMenuButtonShadows */
 	cursor: pointer;
 }
+
+
+#toggl{
+	background:black;
+	transition: top .3s;
+}
 .buttonOn{
 	box-shadow: inset 0px -26px 54px rgba(255, 255, 255, 0.1);
-	
+
 }
 .buttonOff{
 	box-shadow: inset 0px 26px 54px rgba(255, 255, 255, 0.1);
@@ -210,16 +225,16 @@ body
 
 .buttonImOff{
 
-	filter: 
+	filter:
 		      drop-shadow(-4px 4px 4px rgba(255, 255, 255, 0.5))
 		      drop-shadow(6px 6px 4px rgba(255, 255, 255, 0.2))
 		      drop-shadow(-6px -6px 4px rgba(255, 255, 255, 0.2))
        		drop-shadow(6px -6px 8px rgba(0, 0, 0, 0.8));
 
-	
+
 }
 .buttonImOn{
-	filter: 
+	filter:
 		      drop-shadow(4px -4px 4px rgba(255, 255, 255, 0.5))
 		      drop-shadow(-6px -6px 4px rgba(255, 255, 255, 0.2))
 		      drop-shadow(6px 6px 4px rgba(255, 255, 255, 0.2))
@@ -234,7 +249,7 @@ body
   transition:filter .2s;
 	/* MenuButtonShadows */
 	/* box-shadow: inset 0px 0px 2px 1px rgba(255, 255, 255, 0.08);*/
-	/* 
+	/*
 	filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.43)), drop-shadow(1px 2px 4px rgba(130, 130, 130, 0.25)), drop-shadow(-2px -2px 4px rgba(130, 130, 130, 0.25)), drop-shadow(2px -2px 4px rgba(255, 255, 255, 0.25));
 	*/
 	border-radius: 40px;
@@ -257,13 +272,13 @@ body
 	width: 100%;
 }
 #First{
-	background-color:blue;
+	ackground-color:blue;
 }
 #Second{
-	background-color:yellow;
+	ackground-color:yellow;
 }
 #Third{
-	background-color:Orange;
+	ackground-color:Orange;
 }
 
 

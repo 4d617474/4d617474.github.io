@@ -14,13 +14,19 @@
 body{
   background-color: white;
 }
+#menu{
+  background:none;
+}
 .menuImage{
-  opacity:0;
+  opacity:1;
   border-radius: 0px;
   width:100%;
   height: 100%;
   top:0px;
   left:0px;
+}
+.menuImage.first,.menuImage.second,.menuImage.third{
+  opacity: 0;
 }
 .menu.button{
 	font-family: 'Comfortaa';
@@ -28,6 +34,22 @@ body{
   color:white;
   box-shadow: none;
 }
+.menu.button.ninth::after{
+  position: absolute;
+  text-indent:-40px;
+  nimation: textAbout 2.5s infinite;
+  animation-timing-function:linear;
+  content:"";
+}
+@keyframes textAbout {
+	0% {content:'ab';}
+	19% {content:'ab';}
+	20% {content:'ab';}
+	40% {content:'out';}
+	100% {content:'me';}
+
+}
+
 .tabTitle{
   background-color: white;
   box-shadow: none;
@@ -39,6 +61,10 @@ body{
 	border-radius:0px;
 }
 .intro{
-	color:black;
+	olor:black;
 	background:none;
+}
+#intro{
+  background-color:black;
+  color:white;
 }

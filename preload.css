@@ -1,0 +1,7 @@
+body::before {
+  content :
+   url("previous.svg")
+   url("exit.svg")
+   url("next.svg")
+  display:none;
+}
