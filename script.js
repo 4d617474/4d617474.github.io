@@ -1,3 +1,11 @@
+var menu = document.getElementById("menu");
+var modal = document.getElementById("modalBlock");
+var img = document.getElementById("myImg");
+var modalImg = document.getElementById("img00");
+var option = "closed";
+var toggl = document.getElementById("toggl");
+var menuRowTitle = document.getElementById("menuRowTitle");
+var menuRowDesc = document.getElementById("menuDesc");
 var postThumb = document.getElementsByClassName("thumb");
 postThumb.onclick = function(event) {
 		//if (event.target.className != 'operatorBadge') return;
@@ -8,7 +16,32 @@ postThumb.onclick = function(event) {
 		//showCharacter(this);
 	};
 window.onscroll = function() {scrollFunction()};
-
+var menuMenuClosed, menuToggleClosed, menuToggleOpen, menuMenuOpen
+var currWinSize;
+windSize();
+function windSize(){
+	// if (window.outerWidth > 700){
+	// 	currWinSize = 0;
+	// } else {
+	// 	currWinSize = 1;
+	// }
+	if (window.outerWidth > 700){
+		 menuMenuClosed = '-20%';
+		 menuToggleClosed = '-200%';
+		 menuToggleOpen = '0%';
+		 menuMenuOpen = '0%';
+		 menuToggle();
+		 menuToggle();
+	 } else {
+		 menuMenuClosed = '-6%';
+		 menuToggleClosed = '-200%';
+		 menuToggleOpen = '0%';
+		 menuMenuOpen = '18%';
+		 currWinSize = 1;
+		 menuToggle();
+		 menuToggle();
+	 };
+}
 column = document.getElementsByClassName("column");
 function sortPosts() {
 
@@ -22,19 +55,16 @@ function darkMode(){
 	}
 }
 // setInterval(titleGlitch, 1000);
-var option = "closed";
-var toggl = document.getElementById("toggl");
-var menuRowTitle = document.getElementById("menuRowTitle");
 function menuToggle(){
 	if (option == 'open'){
-		menu.style.bottom = '-10%';
-		toggl.style.top = '-200%';
+		menu.style.bottom = menuMenuClosed;
+		toggl.style.top = menuToggleClosed;
 		toggl.style.transform = 'rotate(0deg)';
 		option = "close";
 	}else{
 		toggl.style.transform = 'rotateX(180deg)';
-		toggl.style.top = '0%';
-		menu.style.bottom = '10%';
+		toggl.style.top = menuToggleOpen;
+		menu.style.bottom = menuMenuOpen;
 		option = "open";
 	}
 }
@@ -55,19 +85,17 @@ function scrollFunction() {
 		// document.getElementsByClassName("tabTitle")[2].style.bottom = "10%";
 		// document.getElementsByClassName("tabTitle")[3].style.bottom = "10%";
 		menuRowTitle.style.opacity = "100%";
+		menuRowDesc.style.opacity = "100%";
 
   } else {
 		menuRowTitle.style.opacity = "0%";
+		menuRowDesc.style.opacity = "0%";
 		// document.getElementsByClassName("tabTitle")[0].style.bottom = "0";
 		// document.getElementsByClassName("tabTitle")[1].style.bottom = "0";
 		// document.getElementsByClassName("tabTitle")[2].style.bottom = "0";
 		// document.getElementsByClassName("tabTitle")[3].style.bottom = "0";
   }
 }
-var menu = document.getElementById("menu");
-var modal = document.getElementById("modalBlock");
-var img = document.getElementById("myImg");
-var modalImg = document.getElementById("img00");
 
 // var img = document.getElementsByClassName("post");
 var pane;

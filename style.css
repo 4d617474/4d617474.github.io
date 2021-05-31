@@ -119,7 +119,7 @@ body
 	width: 92%;
 	height:450px;
 	background-color:#252525;
-  padding-bottom:10%;
+  adding-bottom:10%;
 }
 .intro.hey{
 	position: absolute;
@@ -271,6 +271,19 @@ body
 	height: auto;
 	width: 100%;
 }
+	#menuRowTitle{
+		opacity: 0;
+		width: 100%;
+		transition:filter .2s;
+		border:none;
+		/* OMenuButtonShadows */
+		cursor: pointer;
+		text-align:center;
+		background:white;
+		transition:opacity .2s;
+		font-size:20px;
+		font-family: Comfortaa;
+	}
 #First{
 	ackground-color:blue;
 }

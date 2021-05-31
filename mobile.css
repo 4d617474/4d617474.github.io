@@ -1,7 +1,8 @@
-@media (max-width: 22700px){
+@media (max-width: 700px){
 		#intro{
 		width:100%;
 		height:auto;
+		padding-bottom:10%;
 	}
 	.intro.hey{
 		position: relative;
@@ -16,20 +17,18 @@
 		text-align: center;
 		width:90%;
 	}
-	.menuRow{
-		height:40%;
-	}
+
 
 	.tabContent{
 		left:0%;
 		width: 100%;
 	}
-
 	.menu.image{
 		box-shadow: inset 0px 0px 5px 0px rgba(255, 255, 255, 0.25);
 	}
 	.menuRow{
 		height:calc(100% / 3);
+		height:40%;
 	}
 	#toggl{
 		top:-200%;
@@ -69,17 +68,7 @@
 	z-index:2;
 	animation: appear .3s ;
 		}
-	#menuRowTitle{
-		opacity: 0;
-		width: 100%;
-		transition:filter .2s;
-		border:none;
-		/* OMenuButtonShadows */
-		cursor: pointer;
-		text-align:center;
-		background:white;
-		transition:opacity .2s;
-		font-size:20px;
-		font-family: Comfortaa;
-	}
+	#menuDesc{
+		display: none;
+}
 }
