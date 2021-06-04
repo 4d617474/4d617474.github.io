@@ -193,6 +193,9 @@ function switchTab(pageName, elmnt, state, link) {
   elmnt.classList.add("buttonOn");
 	window.scrollTo(0, 800);
 }
+function previewTab(){
+	
+}
 
 // Get the element with id="defaultOpen" and click on it
 document.getElementById("defaultOpen").click();

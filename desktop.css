@@ -115,10 +115,15 @@
 }
 #menuDesc{
 	position: absolute;
-	bottom:0%;
+	top:calc(100%/3);
 	right:0%;
-	height:70%;
+	height:80%;
 	left:50%;
 	background:white;
 	transition:opacity .2s;
 }
+.buttonOff:hover,#menuRowTitle:hover{
+filter:invert(100%);
+}
+
+
