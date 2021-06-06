@@ -7,6 +7,9 @@ var toggl = document.getElementById("toggl");
 var menuRowTitle = document.getElementById("menuRowTitle");
 var menuRowDesc = document.getElementById("menuDesc");
 var postThumb = document.getElementsByClassName("thumb");
+var aRow = document.getElementsByClassName("firstRow");
+var bRow = document.getElementsByClassName("secondRow");
+var cRow = document.getElementsByClassName("thirdRow");
 postThumb.onclick = function(event) {
 		//if (event.target.className != 'operatorBadge') return;
 
@@ -27,16 +30,16 @@ function windSize(){
 	// }
 	if (window.outerWidth > 700){
 		 menuMenuClosed = '-20%';
-		 menuToggleClosed = '-200%';
+		 menuToggleClosed = '0%';
 		 menuToggleOpen = '0%';
 		 menuMenuOpen = '0%';
 		 menuToggle();
 		 menuToggle();
 	 } else {
-		 menuMenuClosed = '-6%';
-		 menuToggleClosed = '-200%';
+		 menuMenuClosed = '-8%';
+		 menuToggleClosed = '0%';
 		 menuToggleOpen = '0%';
-		 menuMenuOpen = '18%';
+		 menuMenuOpen = '12%';
 		 currWinSize = 1;
 		 menuToggle();
 		 menuToggle();
@@ -194,9 +197,27 @@ function switchTab(pageName, elmnt, state, link) {
 	window.scrollTo(0, 800);
 }
 function previewTab(){
-	
+
 }
 
+function moveRow(elmt){
+
+	reorderRow(aRow);
+	reorderRow(bRow);
+	reorderRow(cRow);
+	elmt.style.order = "1";
+}
+function reorderRow(currRow){
+	if (currRow[0].style.order == "3"){
+		return;
+	}
+	if (currRow[0].style.order == "2"){
+		currRow[0].style.order = "3";
+	}
+	if (currRow[0].style.order == "1"){
+		currRow[0].style.order = "2";
+	}
+}
 // Get the element with id="defaultOpen" and click on it
 document.getElementById("defaultOpen").click();
 window.scrollTo(0, 0);

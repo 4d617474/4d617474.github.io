@@ -1,6 +1,8 @@
 :root{
 	--firstColor:#151515 ;
 	--shadowColor: #120009;
+  --aColor: #FFFFFF;
+  --bColor: #000000;
 }
 /*debug*/
 #intro,.tabContent{
@@ -34,7 +36,7 @@ html{
 }
 #exit,#previous,#next{
 	position: absolute;
-	background-color:black;
+	background-color:var(--bColor);
 	height: 20vw;
 	width: 20vw;
 	z-index:3;
@@ -116,7 +118,7 @@ body
 	background-size:auto;
 }
 #intro{
-	color:white;
+	color:var(--aColor);
 	position: relative;
 	width: 92%;
 	height:450px;
@@ -191,7 +193,7 @@ body
 	left:0%;
 	font-size:18px;
 	bottom:0%;
-	color:white;
+	color:var(--aColor);
 	background-color:#414141;
   box-shadow: inset 0px 26px 40px rgba(0, 0, 0, 0.3);
 	z-index: 9;
@@ -214,7 +216,7 @@ body
 
 
 #toggl{
-	background:black;
+	background:var(--bColor);
 	transition: top .3s;
 }
 .buttonOn{
@@ -263,7 +265,7 @@ body
 	position: fixed;
 	height: 10px;
 	width: 10px;
-	background-color:white;
+	background-color:var(--aColor);
 }
 .tabContent{
 	position: absolute;
@@ -281,9 +283,10 @@ body
 		/* OMenuButtonShadows */
 		cursor: pointer;
 		text-align:center;
-		background:white;
+		background:var(--aColor);
 		transition:opacity .2s;
 		font-size:20px;
+	  color:var(--bColor);
 		font-family: Comfortaa;
 	}
 #First{
@@ -329,6 +332,37 @@ body
 }
 #ts{
 		visibility:hidden;
-	  color:white;
+	  color:var(--aColor);
 		text-align:center;
+}
+#menuRows{
+	height:100%;
+	width:100%;
+  display: flex;
+  flex-direction: column;
+}
+.firstRow{
+	order: 1;
+}
+.secondRow{
+	order: 2; 
+}
+.thirdRow{
+	order: 3; 
+}
+#sideRow{
+	position: absolute;
+	top:0%;
+  height:100%;
+	right:50%;
+	background: var(--bColor);
+	width:13%;
+}
+.menu.button.toggle{
+	height:calc(100%/3);
+	width:100%;
+}
+.mtheme{
+	height:calc(100%/3);
+	width:100%;
 }

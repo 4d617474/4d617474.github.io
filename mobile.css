@@ -71,4 +71,9 @@
 	#menuDesc{
 		display: none;
 }
+	#sideRow{
+	top:40%;
+	right:0%;
+	width:25%;
+}
 }

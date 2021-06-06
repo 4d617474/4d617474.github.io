@@ -2,7 +2,7 @@
   filter:none;
 }
 .menu{
-  background:black;
+  background:var(--bColor);
 }
 .buttonOn{
   filter:invert(100%);
@@ -12,7 +12,7 @@
   filter:none ;
 }
 body{
-  background-color: white;
+  background-color: var(--aColor);
   ackground-color: #99ff99;
 }
 #menu{
@@ -32,7 +32,7 @@ body{
 .menu.button{
 	font-family: 'Comfortaa';
   font-size:28px;
-  color:white;
+  color:var(--aColor);
   box-shadow: none;
 }
 .menu.button.ninth::after{
@@ -52,9 +52,9 @@ body{
 }
 
 .tabTitle{
-  background-color: white;
+  background-color: var(--aColor);
   box-shadow: none;
-  color:black;
+  color:var(--bColor);
 }
 .intro.hey{
 	margin:0px;
@@ -62,10 +62,10 @@ body{
 	border-radius:0px;
 }
 .intro{
-	olor:black;
+	olor:var(--bColor);
 	background:none;
 }
 #intro{
-  background-color:black;
-  color:white;
+  background-color:var(--bColor);
+  color:var(--aColor);
 }
