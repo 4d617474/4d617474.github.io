@@ -366,3 +366,26 @@ body
 	height:calc(100%/3);
 	width:100%;
 }
+#curtains{
+	top:-100%;
+	height:100%;
+	width:100%;
+	position: fixed;
+	background:var(--bColor);
+	z-index: 200;
+	animation: disappear 1s;
+	animation-iteration-count: 1;
+}
+@keyframes disappear {
+	0% {opacity: 1;top:0%;}
+	80% {opacity: 1;top:0%;}
+	99% {opacity: 0;top:0%;}
+	100% {opacity: 0;top:-100%;}
+}
+#cLogo{
+	position: absolute;
+	height: 40%;
+	width: 40%;
+	top:30%;
+	left:30%;
+}
