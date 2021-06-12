@@ -1,3 +1,21 @@
+#navigationBar
+{
+	bottom:-15%;
+}
+#barMenu
+{
+	bottom:0%;
+}
+#barInfo
+{
+	bottom:calc(100%/3);
+}
+
+
+.tabContent
+{
+	display: none;
+}
 /*@media (max-width: 700px){
   #menuRows{
     height:100%;
@@ -20,3 +38,62 @@
     width: 100%;
   }
 }*/
+/*debug*/
+/**/
+
+/**
+button
+{
+	color:black !important;
+}
+#navigationBar
+{
+	background-color:green;
+	box-shadow: 0px 0px 0px 1px red inset;
+}
+#barMenu
+{
+	background-color:orange;
+	box-shadow: 0px 0px 0px 1px blue inset;
+}
+#barInfo
+{
+	background-color:blue;
+	box-shadow: 0px 0px 0px 1px orange inset;
+}
+#menuLeft
+{
+	background-color:cyan;
+	box-shadow: 0px 0px 0px 1px yellow inset;
+}
+#menuRight
+{
+	background-color:yellow;
+	box-shadow: 0px 0px 0px 1px cyan inset;
+}
+.menuRows
+{
+	background-color:chartreuse;
+	box-shadow: 0px 0px 0px 1px crimson inset;
+}
+.rowButtons.left
+{
+	background-color:steelblue;
+	box-shadow: 0px 0px 0px 1px darkgreen inset;
+}
+.rowButtons.right
+{
+	background-color:darkgreen;
+	box-shadow: 0px 0px 0px 1px steelblue inset;
+}
+.infoTitle
+{
+	background-color:khaki;
+	box-shadow: 0px 0px 0px 1px darkred inset;
+}
+.infoDescription
+{
+	background-color:darkred;
+	box-shadow: 0px 0px 0px 1px khaki inset;
+}
+

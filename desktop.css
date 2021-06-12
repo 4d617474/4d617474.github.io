@@ -1,4 +1,13 @@
 @media (min-width: 700px){
+  #barInfo
+	{
+		bottom:0% !important;
+	}
+	#navigationBar
+	{
+		width: calc(80% - 8px);
+		left:calc(10% + 4px);
+	}
 	.intro.hey{
 		position: relative;
 		width:50%;

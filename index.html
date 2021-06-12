@@ -31,18 +31,122 @@
 			<video class="intro hey" autoplay loop muted>
 				<source src="heyy.mp4">
 			</video>
-			<div id="videoWrapper">
-				<!-- <video class="intro heyB" autoplay loop muted>
-					<source src="heyy.mp4">
-				</video> -->
-			</div>
-			<div class="intro iam">Hey! I'm Matt</br>I </br>But in the meantime, you can take a look around! aaaaaaaaaaaaaaaaaaa</div>
+
+			<div class="intro iam">Hey, I'm Matt!</br>Here you'll find</br> most of the stuff I make</div>
 		</div>
+
 		<div class="tabTitle" id="MeA">@oddbeep</div>
 		<div class="tabTitle" id="MeB">@crustiestthoughts</div>
 		<div class="tabTitle" id="MeC">ithinkilikenature</div>
 		<div class="tabTitle" id="MeD">cute animals</div>
-		<div id="menu">
+
+		<div id="navigationBar">
+			<div id="barMenu">
+				<div id="menuLeft">
+					<div class="menuRows" id="rowA">
+						<button class="rowButtons left" onclick="btnSlct(1,this)">ob
+						</button>
+						<button class="rowButtons left" onclick="btnSlct(2,this)">ct
+						</button>
+						<button class="rowButtons left" onclick="btnSlct(3,this)">ph
+						</button>
+					</div>
+					<div class="menuRows" id="rowB">
+						<button class="rowButtons left" onclick="btnSlct(4,this)">an
+						</button>
+						<button class="rowButtons left">.
+						</button>
+						<button class="rowButtons left">.
+						</button>
+					</div>
+					<div class="menuRows" id="rowC">
+						<button class="rowButtons left">.
+						</button>
+						<button class="rowButtons left">.
+						</button>
+						<button class="rowButtons left">.
+						</button>
+					</div>
+				</div>
+				<div id="menuRight">
+					<div class="menuRows" id="rowD">
+						<button class="rowButtons right" onclick="toggleMenu()">v
+						</button>
+					</div>
+					<div class="menuRows" id="rowE">
+						<button class="rowButtons right">
+						</button>
+					</div>
+					<div class="menuRows" id="rowF">
+						<button class="rowButtons right">
+						</button>
+					</div>
+				</div>
+			</div>
+			<div id="barInfo"> 
+				<div class="infoBlock default">
+					<a href="">
+						<button class="infoTitle">
+							click on something!
+						</button>
+					</a>
+					<div class="infoDescription">
+						<div class="descContent">
+
+						</div>
+					</div>
+				</div>
+				<div class="infoBlock">
+					<a href="">
+						<button class="infoTitle">
+							@oddbeep
+						</button>
+					</a>
+					<div class="infoDescription">
+						<div class="descContent">
+							This is about mysteries, my love for the Unknown. Anything goes here, just don't stare at it for too long.
+						</div>
+					</div>
+				</div>
+				<div class="infoBlock">
+					<a href="">
+						<button class="infoTitle">
+							@crustiestthoughts
+						</button>
+					</a>
+					<div class="infoDescription">
+						<div class="descContent">
+							Some moments in life are embarrassing, they make you feel uncofortable and you wish they would just go away, and yet you remember them. You remember how akward you felt and feel even worse each time you think about it.
+						</div>
+					</div>
+				</div>
+				<div class="infoBlock">
+					<a href="">
+						<button class="infoTitle">
+							nature pictures
+						</button>
+					</a>
+					<div class="infoDescription">
+						<div class="descContent">
+							A collection of animals and plants pictures, pretty much anything that's alive.
+						</div>
+					</div>
+				</div>
+				<div class="infoBlock">
+					<a href="">
+						<button class="infoTitle">
+							more animals
+						</button>
+					</a>
+					<div class="infoDescription">
+						<div class="descContent">
+							woof woof woof woof woof woof woof meow meow meow meow meow bzz bzz bzz bzz bzz bzz gloo gloo gloo gloo gloo gloo
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- <div id="menu">
 			<a href="">
 				<button id="menuRowTitle" class="menuRow">
 				 	click on a button
@@ -73,9 +177,6 @@
 					<button class="menu button third" onclick="switchTab('Sixth',this ,'nothing yet ¯\\_(ツ)_/¯', '')">
 						<img src="" class="menuImage third">.
 					</button>
-					<!-- <button class="menu button third">
-						<img src="" class="menuImage third">
-					</button> -->
 				</div>
 				<div class="menuRow diff thirdRow" onclick="moveRow(this)">
 					<button class="menu button third" onclick="switchTab('Seventh',this ,'nothing yet ¯\\_(ツ)_/¯', '')">
@@ -87,12 +188,6 @@
 					<button class="menu button third" onclick="switchTab('Ninth',this ,'( ͡° ͜ʖ ͡°)', '')">
 						<img src="" class="menuImage third">.
 					</button>
-					<!-- <button class="menu button ninth">
-						<img src="" class="menuImage third">
-					</button> -->
-					<!-- <button class="menu button ninth" onclick="menuToggle()">
-						<img src="up.svg" class="menuImage" id="toggl">
-					</button> -->
 				</div>
 				<div class="menuRow diff" id="sideRow">
 					<button class="menu button toggle" onclick="menuToggle()">
@@ -103,7 +198,7 @@
 					</button>
 				</div>
 			</div>
-		</div>
+		</div> -->
 		<div id="bg"></div>
 		<p id="ts">too small :(</p>
 
@@ -126,7 +221,7 @@
 			<div class="row">
 
 				<div class="column">
-					<img src="posts/ct/ct001E.png" class="post" loading="lazy" loading="lazy">
+					<img src="posts/ct/ct001E.png" class="post" oading="lazy">
 					<img src="posts/ct/ct0020.png" class="post" loading="lazy">
 					<img src="posts/ct/ct001C.png" class="post" loading="lazy">
 					<img src="posts/ct/ct001A.png" class="post" loading="lazy">

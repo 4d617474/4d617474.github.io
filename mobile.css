@@ -18,7 +18,15 @@
 		width:90%;
 	}
 
-
+	#barMenu,#barInfo
+	{
+		width: 100%;
+	}
+	#barInfo
+	{
+		bottom:100%;
+	}
+  
 	.tabContent{
 		left:0%;
 		width: 100%;
@@ -27,8 +35,7 @@
 		box-shadow: inset 0px 0px 5px 0px rgba(255, 255, 255, 0.25);
 	}
 	.menuRow{
-		height:calc(100% / 3);
-		height:40%;
+		height:20%;
 	}
 	#toggl{
 		top:-200%;
@@ -72,8 +79,12 @@
 		display: none;
 }
 	#sideRow{
-	top:40%;
+	top:20%;
 	right:0%;
 	width:25%;
+		height:60%;
 }
+
+	
+	
 }
