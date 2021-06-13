@@ -107,13 +107,13 @@ button
 }
 #rowD
 {
-	rotate:180deg;
+	transform: rotate(180deg);
 	text-shadow: 2px 2px #ff0000;
 }
 .toggleOn
 {
 	filter:invert(100%);
-	rotate:0deg !important;
+	transform: rotate(0deg) !important;
 }
 .rowButtons
 {

@@ -76,7 +76,9 @@
 	width:25%;
 		height:60%;
 }
-
+	#exit:hover,#previous:hover,#next:hover,.rowButtons:hover,.infoTitle:hover,.post:hover{
+		filter:none !important;
+	}
 	
 	
 }
