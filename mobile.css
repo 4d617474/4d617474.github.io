@@ -1,21 +1,13 @@
 @media (max-width: 700px){
-		#intro{
-		width:100%;
-		height:auto;
-		padding-bottom:10%;
+	#int{
+		left:0%;
+		top:0%;
+		margin: 4%;
+		width:92%;
 	}
-	.intro.hey{
+	#intHey{
 		position: relative;
-		margin:4%;
-		width: 92%;
 		height:auto;
-	}
-	.intro.iam{
-		position: relative;
-		left:0px;
-		top:0px;
-		text-align: center;
-		width:90%;
 	}
 
 	#barMenu,#barInfo
