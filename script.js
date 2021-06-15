@@ -2,6 +2,7 @@ var menu = document.getElementById("menu");
 var modal = document.getElementById("modalBlock");
 var img = document.getElementById("myImg");
 var modalImg = document.getElementById("img00");
+var modalVid = document.getElementById("vid00");
 var option = "closed";
 var toggl = document.getElementById("toggl");
 var menuRowTitle = document.getElementById("menuRowTitle");
@@ -111,6 +112,7 @@ function setTab(tabNum)
 	for (i = 0; i < tabcontent.length; i++) {
 		tabcontent[i].style.display = "none";
 	}
+	// tabcontent[0].style.display = "block";
 	tabcontent[tabNum-1].style.display = "block";
 	window.scrollTo(0, 800);
 }
@@ -164,9 +166,14 @@ this.onclick = function(event) {
 		modal.style.display = "block";
 		modal.style.opacity = "1";
 		if (pane.nodeName == "VIDEO") {
-			modalImg.firstElementChild.src = pane.src;
+			// modalImg.firstElementChild.src = pane.src;
+			modalVid.src = pane.src;
+			modalVid.style.display = "block";
+			modalVid.play();
 		} else {
 			modalImg.style.backgroundImage = "url('" + pane.src + "')";
+			modalVid.style.display = "none";
+
 			// modalImg.src = pane.src;
 		}
 };
@@ -210,4 +217,5 @@ document.getElementById("next").onclick = function(){
 document.getElementById("exit").onclick = function(){
 	modal.style.opacity = "0";
 	modal.style.display = "none";
+	modalVid.pause();
 }
