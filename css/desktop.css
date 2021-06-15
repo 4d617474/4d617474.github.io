@@ -1,0 +1,66 @@
+@media (min-width: 700px){
+  #barInfo
+	{
+		bottom:0% !important;
+	}
+	#navigationBar
+	{
+		width: calc(80% - 8px);
+		left:calc(10% + 4px);
+	}
+	#img00{
+		background-size:contain;
+	}
+	#exit,#previous,#next{
+	height: 5vw;
+	width: 5vw;
+	bottom:3vw;
+	}
+
+	#exit{
+		left:calc(50% - 2.5%);
+	}
+	#previous{	
+		left:calc(45% - 2.5% - 10px);
+	}
+	#next{
+		left:calc(55% - 2.5% + 10px);
+	}
+	.row{
+		width:100% ;
+	}
+	.column{
+		idth: 10%;
+	}
+	.tabContent{
+		
+		width: 80%;
+		left:10%;
+		height: auto;
+	}
+	#vid00{
+	height: 100%;
+	width: 100%;
+	background-size:100%;
+	z-index:2;
+	animation: appear .3s ;
+	}
+}
+@media (min-aspect-ratio:16/9){
+	.tabContent{
+		width: 60%;
+		left:20%;
+		height: auto;
+	}
+		#navigationBar
+	{
+		width: calc(60% - 8px);
+		left:calc(20% + 4px);
+	}
+	#cLogo{
+	background-size:20%;
+}
+}
+
+
+
