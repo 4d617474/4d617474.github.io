@@ -38,6 +38,15 @@
 	{
 		background-color:var(--aColor);
 	}
+	.post{
+		background:#202020;
+		animation: none 1s;
+	}
+	#tst
+	{
+		filter:invert(93.6%) !important;
+	}
+	
 	/*#int,button,.rowButtons
 	{
 		background: var(--aColor);

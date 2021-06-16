@@ -123,13 +123,15 @@ button
 }
 #rowD
 {
-	transform: rotate(180deg);
-	text-shadow: 2px 2px #ff0000;
+	transform: rotate(0deg);
+}
+#tst
+{
+	background:#000000 url('../icons/up.svg') center;	
 }
 .toggleOn
 {
-	filter:invert(100%);
-	transform: rotate(0deg) !important;
+	transform: rotate(180deg) !important;
 }
 .rowButtons
 {
@@ -245,6 +247,23 @@ button
 	cursor: pointer;
 	transition: filter .3s; 
 	nimation: IMGappear .1s ;
+	background:#dedede;
+	animation: none 1s;
+	animation-iteration-count: infinite;
+}
+@keyframes loads {
+	0% {background:#dedede url('../icons/next.svg') center no-repeat;}
+	25% {background:#dedede url('../icons/up.svg') center no-repeat;}
+	50% {background:#dedede url('../icons/previous.svg') center no-repeat;}
+	75% {background:#dedede url('../icons/up.svg') center no-repeat;}
+	100% {background:#dedede url('../icons/next.svg') center no-repeat;}
+}
+@keyframes loadt {
+	0% {background:#202020 url('../icons/next.svg') center no-repeat;}
+	25% {background:#202020 url('../icons/up.svg') center no-repeat;}
+	50% {background:#202020 url('../icons/previous.svg') center no-repeat;}
+	75% {background:#202020 url('../icons/up.svg') center no-repeat;}
+	100% {background:#202020 url('../icons/next.svg') center no-repeat;}
 }
 .post:hover
 {
