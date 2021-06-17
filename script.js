@@ -14,6 +14,7 @@ var cRow = document.getElementsByClassName("thirdRow");
 var rowS = document.getElementsByClassName("menuRow");
 var sideRow = document.getElementById("sideRow");
 
+var navOvf = document.getElementById("navOverflow");
 var navBar = document.getElementById("navigationBar");
 var barInfo = document.getElementById("barInfo");
 var menuToggler = document.getElementById("rowD");
@@ -61,12 +62,15 @@ column = document.getElementsByClassName("column");
 function sortPosts() {
 
 }
+var stylS = document.getElementById("newStyle");
 function darkMode(){
-	var stylS = document.getElementById("Astyle");
-	if (stylS.href == "dark.css"){
-		stylS.href = "light.css";
-	} else if (stylS.href == "light.css"){
-		stylS.href = "dark.css";
+// 	if (stylS.href == undefined){
+// 		stylS.href = "css/new.css";
+// 	} else if (stylS.href == "css/new.css"){
+// 		stylS.href = undefined;
+// 	}
+	if (stylS.href == "css/new.css"){
+		stylS.href = undefined;
 	}
 }
 // var barMenu = document.getElementById("barMenu");
@@ -81,13 +85,23 @@ function toggleMenu(state)
 	//
 	// }
 	if (menuState == 1){
-		navBar.style.bottom = "-15%";
-		barInfo.style.bottom = "calc(100%/3)";
+		// navBar.style.bottom = "-15%";
+		// navBar.style.bottom = "-27%";
+		// barInfo.style.bottom = "calc(100%/3)";
+		// barInfo.style.bottom = "calc(100%/3)";
+		navBar.classList.remove("nvBOn");
+		barInfo.classList.remove("bNfOn");
+		navOvf.classList.remove("nvOfOn");
 		menuState = 0;
 		menuToggler.classList.remove("toggleOn");
 	} else if (menuState == 0){
-		navBar.style.bottom = "0%";
-		barInfo.style.bottom = "100%";
+		// navBar.style.bottom = "0%";
+		// navBar.style.bottom = "0%";
+		// barInfo.style.bottom = "100%";
+		// barInfo.style.bottom = "100%";
+		barInfo.classList.add("bNfOn");
+		navBar.classList.add("nvBOn");
+		navOvf.classList.add("nvOfOn");
 		menuState = 1;
 		menuToggler.classList.add("toggleOn");
 	}
@@ -217,5 +231,6 @@ document.getElementById("next").onclick = function(){
 document.getElementById("exit").onclick = function(){
 	modal.style.opacity = "0";
 	modal.style.display = "none";
-	modalVid.pause();
+	modalVid.src = "";
+	// modalVid.pause();
 }

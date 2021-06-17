@@ -11,6 +11,7 @@
 		<link type="text/css" rel="stylesheet" href="css/desktop.css">
 		<link type="text/css" rel="stylesheet" href="css/mobile.css">
 		<link id="Astyle" rel="stylesheet" href="css/light.css">
+		<link id="newStyle" type="text/css" rel="stylesheet" href="">
 		<title>Hey!</title>
 		<link rel="icon" href="icons/4v.svg">
 		<meta name="theme-color" content="black">
@@ -41,107 +42,109 @@
 		</div>
 
 		<p id="ts">too small :(</p>
-		<div id="navigationBar">
-			<div id="barMenu">
-				<div id="menuLeft">
-					<div class="menuRows" id="rowA">
-						<button class="rowButtons left" onclick="btnSlct(1,this)">ob
-						</button>
-						<button class="rowButtons left" onclick="btnSlct(2,this)">ct
-						</button>
-						<button class="rowButtons left" onclick="btnSlct(3,this)">ph
-						</button>
+		<div id="navOverflow">
+			<div id="navigationBar">
+				<div id="barMenu">
+					<div id="menuLeft">
+						<div class="menuRows" id="rowA">
+							<button class="rowButtons left" onclick="btnSlct(1,this)">ob
+							</button>
+							<button class="rowButtons left" onclick="btnSlct(2,this)">ct
+							</button>
+							<button class="rowButtons left" onclick="btnSlct(3,this)">ph
+							</button>
+						</div>
+						<div class="menuRows" id="rowB">
+							<button class="rowButtons left" onclick="btnSlct(4,this)">an
+							</button>
+							<button class="rowButtons left">.
+							</button>
+							<button class="rowButtons left">.
+							</button>
+						</div>
+						<div class="menuRows" id="rowC">
+							<button class="rowButtons left">.
+							</button>
+							<button class="rowButtons left">.
+							</button>
+							<button class="rowButtons left">.
+							</button>
+						</div>
 					</div>
-					<div class="menuRows" id="rowB">
-						<button class="rowButtons left" onclick="btnSlct(4,this)">an
-						</button>
-						<button class="rowButtons left">.
-						</button>
-						<button class="rowButtons left">.
-						</button>
-					</div>
-					<div class="menuRows" id="rowC">
-						<button class="rowButtons left">.
-						</button>
-						<button class="rowButtons left">.
-						</button>
-						<button class="rowButtons left">.
-						</button>
+					<div id="menuRight">
+						<div class="menuRows" id="rowD">
+							<button id="tst" class="rowButtons right" onclick="toggleMenu()">
+							</button>
+						</div>
+						<div class="menuRows" id="rowE">
+							<button class="rowButtons right" onclick="stylS.href = undefined;">old
+							</button>
+						</div>
+						<div class="menuRows" id="rowF" onclick="stylS.href = 'css/new.css';">
+							<button class="rowButtons right">new
+							</button>
+						</div>
 					</div>
 				</div>
-				<div id="menuRight">
-					<div class="menuRows" id="rowD">
-						<button id="tst" class="rowButtons right" onclick="toggleMenu()">
-						</button>
-					</div>
-					<div class="menuRows" id="rowE">
-						<button class="rowButtons right">
-						</button>
-					</div>
-					<div class="menuRows" id="rowF">
-						<button class="rowButtons right">
-						</button>
-					</div>
-				</div>
-			</div>
-			<div id="barInfo">
-				<div class="infoBlock default">
-					<a href="">
-						<button class="infoTitle">
-							click on something!
-						</button>
-					</a>
-					<div class="infoDescription">
-						<div class="descContent">
+				<div id="barInfo">
+					<div class="infoBlock default">
+						<a href="">
+							<button class="infoTitle">
+								click on something!
+							</button>
+						</a>
+						<div class="infoDescription">
+							<div class="descContent">
 
+							</div>
 						</div>
 					</div>
-				</div>
-				<div class="infoBlock">
-					<a href="https://www.instagram.com/oddbeep/">
-						<button class="infoTitle">
-							@oddbeep
-						</button>
-					</a>
-					<div class="infoDescription">
-						<div class="descContent">
-							This is about mysteries, my love for the Unknown. Anything goes here, just don't stare at it for too long.
+					<div class="infoBlock">
+						<a href="https://www.instagram.com/oddbeep/">
+							<button class="infoTitle">
+								@oddbeep
+							</button>
+						</a>
+						<div class="infoDescription">
+							<div class="descContent">
+								This is about mysteries, my love for the Unknown. Anything goes here, just don't stare at it for too long.
+							</div>
 						</div>
 					</div>
-				</div>
-				<div class="infoBlock">
-					<a href="https://www.instagram.com/crustiestthoughts/">
-						<button class="infoTitle">
-							@crustiestthoughts
-						</button>
-					</a>
-					<div class="infoDescription">
-						<div class="descContent">
-							Some thoughts are out of place, they make you feel akward, and yet you can't get rid of them.
+					<div class="infoBlock">
+						<a href="https://www.instagram.com/crustiestthoughts/">
+							<button class="infoTitle">
+								@crustiestthoughts
+							</button>
+						</a>
+						<div class="infoDescription">
+							<div class="descContent">
+								Some thoughts are out of place, they make you feel akward, and yet you can't get rid of them.
+							</div>
 						</div>
 					</div>
-				</div>
-				<div class="infoBlock">
-					<a href="">
-						<button class="infoTitle">
-							nature pictures
-						</button>
-					</a>
-					<div class="infoDescription">
-						<div class="descContent">
-							A collection of animals and plants pictures, pretty much anything that's alive.
+					<div class="infoBlock">
+						<a href="">
+							<button class="infoTitle">
+								nature pictures
+							</button>
+						</a>
+						<div class="infoDescription">
+							<div class="descContent">
+								A collection of animals and plants pictures, pretty much anything that's alive.
+							</div>
 						</div>
 					</div>
-				</div>
-				<div class="infoBlock">
-					<a href="">
-						<button class="infoTitle">
-							more animals
-						</button>
-					</a>
-					<div class="infoDescription">
-						<div class="descContent">
-							woof woof woof woof woof woof woof meow meow meow meow meow bzz bzz bzz bzz bzz bzz gloo gloo gloo gloo gloo gloo
+					<div class="infoBlock">
+						<a href="">
+							<button class="infoTitle">
+								more animals
+							</button>
+						</a>
+						<div class="infoDescription">
+							<div class="descContent">
+								woof woof woof woof woof woof woof meow meow meow meow meow bzz bzz bzz bzz bzz bzz gloo gloo gloo gloo gloo gloo
+							</div>
 						</div>
 					</div>
 				</div>

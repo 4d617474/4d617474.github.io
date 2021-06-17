@@ -69,6 +69,15 @@ button
 	transition: bottom .3s;
 	z-index:100;
 }
+#navigationBar.nvBOn
+{
+	bottom:0%;
+}
+#barInfo.bNfOn
+{
+	bottom:100%;
+}
+
 #barMenu,#barInfo
 {
 	position: absolute;
