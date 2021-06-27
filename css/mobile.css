@@ -9,7 +9,6 @@
 		position: relative;
 		height:auto;
 	}
-
 	#barMenu,#barInfo
 	{
 		width: 100%;
@@ -18,7 +17,6 @@
 	{
 		bottom:100%;
 	}
-  
 	.tabContent{
 		left:0%;
 		width: 100%;
@@ -41,44 +39,41 @@
 	#Third{
 		ackground-color:Orange;
 	}
-
 	#videoWrapper
 	{
-		display:none;
-		position:absolute;
-		top:0;
-	left:0;
-	height: 500px;
-	width: 100%;
-	overflow: hidden;
-	z-index: 2;
+	 display:none;
+	 position:absolute;
+	 top:0;
+	 left:0;
+	 height: 500px;
+	 width: 100%;
+	 overflow: hidden;
+	 z-index: 2;
 	}	
 	#exit:hover,#previous:hover,#next:hover{
 		filter:none;
 	}
 	#exit:active,#previous:active,#next:active{
-			filter:invert(0);
-			transition:filter .2s;
+	 filter:invert(0);
+	 transition:filter .2s;
 	}
 	#vid00{
-	height: 100%;
-	width: 100%;
-	background-size:100%;
-	z-index:2;
-	animation: appear .3s ;
-		}
+	 height: 100%;
+	 width: 100%;
+	 background-size:100%;
+	 z-index:2;
+	 animation: appear .3s ;
+	}
 	#menuDesc{
 		display: none;
-}
+  }
 	#sideRow{
 	top:20%;
 	right:0%;
 	width:25%;
 		height:60%;
-}
+  }
 	#exit:hover,#previous:hover,#next:hover,.rowButtons:hover,.infoTitle:hover,.post:hover{
 		filter:none !important;
 	}
-	
-	
 }

@@ -57,7 +57,16 @@
 		color:var(--bColor);
 	}*/
 }
-
+/*alternative*/
+/**
+.post, #navigationBar, .modalButton, #int
+{
+	border-radius:4px;
+}
+#navigationBar, #int
+{
+	overflow: hidden;
+}
 /*debug*/
 /**
 button

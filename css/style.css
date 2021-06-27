@@ -430,3 +430,28 @@ button
 {
 	bottom:calc(100%/3);
 }
+.postContainer
+{
+	height:auto;
+	width:auto;
+}
+.tooltipPost
+{
+	position: absolute;
+	top:0%;
+	right:00%;
+	height:auto;
+	width: auto;
+	background: var(--bColor);
+	visibility:visible;
+}
+.tooltipPost::after {
+  content:"";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin-left:-5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent black transparent;
+}
