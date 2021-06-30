@@ -22,46 +22,16 @@ var menuState = 0;
 var infBlck = document.getElementsByClassName("infoBlock");
 var allSlctdBtns = document.getElementsByClassName("rowButtons");
 var tabcontent = document.getElementsByClassName("tabcontent");
-postThumb.onclick = function(event) {
-		//if (event.target.className != 'operatorBadge') return;
 
-		//var pane = event.target.closest('.operatorBadge');
-		//console.log( event.target.closest('.operatorBadge'));
-		//showCharacter(this);
-		console.log("gey");
-	};
-
-// window.onscroll = function() {scrollFunction()};
-var menuMenuClosed, menuToggleClosed, menuToggleOpen, menuMenuOpen
+var menuMenuClosed, menuToggleClosed, menuToggleOpen, menuMenuOpen;
 var currWinSize, rowsSizeOpen, rowsSizeClose;
-// windSize();
-// function windSize(){
-// 	if (window.outerWidth > 700){
-// 		 menuMenuClosed = '-20%';
-// 		 menuToggleClosed = '0%';
-// 		 menuToggleOpen = '0%';
-// 		 menuMenuOpen = '0%';
-// 		 rowsSizeOpen = '40%';
-// 		 rowsSizeClose = '40%';
-// 		 menuToggle();
-// 		 menuToggle();
-// 	 } else {
-// 		 menuMenuClosed = '-18%';
-// 		 menuMenuOpen = '12%';
-// 		 menuToggleClosed = '0%';
-// 		 menuToggleOpen = '200%';
-// 		 rowsSizeOpen = '40%';
-// 		 rowsSizeClose = '20%';
-// 		 currWinSize = 1;
-// 		 menuToggle();
-// 		 menuToggle();
-// 	 };
-// }
 
 column = document.getElementsByClassName("column");
-function sortPosts() {
 
-}
+setTimeout(function(){
+	document.getElementById('curtains').style.display = "none"
+}, 1000)
+
 var stylS = document.getElementById("newStyle");
 function darkMode(){
 // 	if (stylS.href == undefined){
@@ -171,28 +141,44 @@ function scrollFunction() {
 var pane;
 // document.getElementsByClassName("post").onclick = function(){
 this.onclick = function(event) {
-    if (event.target.className != 'post') return;
-		modalImg.firstElementChild.src = "none";
-		modalImg.style.backgroundImage = "none";
-		pane = event.target.closest('.post');
-    // var paneNext = pane.nextElementSibling;
-		// console.log(paneNext);
-		modal.style.display = "block";
-		modal.style.opacity = "1";
-		if (pane.nodeName == "VIDEO") {
-			// modalImg.firstElementChild.src = pane.src;
-			modalVid.src = pane.src;
-			modalVid.style.display = "block";
-			modalVid.play();
-		} else {
-			modalImg.style.backgroundImage = "url('" + pane.src + "')";
-			modalVid.style.display = "none";
-
-			// modalImg.src = pane.src;
-		}
+		// if (event.target.className != 'post' || event.target.className != 'post.wd' ) return;
+		// if (event.target.className != 'post') return;
+    if (event.target.classList.contains("post") == true) {
+			modalImg.firstElementChild.src = "none";
+			modalImg.style.backgroundImage = "none";
+			pane = event.target.closest('.post');
+	    // var paneNext = pane.nextElementSibling;
+			// console.log(paneNext);
+			// console.log(pane.nodeName);
+			modal.style.display = "block";
+			modal.style.opacity = "1";
+			if (pane.nodeName == "VIDEO") {
+				// modalImg.firstElementChild.src = pane.src;
+				modalVid.src = pane.src;
+				modalImg.style.display = "block";
+				modalVid.style.display = "block";
+				document.getElementById("mute").style.display = "block";
+				modalVid.play();
+			// } else if (pane.nodeName == "IMAGE"){
+			} else if (pane.classList.contains("wd") == false){
+				modalImg.style.display = "block";
+				modalImg.style.backgroundImage = "url('" + pane.src + "')";
+				modalVid.style.display = "none";
+				document.getElementById("mute").style.display = "none";
+			} else if (pane.classList.contains("wd") == true){
+				modalVid.style.display = "none";
+				modalImg.style.display = "none";
+				// console.log(pane.href);
+				document.getElementById('spFrame-In').src = pane.alt;
+				document.getElementById("source").style.display = "block";
+				document.getElementById("reload").style.display = "block";
+				document.getElementById("spFrame-In").style.display = "block";
+			}
+	} return
 };
 
 document.getElementById("previous").onclick = function(){
+	// if(pane.parentNode.previousElementSibling.lastElementChild != null)return;
 	var tz, ab;
 	var i;
 	tz = pane;
@@ -203,12 +189,11 @@ document.getElementById("previous").onclick = function(){
 			// if (ab == null){
 				i = 1;
 				ab.click();
-		} else if (ab.className == "post"){
+		} else if (ab.className == "post" || ab.className == "post wd"){
 			ab.click();
 			i = 1;
 		}
 		ab = ab.previousSibling;
-			// console.log(ab);
 	}
 }
 document.getElementById("next").onclick = function(){
@@ -221,7 +206,7 @@ document.getElementById("next").onclick = function(){
 			ab = pane.parentNode.nextElementSibling.firstElementChild;
 				i = 1;
 				ab.click();
-		} else if (ab.className == "post"){
+		} else if (ab.className == "post" || ab.className == "post wd"){
 			ab.click();
 			i = 1;
 		}
@@ -231,6 +216,53 @@ document.getElementById("next").onclick = function(){
 document.getElementById("exit").onclick = function(){
 	modal.style.opacity = "0";
 	modal.style.display = "none";
-	modalVid.src = "";
+	modalVid.src = "none";
+	document.getElementById("reload").style.display = "none";
+	document.getElementById("mute").style.display = "none";
+	document.getElementById("source").style.display = "none";
+	document.getElementById("source").style.display = "none";
+	document.getElementById("reload").style.display = "none";
+	document.getElementById("spFrame-In").style.display = "none";
+	// document.getElementById('spFrame-In').src = "none";
+
 	// modalVid.pause();
+}
+document.getElementById("mute").onclick = function(){
+	if (modalVid.muted == true){
+		modalVid.muted = false;
+		this.style.backgroundImage = "url('icons/sound.svg')";
+		// document.getElementById("mute").style.backgroundImage = "url('icons/sound.svg')";
+	} else {
+		modalVid.muted = true;
+		this.style.backgroundImage = 'url("icons/mute.svg")';
+	}
+}
+document.getElementById("reload").onclick = function(){
+	var hold = document.getElementById("spFrame-In").src;
+	document.getElementById('spFrame-In').src = '';
+	// setTimeout(function(){
+		document.getElementById('spFrame-In').src = hold
+	// }, 10)
+}
+document.getElementById('eggA').onclick = function(){
+	document.getElementById('egg1').classList.add("visible");
+	setTimeout(function(){
+		document.getElementById('egg1').classList.remove("visible")
+	}, 1000)
+}
+document.getElementById('egg1').onclick = function(){
+	document.getElementById('egg2').classList.add("visible");
+	document.getElementById('egg1').classList.remove("visible")
+	setTimeout( function(){
+		document.getElementById('egg2').classList.remove("visible")
+	}, 1000)
+}
+function notyet(){
+	document.getElementById('egg0').classList.add("visible");
+	setTimeout(function(){
+		document.getElementById('egg0').classList.remove("visible")
+	}, 1000)
+}
+function wdToggle(){
+ console.log('r')
 }

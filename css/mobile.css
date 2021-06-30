@@ -57,6 +57,35 @@
 	 filter:invert(0);
 	 transition:filter .2s;
 	}
+	.modalButton{
+		height: 16vw;
+		width: 16vw;
+		bottom:50px;
+	}
+	#exit{
+		left:calc(50% - 8vw);
+		background-image:url('../icons/cross.svg');
+	}
+	#previous{
+		left:calc(35% - 8vw - 10px);
+		background-image:url('../icons/previous.svg');
+	}
+	#next{
+		left:calc(65% - 8vw + 10px);
+		background-image:url('../icons/next.svg');
+	}
+	#mute{
+		left:calc(80% - 8vw + 20px);
+		background-image:url('../icons/sound.svg');
+	}
+	#reload{
+		left:calc(20% - 8vw - 20px);
+		background-image:url('../icons/reload.svg');
+	}
+	#source{
+		left:calc(80% - 8vw + 20px);
+		background-image:url('../icons/source.svg');
+	}
 	#vid00{
 	 height: 100%;
 	 width: 100%;
@@ -73,7 +102,8 @@
 	width:25%;
 		height:60%;
   }
-	#exit:hover,#previous:hover,#next:hover,.rowButtons:hover,.infoTitle:hover,.post:hover{
+	.modalButton:hover,.rowButtons:hover,.infoTitle:hover,.post:hover{
 		filter:none !important;
 	}
+
 }

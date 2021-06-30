@@ -4,7 +4,7 @@
 }
 #barInfo
 {
-	transition: height .3s, bottom .4s;
+	transition: height .3s, bottom .3s;
 }
 #navOverflow
 {
@@ -64,16 +64,67 @@
 	background: white;
 	border-radius: 99px;
 }
-#navigationBar.nvBOn
-{
-	height: 50%;
-	bottom:0%;
+@media (max-width: 700px){ /*mobile*/
+	#navigationBar.nvBOn
+	{
+		height: 50%;
+		bottom:0%;
+	}
+	#barInfo.bNfOn
+	{
+		bottom:100%;
+	}
+	#navOverflow.nvOfOn
+	{
+		height: 40%;	
+	}
 }
-#barInfo.bNfOn
-{
-	bottom:100%;
+@media (min-width: 700px){ /*desktop*/
+	#navOverflow
+	{
+		width: 96%;
+		height: 8%;
+		margin:2%;
+		overflow: hidden;
+		z-index: 100;
+		border-radius: 10px;
+		box-shadow: 0px 10px 40px black;
+	}
+	#navOverflow.nvOfOn
+	{
+		height: calc(8% * 3);	
+	}
+	#navigationBar
+	{
+		position: absolute;
+		height: calc(8% * 38);
+		height: 304%;
+		bottom:unset;		
+		bottom:-202%;		
+	}
+	#navigationBar.nvBOn
+	{
+		height: 100%;
+	}
+	#navOverflow
+	{
+  	margin:0 0 2% 0;		
+		width: calc(80% - 0px);
+		left:calc(10% + 0px);
+	}
+  #navigationBar
+	{
+		
+	}
 }
-#navOverflow.nvOfOn
+#avOverflow{op:50%;overflow: visible;box-shadow: 0px 0px 0px 5px yellow}
+#navOverflowBorder
 {
-	height: 40%;	
+	position: absolute;
+	left:0%;
+	top: 0%;
+	width: 100%;
+	height: 100%;
+	box-shadow: 0px 0px 0px 1px red;
+	z-index: 99;
 }

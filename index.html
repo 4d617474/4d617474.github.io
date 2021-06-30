@@ -10,6 +10,7 @@
 		<link type="text/css" rel="stylesheet" href="css/style.css">
 		<link type="text/css" rel="stylesheet" href="css/desktop.css">
 		<link type="text/css" rel="stylesheet" href="css/mobile.css">
+		<link type="text/css" rel="stylesheet" href="css/player.css">
 		<link id="Astyle" rel="stylesheet" href="css/light.css">
 		<link id="newStyle" type="text/css" rel="stylesheet" href="">
 		<title>Hey!</title>
@@ -28,23 +29,31 @@
 			<div class="modalButton" id="previous"></div>
 			<div class="modalButton" id="exit"></div>
 			<div class="modalButton" id="next"></div>
+			<div class="modalButton" id="reload"></div>
+			<div class="modalButton" id="mute"></div>
+			<div class="modalButton" id="source"></div>
 			<div class="modal-content" id="img00" style="background-image:none;">
 				<!-- <video id="vid00" autoplay muted></video> -->
 				<video id="vid00" loop></video>
 			</div>
+			<!-- <div id="spFrame"> -->
+				<iframe id="spFrame-In" src="none"></iframe>
+			<!-- </div> -->
 		</div>
 
 		<div id="int">
 			<video id="intHey" autoplay loop muted>
 				<source src="heyy.mp4">
 			</video>
-			<div id="intAbt">Hey, I'm Matt!<br>Here you'll find<br> most of the stuff I make</div>
+			<div id="intAbt">Hey! I'm 4D617474, or Matt for short.<br>I will be posting most my work here, feel free to explore. :)</div>
 		</div>
 
 		<p id="ts">too small :(</p>
 		<div id="navOverflow">
+			<div id="navOverflowBorder"></div>
 			<div id="navigationBar">
 				<div id="barMenu">
+					<button id="egg0">nothing yet!</button>
 					<div id="menuLeft">
 						<div class="menuRows" id="rowA">
 							<button class="rowButtons left" onclick="btnSlct(1,this)">ob
@@ -57,17 +66,17 @@
 						<div class="menuRows" id="rowB">
 							<button class="rowButtons left" onclick="btnSlct(4,this)">an
 							</button>
-							<button class="rowButtons left">.
+							<button class="rowButtons left" onclick="btnSlct(5,this)">wd
 							</button>
-							<button class="rowButtons left">.
+							<button class="rowButtons left" onclick="btnSlct(6,this)">mu
 							</button>
 						</div>
 						<div class="menuRows" id="rowC">
-							<button class="rowButtons left">.
+							<button class="rowButtons left" onclick="notyet()">.
 							</button>
-							<button class="rowButtons left">.
+							<button class="rowButtons left" onclick="notyet()">.
 							</button>
-							<button class="rowButtons left">.
+							<button class="rowButtons left" onclick="notyet()">.
 							</button>
 						</div>
 					</div>
@@ -77,22 +86,24 @@
 							</button>
 						</div>
 						<div class="menuRows" id="rowE">
-							<button class="rowButtons right" onclick="stylS.href = undefined;">old
+							<!-- <button class="rowButtons right" onclick="stylS.href = undefined;">old -->
+							<button class="rowButtons right" onclick="notyet()">abt
 							</button>
 						</div>
-						<div class="menuRows" id="rowF" onclick="stylS.href = 'css/new.css';">
-							<button class="rowButtons right">new
+						<!-- <div class="menuRows" id="rowF" onclick="stylS.href = 'css/new.css';"> -->
+						<div class="menuRows" id="rowF">
+							<button class="rowButtons right" onclick="notyet()">.
 							</button>
 						</div>
 					</div>
 				</div>
 				<div id="barInfo">
 					<div class="infoBlock default">
-						<a href="">
-							<button class="infoTitle">
-								click on something!
-							</button>
-						</a>
+						<button class="infoTitle" id="eggA">
+							click on something!
+						</button>
+						<button id="egg1">not me!</button>
+						<button id="egg2">you bully!</button>
 						<div class="infoDescription">
 							<div class="descContent">
 
@@ -147,6 +158,30 @@
 							</div>
 						</div>
 					</div>
+					<div class="infoBlock">
+						<a href="">
+							<button class="infoTitle">
+								web design
+							</button>
+						</a>
+						<div class="infoDescription">
+							<div class="descContent">
+								Some website I've made, including the one you are on right now.
+							</div>
+						</div>
+					</div>
+					<div class="infoBlock">
+						<a href="">
+							<button class="infoTitle">
+								music
+							</button>
+						</a>
+						<div class="infoDescription">
+							<div class="descContent">
+								Experimental songs.
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -156,15 +191,23 @@
 		<div id="First" class="tabContent">
 			<div class="row">
 				<div class="column">
-					<video src="posts/ob/ob0006.mp4" class="post"></video>
-					<video src="posts/ob/ob0004.mp4" class="post"></video>
-					<video src="posts/ob/ob0002.mp4" class="post"></video>
-					<video src="posts/ob/ob0000.mp4" class="post"></video>
+					<video src="posts/ob/ob0014.mp4" class="post"></video>
+					<video src="posts/ob/ob0012.mp4" class="post"></video>
+					<img src="posts/ob/ob0010.png" class="post" loading="lazy"></img>
+					<video src="posts/ob/ob0008.mp4" class="post" loading="lazy"></video>
+					<img src="posts/ob/ob0006.png" class="post" loading="lazy"></img>
+					<video src="posts/ob/ob0004.mp4" class="post" loading="lazy"></video>
+					<video src="posts/ob/ob0000.mp4" class="post" loading="lazy"></video>
 				</div>
 				<div class="column">
-					<img src="posts/ob/ob0005.png" class="post"></img>
-					<video src="posts/ob/ob0003.mp4" class="post"></video>
-					<video src="posts/ob/ob0001.mp4" class="post"></video>
+					<video src="posts/ob/ob0015.mp4" class="post"></video>
+					<video src="posts/ob/ob0013.mp4" class="post"></video>
+					<video src="posts/ob/ob0011.mp4" class="post" loading="lazy"></video>
+					<video src="posts/ob/ob0009.mp4" class="post" loading="lazy"></video>
+					<video src="posts/ob/ob0007.mp4" class="post" loading="lazy"></video>
+					<video src="posts/ob/ob0005.mp4" class="post" loading="lazy"></video>
+					<video src="posts/ob/ob0003.mp4" class="post" loading="lazy"></video>
+					<video src="posts/ob/ob0001.mp4" class="post" loading="lazy"></video>
 				</div>
 			</div>
 		</div>
@@ -174,8 +217,8 @@
 				<div class="column">
 					<img src="posts/ct/ct001E.png" class="post">
 					<img src="posts/ct/ct0020.png" class="post">
-					<img src="posts/ct/ct001C.png" class="post">
-					<img src="posts/ct/ct001A.png" class="post">
+					<img src="posts/ct/ct001C.png" class="post" loading="lazy">
+					<img src="posts/ct/ct001A.png" class="post" loading="lazy">
 					<img src="posts/ct/ct0018.png" class="post" loading="lazy">
 					<img src="posts/ct/ct0016.png" class="post" loading="lazy">
 					<img src="posts/ct/ct0014.png" class="post" loading="lazy">
@@ -193,8 +236,8 @@
 				<div class="column">
 					<img src="posts/ct/ct001F.png" class="post">
 					<img src="posts/ct/ct001D.png" class="post">
-					<img src="posts/ct/ct001B.png" class="post">
-					<img src="posts/ct/ct0019.png" class="post">
+					<img src="posts/ct/ct001B.png" class="post" loading="lazy">
+					<img src="posts/ct/ct0019.png" class="post" loading="lazy">
 					<img src="posts/ct/ct0017.png" class="post" loading="lazy">
 					<img src="posts/ct/ct0015.png" class="post" loading="lazy">
 					<img src="posts/ct/ct0013.png" class="post" loading="lazy">
@@ -222,8 +265,8 @@
 					</div> -->
 					<img src="posts/ph/ph002A.jpg" class="post">
 					<img src="posts/ph/ph0028.jpg" class="post">
-					<img src="posts/ph/ph0026.jpg" class="post">
-					<img src="posts/ph/ph0024.jpg" class="post">
+					<img src="posts/ph/ph0026.jpg" class="post" loading="lazy">
+					<img src="posts/ph/ph0024.jpg" class="post" loading="lazy">
 					<img src="posts/ph/ph0022.jpg" class="post" loading="lazy">
 					<img src="posts/ph/ph0020.jpg" class="post" loading="lazy">
 					<img src="posts/ph/ph001E.jpg" class="post" loading="lazy">
@@ -246,8 +289,8 @@
 				<div class="column">
 					<img src="posts/ph/ph0029.jpg" class="post">
 					<img src="posts/ph/ph0027.jpg" class="post">
-					<img src="posts/ph/ph0025.jpg" class="post">
-					<img src="posts/ph/ph0023.jpg" class="post">
+					<img src="posts/ph/ph0025.jpg" class="post" loading="lazy">
+					<img src="posts/ph/ph0023.jpg" class="post" loading="lazy">
 					<img src="posts/ph/ph0021.jpg" class="post" loading="lazy">
 					<img src="posts/ph/ph001F.jpg" class="post" loading="lazy">
 					<img src="posts/ph/ph001D.jpg" class="post" loading="lazy">
@@ -280,8 +323,52 @@
 				</div>
 			</div>
 		</div>
+		<div id="Fifth" class="tabContent">
+			<div class="row">
+				<div class="column">
 
+					<!-- <img src="posts/wd/siegetool.png" class="post wd" onclick="wdToggle(5,1)"> -->
+					<img src="posts/wd/siegetool.png" class="post wd" alt="https://4d617474.github.io/siegeTool/">
+					<img src="posts/wd/sp3.png" class="post wd" alt="posts/wd/startpageSquared/Squared.html">
+					<img src="posts/wd/sp1.png" class="post wd" alt="posts/wd/startpage1/hp4Nox.html">
+				</div>
+				<div class="column">
+					<img src="posts/wd/sp4.png" class="post wd" alt="posts/wd/ko/Ko.html">
+					<img src="posts/wd/sp2.png" class="post wd" alt="posts/wd/hpstarcitizen/hpsc.html">
+				</div>
+			</div>
+		</div>
+		<div id="Sixth" class="tabContent">
+			<div class="row">
+
+					<audio controls>
+						<source src="posts/mu/ee3.mp3" type="audio/mpeg">
+					</audio>
+					<audio controls>
+						<source src="posts/mu/ec_5x.mp3" type="audio/mp3">
+					</audio>
+					<audio controls>
+					  <source src="posts/mu/etes_18.mp3" type="audio/mpeg">
+					</audio>
+					<audio controls>
+					  <source src="posts/mu/guit2.mp3" type="audio/mpeg">
+					</audio>
+					<audio controls>
+					  <source src="posts/mu/reB_6.mp3" type="audio/mpeg">
+					</audio>
+					<audio controls>
+					  <source src="posts/mu/reB_8.mp3" type="audio/mpeg">
+					</audio>
+					<audio controls>
+					  <source src="posts/mu/untitledM_3.mp3" type="audio/mpeg">
+					</audio>
+					<audio controls>
+					  <source src="posts/mu/xxed.mp3" type="audio/mpeg">
+					</audio>
+			</div>
+		</div>
 		<script src="script.js" type="text/javascript"></script>
+		<script src="player.js" type="text/javascript"></script>
 	</body>
 
 

@@ -1,3 +1,4 @@
+
 #navigationBar
 {
 	bottom:-15%;
@@ -21,12 +22,12 @@
 		--aColor: #101010;
 		--bColor: #eeeeee;
 	}
-  #previous,#exit,#next
+  #previous,#exit,#next,#mute,#reload,#source
 	{
 		background-color:var(--aColor);
 		filter:invert(0%);
 	}
-  #previous:hover,#exit:hover,#next:hover
+  #previous:hover,#exit:hover,#next:hover,#mute:hover,#reload:hover,#source:hover
 	{
 		filter:invert(10%);
 	}

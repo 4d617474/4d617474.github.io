@@ -1,4 +1,25 @@
 @media (min-width: 700px){
+	#int
+	{
+		left: calc(10% + 4px);
+		width: calc(80% - 8px);
+	}
+	#intHey
+	{
+		width:50%;		
+	}
+  #intAbt
+	{
+		width:40%;		
+		padding:5%;
+		font-size: 150%;
+		text-align: left;
+	}
+	#intHey,#intAbt
+	{
+		position: relative;
+		float:left;
+	}
   #barInfo
 	{
 		bottom:0% !important;
@@ -11,12 +32,12 @@
 	#img00{
 		background-size:contain;
 	}
-	#exit,#previous,#next{
-	height: 5vw;
-	width: 5vw;
-	bottom:3vw;
+	.modalButton{
+		height: 5vw;
+		width: 5vw;
+		bottom:3vw;
 	}
-
+  
 	#exit{
 		left:calc(50% - 2.5%);
 	}
@@ -26,6 +47,16 @@
 	#next{
 		left:calc(55% - 2.5% + 10px);
 	}
+	#mute{
+		left:calc(60% - 2.5% + 20px);
+	}
+	#source{
+		left:calc(60% - 2.5% + 20px);
+	}
+	#reload{
+		left:calc(40% - 2.5% - 20px);
+	}
+	
 	.row{
 		width:100% ;
 	}
@@ -52,14 +83,14 @@
 		left:20%;
 		height: auto;
 	}
-		#navigationBar
+		#navigationBar,#int
 	{
 		width: calc(60% - 8px);
 		left:calc(20% + 4px);
 	}
 	#cLogo{
 	background-size:20%;
-}
+  }
 }
 
 
