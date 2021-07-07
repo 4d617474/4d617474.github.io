@@ -266,3 +266,12 @@ function notyet(){
 function wdToggle(){
  console.log('r')
 }
+function dispInfo(nbr,st){
+	var btnsSlctd = document.getElementsByClassName("buttonInfo");
+	// btnsSlctd[nbr].style.display = "block";
+	if(st==1){
+		btnsSlctd[nbr].classList.add("visible");
+	} else {
+		btnsSlctd[nbr].classList.remove("visible");
+	}
+}

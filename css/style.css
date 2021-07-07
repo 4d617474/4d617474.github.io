@@ -481,7 +481,7 @@ button
   border-style: solid;
   border-color: transparent transparent black transparent;
 }
-#egg0,#egg1,#egg2
+#egg0,#egg1,#egg2,.buttonInfo
 {
 	position: absolute;
 	height: 33%;
@@ -491,18 +491,31 @@ button
 	font-size:3vh;
 	text-align: center;
 	opacity: 0;
-	background:var(--cColor) ;
 	color:white;
 	display:none;
 	opacity: 0;
 	transition: opcacity .2s;
 	z-index: 200;
 	cursor:pointer;
+}
+.buttonInfo
+{
+	display: none;
+	/*animation: showBI .2s 1;*/
+	background:var(--aColor) 
+}
+#egg0,#egg1,#egg2
+{
 	animation: showEgg 1s infinite;
+	background:var(--cColor) ;
 }
 #egg0,#egg2
 {
 	cursor:default;
+}
+@keyframes showBI {
+	0% {opacity: 0;;margin-top:0%;}
+	100% {opacity: 1;margin-top:0%;}
 }
 @keyframes showEgg {
 	0% {opacity: 0;}
@@ -515,13 +528,13 @@ button
 	80% {opacity: 1;margin-top:0%;}
 	100% {opacity: 0;margin-top:3%;}
 }
-#egg0.visible,#egg1.visible,#egg2.visible
+#egg0.visible,#egg1.visible,#egg2.visible,.buttonInfo.visible
 {
 	opacity: 1;
 	display: block;
 	top:-33%;
 }
-#egg0::after,#egg1::after,#egg2::after
+#egg0::after,#egg1::after,#egg2::after,.buttonInfo.visible::after
 {
 	content:"";
   position: absolute;
@@ -530,5 +543,12 @@ button
   margin-left:-5px;
   border-width: 5px;
   border-style: solid;
+}
+.buttonInfo.visible::after
+{
+  border-color: var(--aColor) transparent transparent transparent;
+}
+#egg0::after,#egg1::after,#egg2::after
+{
   border-color: var(--cColor) transparent transparent transparent;
 }
