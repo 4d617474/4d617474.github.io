@@ -102,8 +102,10 @@
 	width:25%;
 		height:60%;
   }
-	.modalButton:hover,.rowButtons:hover,.infoTitle:hover,.post:hover{
+	/*
+	.modalButton:hover,.rowButtons:hover,.infoTitle:hover,.post:hover
+	{
 		filter:none !important;
-	}
+	}*/
 
 }

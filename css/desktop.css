@@ -37,7 +37,10 @@
 		width: 5vw;
 		bottom:3vw;
 	}
-  
+  .rowButtons:hover:not(.btnOn),.infoTitle:hover
+	{
+		filter:invert(15%);
+	}
 	#exit{
 		left:calc(50% - 2.5%);
 	}

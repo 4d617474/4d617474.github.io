@@ -1,6 +1,4 @@
 :root{
-	--firstColor:#151515 ;
-	--shadowColor: #120009;
   --aColor: #FFFFFF;
   --bColor: #000000;
   --cColor: #ff4e4e;
@@ -158,10 +156,7 @@ button
 	color:var(--aColor);
 	border:none;
 }
-.rowButtons:hover:not(.btnOn),.infoTitle:hover
-{
-	filter:invert(15%);
-}
+
 .btnOn
 {
 	filter:invert(100%);
