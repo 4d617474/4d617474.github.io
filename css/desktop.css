@@ -20,6 +20,11 @@
 		position: relative;
 		float:left;
 	}
+	.textBlock
+	{
+		left: calc(10% + 4px);
+		width: calc(100% - 8px);
+	}
   #barInfo
 	{
 		bottom:0% !important;

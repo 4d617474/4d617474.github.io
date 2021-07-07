@@ -50,9 +50,11 @@
 	 overflow: hidden;
 	 z-index: 2;
 	}	
-	#exit:hover,#previous:hover,#next:hover{
-		filter:none;
+  .rowButtons:hover:not(.btnOn),.infoTitle:hover
+	{
+		filter:none !important;
 	}
+
 	#exit:active,#previous:active,#next:active{
 	 filter:invert(0);
 	 transition:filter .2s;
@@ -102,6 +104,10 @@
 	width:25%;
 		height:60%;
   }
+	.buttonInfo
+	{
+		display: none !important;
+	}
 	/*
 	.modalButton:hover,.rowButtons:hover,.infoTitle:hover,.post:hover
 	{

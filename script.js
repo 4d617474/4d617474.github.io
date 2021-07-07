@@ -27,7 +27,9 @@ var menuMenuClosed, menuToggleClosed, menuToggleOpen, menuMenuOpen;
 var currWinSize, rowsSizeOpen, rowsSizeClose;
 
 column = document.getElementsByClassName("column");
-
+setTimeout(function(){
+	window.scrollTo(0, 0);
+}, 1)
 setTimeout(function(){
 	document.getElementById('curtains').style.display = "none"
 }, 1000)
@@ -244,13 +246,13 @@ document.getElementById("reload").onclick = function(){
 		document.getElementById('spFrame-In').src = hold
 	// }, 10)
 }
-document.getElementById('eggA').onclick = function(){
+document.getElementById('eggA').onmouseover = function(){
 	document.getElementById('egg1').classList.add("visible");
-	setTimeout(function(){
-		document.getElementById('egg1').classList.remove("visible")
-	}, 1000)
 }
-document.getElementById('egg1').onclick = function(){
+document.getElementById('eggA').onmouseleave = function(){
+	document.getElementById('egg1').classList.remove("visible")
+}
+document.getElementById('eggA').onclick = function(){
 	document.getElementById('egg2').classList.add("visible");
 	document.getElementById('egg1').classList.remove("visible")
 	setTimeout( function(){
@@ -270,8 +272,12 @@ function dispInfo(nbr,st){
 	var btnsSlctd = document.getElementsByClassName("buttonInfo");
 	// btnsSlctd[nbr].style.display = "block";
 	if(st==1){
+		document.getElementById('buttonInfoBlock').classList.add("visible")
 		btnsSlctd[nbr].classList.add("visible");
 	} else {
 		btnsSlctd[nbr].classList.remove("visible");
+		// setTimeout(function(){
+		document.getElementById('buttonInfoBlock').classList.remove("visible")
+		// }, 000);
 	}
 }
