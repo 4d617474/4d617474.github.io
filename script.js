@@ -188,9 +188,14 @@ document.getElementById("previous").onclick = function(){
 	while (i != 1) {
 		if (ab.previousSibling == null){
 			ab = pane.parentNode.previousElementSibling.lastElementChild;
-			// if (ab == null){
+			if (ab.className == "wdLink"){
+				ab = ab.previousElementSibling;
+				ab.click();
+				i = 1;
+			} else {
 				i = 1;
 				ab.click();
+			}
 		} else if (ab.className == "post" || ab.className == "post wd"){
 			ab.click();
 			i = 1;
@@ -237,6 +242,15 @@ document.getElementById("mute").onclick = function(){
 	} else {
 		modalVid.muted = true;
 		this.style.backgroundImage = 'url("icons/mute.svg")';
+	}
+}
+document.getElementById("source").onclick = function(){
+	var oc;
+	oc = pane.nextElementSibling;
+	if (oc.className == "wdLink"){
+		oc.click();
+	} else {
+		return
 	}
 }
 document.getElementById("reload").onclick = function(){
