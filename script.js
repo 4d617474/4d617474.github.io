@@ -26,6 +26,10 @@ var tabcontent = document.getElementsByClassName("tabcontent");
 var menuMenuClosed, menuToggleClosed, menuToggleOpen, menuMenuOpen;
 var currWinSize, rowsSizeOpen, rowsSizeClose;
 
+var neoMenu = document.getElementById("neoMenu");
+var neoToggle = document.getElementById("neoToggle");
+var neoContent = document.getElementById("neoContent");
+
 column = document.getElementsByClassName("column");
 setTimeout(function(){
 	window.scrollTo(0, 0);
@@ -76,6 +80,32 @@ function toggleMenu(state)
 		navOvf.classList.add("nvOfOn");
 		menuState = 1;
 		menuToggler.classList.add("toggleOn");
+	}
+
+}
+function neoToggleMenu(state)
+{
+	if (state != null){menuState = state};
+
+	if (menuState == 1){
+		// navBar.style.bottom = "-15%";
+		// navBar.style.bottom = "-27%";
+		// barInfo.style.bottom = "calc(100%/3)";
+		// barInfo.style.bottom = "calc(100%/3)";
+		neoMenu.classList.remove("nMOn");
+		menuState = 0;
+		neoToggle.classList.remove("neoToggleOn");
+		neoContent.classList.remove("blurred");
+
+	} else if (menuState == 0){
+		// navBar.style.bottom = "0%";
+		// navBar.style.bottom = "0%";
+		// barInfo.style.bottom = "100%";
+		// barInfo.style.bottom = "100%";
+		neoMenu.classList.add("nMOn");
+		menuState = 1;
+		neoContent.classList.add("blurred");
+		neoToggle.classList.add("neoToggleOn");
 	}
 
 }

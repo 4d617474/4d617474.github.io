@@ -1,22 +1,3 @@
-
-#navigationBar
-{
-	bottom:-15%;
-}
-#barMenu
-{
-	bottom:0%;
-}
-#barInfo
-{
-	bottom:calc(100%/3);
-}
-
-
-.tabContent
-{
-	display: none;
-}
 @media (prefers-color-scheme: dark) {
 	:root{
 		--aColor: #101010;
@@ -78,7 +59,34 @@
 {
 	overflow: hidden;
 }
+
+
 /*debug*/
+/**
+#neoMenu
+{
+	background:green;
+
+}
+#neoToggle
+{
+	background:red;
+
+}
+#neoLogo
+{
+	background:pink;
+
+}
+#neoLinks
+{
+	background:yellow;
+
+}
+.neoLink
+{
+
+}
 /**
 button
 {

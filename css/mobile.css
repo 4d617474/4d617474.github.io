@@ -62,7 +62,7 @@
 	.modalButton{
 		height: 16vw;
 		width: 16vw;
-		bottom:50px;
+		bottom:80px;
 	}
 	#exit{
 		left:calc(50% - 8vw);

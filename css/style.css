@@ -36,6 +36,92 @@ button
 	font-family:'Comfortaa';
 	text-align: center;
 }
+.blurred
+{
+	filter:blur(40px);
+	transition:filter .1s;
+	transition-timing-function:cubic-bezier;
+}
+#navOverflow
+{
+	display: none;
+}
+#neoCurtains{
+	top:-100%;
+	height:100%;
+	width:100%;
+	position: fixed;
+	background:rgba(0,0,0,.4);
+	z-index: 600;
+	filter:blur(20px);
+	nimation: disappear 1s;
+	nimation-iteration-count: 1;
+}
+#neoMenu
+{
+	background:white;
+	position: fixed;
+	bottom:-60%;
+	height:60%;
+	width: 100%;
+	z-index: 500;
+	transition:bottom .25s;
+	transition-timing-function:cubic-bezier ;
+	ackground: linear-gradient(180deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 169, 210, 0.1) 100%), #FFFFFF;
+	background: linear-gradient(210deg, rgba(255,255,255,.1) 60%, PINK 150%)
+		, linear-gradient(1600deg, rgba(255,255,255,.1) 60%, GREEN 250%),#FFFFFF;
+}
+.nMOn
+{
+	bottom:0% !important;
+	
+}
+#neoToggle
+{
+	position: absolute;
+	top:0%;
+	left:calc(50% - 70px);
+	margin-top:-70px;
+	height: 70px;
+	width: 140px;
+	background-image: url('../icons/tildaUp.svg');
+	background-repeat: no-repeat;
+	background-position: center;
+	cursor:pointer;
+}
+.neoToggleOn
+{
+	background-image: url('../icons/tildaDo.svg') !important;
+}
+#neoLogo
+{
+	position: relative;
+	top:0%;
+	margin-top:5%;
+	height: 30%;
+	width: 100%;
+	background-image: url('../icons/4dN.png');
+	background-repeat: no-repeat;
+	background-position: center;	
+}
+#neoLinks
+{
+	position: relative;
+	top:0%;
+	margin:10%;
+	height: 90%;
+	width: 80%;
+}
+.neoLink
+{
+	font-size: 18px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 45px;
+	letter-spacing: 0.61em;
+	text-align: center;
+
+}
 .rowButtons,.infoTitle
 {
 	transition: filter .2s; 
@@ -47,11 +133,25 @@ button
 	left:35%;
 	width: 30%;
   background: var(--bColor);
+	overflow: hidden;
 }
 #intHey
 {
 	width: 100%;
 	left:0%;
+	filter:blur(20px);
+	z-index: 1;
+}
+#cLogo2
+{
+	background:url(../icons/4dN.PNG);
+	background-size:70%;
+	position: absolute;
+	background-repeat: no-repeat;
+	background-position: center;
+	height:66.6%;
+	width: 100%;
+	z-index: 2;
 }
 #intAbt
 {
@@ -60,6 +160,8 @@ button
 	padding: 4%;
 	font-size: 3vh;
 	line-height: 120%;
+	z-index: 2;
+	background-color: var(--bColor);
 }
 
 #navigationBar
@@ -68,7 +170,7 @@ button
 	width: 100%;
 	height: 22%;
 	left: 0px;
-	bottom:0%;
+	bottom:-15%;
 	transition: bottom .3s;
 	z-index:100;
 }
@@ -96,6 +198,7 @@ button
 }
 #barInfo
 {
+	bottom:calc(100%/3);
 	right:0%;
 	z-index: 101;
   transition: bottom .4s;
@@ -236,6 +339,8 @@ button
 	cursor: pointer;
 	filter:invert(100%);
 	transition: filter .1s;
+	border-radius: 100%;
+	
 }
 #mute,#reload,#source{
 	display: none;
@@ -443,8 +548,8 @@ button
 	100% {opacity: 0;top:-100%;}
 }
 #cLogo{
-	background:url(../icons/4v.svg);
-	background-size:40%;
+	background:url(../icons/4dN.PNG);
+	background-size:70%;
 	position: absolute;
 	background-repeat: no-repeat;
 	background-position: center;
@@ -452,25 +557,15 @@ button
 	width: 100%;
 	filter:invert(93.6%);
 }
-/*#curtains
+/*
+#curtains
 {
 	top:0%;
 	display: block;
 	opacity: 1;
 	background-color:var(--aColor);
 }*/
-#navigationBar
-{
-	bottom:-20%;
-}
-#barMenu
-{
-	bottom:0%;
-}
-#barInfo
-{
-	bottom:calc(100%/3);
-}
+
 .postContainer
 {
 	height:auto;
