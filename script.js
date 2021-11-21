@@ -164,7 +164,8 @@ this.onclick = function(event) {
 			// } else if (pane.nodeName == "IMAGE"){
 			} else if (pane.classList.contains("wd") == false){
 				modalImg.style.display = "block";
-				modalImg.style.backgroundImage = "url('" + pane.src + "')";
+				modalImg.style.backgroundImage = "url('" + pane.src.replace("_th","") + "')";
+				// modalImg.style.backgroundImage = "url('" + pane.src.slice(0,-7) + pane.src.slice(-4) + "')";
 				modalVid.style.display = "none";
 				document.getElementById("mute").style.display = "none";
 			} else if (pane.classList.contains("wd") == true){

@@ -39,6 +39,17 @@
 	#Third{
 		ackground-color:Orange;
 	}
+	.row
+	{
+	}
+	.column
+	{
+    flex: 41%;
+    max-width: 50%;
+    padding: 0 4px;
+    padding-right: 4px;
+    padding-left: 4px;
+  }
 	#videoWrapper
 	{
 	 display:none;
@@ -113,5 +124,30 @@
 	{
 		filter:none !important;
 	}*/
-
+	/**
+  #navigationBar
+	{
+		position: absolute;
+		width: 100%;
+		height: 22%;
+		left: 0px;
+		top: 0%;
+		transition: bottom .3s;
+		z-index: 100;
+	}
+  #barMenu
+	{
+		top: 40%;
+	}
+  #navOverflow
+	{
+		position: fixed;
+		width: 100%;
+		height: 22%;
+		left: 0px;
+		bottom: 0%;
+		transition: bottom .3s;
+		z-index: 100;
+		overflow: hidden;
+	}
 }

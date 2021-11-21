@@ -22,7 +22,7 @@ body
 	position:absolute;
 	top:0;
 	left:0;
-	height:2000px;
+	height:4000px;
 	/*height: 100%;*/
 	width: 100%;
 	font-family: 'Comfortaa';
@@ -53,15 +53,37 @@ button
 	width: 100%;
 	left:0%;
 }
+#intPic
+{
+	display: none;
+	right:0%;
+	height:100%;
+	width:50%;
+	background:var(--bColor) url('../icons/4dn.svg') center no-repeat;	
+}
 #intAbt
 {
+	position: relative;
+	width:100%;
+	height:100%;
 	color: var(--aColor);
 	text-align: center;
-	padding: 4%;
+	padding-bottom: 40%;
 	font-size: 3vh;
 	line-height: 120%;
+	color:transparent;
+	background:var(--bColor) url('../icons/4dn.svg') center no-repeat;	
+	background-size:40%;
+	
 }
-
+#int
+{
+	width: calc(20% - 8px);
+	left:calc(40% + 4px);		
+}
+#cLogo{
+	background-size:20%;
+}
 #navigationBar
 {
 	position: fixed;
@@ -349,12 +371,14 @@ button
 .tabContent{
 	position: absolute;
 	left:0%;
-	top: 40%;
+	top: 20%;
 	bottom: 0%;
 	height: auto;
 	width: 100%;
 }
-
+.column {
+	flex:23%;
+}
 @media (max-height:200px){
 	body
 	{
@@ -427,7 +451,8 @@ button
 	width:100%;
 }
 #curtains{
-	top:-100%;
+	display:block;
+	top:100%;
 	height:100%;
 	width:100%;
 	position: fixed;
@@ -443,7 +468,7 @@ button
 	100% {opacity: 0;top:-100%;}
 }
 #cLogo{
-	background:url(../icons/4v.svg);
+	background:url(../icons/4dn.svg);
 	background-size:40%;
 	position: absolute;
 	background-repeat: no-repeat;
@@ -610,4 +635,15 @@ button
 #egg0::after,#egg1::after,#egg2::after
 {
   border-color: var(--cColor) transparent transparent transparent;
+}
+/*alternative*/
+/**
+.post, #navigationBar, .modalButton, #int
+{
+	border-radius:6px;
+}
+/**
+#navigationBar, #int
+{
+	overflow: hidden;
 }
