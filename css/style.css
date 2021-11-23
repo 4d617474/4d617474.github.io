@@ -258,6 +258,11 @@ button
 	cursor: pointer;
 	filter:invert(100%);
 	transition: filter .1s;
+		min-height: 60px;
+		max-height: 80px;
+		min-width: 60px;
+		max-width: 80px;
+	user-select:none;
 }
 #mute,#reload,#source{
 	display: none;
