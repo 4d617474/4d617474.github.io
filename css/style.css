@@ -42,15 +42,18 @@ button
 }
 #int
 {
-	position: absolute;
-	top:1%;
-	left:35%;
-	width: 30%;
+	position: relative;
+	top:0%;
+	left:0%;
+	height: 200px;
+	width: 100%;
   background: var(--bColor);
 }
 #intHey
 {
-	width: 100%;
+	float: left;
+	height: 100%;
+	width: 50%;
 	left:0%;
 }
 #intPic
@@ -63,24 +66,19 @@ button
 }
 #intAbt
 {
+	float: left;
 	position: relative;
-	width:100%;
+	width:50%;
 	height:100%;
 	color: var(--aColor);
 	text-align: center;
-	padding-bottom: 40%;
-	font-size: 3vh;
+	font-size: 20px;
 	line-height: 120%;
-	color:transparent;
-	background:var(--bColor) url('../icons/4dn.svg') center no-repeat;	
+	ackground:var(--bColor) url('../icons/4dn.svg') center no-repeat;	
 	background-size:40%;
 	
 }
-#int
-{
-	width: calc(20% - 8px);
-	left:calc(40% + 4px);		
-}
+
 #cLogo{
 	background-size:20%;
 }
@@ -326,6 +324,26 @@ button
 {
 	filter:brightness(1.2);
 }
+.th
+{
+	width: 100%;
+	background: none;
+}
+img
+{
+}
+.desc
+{
+	position: relative;
+	width: 100%;
+	left: 0px;
+	text-align: center;
+	content: 'aaaa';
+	font-size:14px;
+	padding:10px 0px 10px 0px; 
+	background: var(--aColor);
+	color: var(--bColor);
+}
 @keyframes IMGappear {
 	from {opacity: 0;}
 	to {opacity: 1;}
@@ -371,7 +389,7 @@ button
 .tabContent{
 	position: absolute;
 	left:0%;
-	top: 20%;
+	top:100px;
 	bottom: 0%;
 	height: auto;
 	width: 100%;

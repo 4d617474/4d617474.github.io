@@ -41,13 +41,58 @@
 			<!-- </div> -->
 		</div>
 
-		<div id="int">
-			<video id="intHey" autoplay loop muted disablepictureinpicture disableremoteplayback>
-				<source src="heyy.mp4">
-			</video>
-			<div id="intPic"></div>
-			<div id="intAbt"></div>
+		<div id="Zero" class="tabContent" style="display:block">
+			<div id="int">
+					<video id="intHey" autoplay loop muted disablepictureinpicture disableremoteplayback>
+					<source src="heyy.mp4">
+					</video>
+					<div id="intPic"></div>
+					<div id="intAbt">Hey! I'm Matt, and I like to do all kind of stuff.</div>
+			</div>
+			<div class="row">
+				<div class="column">
+					<div class="th">
+						<img src="posts/ob.png" class="post th">
+						<div class="desc">oddbeep</div>
+					</div>
+					<div class="th">
+						<img src="posts/wd.png" class="post">
+						<div class="desc">Web Design</div>
+					</div>
+				</div>
+				<div class="column">
+					<div class="th">
+						<img src="posts/ct.png" class="post">
+						<div class="desc">Crustiest Thoughts</div>
+					</div>
+					<div class="th">
+						<img src="posts/mu.png" class="post">
+						<div class="desc">Music</div>
+					</div>
+				</div>
+				<div class="column">
+					<div class="th">
+						<img src="posts/ph.jpg" class="post">
+						<div class="desc">Photography</div>
+					</div>
+					<div class="th">
+						<img src="posts/3dp.png" class="post">
+						<div class="desc">3D Printing</div>
+					</div>
+				</div>
+				<div class="column">
+					<div class="th">
+						<img src="posts/an.png" class="post">
+						<div class="desc">Gifs</div>
+					</div>
+					<div class="th">
+						<img src="posts/abt.png" class="post">
+						<div class="desc">About me</div>
+					</div>
+				</div>
+			</div>
 		</div>
+
 
 		<p id="ts">too small :(</p>
 		<div id="navOverflow">
@@ -55,6 +100,7 @@
 			<div id="navigationBar">
 				<div id="barMenu">
 					<div id="buttonInfoBlock">
+						<button class="buttonInfo">Home</button>
 						<button class="buttonInfo">???</button>
 						<button class="buttonInfo">Crustiest Thoughts</button>
 						<button class="buttonInfo">Wildlife Photography</button>
@@ -70,27 +116,27 @@
 					</div>
 					<div id="menuLeft">
 						<div class="menuRows" id="rowA">
-							<button class="rowButtons left" onclick="btnSlct(1,this)" onmouseover="dispInfo(0,1)" onmouseleave="dispInfo(0,0)">ob
+							<button class="rowButtons left" onclick="btnSlct(2,this)" onmouseover="dispInfo(1,1)" onmouseleave="dispInfo(1,0)">ob
 							</button>
-							<button class="rowButtons left" onclick="btnSlct(2,this)" onmouseover="dispInfo(1,1)" onmouseleave="dispInfo(1,0)">ct
+							<button class="rowButtons left" onclick="btnSlct(3,this)" onmouseover="dispInfo(2,1)" onmouseleave="dispInfo(2,0)">ct
 							</button>
-							<button class="rowButtons left" onclick="btnSlct(3,this)" onmouseover="dispInfo(2,1)" onmouseleave="dispInfo(2,0)">ph
+							<button class="rowButtons left" onclick="btnSlct(4,this)" onmouseover="dispInfo(3,1)" onmouseleave="dispInfo(3,0)">ph
 							</button>
 						</div>
 						<div class="menuRows" id="rowB">
-							<button class="rowButtons left" onclick="btnSlct(4,this)" onmouseover="dispInfo(3,1)" onmouseleave="dispInfo(3,0)">an
+							<button class="rowButtons left" onclick="btnSlct(5,this)" onmouseover="dispInfo(4,1)" onmouseleave="dispInfo(4,0)">an
 							</button>
-							<button class="rowButtons left" onclick="btnSlct(5,this)" onmouseover="dispInfo(4,1)" onmouseleave="dispInfo(4,0)">wd
+							<button class="rowButtons left" onclick="btnSlct(6,this)" onmouseover="dispInfo(5,1)" onmouseleave="dispInfo(5,0)">wd
 							</button>
-							<button class="rowButtons left" onclick="btnSlct(6,this)" onmouseover="dispInfo(5,1)" onmouseleave="dispInfo(5,0)">mu
+							<button class="rowButtons left" onclick="btnSlct(7,this)" onmouseover="dispInfo(6,1)" onmouseleave="dispInfo(6,0)">mu
 							</button>
 						</div>
 						<div class="menuRows" id="rowC">
-							<button class="rowButtons left" onclick="notyet()" onmouseover="dispInfo(6,1)" onmouseleave="dispInfo(6,0)">3dp
-							</button>
-							<button class="rowButtons left" onclick="notyet()" onmouseover="dispInfo(7,1)" onmouseleave="dispInfo(7,0)">.
+							<button class="rowButtons left" onclick="notyet()" onmouseover="dispInfo(7,1)" onmouseleave="dispInfo(7,0)">3dp
 							</button>
 							<button class="rowButtons left" onclick="notyet()" onmouseover="dispInfo(8,1)" onmouseleave="dispInfo(8,0)">.
+							</button>
+							<button class="rowButtons left" onclick="notyet()" onmouseover="dispInfo(9,1)" onmouseleave="dispInfo(9,0)">.
 							</button>
 						</div>
 					</div>
@@ -101,12 +147,12 @@
 						</div>
 						<div class="menuRows" id="rowE">
 							<!-- <button class="rowButtons right" onclick="stylS.href = undefined;">old -->
-							<button class="rowButtons right" onclick="btnSlct(9,this)" onmouseover="dispInfo(9,1)" onmouseleave="dispInfo(9,0)">abt
+							<button class="rowButtons right" onclick="btnSlct(9,this)" onmouseover="dispInfo(10,1)" onmouseleave="dispInfo(10,0)">abt
 							</button>
 						</div>
 						<!-- <div class="menuRows" id="rowF" onclick="stylS.href = 'css/new.css';"> -->
 						<div class="menuRows" id="rowF">
-							<button class="rowButtons right" onclick="notyet()" onmouseover="dispInfo(10,1)" onmouseleave="dispInfo(10,0)">.
+							<button class="rowButtons right" onclick="notyet()" onmouseover="dispInfo(11,1)" onmouseleave="dispInfo(11,0)">.
 							</button>
 						</div>
 					</div>
@@ -267,11 +313,11 @@
 				<div class="column">
 					<video src="posts/ob/ob0014.mp4" class="post" disablepictureinpicture disableremoteplayback></video>
 					<video src="posts/ob/ob0012.mp4" class="post" disablepictureinpicture disableremoteplayback></video>
-					<img src="posts/ob/ob0010_th.png" class="post" loading="lazy"></img>
+					<img src="posts/ob/ob0010_th.png" class="post" loading="lazy">
 				</div>
 				<div class="column">
 					<video src="posts/ob/ob0008.mp4" class="post" loading="lazy" disablepictureinpicture disableremoteplayback></video>
-					<img src="posts/ob/ob0006_th.png" class="post" loading="lazy"></img>
+					<img src="posts/ob/ob0006_th.png" class="post" loading="lazy">
 					<video src="posts/ob/ob0004.mp4" class="post" loading="lazy" disablepictureinpicture disableremoteplayback></video>
 					<video src="posts/ob/ob0000.mp4" class="post" loading="lazy" disablepictureinpicture disableremoteplayback></video>
 				</div>
@@ -471,7 +517,7 @@
 		<div id="Ninth" class="tabContent">
 			<div class="textBlock">
 				<p>Hi again, I'm Matt, and I do all kind of stuff.<br>
-				I draw, compose, animate, code, cook and entertain. <br><br>
+				 <br><br>
 				<b>What I use</b><br></p>
 				<p class="txtSide">
 				For any illustrations I use After Effects, Blender, Photoshop/Affinity or Figma.<br><br>

@@ -100,7 +100,7 @@ function setTab(tabNum)
 	}
 	// tabcontent[0].style.display = "block";
 	tabcontent[tabNum-1].style.display = "block";
-	window.scrollTo(0, 800);
+	window.scrollTo(0, 0);
 }
 
 function setInfo(blckNum)
