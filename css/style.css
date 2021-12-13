@@ -45,7 +45,7 @@ body
   font-family: 'Comfortaa';
   background: var(--backgroundClr);
 	background-image:var(--icon4d);
-	animation: bgIntro 8s infinite linear;
+	animation: bgIntr 8s infinite linear;
 }
 @keyframes bgIntro {
 	0%{background-position: 0px 0px}
