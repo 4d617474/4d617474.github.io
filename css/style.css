@@ -19,7 +19,8 @@
 	--iconMute:url('../icons/muteLight.svg');
 	--iconSound:url('../icons/soundLight.svg');
 	--icon4d:url('../icons/4ds/bgLight.png');
-	
+	--borderImg:url('../icons/borderLight.png');
+	--ng:url('../ngLight.png');
 }
 audio
 {
@@ -71,7 +72,7 @@ button
 }
 #curtains
 {
-	backdrop-filter:blur(40px);
+	/*backdrop-filter:blur(40px);*/
 	background:rgba(0,0,0,.7);
 	position: fixed;
 	height: 100%;
@@ -116,7 +117,7 @@ button
 {
 	position: fixed;
 	left:5%;
-	bottom:5%;
+	top: 5%;
 	height: 10%;
 	width: 23.3%;
 	background:var(--containerClr);
@@ -290,6 +291,7 @@ background-size:70%;
 	background:var(--containerClr);
 	color: var(--onContainerClr);
 	background-size: 80% !important;; 
+	z-index:100;
 }
 
 .post.pic
@@ -465,7 +467,7 @@ background-size:70%;
 	background:var(--containerClr);
 	color: var(--onContainerClr);
   cursor: pointer;
-
+  z-index: 100;
 }
 .intro.video
 {
@@ -490,6 +492,62 @@ background-size:70%;
   background-position: center;
 	filter:invert(90%);
 }
+
+
+
+#slideShow
+{
+	position: relative;
+	left: 2.5%;
+	width: 95%;
+	height: 40vh;
+	margin-top:10px !important;
+	margin-bottom:10px !important;
+  background:var(--ng);
+	cursor: pointer;
+}
+#slideShow::after
+{
+	bottom:-10px;
+	content: '';
+	position: absolute;
+	height: 1px;
+	width: 100%;
+	background:var(--onContainerClr);
+	animation: slideBar 3.5s infinite ease-in-out;
+}
+#slideShow::before
+{
+	bottom:-12px;
+	content: '';
+	position: absolute;
+	height: 2px;
+	width: 100%;
+	margin:-1px !important;
+	background:none;
+}
+@keyframes slideBar
+{
+	0%{width: 0};
+	100%{width: 100%};
+}
+#slide
+{
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+	z-index: 2;
+	animation: appear .3s;
+}
+
+
+
+
 
 .thumbnail.pagelink
 {
@@ -568,6 +626,7 @@ img.thumbnail
 	box-shadow: var(--borderContainer);
 	transition: box-shadow var(--transitionMain);
 	background-blend-mode:difference;
+	filter:invert(100%);
 }
 
 @keyframes descHover
@@ -578,12 +637,13 @@ img.thumbnail
 	50%{box-shadow:inset -300px 0px var(--onContainerClr), var(--borderContainer)}
 	100%{box-shadow:inset 0px 0px var(--onContainerClr), var(--borderContainer)}
 }
-#intro,.thumbnail.pagelink,#overflow,.post.pic,.pageTitle,.navigation.block
+#intro,#overflow,.post.pic,.pageTitle,.navigation.block,.thumbnail.pagelink,img.thumbnail,#slideShow,#slideShow::before,
+.modalButton
 {
 	border: 1px solid transparent;
 	margin-left:-2px;
 	margin-top:-2px;
-  border-image: url('../icons/border.png') 40% round;
+  border-image: var(--borderImg) 40% round;
 	border-image-outset: 1px;
 	box-shadow: none !important; 
   /*outline: solid white 1px;	*/
@@ -624,36 +684,7 @@ img.thumbnail
 	}
 	
 	
-	#intro
-	{
-		width: 40%;
-		
-		left:0%;
-		height: 20%;
-	 float:left;
-	}
-	.intro#about
-  {
-	 font-size:26px;
-  }
 
-  .column.main
-	{
-		width: 50%;
-	}
-	.thumbnail.pagelink
-	{
-		left:0%;
-		float: left;
-		width: calc(25% - 10px);
-	}
-	.sp.main
-	{
-		height: 100px;
-		width: 12px;
-		float:left;
-	}
-	
 	
 	
 	
@@ -819,6 +850,99 @@ img.thumbnail
 	{
 		background-size: auto 50% !important;; 
 	}
+
+		#intro
+	{
+		left:calc(50% - 400px);
+		width: 800px;
+	}
+	#picture
+	{
+		
+	}
+	.intro#about
+  {
+	 font-size:26px;
+  }
+  .column.main
+	{
+		margin-top:20px;
+		width: 800px;
+		margin-left:calc(50% - 400px);
+	
+	}
+	.column.main.a
+	{
+	}
+  .column.main.b
+	{
+	}
+	.thumbnail.pagelink
+	{
+		float: left;
+		left:unset;
+		margin:0px 5px 0px 5px;
+		width:calc(25% - 12.5px);
+	}
+	.sp.main
+	{
+		display:none;
+		float:left;
+		width: 1px;
+	}
+	/*
+	.pageTitle
+	{
+		background-size: auto 50% !important;; 
+	}
+	#intro,.column.main
+	{
+		margin:2.5%;
+		width: 45%;
+		
+	}
+		#intro
+	{
+		position: fixed;
+		top:0%;
+		left:0%;
+		height: 40% ;
+	}
+	#picture
+	{
+		
+	}
+	.intro#about
+  {
+	 font-size:26px;
+  }
+  .column.main
+	{
+		position: fixed;
+		right:0%;
+    height: 45%;
+	}
+	.column.main.a
+	{
+		top:0%;
+	}
+  .column.main.b
+	{
+		bottom:0%;
+	}
+	.thumbnail.pagelink
+	{
+		left:0%;
+		float: left;
+		width: calc(25% - 10px);
+	}
+	.sp.main
+	{
+		height: 100px;
+		width: 12px;
+		float:left;
+	}
+	*/
 }
 
 
@@ -841,10 +965,14 @@ img.thumbnail
 	--iconSource:url('../icons/source.svg');
 	--iconMute:url('../icons/mute.svg');
 	--iconSound:url('../icons/sound.svg');
+	--borderImg:url('../icons/border.png');
+	--ng:url('../ng.png');
+
 	}
-  #picture
+  #picture,.desc
 	{
 			filter:invert(0%);
 	}
+
 }
 	

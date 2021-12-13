@@ -18,6 +18,23 @@ function toggleMenu(state,noAnim) {
     }
   }
 }
+
+slideShow()
+var currentSlide,currentPageSlide,currentN;
+function slideShow(){
+  var pics = document.getElementsByClassName("pic");
+  var ranN = Math.floor(Math.random() * pics.length);
+  // console.log(ranN)
+  document.getElementById("slide").style.backgroundImage = "url('" + pics[ranN].src + "')";
+  currentSlide = pics[ranN];
+  currentPageSlide = pics[ranN].parentNode.parentNode.parentNode;
+  if (currentPageSlide.classList.contains("ob")){currentN = 1}
+  if (currentPageSlide.classList.contains("ct")){currentN = 2}
+  if (currentPageSlide.classList.contains("ph")){currentN = 3}
+  if (currentPageSlide.classList.contains("wd")){currentN = 4}
+  setTimeout(slideShow, 3500);
+}
+
 rand4D();
 var num;
 var num2;
@@ -48,7 +65,6 @@ function pickPage(number,elmnt,noAnim)
 	window.scrollTo(0, 0);
   toggleMenu(1)
 }
-
 
 
 function btnSlct(number,elmnt)
