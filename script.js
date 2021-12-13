@@ -18,7 +18,16 @@ function toggleMenu(state,noAnim) {
     }
   }
 }
-
+rand4D();
+var num;
+var num2;
+function rand4D() {
+  while(num2 == num){
+  num2 = Math.floor((Math.random() * 6) + 1);
+  }
+  num = num2;
+  document.getElementById("picture").style.backgroundImage = "url('icons/4ds/" + num + ".svg')";
+}
 var page = document.getElementsByClassName("page");
 var navBlocks = document.getElementsByClassName("navigation block");
 var currentPage = 1;

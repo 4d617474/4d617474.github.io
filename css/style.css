@@ -45,8 +45,11 @@ body
   font-family: 'Comfortaa';
   background: var(--backgroundClr);
 	background-image:var(--icon4d);
-	background-size: auto 60px;
-	animation: bgIntro 3s infinite linear;
+	animation: bgIntro 8s infinite linear;
+}
+@keyframes bgIntro {
+	0%{background-position: 0px 0px}
+	100%{background-position: 346px 322px}
 }
 .on
 {
@@ -239,11 +242,7 @@ button
 background-size:70%;
 }
 
-.navigation.block:hover:not(.on)
-{
-  /*background-position: 60% center !important;;*/
-	filter:invert(80%);
-}
+
 
 /* =========== */
 /* == POSTS == */
@@ -301,11 +300,7 @@ background-size:70%;
   transition: box-shadow var(--transitionTer);
 	cursor: pointer;
 }
-.post.pic:hover
-{
-	box-shadow: 0px 0px 0px 1px var(--boxShadowClr);
 
-}
 
 
 
@@ -417,53 +412,6 @@ background-size:70%;
 	background-position: -30px center;
 }*/
 
-#exit,#previous,#next,#exit::after,#previous::after,#next:after
-{
-  transition: background var(--transitionTer) ease-in-out;
-  background-position: 0px center;
-}
-.navigation.block#up,.navigation.block#up::after,.navigation.block#down,.navigation.block#down::after
-{
-	transition: background var(--transitionTer) ease-in-out;
-  background-position: center 0px;
-}
-
-#exit::after {background: var(--iconCross) center;}
-#exit:hover {background-position: -3px center;}
-#exit:hover::after {background-position: 3px center;}
-
-#previous::after {background: var(--iconPrevious) center;}
-#previous:hover {background-position: 4px center;}
-#previous:hover::after {background-position: -5px center;}
-
-#next::after {background: var(--iconNext) center;}
-#next:hover {background-position: -4px center;}
-#next:hover::after {background-position: 5px center;}
-
-.navigation.block#up::after {background: var(--iconHamb) center;}
-.navigation.block#up:hover {background-position: center 5px;}
-.navigation.block#up:hover::after {background-position: center -4px;}
-
-.navigation.block.down::after {background: var(--iconCross) center no-repeat !important}
-.navigation.block.down:hover {background-position: center -4px !important;}
-.navigation.block.down:hover::after {background-position: center -12px !important;}
-
-#exit::after,#previous::after,#next::after,.navigation.block#up::after,.navigation.block#down::after {
-	position: absolute;
-	height: 100%;
-	width: 100%;
-	background-size: cover;
-	content: '';
-	position: absolute;
-	background-position: 0px center;
-}
-
-#exit,#previous,#next,#exit::after,#previous::after,#next:after
-{
-  transition: background var(--transitionTer) ease-in-out;
-  background-position: 0px center;
-}
-
 
 
 
@@ -484,9 +432,7 @@ background-size:70%;
 	left:calc(60% + 20px);
 	background-image:var(--iconSource);
 }
-.modalButton:hover{
-	filter:invert(80%);
-}
+
 #spFrame-In
 {
 	position: absolute;
@@ -534,17 +480,17 @@ background-size:70%;
 	font-size:4.5vw;
 	padding: 4%;
 	border-radius: 22px;
+	text-align:center;
 }
 #picture
 {
 	width: 100%;
 	height:200px;
-  background:url('../icons/4ds/a.svg') center no-repeat;
+  background:url('../icons/4ds/a.svg');
+	background-repeat: no-repeat;
+  background-position: center;
 }
-@keyframes bgIntro {
-	0%{background-position: 0px 0px}
-	100%{background-position: 60px 60px}
-}
+
 .thumbnail.pagelink
 {
 	position: relative;
@@ -569,10 +515,7 @@ img.thumbnail
   opacity: 0;
 	background: url('../ng.png');
 }
-.thumbnail.pagelink:hover
-{
-	box-shadow: 0px 0px 0px 1px var(--boxShadowClr);
-}
+
 /*.thumbnail.pagelink:hover::before
 {
   opacity: 1;
@@ -626,11 +569,7 @@ img.thumbnail
 	transition: box-shadow var(--transitionMain);
 	background-blend-mode:difference;
 }
-.desc:hover
-{	
-	box-shadow: var(--borderContainerHvr);
-  animation:descHovr var(--transitionSec) 1;
-}
+
 @keyframes descHover
 {
 	
@@ -645,6 +584,12 @@ img.thumbnail
 /* == @MEDIA == */
 /* ============ */
 
+@media (max-width:450px) {
+  .navigation.block:not(#up)
+	{
+		background-size: 60% auto !important; 
+	}
+}
 @media (min-width:500px) {
 	.column.post
 	{
@@ -778,15 +723,88 @@ img.thumbnail
 		display:none;
 	}
 }
+@media (min-width:1000px){
+	
+	.navigation.block:hover:not(.on)
+	{
+		filter:invert(80%);
+  }
+	
+
+	.post.pic:hover
+	{
+		box-shadow: 0px 0px 0px 1px var(--boxShadowClr);
+
+	}
+
+	#exit,#previous,#next,#exit::after,#previous::after,#next:after
+	{
+		transition: background var(--transitionTer) ease-in-out;
+		background-position: 0px center;
+	}
+	.navigation.block#up,.navigation.block#up::after,.navigation.block#down,.navigation.block#down::after
+	{
+		transition: background var(--transitionTer) ease-in-out;
+		background-position: center 0px;
+	}
+
+	#exit::after {background: var(--iconCross) center;}
+	#exit:hover {background-position: -3px center;}
+	#exit:hover::after {background-position: 3px center;}
+
+	#previous::after {background: var(--iconPrevious) center;}
+	#previous:hover {background-position: 4px center;}
+	#previous:hover::after {background-position: -5px center;}
+
+	#next::after {background: var(--iconNext) center;}
+	#next:hover {background-position: -4px center;}
+	#next:hover::after {background-position: 5px center;}
+
+	.navigation.block#up::after {background: var(--iconHamb) center;}
+	.navigation.block#up:hover {background-position: center 5px;}
+	.navigation.block#up:hover::after {background-position: center -4px;}
+
+	.navigation.block.down::after {background: var(--iconCross) center no-repeat !important}
+	.navigation.block.down:hover {background-position: center -4px !important;}
+	.navigation.block.down:hover::after {background-position: center -12px !important;}
+
+	#exit::after,#previous::after,#next::after,.navigation.block#up::after,.navigation.block#down::after {
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		background-size: cover;
+		content: '';
+		position: absolute;
+		background-position: 0px center;
+	}
+
+	#exit,#previous,#next,#exit::after,#previous::after,#next:after
+	{
+		transition: background var(--transitionTer) ease-in-out;
+		background-position: 0px center;
+	}
+	.thumbnail.pagelink:hover
+	{
+		box-shadow: 0px 0px 0px 1px var(--boxShadowClr);
+	}
+	.modalButton:hover{
+	 filter:invert(80%);
+  }
+	
+	
+	
+	
+	
+	
+	
+
+}
 @media (min-aspect-ratio:1/1){
 	.pageTitle
 	{
 		background-size: auto 50% !important;; 
 	}
-
-
 }
-
 
 
 
@@ -798,7 +816,7 @@ img.thumbnail
 		--backgroundClr: #050505;
   --boxShadowClr: rgba(255,255,255,.5);
   --boxShadowClrHvr: rgba(255,255,255,1);
-	--icon4d:url('../icons/4d.svg');
+	--icon4d:url('../icons/4ds/bg.png');
   
 	--iconHamb:url('../icons/hamb.svg');
 	--iconCross:url('../icons/cross.svg');
