@@ -893,7 +893,7 @@ ro,#overflow,.post.pic,.pageTitle,.navigation.block,.thumbnail.pagelink,img.thum
 
 
 
-@media (prefers-color-scheme: dark) {
+/*@media (prefers-color-scheme: dark) {*/
 	:root{
 		--containerClr: #000;
 		--onContainerClr: #eeeeee;
@@ -925,4 +925,4 @@ ro,#overflow,.post.pic,.pageTitle,.navigation.block,.thumbnail.pagelink,img.thum
 		    filter:invert(100%) !important;
 		  }
 	}
-}
+/*}*/
