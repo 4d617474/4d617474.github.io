@@ -234,6 +234,22 @@ button
 {
 	background: url('../icons/wd.svg') center no-repeat;
 }
+.navigation.block#mu
+{
+	background: none center no-repeat;
+}
+.navigation.block#an
+{
+	background: none center no-repeat;
+}
+.navigation.block#tdp
+{
+	background: none center no-repeat;
+}
+.navigation.block#abt
+{
+	background: none center no-repeat;
+}
 #od,#ct,#ph,#wd
 {
 background-size:70%;
@@ -562,7 +578,7 @@ img.thumbnail
 .desc.ct{background:url('../icons/ct.svg') center no-repeat;}
 .desc.mu.{background:url('../icons/mu.svg') center no-repeat;}
 .desc.ph{background:url('../icons/ph.svg') center no-repeat;}
-.desc.3dp{background:url('../icons/3dp.svg') center no-repeat;}
+.desc.tdp{background:url('../icons/tdp.svg') center no-repeat;}
 .desc.gif{background:url('../icons/gif.svg') center no-repeat;}
 .desc.abt{background:url('../icons/abt.svg') center no-repeat;}
 .desc
