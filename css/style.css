@@ -20,7 +20,15 @@
 	--iconSound:url('../icons/soundLight.svg');
 	--icon4d:url('../icons/4ds/bgLight.png');
 	--borderImg:url('../icons/borderLight.png');
+	--iconIg:url('../icons/ingLight.svg');
 	--ng:url('../icons/ngLight.png');
+
+	--outlineClr:#00000030;
+	
+	--obBold:url('../icons/oLight.svg');
+	--phBold:url('../icons/phLight.svg');
+	--ctBold:url('../icons/ctLight.svg');
+	--wdBold:url('../icons/wdLight.svg');	
 	
 	--borderWidth:20px;
 	--spSize:2.5vw;
@@ -197,12 +205,11 @@ button
 }
 .navigation.block
 {	
-	background-color:var(--onContainerClr) !important;
-  filter:invert(95%);
+	background-color:var(--containerClr) !important;
 }
 .navigation.block.on
 {
-  filter:invert(0%);
+  filter:invert(100%);
 
 }
 .navigation.block#up
@@ -301,12 +308,11 @@ background-size:70%;
 	width: calc(95% - var(--borderWidth));
 	height: 200px;
 	border-radius: 0px 0px 20px 0px;
-	background-color:var(--onContainerClr) !important;
+	background-color:var(--containerClr) !important;
 	color: var(--onContainerClr);
 	background-size: 80% !important;;
 	z-index:100;
 	/*background-blend-mode: difference;*/
-  filter:invert(95%);
 }
 .socials
 {
@@ -328,6 +334,10 @@ background-size:70%;
 {
 	margin-right:10px;
 	background-image:var(--iconHamb);
+}
+.social.menu
+{
+  width: 95%;
 }
 .social.ig
 {
@@ -614,7 +624,6 @@ img.thumbnail
 	z-index: 55;
 	background-size:80% auto !important;
 	background-blend-mode:difference;
-	filter:invert(100%);
 }
 
 ro,#overflow,.post.pic,.pageTitle,.navigation.block,.thumbnail.pagelink,img.thumbnail,#slideShow,#slider,
@@ -626,7 +635,7 @@ ro,#overflow,.post.pic,.pageTitle,.navigation.block,.thumbnail.pagelink,img.thum
   border-image: var(--borderImg) 40% round;
   border-image: var(--borderImg) 50% round;
 	border-image-outset: 0px;
-  outline:1px solid #ffffff17;
+  outline:1px solid var(--outlineClr);
 }
 
 .wdw
@@ -981,7 +990,7 @@ ro,#overflow,.post.pic,.pageTitle,.navigation.block,.thumbnail.pagelink,img.thum
 
 
 
-/*@media (prefers-color-scheme: dark) {*/
+@media (prefers-color-scheme: dark) {
 	:root{
 		--containerClr: #000;
 		--onContainerClr: #eeeeee;
@@ -1007,6 +1016,7 @@ ro,#overflow,.post.pic,.pageTitle,.navigation.block,.thumbnail.pagelink,img.thum
 	--phBold:url('../icons/ph.svg');
 	--ctBold:url('../icons/ct.svg');
 	--wdBold:url('../icons/wd.svg');
+	--outlineClr:#FFFFFF20;
 
 	}
   #picture,.desc,.navigation.block,.pageTitle
