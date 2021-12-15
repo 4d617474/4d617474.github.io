@@ -67,70 +67,76 @@
 			</div>
     </div>
     <div class="page on">
-			<div class="sp"></div>
+			<div class="sp main"></div>
 
       <div id="intro" onclick="rand4D()">
         <div class="intro" id="picture"></div>
         <!-- <div class="intro" id="about">Hey! I'm Matt, and I like to do all kind of stuff.</div> -->
       </div>
+			<div class="sp main"></div>
 
 			<div id="slideShow" onclick="currentSlide.click(),pickPage(currentN,null,1)">
 				<div id="slide">
 					<!-- <video id="slideVid" loop></video> -->
 				</div>
 			</div>
+			<div class="sp main"></div>
+			<div id="slider"></div>
 
 			<div class="sp main"></div>
 			<div class="wdw left"></div>
 			<div class="wdw right"></div>
+
+			<div id="columns">
 				<div class="column main a">
 	        <div class="thumbnail pagelink" onclick="pickPage(1,null,1)">
 	          <div class="desc ob"></div>
-						<!-- <img src="posts/ob.png" class="thumbnail"> -->
 	        </div>
-					<div class="sp main"></div>
+					<div class="sp main column"></div>
 	        <div class="thumbnail pagelink" onclick="pickPage(4,null,1)">
 	          <div class="desc wd"></div>
-						<!-- <img src="posts/wd.png" class="thumbnail"> -->
 	        </div>
-					<div class="sp main"></div>
-					<div class="thumbnail pagelink">
+					<div class="sp main column hideme"></div>
+					<div class="thumbnail pagelink tdp">
 	          <div class="desc tdp"></div>
-						<!-- <img src="posts/tdp.png" class="thumbnail"> -->
 	        </div>
-					<div class="sp main"></div>
-	        <div class="thumbnail pagelink">
+					<div class="sp main column hideme"></div>
+	        <div class="thumbnail pagelink mu">
 	          <div class="desc mu"></div>
-						<!-- <img src="posts/mu.png" class="thumbnail"> -->
 					</div>
+
         </div>
 				<div class="column main b">
 	        <div class="thumbnail pagelink" onclick="pickPage(3,null,1)">
 	          <div class="desc ph"></div>
-						<!-- <img src="posts/ph.jpg" class="thumbnail" onclick="pickPage(3,null,1)"> -->
 	        </div>
-					<div class="sp main"></div>
+					<div class="sp main column"></div>
 					<div class="thumbnail pagelink" onclick="pickPage(2,null,1)">
 						<div class="desc ct"></div>
-						<!-- <img src="posts/ct.png" class="thumbnail"> -->
 					</div>
-					<div class="sp main"></div>
-	        <div class="thumbnail pagelink">
+					<div class="sp main column hideme"></div>
+	        <div class="thumbnail pagelink gif">
 	          <div class="desc gif"></div>
-						<!-- <img src="posts/an.png" class="thumbnail"> -->
 	        </div>
-					<div class="sp main"></div>
-	        <div class="thumbnail pagelink">
+					<div class="sp main column hideme"></div>
+	        <div class="thumbnail pagelink abt">
 	          <div class="desc abt"></div>
-						<!-- <img src="posts/abt.png" class="thumbnail"> -->
 					</div>
-					<div class="sp main"></div>
         </div>
+			</div>
+			<div class="sp main"></div>
 
     </div>
 		<div class="page ob">
 			<div class="sp"></div>
 			<div class="pageTitle ob"></div>
+			<div class="sp"></div>
+			<div class="socials ob">
+				<div class="social menu" onclick="toggleMenu(null,1)"></div>
+				<a href="https://www.instagram.com/oddbeep">
+					<div class="social ig" ></div>
+				</a>
+			</div>
 			<div class="sp"></div>
 
 			<div class="row post">
@@ -162,6 +168,13 @@
 		<div class="page ct">
 			<div class="sp"></div>
 			<div class="pageTitle ct"></div>
+			<div class="sp"></div>
+			<div class="socials ob">
+				<div class="social menu" onclick="toggleMenu(null,1)"></div>
+				<a href="https://www.instagram.com/crustiestthoughts/">
+					<div class="social ig" ></div>
+				</a>
+			</div>
 			<div class="sp"></div>
 			<div class="row post">
 				<div class="column post left">
@@ -210,6 +223,10 @@
 		<div class="page ph">
 			<div class="sp"></div>
 			<div class="pageTitle ph"></div>
+			<div class="sp"></div>
+			<div class="socials ob">
+				<div class="social menu large" onclick="toggleMenu(null,1)"></div>
+			</div>
 			<div class="sp"></div>
 			<div class="row post">
 				<div class="column post">
@@ -282,6 +299,10 @@
 		<div class="page wd">
 			<div class="sp"></div>
 			<div class="pageTitle wd"></div>
+			<div class="sp"></div>
+			<div class="socials ob">
+				<div class="social menu large" onclick="toggleMenu(null,1)"></div>
+			</div>
 			<div class="sp"></div>
 			<div class="row post">
 				<div class="column post">
