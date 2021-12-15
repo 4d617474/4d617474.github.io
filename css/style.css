@@ -190,8 +190,8 @@ button
 {
 	position: relative;
 	float: left;
-	height: 100%;
-	width: 100%;
+	height: calc(100% - var(--borderWidth));
+	width: calc(100% - var(--borderWidth));
 	background: url(../icons/o.svg) var(--containerClr) center no-repeat;
 	cursor:pointer;
 }
@@ -210,7 +210,7 @@ button
 	background: var(--iconHamb) center no-repeat;
 	background-size:100% 100%;
 	width: calc(100% - var(--borderWidth));
-	height: : calc(100% - var(--borderWidth));
+	height: calc(100% - var(--borderWidth));
 	z-index: 2;
 	cursor: pointer;
 }
@@ -219,7 +219,7 @@ button
 	background: var(--iconCross) var(--containerClr) center no-repeat;
 	border-radius: 0px 0px;
 	z-index: 0;
-	height: 100%;
+	height: calc(100% - var(--borderWidth));
 }
 
 .navigation.block#od
@@ -909,7 +909,7 @@ ro,#overflow,.post.pic,.pageTitle,.navigation.block,.thumbnail.pagelink,img.thum
 		background-size: auto 50% !important;;
 	}
 
-		#intro,#slideShow,#slider,#columns
+		#intro,#slideShow,#slider
 	{
 		left:calc(50% - 400px);
 		width: 800px;
@@ -949,6 +949,8 @@ ro,#overflow,.post.pic,.pageTitle,.navigation.block,.thumbnail.pagelink,img.thum
 	{
 		/*background: green;*/
 		height:calc(100vh - (var(--spSize) * 6) - 220px - (40vh - (var(--borderWidth))) - 21px);
+		left:calc(50% - 400px);
+    width: 800px;
 	}
 	.column.main
 	{
