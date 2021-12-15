@@ -23,6 +23,7 @@
 	--ng:url('../icons/ngLight.png');
 	
 	--borderWidth:20px;
+	--spSize:2.5vw;
 }
 audio
 {
@@ -99,7 +100,7 @@ button
 {
 	position: relative;
 	height: 20px;
-	height: 2.5vw;
+	height: var(--spSize);
 	width: 100%;
 }
 .page
@@ -564,7 +565,7 @@ background-size:70%;
 	position: relative;
 	float:none;
 	height: calc(25% - var(--borderWidth));
-	height: calc(50% - var(--borderWidth) - 1.25vw);
+	height: calc(50% - var(--borderWidth) - (var(--spSize) / 2));
 	width: calc(100% - var(--borderWidth));
 	overflow: hidden;
 	overflow: visible;
@@ -628,47 +629,48 @@ ro,#overflow,.post.pic,.pageTitle,.navigation.block,.thumbnail.pagelink,img.thum
   outline:1px solid #ffffff17;
 }
 
-
 .wdw
 {
-	position: absolute;
-	top:20px;
-  left:0;
-	height:calc(200px + 40vh + 120px + 66px);
-	width: calc(50% - 410px);
+	position: fixed;
+	top:var(--spSize);
+  left:var(--spSize);
+	height:calc(100vh - (var(--spSize) * 3));
+	width: calc(((100vw - 800px) / 2) - (var(--borderWidth)) - (var(--spSize) * 2));
 	display: none;
 	background:var(--ng);
 }
 .wdw.right
 {
 	left:unset;
-	right:0;
+	right:var(--spSize);
 }
 #columns
 {
 	position: relative;
 	width: 95vw;
-	height:calc(100vh - 17.5vw - 220px - (40vh - (var(--borderWidth))) - 21px);
-	left:2.5vw;
+	height:calc(100vh - (var(--spSize) * 6) - 220px - (40vh - (var(--borderWidth))) - 21px);
+	left:var(--spSize);
 }
 .column.main
 {
+	position: absolute;
 	height: 100%;
-	width: calc(50% - 1.25vw);
+	width: calc(50% - (var(--spSize) / 2));
 }
 .column.main.a
 {
-	margin:0 2.5vw 0 0;
+	left:0;
 }
 
 .column.main.b
 {
-	margin:0 0 0 0;
+	right:0;
 }
 .sp.main.column
 {
+	position: relative;
   float: unset;
-	height: 2.5vw;
+	height: var(--spSize);
 	width: 1px;
 }
 .sp.main.column.hideme
@@ -680,12 +682,25 @@ ro,#overflow,.post.pic,.pageTitle,.navigation.block,.thumbnail.pagelink,img.thum
 /* == @MEDIA == */
 /* ============ */
 
+
+
+
+
+
+
+
 @media (max-width:500px) {
   .navigation.block:not(#up)
 	{
 		background-size: 60% auto !important;
 	}
 }
+
+
+
+
+
+
 @media (min-width:500px) {
 	.column.post
 	{
@@ -703,8 +718,16 @@ ro,#overflow,.post.pic,.pageTitle,.navigation.block,.thumbnail.pagelink,img.thum
 		left:calc(50% - 225px);
 		width: 450px;
 	}
-
-
+  #columns
+	{
+		left:2.5%;
+		width: 95%;
+	}
+	 #slider
+	{
+		left:2.5%;
+		width: calc(95% - var(--borderWidth));
+	}
 
 
 
@@ -794,6 +817,11 @@ ro,#overflow,.post.pic,.pageTitle,.navigation.block,.thumbnail.pagelink,img.thum
 		background-size: 60% !important;
 	}
 }
+
+
+
+
+
 @media (min-width:1000px){
 
 	#exit,#previous,#next,#exit::after,#previous::after,#next:after
@@ -853,15 +881,35 @@ ro,#overflow,.post.pic,.pageTitle,.navigation.block,.thumbnail.pagelink,img.thum
 
 
 
-
 }
+
+
+@media (min-width: 1500px){
+.wdw
+{
+  left:calc((((100vw - 800px) / 2) - (var(--borderWidth)) - (var(--spSize) * 2)) / 2);
+	height:calc(100vh - (var(--spSize) * 3));
+	width: calc((((100vw - 800px) / 2) - (var(--borderWidth))) / 2);
+}
+.wdw.right
+{
+	left:unset;
+  right:calc((((100vw - 800px) / 2) - (var(--borderWidth)) - (var(--spSize) * 2)) / 2);
+}
+	
+}
+
+
 @media (min-aspect-ratio:1/1){
+	:root {
+		--spSize: 20px;
+	}
 	.pageTitle
 	{
 		background-size: auto 50% !important;;
 	}
 
-		#intro,#slideShow
+		#intro,#slideShow,#slider,#columns
 	{
 		left:calc(50% - 400px);
 		width: 800px;
@@ -875,36 +923,56 @@ ro,#overflow,.post.pic,.pageTitle,.navigation.block,.thumbnail.pagelink,img.thum
   {
 	 font-size:26px;
   }
-  .column.main
-	{
-		width: 800px;
-		height: calc(10vh - 0px);
-		height: 71px;
-	}
-	.sp.main.column
-	{
-		position:relative;
-		float:left;
-		height: 10px;
-		width: 10px;
-	}
-	.column.main.a
-	{
-		margin: 0%;
-	}
-	.column.main.b {
-		margin: 0%;
-	}
+	
+	
+
 	.thumbnail.pagelink
 	{
 		float: left;
-		width:calc(25% - 9px - var(--borderWidth));
-	}
-	.desc
-	{
-    height: 100%;
+		height: calc(100% - 10px);
+		width: calc(25% - var(--borderWidth) - 15px);
+		background:var(--containerClr);
 	}
 
+	.thumbnail.pagelink.mu,.thumbnail.pagelink.tdp,.thumbnail.pagelink.gif,.thumbnail.pagelink.abt
+	{
+		display: block;
+	}
+
+	.desc
+	{
+		height: 100%;
+		width: 100%;
+	}
+
+	#columns
+	{
+		/*background: green;*/
+		height:calc(100vh - (var(--spSize) * 6) - 220px - (40vh - (var(--borderWidth))) - 21px);
+	}
+	.column.main
+	{
+		width: 100%;
+		height: calc(50% - 20px);
+	}
+	.column.main.a
+	{
+		top:0;
+	}
+	.column.main.b
+	{
+		bottom:10px;
+	}
+	.sp.main.column
+	{
+		float: left;
+		width: 20px;
+		height: 1px;
+	}
+	.sp.main.column.hideme
+	{
+		display: block;
+	}
 	
 }
 
