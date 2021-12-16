@@ -7,15 +7,19 @@ var an = document.getElementById("an");
 var tdp = document.getElementById("tdp");
 var abt = document.getElementById("abt");
 
-window.document.body.onscroll = function() {
 
-  if (document.getElementById("overflow").classList.contains("open")){return}
+function checkY() {
+
   if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
     document.getElementById("overflow").classList.add("on");
   } else {
     document.getElementById("overflow").classList.remove("on");
   }
 }
+window.document.body.onscroll = function(){
+  if (document.getElementById("overflow").classList.contains("open")){return}
+  checkY()
+};
 
 var isMenuOpen = 0;
 function toggleMenu(state,noAnim) {
@@ -32,6 +36,7 @@ function toggleMenu(state,noAnim) {
     document.getElementById("overflow").classList.remove("open");
     document.getElementById("up").classList.remove("down");
     document.getElementById("curtains").classList.remove("on");
+    checkY();
     isMenuOpen = 0;
     if(noAnim == 1)
     {
@@ -87,6 +92,7 @@ var currentPage = 1;
 
 function pickPage(number,elmnt,noAnim)
 {
+  checkY();
   if (elmnt != null){
   for (i = 0; i < navBlocks.length; i++) {
       navBlocks[i].classList.remove("on");
@@ -234,6 +240,7 @@ document.getElementById("exit").onclick = function(){
   window.scrollTo(0,pane.y);
   // document.getElementById("overflow").classList.add("on");
 
+  checkY();
 }
 document.getElementById("mute").onclick = function(){
 	if (modalVid.muted == true){

@@ -57,11 +57,10 @@ body
   font-family: 'Comfortaa';
   background: var(--backgroundClr);
 	background-image:var(--icon4d);
-	animation: bgIntr 8s infinite linear;
 }
 @keyframes bgIntro {
 	0%{background-position: 0px 0px}
-	100%{background-position: 346px 322px}
+	100%{background-position: -40px -40px}
 }
 .on
 {
@@ -139,7 +138,9 @@ button
 	transition:unset;
 	z-index: 70;
 	width: calc(100px - var(--borderWidth));
+	width: 100px;
 	height:calc(100px - var(--borderWidth));
+	height: 100px;
 	display: none;
 
 }
@@ -190,7 +191,7 @@ button
 .navigation.row
 {
 	height: calc(10vh - var(--borderWidth));
-	height: 10vh;
+	height: 25%;
 	width: calc(100% - var(--borderWidth));
 	width: 100%;
 }
@@ -329,6 +330,7 @@ background-size:70%;
 	width: calc(50% - 10px - var(--borderWidth));
 	background-repeat: no-repeat;
 	background-position: center;
+	cursor:pointer;
 }
 .social.menu
 {
@@ -337,7 +339,7 @@ background-size:70%;
 }
 .social.menu.large
 {
-  width: 95%;
+  width: calc(100% - var(--borderWidth));
 }
 .social.ig
 {
@@ -712,7 +714,9 @@ img.thumbnail
 .social::before
 
 {
-	border:10px solid transparent;
+	border-width: 10px;
+	border-style: solid;
+	
   border-image: var(--borderImg) 50% round;
 	border-image-outset: 1px;
   outline:1px solid var(--outlineClr);
@@ -740,24 +744,11 @@ img.thumbnail
 	opacity: .5;
   outline:1px solid var(--outlineClr);
 }
-#overflow:hover::before,
-.pageTitle:hover::before,
-.thumbnail.pagelink:hover::before,
-.thumbnail.pagelink:hover,
-#slideShow:hover::before,
-#slider:hover::before,
-.modalButton:hover::before,
-.social:hover::before,
-.social:hover,
-.post.pic:hover
-
-
+.post.pic,#slideShow
 {
-	content:'';
-  outline:5px solid var(--outlineClr);
-	border-image-outset: 10px;
-	
+  transition-duration: .03s;
 }
+
 
 
 /* ============ */
@@ -776,6 +767,7 @@ img.thumbnail
 	{
 		background-size: 60% auto !important;
 	}
+	
 }
 
 
@@ -843,13 +835,13 @@ img.thumbnail
 		left:calc(50% - 50px);
 	}
 	#previous{
-		left:calc(50% - 170px);
+		left:calc(50% - 50px - 120px - var(--borderWidth));
 	}
 	#next{
-		left:calc(50% + 70px);
+		left:calc(50% - 50px + 120px + var(--borderWidth));
 	}
 	#mute{
-		left:calc(50% + 20px);
+		left:calc(50% + 170px + ( var(--borderWidth) * 3) );
 	}
 	#source{
 		left:calc(60% - 2.5% + 20px);
@@ -879,7 +871,7 @@ img.thumbnail
 		top:unset;
 	}
 	#source,#mute{
-		left:calc(50% + 190px);
+		/*! left:calc(50% + 190px); */
 	}
 	#reload{
 		left:calc(50% - 290px);
@@ -906,6 +898,15 @@ img.thumbnail
 
 @media (min-width:1000px){
 
+	#overflow.close {
+    left:unset;
+		right: 87%;
+		
+	}
+	#overflow.open {
+    left:7% !important;;
+		
+	}
 	#exit,#previous,#next,#exit::after,#previous::after,#next:after
 	{
 		transition: background var(--transitionTer) ease-in-out;
@@ -933,7 +934,7 @@ img.thumbnail
 	.navigation.block#up:hover {background-position: center 5px;}
 	.navigation.block#up:hover::after {background-position: center -4px;}
 
-	.navigation.block.down::after {background: var(--iconCross) center no-repeat !important}
+	.navigation.block.down::after {background: var(--iconCross) center no-repeat !important;}
 	.navigation.block.down:hover {background-position: center -4px !important;}
 	.navigation.block.down:hover::after {background-position: center -12px !important;}
 
@@ -953,10 +954,44 @@ img.thumbnail
 		background-position: 0px center;
 	}
 
+	#intro:hover,
+	.thumbnail.pagelink:hover,
+	.modalButton:hover,
+	.social:hover
+	{
+		filter:invert(100%);
+		outline:0px solid var(--outlineClr);
+	}
+
+	#intro:hover::before,
+	.thumbnail.pagelink:hover::before,
+	.modalButton:hover::before,
+	.social:hover::before
+	{
+		height: calc(100% + 20px);
+		width: calc(100% + 20px);
+		top:-20px;
+		left:-20px;
+		opacity: 1;
+		outline:0px solid var(--outlineClr);
+		filter:invert(100%);
+
+	}
+
+	#slideShow:hover,
+	.post.pic:hover
+	{
+		outline:5px solid var(--onContainerClr);
+		outline:3px solid var(--outlineClr);
+		background:var(--ng);
+	}
 	.modalButton:hover,.thumbnail.pagelink:hover,.navigation.block:hover:not(.on){
     filter:invert(95%);
 	}	
-
+  body
+	{
+		animation: bgIntro 2s infinite linear;
+	}
 
 
 
@@ -1089,6 +1124,7 @@ img.thumbnail
 	--phBold:url('../icons/ph.svg');
 	--ctBold:url('../icons/ct.svg');
 	--wdBold:url('../icons/wd.svg');
+		
 	--outlineClr:#FFFFFF20;
 
 	}
