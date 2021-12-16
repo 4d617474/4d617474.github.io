@@ -1,19 +1,41 @@
+var od = document.getElementById("od");
+var ct = document.getElementById("ct");
+var wd = document.getElementById("wd");
+var ph = document.getElementById("ph");
+var mu = document.getElementById("mu");
+var an = document.getElementById("an");
+var tdp = document.getElementById("tdp");
+var abt = document.getElementById("abt");
+
+window.document.body.onscroll = function() {
+
+  if (document.getElementById("overflow").classList.contains("open")){return}
+  if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+    document.getElementById("overflow").classList.add("on");
+  } else {
+    document.getElementById("overflow").classList.remove("on");
+  }
+}
+
 var isMenuOpen = 0;
 function toggleMenu(state,noAnim) {
   if(state == 1){isMenuOpen = 1}
   if(isMenuOpen == 0) {
     document.getElementById("overflow").classList.add("open");
+    document.getElementById("overflow").classList.add("on");
     document.getElementById("overflow").classList.remove("close");
     document.getElementById("up").classList.add("down");
     document.getElementById("curtains").classList.add("on");
     isMenuOpen = 1;
   } else {
+    // document.getElementById("overflow").classList.remove("on");
     document.getElementById("overflow").classList.remove("open");
     document.getElementById("up").classList.remove("down");
     document.getElementById("curtains").classList.remove("on");
     isMenuOpen = 0;
     if(noAnim == 1)
     {
+      // document.getElementById("overflow").classList.remove("on");
       document.getElementById("overflow").classList.add("close");
     }
   }
@@ -22,10 +44,24 @@ function toggleMenu(state,noAnim) {
 slideShow()
 var currentSlide,currentPageSlide,currentN;
 function slideShow(){
+  var slide = document.getElementById("slide");
+  var slider = document.getElementById("sliderBar");
   var pics = document.getElementsByClassName("pic");
+  // var ranN = Math.floor(Math.random() * pics.length);
   var ranN = Math.floor(Math.random() * pics.length);
-  // console.log(ranN)
+  // console.log(pics[ranN].src.includes("mp4"))
+
+  while(pics[ranN].src.includes("mp4")){
+   ranN = Math.floor(Math.random() * pics.length);
+  }
   document.getElementById("slide").style.backgroundImage = "url('" + pics[ranN].src + "')";
+  setTimeout(function(){
+      slider.classList.add("animated")
+      slide.classList.add("animated")
+    }
+  , 1);
+  slide.classList.remove("animated")
+  slider.classList.remove("animated")
   currentSlide = pics[ranN];
   currentPageSlide = pics[ranN].parentNode.parentNode.parentNode;
   if (currentPageSlide.classList.contains("ob")){currentN = 1}
@@ -196,6 +232,7 @@ document.getElementById("exit").onclick = function(){
 	document.getElementById("reload").classList.remove("on");
 	document.getElementById("spFrame-In").classList.remove("on");
   window.scrollTo(0,pane.y);
+  // document.getElementById("overflow").classList.add("on");
 
 }
 document.getElementById("mute").onclick = function(){

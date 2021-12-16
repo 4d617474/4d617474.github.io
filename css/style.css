@@ -532,22 +532,24 @@ background-size:70%;
 	background-size: contain;
 	background-position: center;
 	background-repeat: no-repeat;
+	animation: none;
+}
+#slide.animated
+{
 	animation: slideChange 3.5s infinite ease-in-out;
 }
 @keyframes slideChange
 {
-	0% {margin-left: -10px;opacity: 0;}
-	10% {margin-left: 0px;opacity: 1;}
-	90% {margin-left: 0px;opacity: 1;}
-	100% {margin-left: 10px;opacity: 0;}
+	0% {margin-left: -5px;opacity: 0;}
+	2% {margin-left: -5px;opacity: 0;}
+	8% {margin-left: 0px;opacity: 1;}
+	92% {margin-left: 0px;opacity: 1;}
+	98% {margin-left: 5px;opacity: 0;}
+	100% {margin-left: 5px;opacity: 0;}
 }
 
 
-@keyframes slideBar
-{
-	0%{width: 0};
-	100%{width: 100%};
-}
+
 #slider
 {
 	position: relative;
@@ -556,18 +558,24 @@ background-size:70%;
 	width: calc(95% - var(--borderWidth));
   background:var(--ng);
 }
-#slider::after
+#sliderBar
 {
 	top:0;
-	content: '';
 	position: absolute;
 	height: 100%;
 	width: 100%;
 	background:var(--onContainerClr);
+	animation: none;
+}
+#sliderBar.animated
+{
 	animation: slideBar 3.5s infinite ease-in-out;
 }
-
-
+@keyframes slideBar
+{
+	0%{width: 0};
+	100%{width: 100%};
+}
 
 
 .thumbnail.pagelink
@@ -636,6 +644,7 @@ ro,#overflow,.post.pic,.pageTitle,.navigation.block,.thumbnail.pagelink,img.thum
   border-image: var(--borderImg) 50% round;
 	border-image-outset: 0px;
   outline:1px solid var(--outlineClr);
+	border-radius: 0px !important;
 }
 
 .wdw
