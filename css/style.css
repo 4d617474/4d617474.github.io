@@ -23,6 +23,7 @@
 	--iconIg:url('../icons/ingLight.svg');
 	--ng:url('../icons/ngLight.png');
 
+	--outlineHoverClr:#00000040;
 	--outlineClr:#00000030;
 	
 	--obBold:url('../icons/oLight.svg');
@@ -82,7 +83,6 @@ button
 }
 #curtains
 {
-	backdrop-filter:blur(20px);
 	background:rgba(0,0,0,.7);
 	position: fixed;
 	height: 100%;
@@ -127,8 +127,8 @@ button
 .navigation#overflow
 {
 	position: fixed;
-	left:5%;
-	top: 5%;
+	left:5vw;
+	top: 5vw;
 	height: 10%;
 	width: 23.3%;
 	background:var(--containerClr);
@@ -146,13 +146,22 @@ button
 }
 .navigation#overflow.open
 {
+	top:5vw;
+	left:5vw;
+	height:calc(100vh - 15vw);
+	width:calc(100vw - 15vw);
+  animation:navOpen2 var(--transitionTer) 1 !important;
+	z-index: 200;
+}
+/*
+.navigation#overflow.open
+{
 	left:15%;
 	height: 90%;
 	width: 70%;
 	max-width: 400px;
-  animation:navOpen2 var(--transitionTer) 1 !important;
-	z-index: 200;
 }
+*/
 .navigation#overflow.close
 {
   animation:navClose2 var(--transitionMain) 1 !important;
@@ -211,8 +220,18 @@ button
 .navigation.block.on
 {
   filter:invert(100%);
-
 }
+/*.navigation.block.on::before
+{
+	position: absolute;
+	content: '';
+	top:-10%;
+	left:-10%;
+  height: 120%;
+  width:20%;
+	margin-left:0px !important;
+	background:green;
+}*/
 .navigation.block#up
 {
 	background: var(--iconHamb) center no-repeat;
@@ -712,12 +731,12 @@ img.thumbnail
 .wdw::before,
 #intro::before,
 .social::before
-
 {
 	border-width: 10px;
 	border-style: solid;
 	
   border-image: var(--borderImg) 50% round;
+	border-color:transparent !important;
 	border-image-outset: 1px;
   outline:1px solid var(--outlineClr);
 	border-radius: 0px !important;
@@ -751,6 +770,7 @@ img.thumbnail
 
 
 
+
 /* ============ */
 /* == @MEDIA == */
 /* ============ */
@@ -776,6 +796,12 @@ img.thumbnail
 
 
 @media (min-width:500px) {
+	.navigation#overflow.open
+	{
+		height: 90%;
+		width: 70%;
+		max-width: 400px;
+	}
 	.column.post
 	{
 		flex: calc(25% - 10px);
@@ -959,8 +985,9 @@ img.thumbnail
 	.modalButton:hover,
 	.social:hover
 	{
-		filter:invert(100%);
-		outline:0px solid var(--outlineClr);
+		/*filter:invert(100%);*/
+		border-image: none;
+		outline:0px solid transparent;
 	}
 
 	#intro:hover::before,
@@ -973,8 +1000,8 @@ img.thumbnail
 		top:-20px;
 		left:-20px;
 		opacity: 1;
-		outline:0px solid var(--outlineClr);
-		filter:invert(100%);
+		outline:1px solid var(--outlineHoverClr);
+		/*filter:invert(100%);*/
 
 	}
 
@@ -986,14 +1013,17 @@ img.thumbnail
 		background:var(--ng);
 	}
 	.modalButton:hover,.thumbnail.pagelink:hover,.navigation.block:hover:not(.on){
-    filter:invert(95%);
+    /*! filter:invert(95%); */
 	}	
   body
 	{
 		animation: bgIntro 2s infinite linear;
 	}
 
-
+.post.pic,#slideShow
+{
+  transition-duration: .03s;
+}
 
 
 
@@ -1126,17 +1156,18 @@ img.thumbnail
 	--wdBold:url('../icons/wd.svg');
 		
 	--outlineClr:#FFFFFF20;
+	--outlineHoverClr:#FFFFFF40;
 
 	}
   #picture,.desc,.navigation.block,.pageTitle
 	{
-		  background-color:var(--containerClr) !important;
+		  /*! background-color:var(--containerClr) !important; */
 			filter:invert(0%);
 	}
 	@media (min-width:1000px){
 			.modalButton:hover,.thumbnail.pagelink:hover,.navigation.block:hover:not(.on)
 			{
-		    filter:invert(100%) !important;
+		    /*! filter:invert(100%) !important; */
 		  }
 	}
 /*}*/
