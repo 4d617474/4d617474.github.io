@@ -335,7 +335,7 @@ background-size:70%;
 	margin-right:10px;
 	background-image:var(--iconHamb);
 }
-.social.menu
+.social.menu.large
 {
   width: 95%;
 }
@@ -397,8 +397,8 @@ background-size:70%;
 
 	position: absolute;
 	background-color:var(--containerClr);
-	height: 20vw;
-	width: 20vw;
+	height: calc( 20vw - var(--borderWidth));
+	width: calc( 20vw - var(--borderWidth));
 	z-index:3;
 	bottom:50px;
 	background-size:cover;
