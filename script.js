@@ -177,7 +177,7 @@ document.getElementById("previous").onclick = function(){
   if(previousPane == null){
     pane.parentElement.previousElementSibling.lastChild.previousElementSibling.click();
   }
-  if (previousPane.className == "post pic" || previousPane.className == " post pic wd"){
+  if (previousPane.className == "post pic btn" || previousPane.className == " post pic wd btn"){
     previousPane.click();
   }
   // window.scrollTo(0,pane.y);
@@ -188,7 +188,7 @@ document.getElementById("next").onclick = function(){
   if(nextPane == null){
     pane.parentElement.nextElementSibling.firstChild.nextElementSibling.click();
   }
-  if (nextPane.className == "post pic" || nextPane.className == " post pic wd"){
+  if (nextPane.className == "post pic btn" || nextPane.className == " post pic wd btn"){
     nextPane.click();
   }
   // window.scrollTo(0,pane.y);

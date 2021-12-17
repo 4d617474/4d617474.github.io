@@ -23,19 +23,19 @@
     </div>
 
 		<div id="modalBlock" class="modal">
-			<div class="modalButton" id="previous"></div>
-			<div class="modalButton" id="exit"></div>
-			<div class="modalButton" id="next"></div>
-			<div class="modalButton" id="reload"></div>
-			<div class="modalButton" id="mute"></div>
-			<div class="modalButton" id="source"></div>
+			<div class="modalButton btn" id="previous"></div>
+			<div class="modalButton btn" id="exit"></div>
+			<div class="modalButton btn" id="next"></div>
+			<div class="modalButton btn" id="reload"></div>
+			<div class="modalButton btn" id="mute"></div>
+			<div class="modalButton btn" id="source"></div>
 			<div class="modal-content" id="img00" style="background-image:none;">
 				<video id="vid00" loop></video>
 			</div>
 				<iframe id="spFrame-In" src="none"></iframe>
 		</div>
-
-		<div id="overflow" class="navigation">
+		<div id="hamburger"class="menu btn" onclick="toggleMenu(null,1)"></div>
+		<div id="overflow" class="navigation close btn">
       <div id="menu" class="navigation">
         <div class="navigation row">
           <div id="up" class="navigation block" onclick="toggleMenu(null,1)"></div>
@@ -69,13 +69,13 @@
     <div class="page on">
 			<div class="sp main"></div>
 
-      <div id="intro" onclick="rand4D()">
+      <div id="intro" class="btn" onclick="rand4D()">
         <div class="intro" id="picture"></div>
         <!-- <div class="intro" id="about">Hey! I'm Matt, and I like to do all kind of stuff.</div> -->
       </div>
 			<div class="sp main"></div>
 
-			<div id="slideShow" onclick="currentSlide.click(),pickPage(currentN,null,1)">
+			<div id="slideShow" class="btn" onclick="currentSlide.click(),pickPage(currentN,null,1)">
 				<div id="slide">
 					<!-- <video id="slideVid" loop></video> -->
 				</div>
@@ -91,37 +91,37 @@
 
 			<div id="columns">
 				<div class="column main a">
-	        <div class="thumbnail pagelink" onclick="od.click()">
+	        <div class="thumbnail pagelink btn" onclick="od.click()">
 	          <div class="desc ob"></div>
 	        </div>
 					<div class="sp main column"></div>
-	        <div class="thumbnail pagelink" onclick="wd.click()">
+	        <div class="thumbnail pagelink btn" onclick="wd.click()">
 	          <div class="desc wd"></div>
 	        </div>
 					<div class="sp main column hideme"></div>
-					<div class="thumbnail pagelink tdp">
+					<div class="thumbnail pagelink btn tdp">
 	          <div class="desc tdp"></div>
 	        </div>
 					<div class="sp main column hideme"></div>
-	        <div class="thumbnail pagelink mu">
+	        <div class="thumbnail pagelink btn mu">
 	          <div class="desc mu"></div>
 					</div>
 
         </div>
 				<div class="column main b">
-	        <div class="thumbnail pagelink" onclick="ph.click()">
+	        <div class="thumbnail pagelink btn" onclick="ph.click()">
 	          <div class="desc ph"></div>
 	        </div>
 					<div class="sp main column"></div>
-					<div class="thumbnail pagelink" onclick="ct.click()">
+					<div class="thumbnail pagelink btn" onclick="ct.click()">
 						<div class="desc ct"></div>
 					</div>
 					<div class="sp main column hideme"></div>
-	        <div class="thumbnail pagelink gif">
+	        <div class="thumbnail pagelink btn gif">
 	          <div class="desc gif"></div>
 	        </div>
 					<div class="sp main column hideme"></div>
-	        <div class="thumbnail pagelink abt">
+	        <div class="thumbnail pagelink btn abt">
 	          <div class="desc abt"></div>
 					</div>
         </div>
@@ -134,36 +134,36 @@
 			<div class="pageTitle ob"></div>
 			<div class="sp"></div>
 			<div class="socials ob">
-				<div class="social menu" onclick="toggleMenu(null,1)"></div>
+				<div class="social menu btn" onclick="toggleMenu(null,1)"></div>
 				<a href="https://www.instagram.com/oddbeep">
-					<div class="social ig" ></div>
+					<div class="social ig btn" ></div>
 				</a>
 			</div>
 			<div class="sp"></div>
 
 			<div class="row post">
 				<div class="column post">
-					<video src="posts/ob/ob0014.mp4" class="post pic" disablepictureinpicture disableremoteplayback></video>
-					<video src="posts/ob/ob0012.mp4" class="post pic" disablepictureinpicture disableremoteplayback></video>
-					<img src="posts/ob/ob0010_th.png" class="post pic" loading="lazy">
+					<video src="posts/ob/ob0014.mp4" class="post pic btn" disablepictureinpicture disableremoteplayback></video>
+					<video src="posts/ob/ob0012.mp4" class="post pic btn" disablepictureinpicture disableremoteplayback></video>
+					<img src="posts/ob/ob0010_th.png" class="post pic btn" loading="lazy">
 				</div>
 				<div class="column post">
-					<video src="posts/ob/ob0008.mp4" class="post pic" loading="lazy" disablepictureinpicture disableremoteplayback></video>
-					<img src="posts/ob/ob0006_th.png" class="post pic" loading="lazy">
-					<video src="posts/ob/ob0004.mp4" class="post pic" loading="lazy" disablepictureinpicture disableremoteplayback></video>
-					<video src="posts/ob/ob0000.mp4" class="post pic" loading="lazy" disablepictureinpicture disableremoteplayback></video>
+					<video src="posts/ob/ob0008.mp4" class="post pic btn" loading="lazy" disablepictureinpicture disableremoteplayback></video>
+					<img src="posts/ob/ob0006_th.png" class="post pic btn" loading="lazy">
+					<video src="posts/ob/ob0004.mp4" class="post pic btn" loading="lazy" disablepictureinpicture disableremoteplayback></video>
+					<video src="posts/ob/ob0000.mp4" class="post pic btn" loading="lazy" disablepictureinpicture disableremoteplayback></video>
 				</div>
 				<div class="column post">
-					<video src="posts/ob/ob0015.mp4" class="post pic" disablepictureinpicture disableremoteplayback></video>
-					<video src="posts/ob/ob0013.mp4" class="post pic" disablepictureinpicture disableremoteplayback></video>
-					<video src="posts/ob/ob0011.mp4" class="post pic" loading="lazy" disablepictureinpicture disableremoteplayback></video>
-					<video src="posts/ob/ob0009.mp4" class="post pic" loading="lazy" disablepictureinpicture disableremoteplayback></video>
+					<video src="posts/ob/ob0015.mp4" class="post pic btn" disablepictureinpicture disableremoteplayback></video>
+					<video src="posts/ob/ob0013.mp4" class="post pic btn" disablepictureinpicture disableremoteplayback></video>
+					<video src="posts/ob/ob0011.mp4" class="post pic btn" loading="lazy" disablepictureinpicture disableremoteplayback></video>
+					<video src="posts/ob/ob0009.mp4" class="post pic btn" loading="lazy" disablepictureinpicture disableremoteplayback></video>
 				</div>
 				<div class="column post">
-					<video src="posts/ob/ob0007.mp4" class="post pic" loading="lazy" disablepictureinpicture disableremoteplayback></video>
-					<video src="posts/ob/ob0005.mp4" class="post pic" loading="lazy" disablepictureinpicture disableremoteplayback></video>
-					<video src="posts/ob/ob0003.mp4" class="post pic" loading="lazy" disablepictureinpicture disableremoteplayback></video>
-					<video src="posts/ob/ob0001.mp4" class="post pic" loading="lazy" disablepictureinpicture disableremoteplayback></video>
+					<video src="posts/ob/ob0007.mp4" class="post pic btn" loading="lazy" disablepictureinpicture disableremoteplayback></video>
+					<video src="posts/ob/ob0005.mp4" class="post pic btn" loading="lazy" disablepictureinpicture disableremoteplayback></video>
+					<video src="posts/ob/ob0003.mp4" class="post pic btn" loading="lazy" disablepictureinpicture disableremoteplayback></video>
+					<video src="posts/ob/ob0001.mp4" class="post pic btn" loading="lazy" disablepictureinpicture disableremoteplayback></video>
 				</div>
 			</div>
 		</div>
@@ -172,52 +172,52 @@
 			<div class="pageTitle ct"></div>
 			<div class="sp"></div>
 			<div class="socials ob">
-				<div class="social menu" onclick="toggleMenu(null,1)"></div>
+				<div class="social menu btn" onclick="toggleMenu(null,1)"></div>
 				<a href="https://www.instagram.com/crustiestthoughts/">
-					<div class="social ig" ></div>
+					<div class="social ig btn" ></div>
 				</a>
 			</div>
 			<div class="sp"></div>
 			<div class="row post">
 				<div class="column post left">
-					<img src="posts/ct/ctB_th.png" class="post pic">
-					<img src="posts/ct/ctD_th.png" class="post pic">
-					<img src="posts/ct/ct0022_th.png" class="post pic" loading="lazy">
-					<img src="posts/ct/ct0020_th.png" class="post pic" loading="lazy">
-					<img src="posts/ct/ct0018_th.png" class="post pic" loading="lazy">
-					<img src="posts/ct/ct0016_th.png" class="post pic" loading="lazy">
-					<img src="posts/ct/ct0014_th.png" class="post pic" loading="lazy">
-					<img src="posts/ct/ct0001_th.png" class="post pic" loading="lazy">
+					<img src="posts/ct/ctB_th.png" class="post pic btn">
+					<img src="posts/ct/ctD_th.png" class="post pic btn">
+					<img src="posts/ct/ct0022_th.png" class="post pic btn" loading="lazy">
+					<img src="posts/ct/ct0020_th.png" class="post pic btn" loading="lazy">
+					<img src="posts/ct/ct0018_th.png" class="post pic btn" loading="lazy">
+					<img src="posts/ct/ct0016_th.png" class="post pic btn" loading="lazy">
+					<img src="posts/ct/ct0014_th.png" class="post pic btn" loading="lazy">
+					<img src="posts/ct/ct0001_th.png" class="post pic btn" loading="lazy">
 				</div>
 				<div class="column post right">
-					<img src="posts/ct/ctF_th.png" class="post pic" loading="lazy">
-					<img src="posts/ct/ctH_th.png" class="post pic" loading="lazy">
-					<img src="posts/ct/ct0012_th.png" class="post pic" loading="lazy">
-					<img src="posts/ct/ct0008_th.png" class="post pic" loading="lazy">
-					<img src="posts/ct/ct0006_th.png" class="post pic" loading="lazy">
-					<img src="posts/ct/ct0004_th.png" class="post pic" loading="lazy">
-					<img src="posts/ct/ct0002_th.png" class="post pic" loading="lazy">
-					<img src="posts/ct/ct0000_th.png" class="post pic" loading="lazy">
+					<img src="posts/ct/ctF_th.png" class="post pic btn" loading="lazy">
+					<img src="posts/ct/ctH_th.png" class="post pic btn" loading="lazy">
+					<img src="posts/ct/ct0012_th.png" class="post pic btn" loading="lazy">
+					<img src="posts/ct/ct0008_th.png" class="post pic btn" loading="lazy">
+					<img src="posts/ct/ct0006_th.png" class="post pic btn" loading="lazy">
+					<img src="posts/ct/ct0004_th.png" class="post pic btn" loading="lazy">
+					<img src="posts/ct/ct0002_th.png" class="post pic btn" loading="lazy">
+					<img src="posts/ct/ct0000_th.png" class="post pic btn" loading="lazy">
 				</div>
 				<div class="column post left">
-					<img src="posts/ct/ctG_th.png" class="post pic" loading="lazy">
-					<img src="posts/ct/ctI_th.png" class="post pic" loading="lazy">
-					<img src="posts/ct/ct0013_th.png" class="post pic" loading="lazy">
-					<img src="posts/ct/ct0011_th.png" class="post pic" loading="lazy">
-					<img src="posts/ct/ct0009_th.png" class="post pic" loading="lazy">
-					<img src="posts/ct/ct0007_th.png" class="post pic" loading="lazy">
-					<img src="posts/ct/ct0005_th.png" class="post pic" loading="lazy">
-					<img src="posts/ct/ct0003_th.png" class="post pic" loading="lazy">
+					<img src="posts/ct/ctG_th.png" class="post pic btn" loading="lazy">
+					<img src="posts/ct/ctI_th.png" class="post pic btn" loading="lazy">
+					<img src="posts/ct/ct0013_th.png" class="post pic btn" loading="lazy">
+					<img src="posts/ct/ct0011_th.png" class="post pic btn" loading="lazy">
+					<img src="posts/ct/ct0009_th.png" class="post pic btn" loading="lazy">
+					<img src="posts/ct/ct0007_th.png" class="post pic btn" loading="lazy">
+					<img src="posts/ct/ct0005_th.png" class="post pic btn" loading="lazy">
+					<img src="posts/ct/ct0003_th.png" class="post pic btn" loading="lazy">
 				</div>
 				<div class="column post right">
-					<img src="posts/ct/ctA_th.png" class="post pic">
-					<img src="posts/ct/ctC_th.png" class="post pic">
-					<img src="posts/ct/ctE_th.png" class="post pic" loading="lazy">
-					<img src="posts/ct/ct0023_th.png" class="post pic" loading="lazy">
-					<img src="posts/ct/ct0021_th.png" class="post pic" loading="lazy">
-					<img src="posts/ct/ct0019_th.png" class="post pic" loading="lazy">
-					<img src="posts/ct/ct0017_th.png" class="post pic" loading="lazy">
-					<img src="posts/ct/ct0015_th.png" class="post pic" loading="lazy">
+					<img src="posts/ct/ctA_th.png" class="post pic btn">
+					<img src="posts/ct/ctC_th.png" class="post pic btn">
+					<img src="posts/ct/ctE_th.png" class="post pic btn" loading="lazy">
+					<img src="posts/ct/ct0023_th.png" class="post pic btn" loading="lazy">
+					<img src="posts/ct/ct0021_th.png" class="post pic btn" loading="lazy">
+					<img src="posts/ct/ct0019_th.png" class="post pic btn" loading="lazy">
+					<img src="posts/ct/ct0017_th.png" class="post pic btn" loading="lazy">
+					<img src="posts/ct/ct0015_th.png" class="post pic btn" loading="lazy">
 				</div>
 			</div>
 		</div>
@@ -227,73 +227,73 @@
 			<div class="pageTitle ph"></div>
 			<div class="sp"></div>
 			<div class="socials ob">
-				<div class="social menu large" onclick="toggleMenu(null,1)"></div>
+				<div class="social menu btn large" onclick="toggleMenu(null,1)"></div>
 			</div>
 			<div class="sp"></div>
 			<div class="row post">
 				<div class="column post">
 					<!-- <div class="postContainer">
-						<img src="posts/ph/ph002A_th.jpg" class="post pic">
+						<img src="posts/ph/ph002A_th.jpg" class="post pic btn">
 						<span class="tooltipPost">
 							aa
 							::after
 						</span>
 					</div> -->
-					<img src="posts/ph/phB_th.jpg" class="post pic">
-					<img src="posts/ph/phD_th.jpg" class="post pic">
-					<img src="posts/ph/phF_th.jpg" class="post pic">
-					<img src="posts/ph/phH_th.jpg" class="post pic" loading="lazy">
-					<img src="posts/ph/ph0036_th.jpg" class="post pic" loading="lazy">
-					<img src="posts/ph/ph0034_th.jpg" class="post pic" loading="lazy">
-					<img src="posts/ph/ph0032_th.jpg" class="post pic" loading="lazy">
-					<img src="posts/ph/ph0030_th.jpg" class="post pic" loading="lazy">
-					<img src="posts/ph/ph0028_th.jpg" class="post pic" loading="lazy">
-					<img src="posts/ph/ph0026_th.jpg" class="post pic" loading="lazy">
-					<img src="posts/ph/ph0024_th.jpg" class="post pic" loading="lazy">
-					<img src="posts/ph/ph0033_th.jpg" class="post pic" loading="lazy">
-					<img src="posts/ph/ph0022_th.jpg" class="post pic" loading="lazy">
+					<img src="posts/ph/phB_th.jpg" class="post pic btn">
+					<img src="posts/ph/phD_th.jpg" class="post pic btn">
+					<img src="posts/ph/phF_th.jpg" class="post pic btn">
+					<img src="posts/ph/phH_th.jpg" class="post pic btn" loading="lazy">
+					<img src="posts/ph/ph0036_th.jpg" class="post pic btn" loading="lazy">
+					<img src="posts/ph/ph0034_th.jpg" class="post pic btn" loading="lazy">
+					<img src="posts/ph/ph0032_th.jpg" class="post pic btn" loading="lazy">
+					<img src="posts/ph/ph0030_th.jpg" class="post pic btn" loading="lazy">
+					<img src="posts/ph/ph0028_th.jpg" class="post pic btn" loading="lazy">
+					<img src="posts/ph/ph0026_th.jpg" class="post pic btn" loading="lazy">
+					<img src="posts/ph/ph0024_th.jpg" class="post pic btn" loading="lazy">
+					<img src="posts/ph/ph0033_th.jpg" class="post pic btn" loading="lazy">
+					<img src="posts/ph/ph0022_th.jpg" class="post pic btn" loading="lazy">
 				</div>
 				<div class="column post">
-					<img src="posts/ph/phA_th.jpg" class="post pic">
-					<img src="posts/ph/phC_th.jpg" class="post pic">
-					<img src="posts/ph/phE_th.jpg" class="post pic">
-					<img src="posts/ph/phG_th.jpg" class="post pic" loading="lazy">
-					<img src="posts/ph/phI_th.jpg" class="post pic" loading="lazy">
-					<img src="posts/ph/ph0038_th.jpg" class="post pic" loading="lazy">
-					<img src="posts/ph/ph0033_th.jpg" class="post pic" loading="lazy">
-					<img src="posts/ph/ph0031_th.jpg" class="post pic" loading="lazy">
-					<img src="posts/ph/ph0029_th.jpg" class="post pic" loading="lazy">
-					<img src="posts/ph/ph0027_th.jpg" class="post pic" loading="lazy">
-					<img src="posts/ph/ph0025_th.jpg" class="post pic" loading="lazy">
-					<img src="posts/ph/ph0023_th.jpg" class="post pic" loading="lazy">
+					<img src="posts/ph/phA_th.jpg" class="post pic btn">
+					<img src="posts/ph/phC_th.jpg" class="post pic btn">
+					<img src="posts/ph/phE_th.jpg" class="post pic btn">
+					<img src="posts/ph/phG_th.jpg" class="post pic btn" loading="lazy">
+					<img src="posts/ph/phI_th.jpg" class="post pic btn" loading="lazy">
+					<img src="posts/ph/ph0038_th.jpg" class="post pic btn" loading="lazy">
+					<img src="posts/ph/ph0033_th.jpg" class="post pic btn" loading="lazy">
+					<img src="posts/ph/ph0031_th.jpg" class="post pic btn" loading="lazy">
+					<img src="posts/ph/ph0029_th.jpg" class="post pic btn" loading="lazy">
+					<img src="posts/ph/ph0027_th.jpg" class="post pic btn" loading="lazy">
+					<img src="posts/ph/ph0025_th.jpg" class="post pic btn" loading="lazy">
+					<img src="posts/ph/ph0023_th.jpg" class="post pic btn" loading="lazy">
 				</div>
 				<div class="column post">
-					<img src="posts/ph/ph0035_th.jpg" class="post pic" loading="lazy">
-					<img src="posts/ph/ph0018_th.jpg" class="post pic" loading="lazy">
-					<img src="posts/ph/ph0020_th.jpg" class="post pic" loading="lazy">
-					<img src="posts/ph/ph0016_th.jpg" class="post pic" loading="lazy">
-					<img src="posts/ph/ph0014_th.jpg" class="post pic" loading="lazy">
-					<img src="posts/ph/ph0012_th.jpg" class="post pic" loading="lazy">
-					<img src="posts/ph/ph0010_th.jpg" class="post pic" loading="lazy">
-					<img src="posts/ph/ph0008_th.jpg" class="post pic" loading="lazy">
-					<img src="posts/ph/ph0006_th.jpg" class="post pic" loading="lazy">
-					<img src="posts/ph/ph0004_th.jpg" class="post pic" loading="lazy">
-					<img src="posts/ph/ph0002_th.jpg" class="post pic" loading="lazy">
-					<img src="posts/ph/ph0000_th.jpg" class="post pic" loading="lazy">
+					<img src="posts/ph/ph0035_th.jpg" class="post pic btn" loading="lazy">
+					<img src="posts/ph/ph0018_th.jpg" class="post pic btn" loading="lazy">
+					<img src="posts/ph/ph0020_th.jpg" class="post pic btn" loading="lazy">
+					<img src="posts/ph/ph0016_th.jpg" class="post pic btn" loading="lazy">
+					<img src="posts/ph/ph0014_th.jpg" class="post pic btn" loading="lazy">
+					<img src="posts/ph/ph0012_th.jpg" class="post pic btn" loading="lazy">
+					<img src="posts/ph/ph0010_th.jpg" class="post pic btn" loading="lazy">
+					<img src="posts/ph/ph0008_th.jpg" class="post pic btn" loading="lazy">
+					<img src="posts/ph/ph0006_th.jpg" class="post pic btn" loading="lazy">
+					<img src="posts/ph/ph0004_th.jpg" class="post pic btn" loading="lazy">
+					<img src="posts/ph/ph0002_th.jpg" class="post pic btn" loading="lazy">
+					<img src="posts/ph/ph0000_th.jpg" class="post pic btn" loading="lazy">
 				</div>
 				<div class="column post">
-					<img src="posts/ph/ph0037_th.jpg" class="post pic" loading="lazy">
-					<img src="posts/ph/ph0021_th.jpg" class="post pic" loading="lazy">
-					<img src="posts/ph/ph0019_th.jpg" class="post pic" loading="lazy">
-					<img src="posts/ph/ph0017_th.jpg" class="post pic" loading="lazy">
-					<img src="posts/ph/ph0015_th.jpg" class="post pic" loading="lazy">
-					<img src="posts/ph/ph0013_th.jpg" class="post pic" loading="lazy">
-					<img src="posts/ph/ph0011_th.jpg" class="post pic" loading="lazy">
-					<img src="posts/ph/ph0009_th.jpg" class="post pic" loading="lazy">
-					<img src="posts/ph/ph0007_th.jpg" class="post pic" loading="lazy">
-					<img src="posts/ph/ph0005_th.jpg" class="post pic" loading="lazy">
-					<img src="posts/ph/ph0003_th.jpg" class="post pic" loading="lazy">
-					<img src="posts/ph/ph0001_th.jpg" class="post pic" loading="lazy">
+					<img src="posts/ph/ph0037_th.jpg" class="post pic btn" loading="lazy">
+					<img src="posts/ph/ph0021_th.jpg" class="post pic btn" loading="lazy">
+					<img src="posts/ph/ph0019_th.jpg" class="post pic btn" loading="lazy">
+					<img src="posts/ph/ph0017_th.jpg" class="post pic btn" loading="lazy">
+					<img src="posts/ph/ph0015_th.jpg" class="post pic btn" loading="lazy">
+					<img src="posts/ph/ph0013_th.jpg" class="post pic btn" loading="lazy">
+					<img src="posts/ph/ph0011_th.jpg" class="post pic btn" loading="lazy">
+					<img src="posts/ph/ph0009_th.jpg" class="post pic btn" loading="lazy">
+					<img src="posts/ph/ph0007_th.jpg" class="post pic btn" loading="lazy">
+					<img src="posts/ph/ph0005_th.jpg" class="post pic btn" loading="lazy">
+					<img src="posts/ph/ph0003_th.jpg" class="post pic btn" loading="lazy">
+					<img src="posts/ph/ph0001_th.jpg" class="post pic btn" loading="lazy">
 				</div>
 			</div>
 		</div>
@@ -303,7 +303,7 @@
 			<div class="pageTitle wd"></div>
 			<div class="sp"></div>
 			<div class="socials ob">
-				<div class="social menu large" onclick="toggleMenu(null,1)"></div>
+				<div class="social menu btn large" onclick="toggleMenu(null,1)"></div>
 			</div>
 			<div class="sp"></div>
 			<div class="row post">
