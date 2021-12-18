@@ -68,11 +68,12 @@ body
 {
   animation:pageSlideIn .12s 1 !important;
 	display: block !important;
+	opacity:1 !important;
 }
 @keyframes pageSlideIn
 {
 	0%{opacity:0;margin-top:5px};
-	100%{opacity:0;margin-top:0%};
+	100%{opacity:1;margin-top:0%};
 }
 .hide
 {
@@ -129,20 +130,28 @@ button
 	position: fixed !important;
 	left:5vw;
 	top: 5vw;
-	height: 10vh;
-	width: 23.3vh;
 	background:var(--containerClr);
 	background:none;
 	overflow: visible;
 	overflow: hidden;
 	transition:unset;
 	z-index: 70;
-	width: calc(100px - var(--borderWidth));
 	width: 100px;
-	height:calc(100px - var(--borderWidth));
 	height: 100px;
+	background:var(--iconHamb) var(--containerClr) center no-repeat;
+	display: none;
+	opacity: 0;
 }
-.navigation#overflow
+#hamburger.on
+{
+  animation:hambOn .12s 1 !important;
+}
+@keyframes hambOn
+{
+	0%{opacity:0;margin-top:-20px};
+	100%{opacity:1;margin-top:0%};
+}
+#menu
 {
 	position: fixed;
 	left:5vw;
@@ -161,9 +170,6 @@ button
 	height: 100px;
 	display: none;
 
-}
-.navigation#overflow.open
-{
 	top:5vw;
 	left:5vw;
 	height:calc(100vh - 15vw);
@@ -172,18 +178,8 @@ button
 	background:var(--ng) var(--containerClr);
 }
 
-.navigation#overflow.close
-{
-  animation:navClose2 var(--transitionMain) 1 !important;
-}
 
-.navigation#menu
-{
-	position: absolute;
-	width: 100%;
-	height:100% ;
 
-}
 .navigation.row
 {
 	height: calc(100% / 5);
@@ -234,14 +230,9 @@ button
 	background-size:100% 100%;
 	width: calc(100% - var(--borderWidth));
 	height: calc(100% - var(--borderWidth));
-	z-index: 2;
 	cursor: pointer;
-}
-.navigation.block#up.down
-{
 	background: var(--iconCross) var(--containerClr) center no-repeat;
 	border-radius: 0px 0px;
-	z-index: 0;
 	height: calc(100% - var(--borderWidth));
 }
 
@@ -395,7 +386,29 @@ background-size:70%;
 	background-position: center;
 	background-repeat: no-repeat;
 	z-index:2;
-	animation: appear .3s ;
+	animation: none !important;
+	
+}
+#img00.animated-left
+{
+	animation: swipeL .12s 1 !important;
+	
+}
+@keyframes swipeL
+{
+	0% {margin-left: -20px;opacity: 0;}
+	100% {margin-left: 0px;opacity: 1;}
+}
+
+#img00.animated-right
+{
+	animation: swipeR .12s 1 !important;
+	
+}
+@keyframes swipeR
+{
+	0% {margin-left: 20px;opacity: 0;}
+	100% {margin-left: 0px;opacity: 1;}
 }
 #vid00
 {
@@ -564,7 +577,14 @@ background-size:70%;
 	98% {margin-left: 5px;opacity: 0;}
 	100% {margin-left: 5px;opacity: 0;}
 }
-
+/*
+	0% {margin-left: -5px;opacity: 0;}
+	2% {margin-left: -5px;opacity: 0;}
+	8% {margin-left: 0px;opacity: 1;}
+	92% {margin-left: 0px;opacity: 1;}
+	98% {margin-left: 5px;opacity: 0;}
+	100% {margin-left: 5px;opacity: 0;}
+*/
 
 
 #slider
@@ -761,24 +781,15 @@ img.thumbnail
 	{
 		background-size: 60% auto !important;
 	}
-	#overflow.close
+	#hamburger
 	{
-		top:unset;
+		top:0%;
 		left: 0%;
-		bottom:  0%;
 		height: 10vh;
 		width: 100%;
 		border: none;
 	}
-	#up:not(.down)
-	{
-		height: calc(10vh - var(--borderWidth)) !important;
-	}
-	body
-	{
-		padding-bottom:10vh;
-	}
-
+	
 }
 
 
@@ -787,7 +798,7 @@ img.thumbnail
 
 
 @media (min-width:500px) {
-	.navigation#overflow.open
+	#menu
 	{
 		height: 90%;
 		width: 70%;
@@ -915,13 +926,9 @@ img.thumbnail
 
 @media (min-width:1000px){
 
-	#overflow.close {
+	#hamburger {
     left:unset;
 		right: 87%;
-		
-	}
-	#overflow.open {
-    left:7% !important;;
 		
 	}
 	#exit,#previous,#next,#exit::after,#previous::after,#next:after
@@ -971,9 +978,10 @@ img.thumbnail
 		background-position: 0px center;
 	}
 
-	#overflow.open,
+	#menu,
 	.btn:hover,
-	.pageTitle
+	.pageTitle,
+	#hamburger:hover
 	{
 		outline:6px solid var(--outlineClr);
 		border-image-outset: 6px;
@@ -996,7 +1004,7 @@ img.thumbnail
 		animation: bgIntro 2s infinite linear;
 	}
 
-.post.pic,#slideShow,#overflow.close,.thumbnail.pagelink,.btn
+.post.pic,#slideShow,#hamburger,.thumbnail.pagelink,.btn
 {
   transition: all .03s !important;
 }

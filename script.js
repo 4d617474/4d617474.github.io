@@ -6,18 +6,19 @@ var mu = document.getElementById("mu");
 var an = document.getElementById("an");
 var tdp = document.getElementById("tdp");
 var abt = document.getElementById("abt");
-
+var hamb = document.getElementById("hamburger");
+var menu = document.getElementById("menu");
 
 function checkY() {
 
   if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
-    document.getElementById("overflow").classList.add("on");
+    hamb.classList.add("on");
   } else {
-    document.getElementById("overflow").classList.remove("on");
+    hamb.classList.remove("on");
   }
 }
 window.document.body.onscroll = function(){
-  if (document.getElementById("overflow").classList.contains("open")){return}
+  if (menu.classList.contains("on")){return}
   checkY()
 };
 
@@ -25,23 +26,17 @@ var isMenuOpen = 0;
 function toggleMenu(state,noAnim) {
   if(state == 1){isMenuOpen = 1}
   if(isMenuOpen == 0) {
-    document.getElementById("overflow").classList.add("open");
-    document.getElementById("overflow").classList.add("on");
-    document.getElementById("overflow").classList.remove("close");
-    document.getElementById("up").classList.add("down");
+    menu.classList.add("on");
     document.getElementById("curtains").classList.add("on");
     isMenuOpen = 1;
   } else {
-    // document.getElementById("overflow").classList.remove("on");
-    document.getElementById("overflow").classList.remove("open");
-    document.getElementById("up").classList.remove("down");
+    menu.classList.remove("on");
     document.getElementById("curtains").classList.remove("on");
     checkY();
     isMenuOpen = 0;
     if(noAnim == 1)
     {
-      // document.getElementById("overflow").classList.remove("on");
-      document.getElementById("overflow").classList.add("close");
+      menu.classList.remove("on");
     }
   }
 }
@@ -52,10 +47,7 @@ function slideShow(){
   var slide = document.getElementById("slide");
   var slider = document.getElementById("sliderBar");
   var pics = document.getElementsByClassName("pic");
-  // var ranN = Math.floor(Math.random() * pics.length);
   var ranN = Math.floor(Math.random() * pics.length);
-  // console.log(pics[ranN].src.includes("mp4"))
-
   while(pics[ranN].src.includes("mp4")){
    ranN = Math.floor(Math.random() * pics.length);
   }
@@ -128,7 +120,7 @@ var columnSide;
 var postNo;
 this.onclick = function(event) {
     if (event.target.classList.contains("pic") == true) {
-      document.getElementById("overflow").classList.add("hide");
+      document.getElementById("menu").classList.add("hide");
 
 			modalImg.firstElementChild.src = "none";
 			modalImg.style.backgroundImage = "none";
@@ -172,6 +164,12 @@ var isFromNextCol = 0;
 var postIndex = 0;
 var oldPane;
 document.getElementById("previous").onclick = function(){
+  setTimeout(function(){
+  modalImg.classList.add("animated-left")
+}
+, 1);
+modalImg.classList.remove("animated-right");
+modalImg.classList.remove("animated-left");
   var previousPane;
   previousPane = pane.previousSibling.previousSibling;
   if(previousPane == null){
@@ -183,6 +181,7 @@ document.getElementById("previous").onclick = function(){
   // window.scrollTo(0,pane.y);
 }
 document.getElementById("next").onclick = function(){
+
   var nextPane;
   nextPane = pane.nextSibling.nextSibling;
   if(nextPane == null){
@@ -191,46 +190,21 @@ document.getElementById("next").onclick = function(){
   if (nextPane.className == "post pic btn" || nextPane.className == " post pic wd btn"){
     nextPane.click();
   }
-  // window.scrollTo(0,pane.y);
-
-  // if (nextPane.className == "post pic" || nextPane.className == " post pic wd")
-  // {
-  // console.log(postNo);
-  // console.log(columnSide);
-  // console.log("before");
-  // console.log(postNo);
-  //
-  //   if (columnSide == 0){
-  //     // nextPane = pane.parentElement.nextElementSibling.childNodes[postNo].nextElementSibling;
-  //     // isFromNextCol = 1;
-  //     // pane.parentElement.nextElementSibling.childNodes[postNo].nextElementSibling
-  //     // nextPane = pane.parentElement.nextElementSibling.childNodes[postIndex].previousElementSibling;
-  //     // nextPane = pane.parentElement.nextElementSibling.childNodes[postNo].nextSibling;
-  //     nextPane = pane.parentElement.nextElementSibling.childNodes[postNo].nextSibling.nextSibling;
-  //   } else {
-  //     nextPane = oldPane.nextElementSibling;
-  //     // console.log("after");
-  //     // console.log(postNo);
-  //     // if (postNo != 0){postNo = postNo+1;console.log("after");}
-  //     // nextPane = pane.parentElement.previousElementSibling.childNodes[postNo+1].nextElementSibling;
-  //     // isFromNextCol = 0;
-  //   }
-  //   // postIndex++;
-  //   if(nextPane == null){
-  //     nextPane = pane.parentElement.nextElementSibling.firstChild.nextElementSibling;
-  //     postIndex = 0;
-  //     // isFromNextCol = 0;
-  //   }
-  //   // console.log(nextPane);
-  //   oldPane = pane;
-  //   nextPane.click();
-  // // }
+  setTimeout(function(){
+  modalImg.classList.add("animated-right")
+}
+, 1);
+modalImg.classList.remove("animated-left");
+modalImg.classList.remove("animated-right");
 
 }
 document.getElementById("exit").onclick = function(){
 	modal.classList.remove("on");
 	modalVid.src = "none";
-  document.getElementById("overflow").classList.remove("hide");
+  modalImg.classList.remove("animated-left");
+  modalImg.classList.remove("animated-right");
+
+  document.getElementById("menu").classList.remove("hide");
 	document.getElementById("reload").classList.remove("on");
 	document.getElementById("mute").classList.remove("on");
 	document.getElementById("source").classList.remove("on");
@@ -238,7 +212,7 @@ document.getElementById("exit").onclick = function(){
 	document.getElementById("reload").classList.remove("on");
 	document.getElementById("spFrame-In").classList.remove("on");
   window.scrollTo(0,pane.y);
-  // document.getElementById("overflow").classList.add("on");
+  // document.getElementById("menu").classList.add("on");
 
   checkY();
 }
