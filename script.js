@@ -76,7 +76,7 @@ function rand4D() {
   num2 = Math.floor((Math.random() * 11) + 1);
   }
   num = num2;
-  document.getElementById("picture").style.backgroundImage = "url('icons/4ds/" + num + ".svg')";
+  document.getElementById("picture").style.backgroundImage = "var(--4d" + num + ")";
 }
 var page = document.getElementsByClassName("page");
 var navBlocks = document.getElementsByClassName("navigation block");
@@ -207,7 +207,7 @@ document.getElementById("exit").onclick = function(){
   document.getElementById("menu").classList.remove("hide");
 	document.getElementById("reload").classList.remove("on");
 	document.getElementById("mute").classList.remove("on");
-	document.getElementById("source").classList.remove("on");
+  document.getElementById("source").classList.remove("on");
 	document.getElementById("source").classList.remove("on");
 	document.getElementById("reload").classList.remove("on");
 	document.getElementById("spFrame-In").classList.remove("on");
@@ -219,10 +219,12 @@ document.getElementById("exit").onclick = function(){
 document.getElementById("mute").onclick = function(){
 	if (modalVid.muted == true){
 		modalVid.muted = false;
-		this.style.backgroundImage = "url('icons/sound.svg')";
+    this.classList.remove("mute");
+    this.classList.add("sound");
 	} else {
 		modalVid.muted = true;
-		this.style.backgroundImage = 'url("icons/mute.svg")';
+    this.classList.add("mute");
+    this.classList.remove("sound");
 	}
 }
 document.getElementById("source").onclick = function(){
