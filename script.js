@@ -139,6 +139,9 @@ this.onclick = function(event) {
       if (pane.parentElement.className == "column post left") {columnSide = 0}
       else {columnSide = 1}
       // console.log(columnSide);
+      // pane.parentElement.previousElementSibling.lastChild.previousElementSibling.loading="none";
+      // pane.parentElement.nextElementSibling.firstChild.nextElementSibling.loading="none";
+
 			if (pane.nodeName == "VIDEO") {
 				modalVid.src = pane.src;
         modalImg.classList.add("on");
