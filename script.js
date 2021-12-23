@@ -9,6 +9,9 @@ var abt = document.getElementById("abt");
 var hamb = document.getElementById("hamburger");
 var menu = document.getElementById("menu");
 
+slideShow()
+// rand4D();
+
 function checkY() {
 
   if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
@@ -41,7 +44,6 @@ function toggleMenu(state,noAnim) {
   }
 }
 
-slideShow()
 var currentSlide,currentPageSlide,currentN;
 function slideShow(){
   var slide = document.getElementById("slide");
@@ -68,7 +70,6 @@ function slideShow(){
   setTimeout(slideShow, 3500);
 }
 
-rand4D();
 var num;
 var num2;
 function rand4D() {
