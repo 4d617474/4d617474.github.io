@@ -10,7 +10,7 @@ var hamb = document.getElementById("hamburger");
 var menu = document.getElementById("menu");
 
 slideShow()
-// rand4D();
+rand4D();
 
 function checkY() {
 
