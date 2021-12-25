@@ -21,9 +21,9 @@
 		<div id="bg"></div>
 		<div id="bg2"></div>
 		<div id="bg3"></div>
+		<div id="logo"></div>
 
     <div id="curtains" onclick="toggleMenu(null,1)">
-      <div id="logo"></div>
     </div>
 
 		<div id="modalBlock" class="modal">
@@ -46,29 +46,33 @@
         <div class="navigation row">
           <div id="up" class="navigation block" onclick="toggleMenu(null,1)"></div>
         </div>
-        <div class="navigation row">
-          <div id="od" class="navigation block" onclick="pickPage(1,this)"></div>
-        </div>
-				<div class="navigation row">
-					<div id="ct"  class="navigation block" onclick="pickPage(2,this)"></div>
+				<div class="navigation column">
+	        <div class="navigation row">
+	          <div id="od" class="navigation block" onclick="pickPage(1,this)"></div>
+	        </div>
+					<div class="navigation row">
+						<div id="ct"  class="navigation block" onclick="pickPage(2,this)"></div>
+					</div>
+					<div class="navigation row">
+						<div id="ph" class="navigation block" onclick="pickPage(3,this)"></div>
+					</div>
+					<div class="navigation row">
+						<div id="wd" class="navigation block" onclick="pickPage(4,this)"></div>
+					</div>
 				</div>
-				<div class="navigation row">
-					<div id="ph" class="navigation block" onclick="pickPage(3,this)"></div>
-				</div>
-				<div class="navigation row">
-					<div id="wd" class="navigation block" onclick="pickPage(4,this)"></div>
-				</div>
-				<div class="navigation row">
-					<div id="mu" class="navigation block" onclick="pickPage(5,this)"></div>
-				</div>
-				<div class="navigation row">
-					<div id="an" class="navigation block" onclick="pickPage(6,this)"></div>
-				</div>
-				<div class="navigation row">
-					<div id="tdp" class="navigation block" onclick="pickPage(7,this)"></div>
-				</div>
-				<div class="navigation row">
-					<div id="abt" class="navigation block" onclick="pickPage(8,this)"></div>
+				<div class="navigation column">
+					<div class="navigation row">
+						<div id="mu" class="navigation block" onclick="pickPage(5,this)"></div>
+					</div>
+					<div class="navigation row">
+						<div id="an" class="navigation block" onclick="pickPage(6,this)"></div>
+					</div>
+					<div class="navigation row">
+						<div id="tdp" class="navigation block" onclick="pickPage(7,this)"></div>
+					</div>
+					<div class="navigation row">
+						<div id="abt" class="navigation block" onclick="pickPage(8,this)"></div>
+					</div>
 				</div>
     </div>
 
@@ -106,11 +110,11 @@
 	          <div class="desc wd"></div>
 	        </div>
 					<div class="sp main column hideme"></div>
-					<div class="thumbnail pagelink btn tdp">
+					<div class="thumbnail pagelink btn tdp" onclick="tdp.click()">
 	          <div class="desc tdp"></div>
 	        </div>
 					<div class="sp main column hideme"></div>
-	        <div class="thumbnail pagelink btn mu">
+	        <div class="thumbnail pagelink btn mu" onclick="mu.click()">
 	          <div class="desc mu"></div>
 					</div>
 
@@ -124,11 +128,11 @@
 						<div class="desc ct"></div>
 					</div>
 					<div class="sp main column hideme"></div>
-	        <div class="thumbnail pagelink btn gif">
+	        <div class="thumbnail pagelink btn gif" onclick="an.click()">
 	          <div class="desc gif"></div>
 	        </div>
 					<div class="sp main column hideme"></div>
-	        <div class="thumbnail pagelink btn abt">
+	        <div class="thumbnail pagelink btn abt" onclick="abt.click()">
 	          <div class="desc abt"></div>
 					</div>
         </div>
@@ -332,6 +336,38 @@
 					<img src="posts/wd/mm.png" class="post wd pic btn" alt="https://ilctz.github.io/may/">
 					<a class="wdLink" style="display:none;" target="_blank" href="https://ilctz.github.io/may/"></a>
 				</div>
+			</div>
+		</div>
+		<div class="page mu">
+			<div class="sp"></div>
+			<div class="pageTitle mu"></div>
+			<div class="sp"></div>
+			<div class="socials mu">
+				<div class="social menu btn large" onclick="toggleMenu(null,1)"></div>
+			</div>
+		</div>
+		<div class="page gif">
+			<div class="sp"></div>
+			<div class="pageTitle gif"></div>
+			<div class="sp"></div>
+			<div class="socials gif">
+				<div class="social menu btn large" onclick="toggleMenu(null,1)"></div>
+			</div>
+		</div>
+		<div class="page tdp">
+			<div class="sp"></div>
+			<div class="pageTitle tdp"></div>
+			<div class="sp"></div>
+			<div class="socials tdp">
+				<div class="social menu btn large" onclick="toggleMenu(null,1)"></div>
+			</div>
+		</div>
+		<div class="page abt">
+			<div class="sp"></div>
+			<div class="pageTitle abt"></div>
+			<div class="sp"></div>
+			<div class="socials abt">
+				<div class="social menu btn large" onclick="toggleMenu(null,1)"></div>
 			</div>
 		</div>
     <script src="script.js" type="text/javascript"></script>
