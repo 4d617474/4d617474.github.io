@@ -117,11 +117,6 @@ button
 #curtains.on
 {
 	display: block;
-	animation: curtains var(--transitionTer) 1 !important;
-}
-@keyframes curtains{
-	0%{margin-left:-50vh;opacity: 1;}
-	100%{margin-left:-0%;opacity: 1;}
 }
 .row
 {
@@ -195,15 +190,11 @@ button
 	overflow: hidden;
 	transition:unset;
 	z-index: 70;
-	width: calc(100px - var(--borderWidth));
-	width: 100px;
-	height:calc(100px - var(--borderWidth));
-	height: 100px;
 	display: none;
 
-	top:5vw;
-	left:5vw;
-	height:calc(100vh - 15vw);
+	top:calc(var(--spSize) * 2);
+	left:calc(var(--spSize) * 2);
+	height:calc(100vh - (var(--spSize) * 6) - 6vh);
 	width:calc(100vw - 15vw);
 	z-index: 200;
 	background:var(--ng) var(--containerClr);
@@ -584,6 +575,9 @@ background-size:70%;
 		position: absolute;
 	}
 */
+
+
+
 /* =========== */
 /* == INTRO == */
 /* =========== */
@@ -593,10 +587,10 @@ background-size:70%;
 
 #intro
 {
-	position: relative;
-	float:none;
-	left:2.5%;
-	height: 20vh;
+	position: fixed;
+	top:var(--spSize);
+	left:var(--spSize);
+	height: calc(20vh - 2vh);
 	width:calc(100% - (var(--spSize) * 2));
 	background:var(--containerClr);
 	color: var(--onContainerClr);
@@ -632,10 +626,11 @@ background-size:70%;
 
 #slideShow
 {
-	position: absolute;
-	left: 2.5%;
-	width:calc(100% - (var(--spSize) * 4));
-	height: 40vh;
+	position: fixed;
+	left:var(--spSize);
+	width:calc(100% - (var(--spSize) * 2) - var(--borderWidth));
+	height: calc(40vh - 2vh);
+	top: calc(20vh + (var(--spSize) * 2) - 2vh);
 	/*! margin-top:10px !important; */
 	/*! margin-bottom:10px !important; */
 }
@@ -709,7 +704,15 @@ background-size:70%;
 	100%{width: 100%};
 }
 
-
+#columns
+{
+	position: fixed;
+	width:calc(100% - (var(--spSize) * 2) - var(--borderWidth));
+	height:calc(100vh - (var(--spSize) * 4) - 65vh);
+	height:calc(35vh - (var(--spSize) * 4) - 2vh);
+	left:var(--spSize);
+	top: calc(60vh + (var(--spSize) * 3) + var(--borderWidth) - 4vh);
+}
 .thumbnail.pagelink
 {
 	position: relative;
@@ -784,18 +787,9 @@ img.thumbnail
 	left:unset;
 	right:var(--spSize);
 }
-#columns
-{
-	position: fixed;
-	width:calc(100% - (var(--spSize) * 4));
-	height:calc(100vh - (var(--spSize) * 4) - 65vh);
-	left:var(--spSize);
-	top:calc(100vh + (var(--spSize) * 2) - (100vh - (var(--spSize) * 2.5) - 20vh - 40vh));
-  top:unset;
-	bottom:var(--spSize);
-}
-.column.main
 
+.column.main
+{
 	position: absolute;
 	height: 100%;
 	width: calc(50% - (var(--spSize) / 2));
@@ -905,6 +899,15 @@ img.thumbnail
 	{
 		background:linear-gradient(90deg,#000000F2 40vw,#00000050 100vw);
 	}
+	#curtains.on
+	{
+		display: block;
+		animation: curtains var(--transitionTer) 1 !important;
+	}
+	@keyframes curtains{
+		0%{margin-left:-50vh;opacity: 1;}
+		100%{margin-left:-0%;opacity: 1;}
+	}
 	#menu
 	{
 		top: var(--spSize);
@@ -928,12 +931,7 @@ img.thumbnail
 		left:calc(50% - 225px);
 		width: 450px;
 	}
-  #columns
-	{
-		left:2.5%;
-    width:calc(100% - (var(--spSize) * 3.5));
 
-	}
 	 #slider
 	{
 	}
@@ -1026,6 +1024,13 @@ img.thumbnail
 	.navigation.block:not(#up)
 	{
 		background-size: 60%;
+	}
+		.desc
+	{
+		height: 100%;
+		width: 100%;
+		background-size:60% !important;
+		background-position: bottom left !important;
 	}
 }
 
@@ -1144,6 +1149,16 @@ img.thumbnail
 		box-shadow: none;
 		border:none;
 	}
+		.desc
+	{
+		transition: all .12s;
+		background-position: center !important;
+		background-position: 20%  90% !important;
+		height: 100%;
+		width: 75%;
+		max-width: unset;
+	}
+
 }
 
 
@@ -1311,13 +1326,7 @@ img.thumbnail
 		display: block;
 	}
 
-	.desc
-	{
-		height: 100%;
-		width: 100%;
-		background-size:60% !important;
-		background-position: bottom left !important;
-	}
+
 
 		#columns
 	{
@@ -1685,15 +1694,7 @@ img.thumbnail
 	{
 		box-shadow:0px 0px 10px 0px var(--btnClr1);
 	}
-	.desc
-	{
-		transition: all .12s;
-		background-position: center !important;
-		background-position: 20%  90% !important;
-		height: 100%;
-		width: 75%;
-		max-width: unset;
-	}
+
 	
 	{
 		background-position: center !important;
@@ -1839,9 +1840,7 @@ img.thumbnail
 {
 	background-color:#151331e0; 
 }
-		#intro,#slideShow,#slider
-	{
-	}
+
   #slideShow,#columns
 {
 		background-color: var(--containerClr);

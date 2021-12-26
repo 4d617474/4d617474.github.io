@@ -215,7 +215,7 @@ document.getElementById("exit").onclick = function(){
 	document.getElementById("source").classList.remove("on");
 	document.getElementById("reload").classList.remove("on");
 	document.getElementById("spFrame-In").classList.remove("on");
-  window.scrollTo(0,pane.y);
+  // window.scrollTo(0,pane.y);
   // document.getElementById("menu").classList.add("on");
 
   checkY();
