@@ -400,7 +400,13 @@ background-size:70%;
 	cursor: pointer;
 }
 
-
+.textBlock
+{
+	position: relative;
+	left:var(--spSize);
+	width: calc(100vw - (var(--spSize) * 2) - var(--borderWidth) );
+  color:white;
+}
 
 
 /* =========== */
@@ -885,7 +891,12 @@ img.thumbnail
 		border: none;
 		background-color: #311320e0 !important;
 	}
-	
+	#slider::before
+,.btn::before
+,.btn:not(.modalButton, #menu, #hamburger)::after
+	{
+		content: none !important;
+	}
 }
 
 
@@ -940,11 +951,7 @@ img.thumbnail
 
 
 
-	.textBlock
-	{
-		left: calc(10% + 4px);
-		width: calc(100% - 8px);
-	}
+
   #barInfo
 	{
 		bottom:0% !important;
