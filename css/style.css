@@ -896,6 +896,7 @@ img.thumbnail
 ,.btn:not(.modalButton, #menu, #hamburger)::after
 	{
 		content: none !important;
+		background-image:var(--ng) !important;
 	}
 }
 
