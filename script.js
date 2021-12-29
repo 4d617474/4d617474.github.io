@@ -8,6 +8,10 @@ var tdp = document.getElementById("tdp");
 var abt = document.getElementById("abt");
 var hamb = document.getElementById("hamburger");
 var menu = document.getElementById("menu");
+var thumbnails = document.getElementsByClassName("thumbnail");
+var slide = document.getElementById("slide");
+var slide2 = document.getElementById("slide2");
+var slider = document.getElementById("sliderBar");
 
 slideShow()
 rand4D();
@@ -43,23 +47,25 @@ function toggleMenu(state,noAnim) {
     }
   }
 }
-
+var slideTO;
 var currentSlide,currentPageSlide,currentN;
 function slideShow(){
-  var slide = document.getElementById("slide");
-  var slider = document.getElementById("sliderBar");
+
   var pics = document.getElementsByClassName("pic");
   var ranN = Math.floor(Math.random() * pics.length);
   while(pics[ranN].src.includes("mp4")){
    ranN = Math.floor(Math.random() * pics.length);
   }
-  document.getElementById("slide").style.backgroundImage = "url('" + pics[ranN].src + "')";
+  slide.style.backgroundImage = "url('" + pics[ranN].src + "')";
+  slide2.style.backgroundImage = "url('" + pics[ranN].src + "')";
   setTimeout(function(){
       slider.classList.add("animated")
       slide.classList.add("animated")
+      slide2.classList.add("animated")
     }
   , 1);
   slide.classList.remove("animated")
+  slide2.classList.remove("animated")
   slider.classList.remove("animated")
   currentSlide = pics[ranN];
   currentPageSlide = pics[ranN].parentNode.parentNode.parentNode;
@@ -67,7 +73,53 @@ function slideShow(){
   if (currentPageSlide.classList.contains("ct")){currentN = 2}
   if (currentPageSlide.classList.contains("ph")){currentN = 3}
   if (currentPageSlide.classList.contains("wd")){currentN = 4}
-  setTimeout(slideShow, 3500);
+  slideTO = setTimeout(slideShow, 3500);
+}
+
+
+var s = document.getElementsByClassName("thumbnail pageLink");
+
+// s[0].onmouseover = function(){
+//   slide.style.backgroundImage = "url('posts/ob.png')";
+//   slide2.style.backgroundImage = "url('posts/ob.png')";
+//   clearTimeout(slideTO);
+//   setTimeout(function(){
+//   document.getElementById("slide").classList.remove("animated");
+//   slide2.classList.remove("animated");
+//   slider.classList.remove("animated");
+// }
+// , 1);
+// }
+s[0].onmouseover = function(){slideThumb(0)}
+s[1].onmouseover = function(){slideThumb(1)}
+s[2].onmouseover = function(){slideThumb(2)}
+s[3].onmouseover = function(){slideThumb(3)}
+s[4].onmouseover = function(){slideThumb(4)}
+s[5].onmouseover = function(){slideThumb(5)}
+s[6].onmouseover = function(){slideThumb(6)}
+s[7].onmouseover = function(){slideThumb(7)}
+
+
+s[0].onmouseout = function(){slideShow();slide2.classList.remove("animatedB");}
+s[1].onmouseout = function(){slideShow();slide2.classList.remove("animatedB");}
+s[2].onmouseout = function(){slideShow();slide2.classList.remove("animatedB");}
+s[3].onmouseout = function(){slideShow();slide2.classList.remove("animatedB");}
+s[4].onmouseout = function(){slideShow();slide2.classList.remove("animatedB");}
+s[5].onmouseout = function(){slideShow();slide2.classList.remove("animatedB");}
+s[6].onmouseout = function(){slideShow();slide2.classList.remove("animatedB");}
+s[7].onmouseout = function(){slideShow();slide2.classList.remove("animatedB");}
+
+
+function slideThumb(n) {
+  slide.style.backgroundImage = "url('posts/" + n + ".png')";
+  slide2.style.backgroundImage = "url('posts/" + n + ".png')";
+  clearTimeout(slideTO);
+  setTimeout(function(){
+    slide.classList.remove("animated");
+    slide2.classList.add("animatedB");
+    slide2.classList.remove("animated");
+    slider.classList.remove("animated");
+  } , 1);
 }
 
 var num;
