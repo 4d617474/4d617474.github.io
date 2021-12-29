@@ -1,3 +1,47 @@
+
+
+
+
+
+@keyframes slideGlitchB
+{
+	0% {margin-left:0px;}
+	19.9% {margin-left:0px;}
+	20% {margin-left:10px;}
+	22.9% {margin-left:10px;}
+	23% {margin-left:0px;}
+	45.9% {margin-left:0px;}
+	46% {margin-left:-4px;}
+	47.9% {margin-left:-4px;}
+	48% {margin-left:0px;}
+	85.9% {margin-left:0px;}
+	86% {margin-left:1px;}
+	98.9% {margin-left:1px;}
+	99% {margin-left:0px;}
+	100% {margin-left:0px;}
+}
+@keyframes slideGlitchC
+{
+	0% {opacity: 0;margin-left:0px;}
+	9.9% {opacity: 0;margin-left:0px;height: 100%;}
+	 10% {opacity: 1;margin-left:10px;height: 200%;}
+	 11.9% {opacity: 1;margin-left:10px;height: 200%;}
+	12% {opacity: 0;margin-left:0px;height: 100%;}
+	34.9% {opacity: 0;margin-left:0px;height: 100%;}
+	 35% {opacity: 1;margin-left:-10px;height: 400%;}
+	 36.9% {opacity: 1;margin-left:-10px;height: 400%;}
+	37% {opacity: 0;margin-left:0px;height: 100%;}
+	75.9% {opacity: 0;margin-left:0px;height:100%;top:0;}
+	 76% {opacity: 1;margin-left:-14px;height:200%;top:unset;bottom:0;}
+	 83.9% {opacity: 1;margin-left:-14px;height:200%;top:unset;bottom:0;}
+	84% {opacity: 0;margin-left:0px;height:100%;top:0;}
+	100% {opacity: 0;margin-left:0px;}
+}
+
+
+
+
+
 	#slideBox::before
 {
   content:'';

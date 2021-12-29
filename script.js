@@ -11,6 +11,7 @@ var menu = document.getElementById("menu");
 var thumbnails = document.getElementsByClassName("thumbnail");
 var slide = document.getElementById("slide");
 var slide2 = document.getElementById("slide2");
+var slide3 = document.getElementById("slide3");
 var slider = document.getElementById("sliderBar");
 
 slideShow()
@@ -62,10 +63,12 @@ function slideShow(){
       slider.classList.add("animated")
       slide.classList.add("animated")
       slide2.classList.add("animated")
+      // slide3.classList.add("animated")
     }
   , 1);
   slide.classList.remove("animated")
   slide2.classList.remove("animated")
+  // slide3.classList.remove("animated")
   slider.classList.remove("animated")
   currentSlide = pics[ranN];
   currentPageSlide = pics[ranN].parentNode.parentNode.parentNode;
@@ -90,36 +93,52 @@ var s = document.getElementsByClassName("thumbnail pageLink");
 // }
 // , 1);
 // }
-s[0].onmouseover = function(){slideThumb(0)}
-s[1].onmouseover = function(){slideThumb(1)}
-s[2].onmouseover = function(){slideThumb(2)}
-s[3].onmouseover = function(){slideThumb(3)}
-s[4].onmouseover = function(){slideThumb(4)}
-s[5].onmouseover = function(){slideThumb(5)}
-s[6].onmouseover = function(){slideThumb(6)}
-s[7].onmouseover = function(){slideThumb(7)}
+s[0].onmouseover = function(){slideThumb(0,0)}
+s[1].onmouseover = function(){slideThumb(1,0)}
+s[2].onmouseover = function(){slideThumb(2,0)}
+s[3].onmouseover = function(){slideThumb(3,0)}
+s[4].onmouseover = function(){slideThumb(4,0)}
+s[5].onmouseover = function(){slideThumb(5,0)}
+s[6].onmouseover = function(){slideThumb(6,0)}
+s[7].onmouseover = function(){slideThumb(7,0)}
 
 
-s[0].onmouseout = function(){slideShow();slide2.classList.remove("animatedB");}
-s[1].onmouseout = function(){slideShow();slide2.classList.remove("animatedB");}
-s[2].onmouseout = function(){slideShow();slide2.classList.remove("animatedB");}
-s[3].onmouseout = function(){slideShow();slide2.classList.remove("animatedB");}
-s[4].onmouseout = function(){slideShow();slide2.classList.remove("animatedB");}
-s[5].onmouseout = function(){slideShow();slide2.classList.remove("animatedB");}
-s[6].onmouseout = function(){slideShow();slide2.classList.remove("animatedB");}
-s[7].onmouseout = function(){slideShow();slide2.classList.remove("animatedB");}
+s[0].onmouseout = function(){slideThumb(0,1);}
+s[1].onmouseout = function(){slideThumb(0,1);}
+s[2].onmouseout = function(){slideThumb(0,1);}
+s[3].onmouseout = function(){slideThumb(0,1);}
+s[4].onmouseout = function(){slideThumb(0,1);}
+s[5].onmouseout = function(){slideThumb(0,1);}
+s[6].onmouseout = function(){slideThumb(0,1);}
+s[7].onmouseout = function(){slideThumb(0,1);}
 
 
-function slideThumb(n) {
-  slide.style.backgroundImage = "url('posts/" + n + ".png')";
-  slide2.style.backgroundImage = "url('posts/" + n + ".png')";
-  clearTimeout(slideTO);
-  setTimeout(function(){
-    slide.classList.remove("animated");
-    slide2.classList.add("animatedB");
-    slide2.classList.remove("animated");
-    slider.classList.remove("animated");
-  } , 1);
+function slideThumb(n,e) {
+  if(e == 0){
+    slide.style.backgroundImage = "url('posts/" + n + ".png')";
+    slide2.style.backgroundImage = "url('posts/" + (n+10) + ".png')";
+    slide3.style.backgroundImage = "url('posts/" + (n+20) + ".png')";
+    clearTimeout(slideTO);
+    setTimeout(function(){
+      document.getElementById("slide-OverflowA").classList.add("animatedB");
+      document.getElementById("slide-OverflowB").classList.add("animatedB");
+      document.getElementById("slide-OverflowC").classList.add("animatedB");
+      slide.classList.remove("animated");
+      slide.classList.add("animatedB");
+      slide2.classList.add("animatedB");
+      slide2.classList.remove("animated");
+      slide3.classList.add("animatedB");
+      slider.classList.remove("animated");
+    } , 1);
+  } else {
+    document.getElementById("slide-OverflowA").classList.remove("animatedB");
+    document.getElementById("slide-OverflowB").classList.remove("animatedB");
+    document.getElementById("slide-OverflowC").classList.remove("animatedB");
+    slide.classList.remove("animatedB");
+    slide2.classList.remove("animatedB");
+    slide3.classList.remove("animatedB");
+    slideShow();
+  }
 }
 
 var num;
