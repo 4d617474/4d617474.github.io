@@ -674,6 +674,7 @@ background-size:70%;
 {
 	bottom:0%;
 }
+
 #slide.animated
 {
 	animation: slideChangeA infinite ease-in-out;
@@ -723,6 +724,7 @@ background-size:70%;
 }
 .animatedB
 {
+	animation-delay:1.5s !important;
 	animation-duration: 1.5s !important;
 }
 @keyframes slideChangeB
@@ -1652,13 +1654,11 @@ img.thumbnail
 	  --bgClr1:#330f0f;
 		--bgClr2:#0c101a;
 
+	}
 			#bg2
 	{
-  	opacity: .2;
+  	opacity: .25;
 	}
-
-	}
-
   #picture,.desc,.navigation.block,.pageTitle
 	{
 		  /*! background-color:var(--containerClr) !important; */
@@ -1972,7 +1972,7 @@ img.thumbnail
   #slideShow::after,#columns::after,#intro::after
 {
 	position: absolute;
-	content:'∎ slideShow';
+	content:'#slideShow(active) . click to open current image';
 	top: calc(0px - (var(--spSize) * 1.5));
 	top:unset;
 	bottom: calc(100% + (var(--spSize) * 1));
@@ -1986,13 +1986,13 @@ img.thumbnail
 }
   #columns::after
 {
-		content:'∎ pageLink';
+		content:'.pageLinks(4-8) . select desired category';
 	}
   #intro::after
   {
 	  bottom: calc(100% + (var(--borderWidth) / 2));
   	left:unset;
-		content:'∎ intro';
+		content:'#intro-4d617474 . click to change logo';
 	}
 
   .modalButton,#hamburger
