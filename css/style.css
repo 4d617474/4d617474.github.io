@@ -358,21 +358,6 @@ background-size:70%;
 {
 	background: var(--tdp) center no-repeat;
 }
-.pageTitle
-{
-	position: relative;
-	/*! float:top; */
-	left:var(--spSize);
-	width:calc(100% - (var(--spSize) * 2) - var(--borderWidth));
-	height: 20vh;
-	max-height: 80px;
-	border-radius: 0px 0px 20px 0px;
-	background-color:var(--containerClr) !important;
-	color: var(--onContainerClr);
-	background-size: contain !important;;
-	z-index:100;
-	/*background-blend-mode: difference;*/
-}
 .socials
 {
 	max-height: 80px;
@@ -381,20 +366,41 @@ background-size:70%;
 	width:calc(100% - (var(--spSize) * 2));
 
 	height:20vh;
+	display: flex;
+  flex-wrap: nowrap;
 }
+.pageTitle
+{
+	position: relative;
+	/*! float:top; */
+	left:0;
+	width:calc(100% - 30% - (var(--spSize) / 1));
+	width: 100%;
+	height: calc(100% - var(--borderWidth));
+	border-radius: 0px 0px 20px 0px;
+	background-color:var(--containerClr) !important;
+	color: var(--onContainerClr);
+	background-size: contain !important;;
+	float: left;
+	z-index:100;
+	/*background-blend-mode: difference;*/
+}
+
 .social
 {
-	position: absolute;
+	position: relative;
 	height: calc(100% - var(--borderWidth));
 	background-color:var(--containerClr);
-	width: calc(50% - (var(--spSize) / 2) - var(--borderWidth));
+	
+	width: 10vw;
 	background-repeat: no-repeat;
+	float: left;
 	background-position: center;
 	cursor:pointer;
+	margin-left: calc(var(--spSize) / 2);
 }
 .social.menu
 {
-	left: 0;
 	background-image:var(--iconHamb);
 }
 .social.menu.large
@@ -403,8 +409,11 @@ background-size:70%;
 }
 .social.ig
 {
-	right: 0;
 	background-image:var(--iconIg);
+}
+.social.tk
+{
+	background-image:var(--iconTk);
 }
 .post.pic
 {
@@ -1624,6 +1633,7 @@ img.thumbnail
 	--iconMute:url('../icons/mute.svg');
 	--iconSound:url('../icons/sound.svg');
 	--iconIg:url('../icons/ing.svg');
+	--iconTk:url('../icons/tiktok.svg');
 
 	--borderImg:url('../icons/border.png');
 	--ng:url('../icons/ng.png');
