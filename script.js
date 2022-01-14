@@ -19,7 +19,7 @@ rand4D();
 
 function checkY() {
 
-  if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+  if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
     hamb.classList.add("on");
   } else {
     hamb.classList.remove("on");

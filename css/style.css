@@ -24,7 +24,7 @@
 	--gif:url('../icons/gifLight.svg');
 
 
-
+  --startUp:url('../icons/4ds/startUpLight.svg');
 	--4d1:url('icons/4ds/1Light.svg');
 	--4d2:url('icons/4ds/2Light.svg');
 	--4d3:url('icons/4ds/3Light.svg');
@@ -177,8 +177,8 @@ button
 #hamburger
 {
 	position: fixed !important;
-	left:5vw;
-	top: 5vw;
+	right:5vw;
+	top: var(--spSize);
 	background:var(--containerClr);
 	background:none;
 	overflow: visible;
@@ -190,6 +190,7 @@ button
 	background:var(--iconHamb) var(--containerClr) center no-repeat;
 	display: none;
 	opacity: 0;
+	cursor:pointer;
 }
 #hamburger.on
 {
@@ -502,7 +503,7 @@ background-size:70%;
 {
 
 	position: absolute;
-	background-color:var(--containerClr);
+	/*! background-color:var(--containerClr); */
 	height: calc( 20vw - var(--borderWidth));
 	width: calc( 20vw - var(--borderWidth));
 	z-index:3;
@@ -1098,13 +1099,12 @@ img.thumbnail
 	#menu
 	{
 		top: var(--spSize);
-		left: calc(50% - 200px);
-		left: var(--spSize);
+		left:unset;
+		right: var(--spSize);
 		height: calc(100vh - (var(--spSize) * 2) - var(--borderWidth));
 		width: 400px;
-		width: calc(100vw - (var(--spSize) * 2));
-		max-width: 400px;
-		max-width: unset;
+		width: calc(100vw - (var(--spSize) * 2) - var(--borderWidth));
+		max-width: 600px;
 	}
 	.column.post
 	{
@@ -1216,7 +1216,8 @@ img.thumbnail
 		height: 100%;
 		width: 100%;
 		background-size:60% !important;
-		background-position: bottom left !important;
+		transition:background var(--transitionTer);
+		/*! background-position: bottom left !important; */
 	}
 }
 
@@ -1227,9 +1228,7 @@ img.thumbnail
 @media (min-width:1000px){
 
 	#hamburger {
-    left:unset;
-		right: 87%;
-
+		left: 87%;
 	}
 	#exit,#previous,#next,#exit::after,#previous::after,#next:after
 	{
@@ -1339,9 +1338,8 @@ img.thumbnail
 	{
 		transition: all .12s;
 		background-position: center !important;
-		background-position: 20%  90% !important;
 		height: 100%;
-		width: 75%;
+		width: 100%;
 		max-width: unset;
 	}
 
@@ -1561,7 +1559,6 @@ img.thumbnail
 		animation: descAfter 4s linear infinite;
 	}
 	.btn:hover,
-	.pageTitle:hover,
 	.navigation.block:hover
 	{
 		background-color:var(--btnClr1);
@@ -1647,7 +1644,8 @@ img.thumbnail
 	--abt:url('../icons/abt.svg');
 	--tdp:url('../icons/tdp.svg');
 	--gif:url('../icons/gif.svg');
-
+		
+  --startUp:url('../icons/4ds/startUp.svg');
 	--4d1:url('icons/4ds/1.svg');
 	--4d2:url('icons/4ds/2.svg');
 	--4d3:url('icons/4ds/3.svg');
@@ -1671,7 +1669,7 @@ img.thumbnail
 	  --bgClr1:#330f0f;
 		--bgClr2:#0c101a;
 
-			--hamod:#000000d1;
+			--hamod:#000000fc;
 		--hamod2:#000;
 	--backgroundClr: #050508;
 	--outlineClr:#ffffff0d;
@@ -1689,7 +1687,9 @@ img.thumbnail
 	#sliderBar
 {
 	background-color: #FFAAAA;
+	background-color: #FFFFFF;
 	box-shadow:0px 0px 5px 5px #FFAAAA20;
+	box-shadow:0px 0px 5px 5px #FFFFFF20;
 }
 	
 	
@@ -1778,7 +1778,8 @@ img.thumbnail
 			position: fixed;
 			height: 100vh;
 			width: 100vw;
-			background:url('../icons/4ds/startUp.png') no-repeat center;
+			background:var(--startUp) no-repeat center;
+			background-size: 50% !important;
 			z-index:10;
 			animation: startUp4 3s 1;
 			opacity: 0;
@@ -1787,10 +1788,9 @@ img.thumbnail
 		}
 @keyframes startUp4
 {
-	0%{opacity:1;margin-top:0%}
-	30%{opacity:1;margin-top:0%}
-	40%{opacity:0;margin-top:5px}
-	100%{opacity:0;margin-top:5px}
+	0%{opacity:1;}
+	30%{opacity:1;}
+	40%{opacity:0;}
 }
 
 
