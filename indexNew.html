@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link rel="preload" href="icons/4v.svg" as="image" type="image/svg+xml">
+		<link rel="preload" href="icons/next.svg" as="image" type="image/svg+xml">
+		<link rel="preload" href="icons/cross.svg" as="image" type="image/svg+xml">
+    <link rel="preload" href="icons/previous.svg" as="image" type="image/svg+xml">
+		<link type="text/css" rel="stylesheet" href="css/style.css">
+		<link type="text/css" rel="stylesheet" href="css/media.css">
+    <link type="text/css" rel="stylesheet" href="css/dark.css">
+    <link rel="icon" href="icons/4v.svg">
+    <title>4D617474</title>
+    <meta name="thumbnaileme-color" content="black">
+    <meta name="viewport" content="widthumbnail=device-widthumbnail, initial-scale=1.0">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,200;0,300;1,200;1,300&family=Yeseva+One&display=swap" rel="stylesheet">
+  </head>
+
+	<body>
+
+		<div id="modalBlock" class="modal">
+			<div id="tst"></div>
+			<div id="modalBtnsA">
+
+				<div class="modalButton btn" id="previous"></div>
+				<div class="modalButton btn" id="exit"></div>
+				<div class="modalButton btn" id="next"></div>
+			</div>
+			<div id="modalBtnsB">
+				<div class="modalButton btn" id="reload"></div>
+				<div class="modalButton btn" id="mute"></div>
+				<div class="modalButton btn" id="source">marthamaymusic.com</div>
+			</div>
+			<div class="modal-content" id="img00" style="background-image:none;">
+				<video id="vid00" loop></video>
+			</div>
+				<iframe id="spFrame-In" src="none"></iframe>
+		</div>
+
+		<div id="hamburger" class="menu btn" onclick="toggleMenu(0)"></div>
+		<div id="menu">
+
+					<div class="navigation row btn">
+						<div id="od" class="navigation block" onclick="pickPage(1,this)">oddbeep</div>
+					</div>
+					<div class="separator"></div>
+					<div class="navigation row btn">
+						<div id="ct"  class="navigation block" onclick="pickPage(2,this)">crustiestthoughts</div>
+					</div>
+					<div class="separator"></div>
+					<div class="navigation row btn">
+						<div id="ph" class="navigation block" onclick="pickPage(3,this)">photography</div>
+					</div>
+					<div class="separator"></div>
+					<div class="navigation row btn">
+						<div id="wd" class="navigation block" onclick="pickPage(4,this)">web design</div>
+					</div>
+					<div class="separator"></div>
+					<div class="navigation row btn">
+						<div id="mu" class="navigation block" onclick="pickPage(5,this)">music</div>
+					</div>
+					<div class="separator"></div>
+					<div class="navigation row btn">
+						<div id="an" class="navigation block" onclick="pickPage(6,this)">???</div>
+					</div>
+					<div class="separator"></div>
+					<div class="navigation row btn">
+						<div id="abt" class="navigation block" onclick="pickPage(8,this)">about me</div>
+					</div>
+					<div class="separator"></div>
+					<div id="closeMenu" class="navigation row close btn" onclick="toggleMenu(1)"></div>
+		</div>
+		<div class="page on main">
+		</div>
+		<div class="page oddbeep">
+			<div class="row post">
+				<div class="column post">
+					<video src="posts/ob/ob0014.mp4" class="post pic btn" disablepictureinpicture disableremoteplayback></video>
+					<video src="posts/ob/ob0012.mp4" class="post pic btn" disablepictureinpicture disableremoteplayback></video>
+					<img src="posts/ob/ob0010_th.png" class="post pic btn" loading="lazy">
+				</div>
+				<div class="column post">
+					<video src="posts/ob/ob0008.mp4" class="post pic btn" loading="lazy" disablepictureinpicture disableremoteplayback></video>
+					<img src="posts/ob/ob0006_th.png" class="post pic btn" loading="lazy">
+					<video src="posts/ob/ob0004.mp4" class="post pic btn" loading="lazy" disablepictureinpicture disableremoteplayback></video>
+					<video src="posts/ob/ob0000.mp4" class="post pic btn" loading="lazy" disablepictureinpicture disableremoteplayback></video>
+				</div>
+				<div class="column post">
+					<video src="posts/ob/ob0015.mp4" class="post pic btn" disablepictureinpicture disableremoteplayback></video>
+					<video src="posts/ob/ob0013.mp4" class="post pic btn" disablepictureinpicture disableremoteplayback></video>
+					<video src="posts/ob/ob0011.mp4" class="post pic btn" loading="lazy" disablepictureinpicture disableremoteplayback></video>
+					<video src="posts/ob/ob0009.mp4" class="post pic btn" loading="lazy" disablepictureinpicture disableremoteplayback></video>
+				</div>
+				<div class="column post">
+					<video src="posts/ob/ob0007.mp4" class="post pic btn" loading="lazy" disablepictureinpicture disableremoteplayback></video>
+					<video src="posts/ob/ob0005.mp4" class="post pic btn" loading="lazy" disablepictureinpicture disableremoteplayback></video>
+					<video src="posts/ob/ob0003.mp4" class="post pic btn" loading="lazy" disablepictureinpicture disableremoteplayback></video>
+					<video src="posts/ob/ob0001.mp4" class="post pic btn" loading="lazy" disablepictureinpicture disableremoteplayback></video>
+				</div>
+			</div>
+		</div>
+
+		<div class="page crustiestthoughts">
+			<div class="row post">
+				<div class="column post left">
+					<img src="posts/ct/ctB_th.png" class="post pic btn" loading="lazy">
+					<img src="posts/ct/ctD_th.png" class="post pic btn" loading="lazy">
+					<img src="posts/ct/ct0022_th.png" class="post pic btn" loading="lazy">
+					<img src="posts/ct/ct0020_th.png" class="post pic btn" loading="lazy">
+					<img src="posts/ct/ct0018_th.png" class="post pic btn" loading="lazy">
+					<img src="posts/ct/ct0016_th.png" class="post pic btn" loading="lazy">
+					<img src="posts/ct/ct0014_th.png" class="post pic btn" loading="lazy">
+					<img src="posts/ct/ct0001_th.png" class="post pic btn" loading="lazy">
+				</div>
+				<div class="column post right">
+					<img src="posts/ct/ctF_th.png" class="post pic btn" loading="lazy">
+					<img src="posts/ct/ctH_th.png" class="post pic btn" loading="lazy">
+					<img src="posts/ct/ct0012_th.png" class="post pic btn" loading="lazy">
+					<img src="posts/ct/ct0008_th.png" class="post pic btn" loading="lazy">
+					<img src="posts/ct/ct0006_th.png" class="post pic btn" loading="lazy">
+					<img src="posts/ct/ct0004_th.png" class="post pic btn" loading="lazy">
+					<img src="posts/ct/ct0002_th.png" class="post pic btn" loading="lazy">
+					<img src="posts/ct/ct0000_th.png" class="post pic btn" loading="lazy">
+				</div>
+				<div class="column post left">
+					<img src="posts/ct/ctG_th.png" class="post pic btn" loading="lazy">
+					<img src="posts/ct/ctI_th.png" class="post pic btn" loading="lazy">
+					<img src="posts/ct/ct0013_th.png" class="post pic btn" loading="lazy">
+					<img src="posts/ct/ct0011_th.png" class="post pic btn" loading="lazy">
+					<img src="posts/ct/ct0009_th.png" class="post pic btn" loading="lazy">
+					<img src="posts/ct/ct0007_th.png" class="post pic btn" loading="lazy">
+					<img src="posts/ct/ct0005_th.png" class="post pic btn" loading="lazy">
+					<img src="posts/ct/ct0003_th.png" class="post pic btn" loading="lazy">
+				</div>
+				<div class="column post right">
+					<img src="posts/ct/ctA_th.png" class="post pic btn" loading="lazy">
+					<img src="posts/ct/ctC_th.png" class="post pic btn" loading="lazy">
+					<img src="posts/ct/ctE_th.png" class="post pic btn" loading="lazy">
+					<img src="posts/ct/ct0023_th.png" class="post pic btn" loading="lazy">
+					<img src="posts/ct/ct0021_th.png" class="post pic btn" loading="lazy">
+					<img src="posts/ct/ct0019_th.png" class="post pic btn" loading="lazy">
+					<img src="posts/ct/ct0017_th.png" class="post pic btn" loading="lazy">
+					<img src="posts/ct/ct0015_th.png" class="post pic btn" loading="lazy">
+				</div>
+			</div>
+		</div>
+
+		<div class="page photography">
+			<div class="row post">
+				<div class="column post">
+					<img src="posts/ph/phB_th.jpg" class="post pic btn" loading="lazy">
+					<img src="posts/ph/phD_th.jpg" class="post pic btn" loading="lazy">
+					<img src="posts/ph/phF_th.jpg" class="post pic btn" loading="lazy">
+					<img src="posts/ph/phH_th.jpg" class="post pic btn" loading="lazy">
+					<img src="posts/ph/ph0036_th.jpg" class="post pic btn" loading="lazy">
+					<img src="posts/ph/ph0034_th.jpg" class="post pic btn" loading="lazy">
+					<img src="posts/ph/ph0032_th.jpg" class="post pic btn" loading="lazy">
+					<img src="posts/ph/ph0030_th.jpg" class="post pic btn" loading="lazy">
+					<img src="posts/ph/ph0028_th.jpg" class="post pic btn" loading="lazy">
+					<img src="posts/ph/ph0026_th.jpg" class="post pic btn" loading="lazy">
+					<img src="posts/ph/ph0024_th.jpg" class="post pic btn" loading="lazy">
+					<img src="posts/ph/ph0033_th.jpg" class="post pic btn" loading="lazy">
+					<img src="posts/ph/ph0022_th.jpg" class="post pic btn" loading="lazy">
+				</div>
+				<div class="column post">
+					<img src="posts/ph/phA_th.jpg" class="post pic btn" loading="lazy">
+					<img src="posts/ph/phC_th.jpg" class="post pic btn" loading="lazy">
+					<img src="posts/ph/phE_th.jpg" class="post pic btn" loading="lazy">
+					<img src="posts/ph/phG_th.jpg" class="post pic btn" loading="lazy">
+					<img src="posts/ph/phI_th.jpg" class="post pic btn" loading="lazy">
+					<img src="posts/ph/ph0038_th.jpg" class="post pic btn" loading="lazy">
+					<img src="posts/ph/ph0033_th.jpg" class="post pic btn" loading="lazy">
+					<img src="posts/ph/ph0031_th.jpg" class="post pic btn" loading="lazy">
+					<img src="posts/ph/ph0029_th.jpg" class="post pic btn" loading="lazy">
+					<img src="posts/ph/ph0027_th.jpg" class="post pic btn" loading="lazy">
+					<img src="posts/ph/ph0025_th.jpg" class="post pic btn" loading="lazy">
+					<img src="posts/ph/ph0023_th.jpg" class="post pic btn" loading="lazy">
+				</div>
+				<div class="column post">
+					<img src="posts/ph/ph0035_th.jpg" class="post pic btn" loading="lazy">
+					<img src="posts/ph/ph0018_th.jpg" class="post pic btn" loading="lazy">
+					<img src="posts/ph/ph0020_th.jpg" class="post pic btn" loading="lazy">
+					<img src="posts/ph/ph0016_th.jpg" class="post pic btn" loading="lazy">
+					<img src="posts/ph/ph0014_th.jpg" class="post pic btn" loading="lazy">
+					<img src="posts/ph/ph0012_th.jpg" class="post pic btn" loading="lazy">
+					<img src="posts/ph/ph0010_th.jpg" class="post pic btn" loading="lazy">
+					<img src="posts/ph/ph0008_th.jpg" class="post pic btn" loading="lazy">
+					<img src="posts/ph/ph0006_th.jpg" class="post pic btn" loading="lazy">
+					<img src="posts/ph/ph0004_th.jpg" class="post pic btn" loading="lazy">
+					<img src="posts/ph/ph0002_th.jpg" class="post pic btn" loading="lazy">
+					<img src="posts/ph/ph0000_th.jpg" class="post pic btn" loading="lazy">
+				</div>
+				<div class="column post">
+					<img src="posts/ph/ph0037_th.jpg" class="post pic btn" loading="lazy">
+					<img src="posts/ph/ph0021_th.jpg" class="post pic btn" loading="lazy">
+					<img src="posts/ph/ph0019_th.jpg" class="post pic btn" loading="lazy">
+					<img src="posts/ph/ph0017_th.jpg" class="post pic btn" loading="lazy">
+					<img src="posts/ph/ph0015_th.jpg" class="post pic btn" loading="lazy">
+					<img src="posts/ph/ph0013_th.jpg" class="post pic btn" loading="lazy">
+					<img src="posts/ph/ph0011_th.jpg" class="post pic btn" loading="lazy">
+					<img src="posts/ph/ph0009_th.jpg" class="post pic btn" loading="lazy">
+					<img src="posts/ph/ph0007_th.jpg" class="post pic btn" loading="lazy">
+					<img src="posts/ph/ph0005_th.jpg" class="post pic btn" loading="lazy">
+					<img src="posts/ph/ph0003_th.jpg" class="post pic btn" loading="lazy">
+					<img src="posts/ph/ph0001_th.jpg" class="post pic btn" loading="lazy">
+				</div>
+			</div>
+		</div>
+
+		<div class="page webdesign">
+			<div class="row post">
+				<div class="column post left">
+
+					<div class="post wd container">
+						<img src="posts/wd/mm.png" class="post picdesc wd btn" loading="lazy">
+						<div class="post desc">marthamaymusic</div>
+					</div>
+					<img src="posts/wd/siegetool.png" class="post pic btn" loading="lazy">
+					<img src="posts/wd/sp3.png" class="post pic btn" loading="lazy">
+				</div>
+				<div class="column post right">
+					<img src="posts/wd/sp1.png" class="post pic btn" loading="lazy">
+					<img src="posts/wd/sp2.png" class="post pic btn" loading="lazy">
+					<img src="posts/wd/sp4.png" class="post pic btn" loading="lazy">
+				</div>
+			</div>
+		</div>
+		<script src="script.js" type="text/javascript"></script>
+  </body>

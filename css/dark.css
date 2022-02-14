@@ -1,0 +1,18 @@
+@media (prefers-color-scheme: dark) {
+
+	:root{
+	--backgroundClr: #171912;
+	--topClr:#FAF3F1;
+  --top2Clr:#FAF3F130;
+
+	--iconHamb:url('../icons/hamb.svg');
+	--iconCross:url('../icons/cross.svg');
+	--iconPrevious:url('../icons/previous.svg');
+	--iconNext:url('../icons/next.svg');
+	--iconReload:url('../icons/reload.svg');
+	--iconSource:url('../icons/source.svg');
+	--iconMute:url('../icons/mute.svg');
+	--iconSound:url('../icons/sound.svg');
+	--iconIg:url('../icons/ing.svg');
+	--iconTk:url('../icons/tiktok.svg');
+ }
