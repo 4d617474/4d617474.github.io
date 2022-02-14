@@ -20,11 +20,15 @@ function toggleMenu(state) {
     isMenuOpen = 0;
   }
 }
-function pickPage(number,elmnt)
+var oldName;
+function pickPage(number,elmnt,name)
 {
   // checkY();
+
   var navBlocks = document.getElementsByClassName("navigation block");
   var page = document.getElementsByClassName("page");
+  var modals = document.getElementsByClassName("modalButton");
+
 
   if (elmnt != null){
   for (i = 0; i < navBlocks.length; i++) {
@@ -36,9 +40,32 @@ function pickPage(number,elmnt)
 	for (i = 0;i < page.length; i++) {
 		page[i].classList.remove("on");
 	}
-	page[number].classList.add("on");
-	window.scrollTo(0, 0);
-  toggleMenu(1)
+  page[number].classList.add("on");
+  window.scrollTo(0, 0);
+  toggleMenu(1);
+
+  if(name == oldName){
+    return;
+  }
+
+  for (i = 0;i < modals.length; i++) {
+    modals[i].classList.remove(oldName);
+    modals[i].classList.add(name);
+  }
+  document.getElementById("menu").classList.add(name);
+  document.getElementById("menu").classList.remove(oldName);
+  document.getElementById("hamburger").classList.add(name);
+  document.getElementById("hamburger").classList.remove(oldName);
+  document.getElementById("closeMenu").classList.add(name);
+  document.getElementById("closeMenu").classList.remove(oldName);
+  document.body.classList.add(name);
+  document.body.classList.remove(oldName);
+
+  // document.getElementById("body").classList.add(name);
+  // document.getElementById("body").classList.remove(oldName);
+  oldName = name;
+  page[number].classList.add(name);
+
 }
 
 var modal = document.getElementById("modalBlock");
@@ -60,6 +87,7 @@ this.onclick = function(event) {
       // console.log(pane);
       modal.classList.add("on");
 			modal.style.opacity = "1";
+      // document.getElementById("source").classList.remove("on");
       // console.log(Array.prototype.indexOf.call(pane.parentNode.children,pane))
       postNo = Array.prototype.indexOf.call(pane.parentNode.children,pane);
 
@@ -92,11 +120,9 @@ this.onclick = function(event) {
 			}
 	} else if (event.target.classList.contains("container") == true){
       pane =  event.target.closest('.picdesc');
-      console.log(pane);
 
       modalVid.classList.remove("on");
       modalImg.classList.add("on");
-      // modalImg.style.backgroundImage = "url('" + pane.src.replace("_th","") + "')";
       modalImg.style.backgroundImage = pane.src;
       document.getElementById("source").classList.add("on");
     } return

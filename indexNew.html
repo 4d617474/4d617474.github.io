@@ -43,31 +43,31 @@
 		<div id="menu">
 
 					<div class="navigation row btn">
-						<div id="od" class="navigation block" onclick="pickPage(1,this)">oddbeep</div>
+						<div id="od" class="navigation block" onclick="pickPage(1,this,'oddbeep')">oddbeep</div>
 					</div>
 					<div class="separator"></div>
 					<div class="navigation row btn">
-						<div id="ct"  class="navigation block" onclick="pickPage(2,this)">crustiestthoughts</div>
+						<div id="ct"  class="navigation block" onclick="pickPage(2,this,'crustiestthoughts')">crustiestthoughts</div>
 					</div>
 					<div class="separator"></div>
 					<div class="navigation row btn">
-						<div id="ph" class="navigation block" onclick="pickPage(3,this)">photography</div>
+						<div id="ph" class="navigation block" onclick="pickPage(3,this,'photography')">photography</div>
 					</div>
 					<div class="separator"></div>
 					<div class="navigation row btn">
-						<div id="wd" class="navigation block" onclick="pickPage(4,this)">web design</div>
+						<div id="wd" class="navigation block" onclick="pickPage(4,this,'webdesign')">web design</div>
 					</div>
 					<div class="separator"></div>
 					<div class="navigation row btn">
-						<div id="mu" class="navigation block" onclick="pickPage(5,this)">music</div>
+						<div id="mu" class="navigation block" onclick="pickPage(5,this,'music')">music</div>
 					</div>
 					<div class="separator"></div>
 					<div class="navigation row btn">
-						<div id="an" class="navigation block" onclick="pickPage(6,this)">???</div>
+						<div id="an" class="navigation block" onclick="pickPage(6,this,'gif')">???</div>
 					</div>
 					<div class="separator"></div>
 					<div class="navigation row btn">
-						<div id="abt" class="navigation block" onclick="pickPage(8,this)">about me</div>
+						<div id="abt" class="navigation block" onclick="pickPage(7,this,'about')">about me</div>
 					</div>
 					<div class="separator"></div>
 					<div id="closeMenu" class="navigation row close btn" onclick="toggleMenu(1)"></div>
@@ -227,5 +227,48 @@
 				</div>
 			</div>
 		</div>
+
+		<div class="page mu">
+			<div class="textBlock btn">
+				<p>Nothing here, yet.<br>
+				Oh wait I got this cool song, it goes like this:<br>
+				<b>du du dudu du du du du dudududu dudu duuuuu du</b></p>
+
+			</div>
+		</div>
+
+		<div class="page gif">
+
+			<div class="row post">
+				<div class="column post left">
+					<img src="posts/an/an0000.gif" class="post pic btn" loading="lazy">
+					<img src="posts/an/an0001.gif" class="post pic btn" loading="lazy">
+					<img src="posts/an/an0004.mp4" class="post pic btn" loading="lazy">
+				</div>
+				<div class="column post left">
+					<img src="posts/an/an0002.gif" class="post pic btn" loading="lazy">
+					<img src="posts/an/an0003.gif" class="post pic btn" loading="lazy">
+				</div>
+			</div>
+		</div>
+
+		<div class="page abt">
+			<div class="textBlock btn">
+				<p>Hi, I'm Matt, and I do all kinds of stuff.<br>
+				 <br><br>
+				<b>What I use</b><br></p>
+				<p class="txtSide">
+				For any illustrations I use After Effects, Blender, Photoshop/Affinity or Figma.<br><br>
+				I experiment making songs with FL Studio, but also  LMMS.<br><br>
+				When it comes to 3D printing I use Fusion360/OpenSCAD, and print with Cura.<br><br>
+				And for web design, I simply use Atom.<br><br>
+				Yes I do prefer open-source software.<br><br>
+				My current camera equipement is a Nikon D3100, 55-300mm and 18-55mm Nikon lens,
+				 and finally a 105mm 1:2:8 DG Macro HSM Sigma lens.<br><br>
+				</p>
+
+			</div>
+		</div>
+
 		<script src="script.js" type="text/javascript"></script>
   </body>

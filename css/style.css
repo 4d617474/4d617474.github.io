@@ -3,6 +3,22 @@
 	--topClr:#151515;
 	--top2Clr:#15151550;
 	
+	--OBbackgroundClr: #E8DADA;
+	--OBtopClr:#151515;
+	--OBtop2Clr:#15151550;
+	
+	--CTbackgroundClr: #DAE5E8;
+	--CTtopClr:#151515;
+	--CTtop2Clr:#15151550;
+	
+	--PHbackgroundClr: #DCE8DA;
+	--PHtopClr:#2f2f2f;
+	--PHtop2Clr:#2f2f2f17;
+	
+	--WDbackgroundClr: #E8DAE1;
+	--WDtopClr:#151515;
+	--WDtop2Clr:#2f2f2f45;
+		
 	--iconHamb:url('../icons/hambLight.svg');
 	--iconCross:url('../icons/crossLight.svg');
 	--iconPrevious:url('../icons/previousLight.svg');
@@ -47,7 +63,7 @@ body
 	display: block !important;
 	opacity:1 !important;
 }
-@keyframes o
+@keyframes on
 {
 	0%{opacity:0;margin-top:5px};
 	100%{opacity:1;margin-top:0%};
@@ -61,6 +77,41 @@ body
 {
 	display: none;
 	margin-bottom:12vh;
+}
+
+/* STYLES */
+/* STYLES */
+/* STYLES */
+#hamburger,#menu,.page,.modalButton,#closeMenu
+{
+  transition: background-color .5s !important;
+}
+/*body.oddbeep,#hamburger.oddbeep,#menu.oddbeep,.page.oddbeep,.modalButton.oddbeep,#closeMenu.oddbeep*/
+body.oddbeep,#hamburger.oddbeep,#menu.oddbeep,.page.oddbeep,.modalButton.oddbeep,#closeMenu.oddbeep
+{
+  background-color: var(--OBbackgroundClr) !important;
+	/*outline: 1px solid var(--OBtop2Clr);
+	color:var(--OBtopClr);*/
+}
+
+.crustiestthoughts
+{
+  background-color: var(--CTbackgroundClr) !important;
+	/*outline: 1px solid var(--CTtop2Clr);
+	color:var(--CTtopClr);*/
+}
+
+.photography
+{
+  background-color: var(--PHbackgroundClr) !important;
+	/*outline: 1px solid var(--PHtop2Clr);
+	color:var(--PHtopClr);*/
+}
+.webdesign
+{
+  background-color: var(--WDbackgroundClr) !important;
+	/*outline: 1px solid var(--WDtop2Clr);
+	color:var(--WDtopClr);*/
 }
 
 /* MENU */
