@@ -68,6 +68,13 @@ function pickPage(number,elmnt,name)
 
 }
 
+function openFolder(no){
+  folder = document.getElementsByClassName("folder");
+  folderS = document.getElementsByClassName("folders");
+  folder[no].style.display = "block";
+  folderS[0].style.display = "none";
+}
+
 var modal = document.getElementById("modalBlock");
 var modalImg = document.getElementById("img00");
 var modalVid = document.getElementById("vid00");

@@ -211,6 +211,26 @@ body.oddbeep,#hamburger.oddbeep,#menu.oddbeep,.page.oddbeep,.modalButton.oddbeep
 	outline:1px solid  var(--top2Clr);
 	margin: 2.5px 0 2.5px 0;
 }
+.pic.cover
+{
+	width: 100%;
+}
+.cover
+{
+	float: left;
+	outline:1px solid  var(--top2Clr);
+	width: calc(50% - 10px);
+	margin:5px;
+}
+.coverpicture
+{
+	width: 100%;
+}
+.folder
+{
+	display: none;
+	width: 100%;
+}
 /*.post.wd.container:after
 {
 	content: '';
