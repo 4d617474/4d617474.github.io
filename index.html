@@ -1,4 +1,4 @@
-<!-- <!DOCTYPE html> -->
+<!DOCTYPE html>
 <html>
 	<head>
 		<meta charset="utf-8">
@@ -6,153 +6,76 @@
 		<link rel="preload" href="icons/next.svg" as="image" type="image/svg+xml">
 		<link rel="preload" href="icons/cross.svg" as="image" type="image/svg+xml">
     <link rel="preload" href="icons/previous.svg" as="image" type="image/svg+xml">
-    <link type="text/css" rel="stylesheet" href="css/styleOld.css">
+		<link type="text/css" rel="stylesheet" href="css/style.css">
+		<link type="text/css" rel="stylesheet" href="css/media.css">
+    <link type="text/css" rel="stylesheet" href="css/dark.css">
     <link rel="icon" href="icons/4v.svg">
-    <title>Hey!</title>
+    <title>4D617474</title>
     <meta name="thumbnaileme-color" content="black">
     <meta name="viewport" content="widthumbnail=device-widthumbnail, initial-scale=1.0">
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,200;0,300;1,200;1,300&family=Yeseva+One&display=swap" rel="stylesheet">
   </head>
 
-  <body>
-
-		<div id="bg"></div>
-		<div id="bg2"></div>
-		<div id="bg3"></div>
-		<div id="logo"></div>
-
-    <div id="curtains" onclick="toggleMenu(null,1)">
-    </div>
+	<body>
 
 		<div id="modalBlock" class="modal">
 			<div id="tst"></div>
-			<div class="modalButton btn" id="previous"></div>
-			<div class="modalButton btn" id="exit"></div>
-			<div class="modalButton btn" id="next"></div>
-			<div class="modalButton btn" id="reload"></div>
-			<div class="modalButton btn" id="mute"></div>
-			<div class="modalButton btn" id="source"></div>
+			<div id="modalBtnsA" class="themed">
+
+				<div class="modalButton btn" id="previous"></div>
+				<div class="modalButton btn" id="exit"></div>
+				<div class="modalButton btn" id="next"></div>
+			</div>
+			<div id="modalBtnsB" class="themed">
+				<div class="modalButton btn" id="reload"></div>
+				<div class="modalButton btn" id="mute"></div>
+				<div class="modalButton btn" id="source">marthamaymusic.com</div>
+			</div>
 			<div class="modal-content" id="img00" style="background-image:none;">
-				<video id="vid00" loop></video>
+				<video class="modal-content" id="vid00" loop></video>
 			</div>
 				<iframe id="spFrame-In" src="none"></iframe>
 		</div>
-		<div id="hamburger" class="menu btn" onclick="toggleMenu(null,1)"></div>
-		<div id="menu" class="navigation close btn">
-        <div class="navigation row">
-          <div id="up" class="navigation block" onclick="toggleMenu(null,1)"></div>
-        </div>
-				<div class="navigation column">
-	        <div class="navigation row">
-	          <div id="od" class="navigation block" onclick="pickPage(1,this)"></div>
-	        </div>
-					<div class="navigation row">
-						<div id="ct"  class="navigation block" onclick="pickPage(2,this)"></div>
-					</div>
-					<div class="navigation row">
-						<div id="ph" class="navigation block" onclick="pickPage(3,this)"></div>
-					</div>
-					<div class="navigation row">
-						<div id="wd" class="navigation block" onclick="pickPage(4,this)"></div>
-					</div>
-				</div>
-				<div class="navigation column">
-					<div class="navigation row">
-						<div id="mu" class="navigation block" onclick="pickPage(5,this)"></div>
-					</div>
-					<div class="navigation row">
-						<div id="an" class="navigation block" onclick="pickPage(6,this)"></div>
-					</div>
-					<div class="navigation row">
-						<div id="tdp" class="navigation block" onclick="pickPage(7,this)"></div>
-					</div>
-					<div class="navigation row">
-						<div id="abt" class="navigation block" onclick="pickPage(8,this)"></div>
-					</div>
-				</div>
-    </div>
 
-    <div class="page on main">
+		<div id="hamburger" class="menu btn themed" onclick="toggleMenu(0)"></div>
+		<div id="back" class="menu btn themed" onclick="openFolder(null,1)"></div>
+		<div id="menu" class="themed">
 
-      <div id="intro" onclick="rand4D()">
-        <div class="intro btn" id="picture"></div>
-      </div>
-
-			<div id="slideShow"onclick="currentSlide.click(),pickPage(currentN,null,1)">
-				<div id="slideBox" class="btn" >
-
-					<div id="slide-OverflowA">
-						<div id="slide"></div>
+					<div class="navigation row btn">
+						<div id="od" class="navigation block" onclick="pickPage(1,this,'oddbeep')">oddbeep</div>
 					</div>
-
-					<div id="slide-OverflowB">
-						<div id="slide2"></div>
+					<div class="separator"></div>
+					<div class="navigation row btn">
+						<div id="ct"  class="navigation block" onclick="pickPage(2,this,'crustiestthoughts')">crustiestthoughts</div>
 					</div>
-
-					<div id="slide-OverflowC">
-						<div id="slide3"></div>
+					<div class="separator"></div>
+					<div class="navigation row btn">
+						<div id="ph" class="navigation block" onclick="pickPage(3,this,'photography');openFolder(null,1)">photography</div>
 					</div>
-				</div>
-				<div class="sp main"></div>
-				<div id="slider">
-					<div id="sliderBar"></div>
-				</div>
-			</div>
-
-			<div id="columns">
-				<div class="column main a">
-	        <div class="thumbnail pagelink btn" onclick="od.click()">
-	          <div class="desc ob"></div>
-	        </div>
-					<div class="sp main column"></div>
-	        <div class="thumbnail pagelink btn" onclick="wd.click()">
-	          <div class="desc wd"></div>
-	        </div>
-					<div class="sp main column hideme"></div>
-					<div class="thumbnail pagelink btn tdp" onclick="tdp.click()">
-	          <div class="desc tdp"></div>
-	        </div>
-					<div class="sp main column hideme"></div>
-	        <div class="thumbnail pagelink btn mu" onclick="mu.click()">
-	          <div class="desc mu"></div>
+					<div class="separator"></div>
+					<div class="navigation row btn">
+						<div id="wd" class="navigation block" onclick="pickPage(4,this,'webdesign')">web design</div>
 					</div>
-
-        </div>
-				<div class="column main b">
-	        <div class="thumbnail pagelink btn" onclick="ph.click()">
-	          <div class="desc ph"></div>
-	        </div>
-					<div class="sp main column"></div>
-					<div class="thumbnail pagelink btn" onclick="ct.click()">
-						<div class="desc ct"></div>
+					<div class="separator"></div>
+					<div class="navigation row btn">
+						<div id="mu" class="navigation block" onclick="pickPage(5,this,'music')">music</div>
 					</div>
-					<div class="sp main column hideme"></div>
-	        <div class="thumbnail pagelink btn gif" onclick="an.click()">
-	          <div class="desc gif"></div>
-	        </div>
-					<div class="sp main column hideme"></div>
-	        <div class="thumbnail pagelink btn abt" onclick="abt.click()">
-	          <div class="desc abt"></div>
+					<div class="separator"></div>
+					<div class="navigation row btn">
+						<div id="an" class="navigation block" onclick="pickPage(6,this,'gif')">???</div>
 					</div>
-        </div>
-			</div>
-
-    </div>
-		<div class="page ob">
-			<div class="sp"></div>
-			<div class="socials ob">
-				<div class="pageTitle ob"></div>
-				<a href="https://www.instagram.com/oddbeep">
-					<div class="social ig btn" ></div>
-				</a>
-				<a>
-					<div class="social menu btn" onclick="toggleMenu(null,1)"></div>
-				</a>
-			</div>
-			<div class="sp"></div>
-
+					<div class="separator"></div>
+					<div class="navigation row btn">
+						<div id="abt" class="navigation block" onclick="pickPage(7,this,'about')">contact me</div>
+					</div>
+					<div class="separator"></div>
+					<div id="closeMenu" class="navigation row close btn themed" onclick="toggleMenu(1)"></div>
+		</div>
+		<div class="page on main">
+		</div>
+		<div class="page oddbeep">
 			<div class="row post">
 				<div class="column post">
 					<video src="posts/ob/ob0014.mp4" class="post pic btn" disablepictureinpicture disableremoteplayback></video>
@@ -179,21 +102,8 @@
 				</div>
 			</div>
 		</div>
-		<div class="page ct">
-			<div class="sp"></div>
-			<div class="socials ct">
-				<div class="pageTitle ct"></div>
-				<a href="https://www.instagram.com/crustiestthoughts/">
-					<div class="social ig btn"></div>
-				</a>
-				<a href="https://www.tiktok.com/@crustiestthoughts">
-					<div class="social tk btn"></div>
-				</a>
-				<a>
-					<div class="social menu btn" onclick="toggleMenu(null,1)"></div>
-				</a>
-			</div>
-			<div class="sp"></div>
+
+		<div class="page crustiestthoughts">
 			<div class="row post">
 				<div class="column post left">
 					<img src="posts/ct/ctB_th.png" class="post pic btn" loading="lazy">
@@ -238,159 +148,200 @@
 			</div>
 		</div>
 
-		<div class="page ph">
-			<div class="sp"></div>
-			<div class="socials ph">
-				<div class="pageTitle ph"></div>
-				<a>
-					<div class="social menu btn" onclick="toggleMenu(null,1)"></div>
-				</a>
+		<div class="page photography">
+			<div class="folders on">
+				<div class="row post ">
+					<div class="column post ">
+
+						<div class="cover ph btn" onclick="openFolder(0)">
+							<img src="posts/ph/phB_th.jpg" class="coverpicture" loading="lazy">
+							<div class="post desc">animals</div>
+						</div>
+
+					</div>
+					<div class="column post ">
+
+						<div class="cover ph btn" onclick="openFolder(1)">
+							<img src="posts/ph/arch1.jpg" class="coverpicture" loading="lazy">
+							<div class="post desc">architecture</div>
+						</div>
+
+					</div>
+
+					<div class="column post ">
+
+						<div class="cover ph btn" onclick="openFolder(2)">
+							<img src="posts/ph/world1.jpg" class="coverpicture" loading="lazy">
+							<div class="post desc">world</div>
+						</div>
+
+					</div>
+
+					<div class="column post ">
+
+						<div class="cover ph btn" onclick="openFolder(3)">
+							<img src="posts/ph/ph0009_th.jpg" class="coverpicture" loading="lazy">
+							<div class="post desc">nature</div>
+						</div>
+
+					</div>
+				</div>
+
 			</div>
-			<div class="sp"></div>
+
+			<div class="folder ph">
+				<div class="row post">
+					<div class="column post">
+						<img src="posts/ph/phB_th.jpg" class="post pic btn" loading="lazy">
+						<img src="posts/ph/phD_th.jpg" class="post pic btn" loading="lazy">
+						<img src="posts/ph/phF_th.jpg" class="post pic btn" loading="lazy">
+						<img src="posts/ph/phH_th.jpg" class="post pic btn" loading="lazy">
+						<img src="posts/ph/ph0036_th.jpg" class="post pic btn" loading="lazy">
+						<img src="posts/ph/ph0034_th.jpg" class="post pic btn" loading="lazy">
+						<img src="posts/ph/ph0032_th.jpg" class="post pic btn" loading="lazy">
+						<img src="posts/ph/ph0030_th.jpg" class="post pic btn" loading="lazy">
+						<img src="posts/ph/ph0028_th.jpg" class="post pic btn" loading="lazy">
+						<img src="posts/ph/ph0026_th.jpg" class="post pic btn" loading="lazy">
+						<img src="posts/ph/ph0024_th.jpg" class="post pic btn" loading="lazy">
+						<img src="posts/ph/ph0033_th.jpg" class="post pic btn" loading="lazy">
+						<img src="posts/ph/ph0022_th.jpg" class="post pic btn" loading="lazy">
+					</div>
+					<div class="column post">
+						<img src="posts/ph/phA_th.jpg" class="post pic btn" loading="lazy">
+						<img src="posts/ph/phC_th.jpg" class="post pic btn" loading="lazy">
+						<img src="posts/ph/phE_th.jpg" class="post pic btn" loading="lazy">
+						<img src="posts/ph/phG_th.jpg" class="post pic btn" loading="lazy">
+						<img src="posts/ph/phI_th.jpg" class="post pic btn" loading="lazy">
+						<img src="posts/ph/ph0038_th.jpg" class="post pic btn" loading="lazy">
+						<img src="posts/ph/ph0033_th.jpg" class="post pic btn" loading="lazy">
+						<img src="posts/ph/ph0031_th.jpg" class="post pic btn" loading="lazy">
+						<img src="posts/ph/ph0029_th.jpg" class="post pic btn" loading="lazy">
+						<img src="posts/ph/ph0027_th.jpg" class="post pic btn" loading="lazy">
+						<img src="posts/ph/ph0025_th.jpg" class="post pic btn" loading="lazy">
+						<img src="posts/ph/ph0023_th.jpg" class="post pic btn" loading="lazy">
+					</div>
+					<div class="column post">
+						<img src="posts/ph/ph0035_th.jpg" class="post pic btn" loading="lazy">
+						<img src="posts/ph/ph0018_th.jpg" class="post pic btn" loading="lazy">
+						<img src="posts/ph/ph0020_th.jpg" class="post pic btn" loading="lazy">
+						<img src="posts/ph/ph0016_th.jpg" class="post pic btn" loading="lazy">
+						<img src="posts/ph/ph0014_th.jpg" class="post pic btn" loading="lazy">
+						<img src="posts/ph/ph0012_th.jpg" class="post pic btn" loading="lazy">
+						<img src="posts/ph/ph0010_th.jpg" class="post pic btn" loading="lazy">
+						<img src="posts/ph/ph0008_th.jpg" class="post pic btn" loading="lazy">
+						<img src="posts/ph/ph0006_th.jpg" class="post pic btn" loading="lazy">
+						<img src="posts/ph/ph0004_th.jpg" class="post pic btn" loading="lazy">
+						<img src="posts/ph/ph0002_th.jpg" class="post pic btn" loading="lazy">
+						<img src="posts/ph/ph0000_th.jpg" class="post pic btn" loading="lazy">
+					</div>
+					<div class="column post">
+						<img src="posts/ph/ph0037_th.jpg" class="post pic btn" loading="lazy">
+						<img src="posts/ph/ph0021_th.jpg" class="post pic btn" loading="lazy">
+						<img src="posts/ph/ph0019_th.jpg" class="post pic btn" loading="lazy">
+						<img src="posts/ph/ph0017_th.jpg" class="post pic btn" loading="lazy">
+						<img src="posts/ph/ph0015_th.jpg" class="post pic btn" loading="lazy">
+						<img src="posts/ph/ph0013_th.jpg" class="post pic btn" loading="lazy">
+						<img src="posts/ph/ph0011_th.jpg" class="post pic btn" loading="lazy">
+						<img src="posts/ph/ph0009_th.jpg" class="post pic btn" loading="lazy">
+						<img src="posts/ph/ph0007_th.jpg" class="post pic btn" loading="lazy">
+						<img src="posts/ph/ph0005_th.jpg" class="post pic btn" loading="lazy">
+						<img src="posts/ph/ph0003_th.jpg" class="post pic btn" loading="lazy">
+						<img src="posts/ph/ph0001_th.jpg" class="post pic btn" loading="lazy">
+					</div>
+				</div>
+			</div>
+
+			<div class="folder ph">
+				<div class="row post">
+					<div class="column post">
+						<img src="posts/ph/arch1.jpg" class="post pic btn" loading="lazy">
+					</div>
+					<div class="column post">
+						<img src="posts/ph/arch2.jpg" class="post pic btn" loading="lazy">
+					</div>
+					<div class="column post">
+						<img src="posts/ph/arch3.jpg" class="post pic btn" loading="lazy">
+					</div>
+					<div class="column post">
+					</div>
+				</div>
+			</div>
+
+			<div class="folder ph">
+				<div class="row post">
+					<div class="column post">
+						<img src="posts/ph/world1.jpg" class="post pic btn" loading="lazy">
+					</div>
+				</div>
+			</div>
+
+			<div class="folder ph">
+				<div class="row post">
+					<div class="column post">
+						<img src="posts/ph/ph0009_th.jpg" class="post pic btn" loading="lazy">
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+		<div class="page webdesign">
 			<div class="row post">
 				<div class="column post">
-					<img src="posts/ph/phB_th.jpg" class="post pic btn" loading="lazy">
-					<img src="posts/ph/phD_th.jpg" class="post pic btn" loading="lazy">
-					<img src="posts/ph/phF_th.jpg" class="post pic btn" loading="lazy">
-					<img src="posts/ph/phH_th.jpg" class="post pic btn" loading="lazy">
-					<img src="posts/ph/ph0036_th.jpg" class="post pic btn" loading="lazy">
-					<img src="posts/ph/ph0034_th.jpg" class="post pic btn" loading="lazy">
-					<img src="posts/ph/ph0032_th.jpg" class="post pic btn" loading="lazy">
-					<img src="posts/ph/ph0030_th.jpg" class="post pic btn" loading="lazy">
-					<img src="posts/ph/ph0028_th.jpg" class="post pic btn" loading="lazy">
-					<img src="posts/ph/ph0026_th.jpg" class="post pic btn" loading="lazy">
-					<img src="posts/ph/ph0024_th.jpg" class="post pic btn" loading="lazy">
-					<img src="posts/ph/ph0033_th.jpg" class="post pic btn" loading="lazy">
-					<img src="posts/ph/ph0022_th.jpg" class="post pic btn" loading="lazy">
+
+					<div class="cover wd btn">
+						<img src="posts/wd/mm.png" class="pic coverpicture" loading="lazy">
+						<div class="post desc">marthamaymusic</div>
+					</div>
+					<img src="posts/wd/siegetool.png" class="post pic btn" loading="lazy">
 				</div>
 				<div class="column post">
-					<img src="posts/ph/phA_th.jpg" class="post pic btn" loading="lazy">
-					<img src="posts/ph/phC_th.jpg" class="post pic btn" loading="lazy">
-					<img src="posts/ph/phE_th.jpg" class="post pic btn" loading="lazy">
-					<img src="posts/ph/phG_th.jpg" class="post pic btn" loading="lazy">
-					<img src="posts/ph/phI_th.jpg" class="post pic btn" loading="lazy">
-					<img src="posts/ph/ph0038_th.jpg" class="post pic btn" loading="lazy">
-					<img src="posts/ph/ph0033_th.jpg" class="post pic btn" loading="lazy">
-					<img src="posts/ph/ph0031_th.jpg" class="post pic btn" loading="lazy">
-					<img src="posts/ph/ph0029_th.jpg" class="post pic btn" loading="lazy">
-					<img src="posts/ph/ph0027_th.jpg" class="post pic btn" loading="lazy">
-					<img src="posts/ph/ph0025_th.jpg" class="post pic btn" loading="lazy">
-					<img src="posts/ph/ph0023_th.jpg" class="post pic btn" loading="lazy">
+					<img src="posts/wd/sp3.png" class="post pic btn" loading="lazy">
+					<img src="posts/wd/sp2.png" class="post pic btn" loading="lazy">
 				</div>
 				<div class="column post">
-					<img src="posts/ph/ph0035_th.jpg" class="post pic btn" loading="lazy">
-					<img src="posts/ph/ph0018_th.jpg" class="post pic btn" loading="lazy">
-					<img src="posts/ph/ph0020_th.jpg" class="post pic btn" loading="lazy">
-					<img src="posts/ph/ph0016_th.jpg" class="post pic btn" loading="lazy">
-					<img src="posts/ph/ph0014_th.jpg" class="post pic btn" loading="lazy">
-					<img src="posts/ph/ph0012_th.jpg" class="post pic btn" loading="lazy">
-					<img src="posts/ph/ph0010_th.jpg" class="post pic btn" loading="lazy">
-					<img src="posts/ph/ph0008_th.jpg" class="post pic btn" loading="lazy">
-					<img src="posts/ph/ph0006_th.jpg" class="post pic btn" loading="lazy">
-					<img src="posts/ph/ph0004_th.jpg" class="post pic btn" loading="lazy">
-					<img src="posts/ph/ph0002_th.jpg" class="post pic btn" loading="lazy">
-					<img src="posts/ph/ph0000_th.jpg" class="post pic btn" loading="lazy">
+					<img src="posts/wd/sp1.png" class="post pic btn" loading="lazy">
 				</div>
 				<div class="column post">
-					<img src="posts/ph/ph0037_th.jpg" class="post pic btn" loading="lazy">
-					<img src="posts/ph/ph0021_th.jpg" class="post pic btn" loading="lazy">
-					<img src="posts/ph/ph0019_th.jpg" class="post pic btn" loading="lazy">
-					<img src="posts/ph/ph0017_th.jpg" class="post pic btn" loading="lazy">
-					<img src="posts/ph/ph0015_th.jpg" class="post pic btn" loading="lazy">
-					<img src="posts/ph/ph0013_th.jpg" class="post pic btn" loading="lazy">
-					<img src="posts/ph/ph0011_th.jpg" class="post pic btn" loading="lazy">
-					<img src="posts/ph/ph0009_th.jpg" class="post pic btn" loading="lazy">
-					<img src="posts/ph/ph0007_th.jpg" class="post pic btn" loading="lazy">
-					<img src="posts/ph/ph0005_th.jpg" class="post pic btn" loading="lazy">
-					<img src="posts/ph/ph0003_th.jpg" class="post pic btn" loading="lazy">
-					<img src="posts/ph/ph0001_th.jpg" class="post pic btn" loading="lazy">
+					<img src="posts/wd/sp4.png" class="post pic btn" loading="lazy">
 				</div>
 			</div>
 		</div>
 
-		<div class="page wd">
-			<div class="sp"></div>
-			<div class="socials ob">
-				<div class="pageTitle wd"></div>
-				<a>
-					<div class="social menu btn" onclick="toggleMenu(null,1)"></div>
-				</a>
-			</div>
-			<div class="sp"></div>
-			<div class="row post">
-				<div class="column post">
-
-					<!-- <img src="posts/wd/siegetool.png" class="post wd pic" onclick="wdToggle(5,1)"> -->
-					<img src="posts/wd/siegetool.png" class="post wd pic btn" alt="https://4d617474.github.io/siegeTool/">
-					<a class="wdLink" style="display:none;" target="_blank" href="https://github.com/4d617474/siegeTool"></a>
-					<img src="posts/wd/sp3.png" class="post wd pic btn" alt="posts/wd/startpageSquared/Squared.html">
-					<a class="wdLink" style="display:none;" target="_blank" href="https://github.com/4d617474/startpage-Squared"></a>
-					<img src="posts/wd/sp1.png" class="post wd pic btn" alt="posts/wd/startpage1/hp4Nox.html">
-					<a class="wdLink" style="display:none;" target="_blank" href="https://github.com/4d617474/startpage1"></a>
-				</div>
-				<div class="column post">
-					<img src="posts/wd/sp4.png" class="post wd pic btn" alt="posts/wd/ko/Ko.html">
-					<a class="wdLink" style="display:none;" target="_blank" href="https://github.com/4d617474/ko"></a>
-					<img src="posts/wd/sp2.png" class="post wd pic btn" alt="posts/wd/hpstarcitizen/hpsc.html">
-					<a class="wdLink" style="display:none;" target="_blank" href="https://github.com/4d617474/hpstarcitizen"></a>
-					<img src="posts/wd/mm.png" class="post wd pic btn" alt="https://ilctz.github.io/may/">
-					<a class="wdLink" style="display:none;" target="_blank" href="https://ilctz.github.io/may/"></a>
-				</div>
-			</div>
-		</div>
 		<div class="page mu">
-			<div class="sp"></div>
-			<div class="socials mu">
-				<div class="pageTitle mu"></div>
-				<a>
-					<div class="social menu btn" onclick="toggleMenu(null,1)"></div>
-				</a>
+			<div class="textBlock btn">
+				<p>Nothing here, yet.<br>
+				Oh wait I got this cool song, it goes like this:<br>
+				<b>du du dudu du du du du dudududu dudu duuuuu du</b></p>
+
 			</div>
 		</div>
+
 		<div class="page gif">
-			<div class="sp"></div>
-			<div class="socials gif">
-				<div class="pageTitle gif"></div>
-				<a>
-					<div class="social menu btn" onclick="toggleMenu(null,1)"></div>
-				</a>
-			</div>
-			<div class="sp"></div>
+
 			<div class="row post">
-				<div class="column post left">
+				<div class="column post">
 					<img src="posts/an/an0000.gif" class="post pic btn" loading="lazy">
-					<img src="posts/an/an0001.gif" class="post pic btn" loading="lazy">
-					<img src="posts/an/an0004.mp4" class="post pic btn" loading="lazy">
+					<video src="posts/an/an0004.mp4" class="post pic btn" loading="lazy">
 				</div>
-				<div class="column post left">
+				<div class="column post">
+					<img src="posts/an/an0001.gif" class="post pic btn" loading="lazy">
+				</div>
+				<div class="column post">
 					<img src="posts/an/an0002.gif" class="post pic btn" loading="lazy">
+				</div>
+				<div class="column post">
 					<img src="posts/an/an0003.gif" class="post pic btn" loading="lazy">
 				</div>
 			</div>
 		</div>
-		<div class="page tdp">
-			<div class="sp"></div>
-			<div class="socials tdp">
-				<div class="pageTitle tdp"></div>
-				<a>
-					<div class="social menu btn" onclick="toggleMenu(null,1)"></div>
-				</a>
-			</div>
-		</div>
+
 		<div class="page abt">
-			<div class="sp"></div>
-			<div class="socials abt">
-				<div class="pageTitle abt"></div>
-				<a>
-					<div class="social menu btn" onclick="toggleMenu(null,1)"></div>
-				</a>
-			</div>
-			<div class="sp"></div>
-			<div class="textBlock btn">
-				<p>Hi, I'm Matt, and I do all kinds of stuff.<br>
-				 <br><br>
-				<b>What I use</b><br></p>
+			<div class="textBlock">
+				<p><b>contact me at 4d6174745f@gmail.com</b><br><br>
+				<b>About me</b><br><br></p>
 				<p class="txtSide">
+				Hi, I'm Matt, and I do all kinds of stuff.<br>
 				For any illustrations I use After Effects, Blender, Photoshop/Affinity or Figma.<br><br>
 				I experiment making songs with FL Studio, but also  LMMS.<br><br>
 				When it comes to 3D printing I use Fusion360/OpenSCAD, and print with Cura.<br><br>
@@ -398,9 +349,10 @@
 				Yes I do prefer open-source software.<br><br>
 				My current camera equipement is a Nikon D3100, 55-300mm and 18-55mm Nikon lens,
 				 and finally a 105mm 1:2:8 DG Macro HSM Sigma lens.<br><br>
-			 	</p>
+				</p>
 
 			</div>
 		</div>
-    <script src="scriptOld.js" type="text/javascript"></script>
+
+		<script src="script.js" type="text/javascript"></script>
   </body>
