@@ -6,7 +6,7 @@
 // document.getElementById("hamburger").onclick = toggleMenu(0);
 
 var isMenuOpen = 0;
-// toggleMenu();
+toggleMenu();
 function toggleMenu(state) {
   var menu = document.getElementById("menu");
   // if(state == 1){isMenuOpen = 1}
@@ -24,7 +24,7 @@ var oldName;
 function pickPage(number,elmnt,name)
 {
   // checkY();
-
+  openFolder(null,1)
   var navBlocks = document.getElementsByClassName("navigation block");
   var page = document.getElementsByClassName("page");
   var modals = document.getElementsByClassName("modalButton");
@@ -48,16 +48,25 @@ function pickPage(number,elmnt,name)
     return;
   }
 
-  for (i = 0;i < modals.length; i++) {
-    modals[i].classList.remove(oldName);
-    modals[i].classList.add(name);
+  // for (i = 0;i < modals.length; i++) {
+  //   modals[i].classList.remove(oldName);
+  //   modals[i].classList.add(name);
+  // }
+  var themed = document.getElementsByClassName("themed");
+  for (i = 0;i < themed.length; i++) {
+    themed[i].classList.remove(oldName);
+    themed[i].classList.add(name);
   }
-  document.getElementById("menu").classList.add(name);
-  document.getElementById("menu").classList.remove(oldName);
-  document.getElementById("hamburger").classList.add(name);
-  document.getElementById("hamburger").classList.remove(oldName);
-  document.getElementById("closeMenu").classList.add(name);
-  document.getElementById("closeMenu").classList.remove(oldName);
+  // document.getElementById("menu").classList.add(name);
+  // document.getElementById("menu").classList.remove(oldName);
+  // document.getElementById("menu").classList.add(name);
+  // document.getElementById("menu").classList.remove(oldName);
+  // document.getElementById("back").classList.add(name);
+  // document.getElementById("back").classList.remove(oldName);
+  // document.getElementById("hamburger").classList.add(name);
+  // document.getElementById("hamburger").classList.remove(oldName);
+  // document.getElementById("closeMenu").classList.add(name);
+  // document.getElementById("closeMenu").classList.remove(oldName);
   document.body.classList.add(name);
   document.body.classList.remove(oldName);
 
@@ -71,15 +80,27 @@ function pickPage(number,elmnt,name)
 function openFolder(no,state){
   folder = document.getElementsByClassName("folder");
   folderS = document.getElementsByClassName("folders");
+  hamburger = document.getElementById("hamburger");
+  back = document.getElementById("back");
   if(state == 1){
-    folderS[0].style.display = "block";
+    // folderS[0].style.display = "block";
+    folderS[0].classList.add("on");
+    hamburger.classList.remove("alt");
+    back.classList.remove("alt");
     for(i=0;i<folder.length;i++){
-      folder[i].style.display = "none";
-
+      // folder[i].style.display = "none";
+      folder[i].classList.remove("on");
     }
   } else {
-    folderS[0].style.display = "none";
-    folder[no].style.display = "block";
+    // for(i=0;i<folder.length;i++){
+    //   folder[i].classList.add("on");
+    // }
+    hamburger.classList.add("alt");
+    back.classList.add("alt");
+    // folderS[0].style.display = "none";
+    folderS[0].classList.remove("on");
+      folder[no].classList.add("on");
+    // folder[no].style.display = "block";
   }
 }
 

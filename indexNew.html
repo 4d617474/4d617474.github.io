@@ -22,25 +22,26 @@
 
 		<div id="modalBlock" class="modal">
 			<div id="tst"></div>
-			<div id="modalBtnsA">
+			<div id="modalBtnsA" class="themed">
 
 				<div class="modalButton btn" id="previous"></div>
 				<div class="modalButton btn" id="exit"></div>
 				<div class="modalButton btn" id="next"></div>
 			</div>
-			<div id="modalBtnsB">
+			<div id="modalBtnsB" class="themed">
 				<div class="modalButton btn" id="reload"></div>
 				<div class="modalButton btn" id="mute"></div>
 				<div class="modalButton btn" id="source">marthamaymusic.com</div>
 			</div>
 			<div class="modal-content" id="img00" style="background-image:none;">
-				<video id="vid00" loop></video>
+				<video class="modal-content" id="vid00" loop></video>
 			</div>
 				<iframe id="spFrame-In" src="none"></iframe>
 		</div>
 
-		<div id="hamburger" class="menu btn" onclick="toggleMenu(0)"></div>
-		<div id="menu">
+		<div id="hamburger" class="menu btn themed" onclick="toggleMenu(0)"></div>
+		<div id="back" class="menu btn themed" onclick="openFolder(null,1)"></div>
+		<div id="menu" class="themed">
 
 					<div class="navigation row btn">
 						<div id="od" class="navigation block" onclick="pickPage(1,this,'oddbeep')">oddbeep</div>
@@ -67,10 +68,10 @@
 					</div>
 					<div class="separator"></div>
 					<div class="navigation row btn">
-						<div id="abt" class="navigation block" onclick="pickPage(7,this,'about')">about me</div>
+						<div id="abt" class="navigation block" onclick="pickPage(7,this,'about')">contact me</div>
 					</div>
 					<div class="separator"></div>
-					<div id="closeMenu" class="navigation row close btn" onclick="toggleMenu(1)"></div>
+					<div id="closeMenu" class="navigation row close btn themed" onclick="toggleMenu(1)"></div>
 		</div>
 		<div class="page on main">
 		</div>
@@ -148,24 +149,46 @@
 		</div>
 
 		<div class="page photography">
-			<div class="folders">
+			<div class="folders on">
+				<div class="row post ">
+					<div class="column post ">
 
-			<div class="cover ph btn" onclick="openFolder(0)">
-				<img src="posts/ph/phB_th.jpg" class="coverpicture" loading="lazy">
-				<div class="post desc">animals</div>
+						<div class="cover ph btn" onclick="openFolder(0)">
+							<img src="posts/ph/phB_th.jpg" class="coverpicture" loading="lazy">
+							<div class="post desc">animals</div>
+						</div>
+
+					</div>
+					<div class="column post ">
+
+						<div class="cover ph btn" onclick="openFolder(1)">
+							<img src="posts/ph/arch1.jpg" class="coverpicture" loading="lazy">
+							<div class="post desc">architecture</div>
+						</div>
+
+					</div>
+
+					<div class="column post ">
+
+						<div class="cover ph btn" onclick="openFolder(2)">
+							<img src="posts/ph/world1.jpg" class="coverpicture" loading="lazy">
+							<div class="post desc">world</div>
+						</div>
+
+					</div>
+
+					<div class="column post ">
+
+						<div class="cover ph btn" onclick="openFolder(3)">
+							<img src="posts/ph/ph0009_th.jpg" class="coverpicture" loading="lazy">
+							<div class="post desc">nature</div>
+						</div>
+
+					</div>
+				</div>
+
 			</div>
 
-			<div class="cover ph btn" onclick="openFolder(1)">
-				<img src="posts/ph/arch1.jpg" class="coverpicture" loading="lazy">
-				<div class="post desc">architecture</div>
-			</div>
-
-			<div class="cover ph btn" onclick="openFolder(2)">
-				<img src="posts/ph/world1.jpg" class="coverpicture" loading="lazy">
-				<div class="post desc">world</div>
-			</div>
-
-			</div>
 			<div class="folder ph">
 				<div class="row post">
 					<div class="column post">
@@ -232,10 +255,14 @@
 				<div class="row post">
 					<div class="column post">
 						<img src="posts/ph/arch1.jpg" class="post pic btn" loading="lazy">
-						<img src="posts/ph/arch3.jpg" class="post pic btn" loading="lazy">
 					</div>
 					<div class="column post">
 						<img src="posts/ph/arch2.jpg" class="post pic btn" loading="lazy">
+					</div>
+					<div class="column post">
+						<img src="posts/ph/arch3.jpg" class="post pic btn" loading="lazy">
+					</div>
+					<div class="column post">
 					</div>
 				</div>
 			</div>
@@ -248,22 +275,34 @@
 				</div>
 			</div>
 
+			<div class="folder ph">
+				<div class="row post">
+					<div class="column post">
+						<img src="posts/ph/ph0009_th.jpg" class="post pic btn" loading="lazy">
+					</div>
+				</div>
+			</div>
+
 		</div>
 
 		<div class="page webdesign">
 			<div class="row post">
-				<div class="column post left">
+				<div class="column post">
 
-					<div class="post wd container">
-						<img src="posts/wd/mm.png" class="post picdesc wd btn" loading="lazy">
+					<div class="cover wd btn">
+						<img src="posts/wd/mm.png" class="pic coverpicture" loading="lazy">
 						<div class="post desc">marthamaymusic</div>
 					</div>
 					<img src="posts/wd/siegetool.png" class="post pic btn" loading="lazy">
-					<img src="posts/wd/sp3.png" class="post pic btn" loading="lazy">
 				</div>
-				<div class="column post right">
-					<img src="posts/wd/sp1.png" class="post pic btn" loading="lazy">
+				<div class="column post">
+					<img src="posts/wd/sp3.png" class="post pic btn" loading="lazy">
 					<img src="posts/wd/sp2.png" class="post pic btn" loading="lazy">
+				</div>
+				<div class="column post">
+					<img src="posts/wd/sp1.png" class="post pic btn" loading="lazy">
+				</div>
+				<div class="column post">
 					<img src="posts/wd/sp4.png" class="post pic btn" loading="lazy">
 				</div>
 			</div>
@@ -281,24 +320,28 @@
 		<div class="page gif">
 
 			<div class="row post">
-				<div class="column post left">
+				<div class="column post">
 					<img src="posts/an/an0000.gif" class="post pic btn" loading="lazy">
-					<img src="posts/an/an0001.gif" class="post pic btn" loading="lazy">
-					<img src="posts/an/an0004.mp4" class="post pic btn" loading="lazy">
+					<video src="posts/an/an0004.mp4" class="post pic btn" loading="lazy">
 				</div>
-				<div class="column post left">
+				<div class="column post">
+					<img src="posts/an/an0001.gif" class="post pic btn" loading="lazy">
+				</div>
+				<div class="column post">
 					<img src="posts/an/an0002.gif" class="post pic btn" loading="lazy">
+				</div>
+				<div class="column post">
 					<img src="posts/an/an0003.gif" class="post pic btn" loading="lazy">
 				</div>
 			</div>
 		</div>
 
 		<div class="page abt">
-			<div class="textBlock btn">
-				<p>Hi, I'm Matt, and I do all kinds of stuff.<br>
-				 <br><br>
-				<b>What I use</b><br></p>
+			<div class="textBlock">
+				<p><b>contact me at 4d6174745f@gmail.com</b><br><br>
+				<b>About me</b><br><br></p>
 				<p class="txtSide">
+				Hi, I'm Matt, and I do all kinds of stuff.<br>
 				For any illustrations I use After Effects, Blender, Photoshop/Affinity or Figma.<br><br>
 				I experiment making songs with FL Studio, but also  LMMS.<br><br>
 				When it comes to 3D printing I use Fusion360/OpenSCAD, and print with Cura.<br><br>

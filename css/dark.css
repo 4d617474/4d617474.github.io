@@ -6,6 +6,7 @@
   --top2Clr:#FAF3F130;
 
 	--iconHamb:url('../icons/hamb.svg');
+	--iconBack:url('../icons/back.svg');
 	--iconCross:url('../icons/cross.svg');
 	--iconPrevious:url('../icons/previous.svg');
 	--iconNext:url('../icons/next.svg');
@@ -16,17 +17,18 @@
 	--iconIg:url('../icons/ing.svg');
 	--iconTk:url('../icons/tiktok.svg');
 		
-	--OBbackgroundClr: #201e1e;
-	--OBtopClr:#151515;
-	--OBtop2Clr:#15151550;
+	--OBbackgroundClr: #4F2A2A;
 	
-	--CTbackgroundClr: #1E1F20;
-	--CTtopClr:#151515;
-	--CTtop2Clr:#15151550;
+	--CTbackgroundClr: #4A3F28;
 	
-	--PHbackgroundClr: #1E201E;
-	--PHtopClr:#2f2f2f;
-	--PHtop2Clr:#2f2f2f17;
+	--PHbackgroundClr: #20391C;
 	
-	--WDbackgroundClr: #1E1C1D;
+	--WDbackgroundClr: #392230;
+	
+	--MUbackgroundClr: #1F323E;
+		
+	--GIbackgroundClr: #35341D;
+	
+	--ABbackgroundClr: #2D2428;
+	
  }
