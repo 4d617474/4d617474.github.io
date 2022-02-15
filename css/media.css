@@ -1,0 +1,21 @@
+@media (min-width: 700px){
+  #hamburger
+  {
+    height: 100vh;
+    width: 10vw;
+    
+  }
+  .page
+  {
+    width: 88vw;
+    margin-left:10vw; 
+  }
+ .modal-content
+  {
+    background-size: auto 75vh !important;;
+  }
+  .column
+  {
+    max-width: calc(25% - 10px) !important;
+  }
+}

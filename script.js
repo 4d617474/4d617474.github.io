@@ -68,12 +68,21 @@ function pickPage(number,elmnt,name)
 
 }
 
-function openFolder(no){
+function openFolder(no,state){
   folder = document.getElementsByClassName("folder");
   folderS = document.getElementsByClassName("folders");
-  folder[no].style.display = "block";
-  folderS[0].style.display = "none";
+  if(state == 1){
+    folderS[0].style.display = "block";
+    for(i=0;i<folder.length;i++){
+      folder[i].style.display = "none";
+
+    }
+  } else {
+    folderS[0].style.display = "none";
+    folder[no].style.display = "block";
+  }
 }
+
 
 var modal = document.getElementById("modalBlock");
 var modalImg = document.getElementById("img00");

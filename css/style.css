@@ -65,13 +65,20 @@ body
 }
 @keyframes on
 {
-	0%{opacity:0;margin-top:5px};
+	0%{opacity:0;margin-top:5px;};
 	100%{opacity:1;margin-top:0%};
 }
 .btn
 {
 	cursor: pointer;
+	transition: all .08s;
 	/*outline: 1px solid black;*/
+}
+.btn:hover
+{
+	opacity: 85%;
+	outline-offset: -5px;
+	background-color:#FFFFFF10;
 }
 .page
 {
