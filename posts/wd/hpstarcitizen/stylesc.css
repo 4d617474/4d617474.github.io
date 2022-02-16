@@ -2,9 +2,13 @@ body
 {
 	
 	background-image: url('bg1small.png');
-	font-family: 'Perfect DOS VGA 437 Win';
+	font-family: 'Perfect_DOS_VGA_437';
 	text-decoration: none;
 	background-color:#202020;
+}
+@font-face {
+  font-family: Perfect_DOS_VGA_437;
+  src: url('Perfect_DOS_VGA_437.ttf');
 }
 /*
 #UI

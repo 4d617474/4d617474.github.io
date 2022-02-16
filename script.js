@@ -150,6 +150,13 @@ this.onclick = function(event) {
 				modalVid.classList.remove("on");
 				document.getElementById("mute").style.display = "none";
 			} else if (pane.classList.contains("wd") == true){
+        modalImg.classList.add("on");
+        modalVid.classList.remove("on");
+        modalImg.style.backgroundImage = "url('" + pane.src.replace("_th","") + "')";
+        document.getElementById("source").classList.add("on");
+        document.getElementById("mute").style.display = "none";
+        document.getElementById('source').innerHTML= pane.alt + " (open in new tab)";
+        document.getElementById('source').href= pane.alt + " (open in new tab)";
   				// modalVid.classList.remove("on");
   				// modalImg.classList.add("on");
           // modalImg.style.backgroundImage = "url('" + pane.src.replace("_th","") + "')";
@@ -175,10 +182,17 @@ modalImg.classList.remove("animated-left");
   var previousPane;
   previousPane = pane.previousSibling.previousSibling;
   if(previousPane == null){
-    pane.parentElement.previousElementSibling.lastChild.previousElementSibling.click();
+    if(pane.parentElement.previousElementSibling.lastChild.previousElementSibling.className == "wdLink"){
+      pane.parentElement.previousElementSibling.lastChild.previousElementSibling.previousElementSibling.click();
+    }else {
+      pane.parentElement.previousElementSibling.lastChild.previousElementSibling.click();
+    }
   }
-  if (previousPane.className == "post pic btn" || previousPane.className == " post pic wd btn"){
+  if (previousPane.className == "post pic btn" || previousPane.className == "post pic wd btn"){
     previousPane.click();
+  }
+  if(previousPane.className == "wdLink"){
+    previousPane.previousElementSibling.click();
   }
   // window.scrollTo(0,pane.y);
 }
@@ -189,8 +203,16 @@ document.getElementById("next").onclick = function(){
   if(nextPane == null){
     pane.parentElement.nextElementSibling.firstChild.nextElementSibling.click();
   }
-  if (nextPane.className == "post pic btn" || nextPane.className == " post pic wd btn"){
+  if (nextPane.className == "post pic btn" || nextPane.className == "post pic wd btn"){
     nextPane.click();
+  }
+  if(nextPane.className == "wdLink"){
+    if(nextPane.nextElementSibling == null){
+      pane.parentElement.nextElementSibling.firstChild.nextElementSibling.click();
+    } else {
+      nextPane.nextElementSibling.click();
+
+    }
   }
   setTimeout(function(){
   modalImg.classList.add("animated-right")
@@ -227,5 +249,14 @@ document.getElementById("mute").onclick = function(){
 		modalVid.muted = true;
     this.classList.add("mute");
     this.classList.remove("sound");
+	}
+}
+document.getElementById("source").onclick = function(){
+	var oc;
+	oc = pane.nextElementSibling;
+	if (oc.className == "wdLink"){
+		oc.click();
+	} else {
+		return
 	}
 }

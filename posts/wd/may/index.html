@@ -1,0 +1,160 @@
+<!-- <!DOCTYPE html> -->
+<html>
+	<head>
+		<meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+		<title>Title</title>
+		<link rel="icon" href="fav.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="viewport" content="height=device-height, initial-scale=1.0">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&family=Reem+Kufi:wght@400;700&family=Reenie+Beanie&family=Rubik:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+	</head>
+
+	<body>
+		<!-- <div id="overF"> -->
+		<header>
+			<div id="bgHeader"></div>
+
+				<button id="title" onclick="pickPage(1)">Example</button>
+				<button id="drawerIcon" class="on" onclick="pickPage(0)"></button>
+				<!-- <button id="drawerIconClose" class="" onclick="pickPage(99)"></button> -->
+
+			</header>
+			<div id="curtains"></div>
+
+			<div id="bg"></div>
+			<div id="bgR"></div>
+			<div id="bgL"></div>
+			<div id="drawerOverlay" class="page">
+
+				<div class="space"></div>
+
+				<button class="card drawer" onclick="pickPage(2);previousPage = currentPage">Events</button>
+				<button class="card drawer" onclick="pickPage(3)">Music</button>
+				<button class="card drawer" onclick="pickPage(4)">About</button>
+				<!-- <button class="card drawer" onclick="pickPage(4)">Contact</button> -->
+				<div class="drawer socials">
+					<a href="">
+						<div class="card tiktok"></div>
+					</a>
+					<a href="">
+						<div class="card instagram"></div>
+					</a>
+					<div class="card spotify"></div>
+				</div>
+				<div id="credit"></div>
+			</div>
+
+			<div id="main" class="page on">
+				<div class="space main"></div>
+				<div id="slides" class="card main">
+					<div id="ss1" class="card main ss on"></div>
+					<div id="ss2" class="card main ss"></div>
+					<div id="ss3"  class="card main ss"></div>
+					<div id="ss4"  class="card main ss"></div>
+				</div>
+				<div class="hideme">
+				<div class="socials main">
+					<a href="">
+						<div class="card tiktok socials main"></div>
+					</a>
+					<a href="">
+						<div class="card instagram socials main"></div>
+					</a>
+					<div class="card spotify socials main"></div>
+				</div>
+				<button class="card main" onclick="pickPage(3)">Music</button>
+				<button class="card main" onclick="pickPage(2);previousPage = currentPage">Events</button>
+			</div>
+
+	    <!-- <div class="tst t1"></div>
+	    <div class="tst t2"></div> -->
+
+
+
+
+	    </div>
+			<div id="events" class="page">
+				<div class="space"></div>
+				<a href="geo:51.5266937,-0.0840285">
+				<div class="card event">
+					<div class="event date">
+						<div class="event number">02</div>
+						<div class="event month">JAN</div>
+					</div>
+					<div class="event place">
+						<div class="event name">Somewhere Someplace</div>
+						<div class="event adress">129 New St, New York</div>
+					</div>
+				</div>
+			</a>
+				<a href="geo:51.4673069,-0.2222776">
+				<div class="card event">
+					<div class="event date">
+						<div class="event number">18</div>
+						<div class="event month">MAR</div>
+					</div>
+					<div class="event place">
+						<div class="event name">Random Place</div>
+						<div class="event adress">26 Kings St, London</div>
+					</div>
+				</div>
+				</a>
+				<a href="geo:51.442722,-0.1516286">
+				<div class="card event">
+					<div class="event date">
+						<div class="event number">27</div>
+						<div class="event month">JUN</div>
+					</div>
+					<div class="event place">
+						<div class="event name">TBA</div>
+						<div class="event adress">TBA</div>
+					</div>
+				</div>
+				</a>
+
+				<div class="card previous">PREVIOUS EVENTS</div>
+				<div class="card event past">
+					<div class="event date">
+						<div class="event number">06</div>
+						<div class="event month">DEC</div>
+					</div>
+					<div class="event place">
+						<div class="event name">I forgot</div>
+						<div class="event adress">-</div>
+					</div>
+				</div>
+
+
+			</div>
+			<div id="demo" class="page">
+				<div class="space"></div>
+				<iframe class="card ytbe"width="560" height="315" src="https://www.youtube.com/watch?v=ScMzIvxBSi4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				<iframe class="card ytbe" width="560" height="315" src="https://www.youtube.com/watch?v=ScMzIvxBSi4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				<div class="space"></div>
+
+			</div>
+			<div id="contact" class="page">
+				<div class="space"></div>
+
+				<img src="cA.jpg" class="card">
+				<div class="card text">
+				 		On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain.
+				 </div>
+				 <img src="cB.jpg" class="card">
+				 <div class="card text">
+					 	These cases are perfectly simple and easy to distinguish. In a free hour, when our power of choice is untrammelled and when nothing prevents our being able to do what we like best, every pleasure is to be welcomed and every pain avoided. But in certain circumstances and owing to the claims of duty or the obligations of business it will frequently occur that pleasures have to be repudiated and annoyances accepted.
+					</div>
+					<img src="cC.jpg" class="card">
+					<div class="card text">
+						The wise man therefore always holds in these matters to this principle of selection: he rejects pleasures to secure other greater pleasures, or else he endures pains to avoid worse pains
+					</div>
+					<div class="space"></div>
+			</div>
+		<!-- </div> -->
+	</body>
+	<script src="script.js" type="text/javascript"></script>
+
+</html>

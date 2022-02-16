@@ -232,6 +232,11 @@ body
 	width: 100%;
 	height: 45%;
 }
+.post.column.large
+{
+  max-width: 100%;
+	flex: calc(100% - 10px);
+}
 .post.row
 {
 	display: flex;
@@ -441,16 +446,6 @@ body
 }
 
 
-
-
-
-
-
-
-
-
-
-
 #mute{
 	background-image:var(--iconSound);
 }
@@ -458,7 +453,12 @@ body
 	background-image:var(--iconReload);
 }
 #source{
-	background-image:var(--iconSource);
+	/*background-image:var(--iconSource);*/
+	width: 100%;
+	text-align: center;
+	padding-top:calc(6vh - 10px);
+	font-size: 20px;
+	height: calc(100% - (6vh - 10px));
 }
 
 #spFrame-In
