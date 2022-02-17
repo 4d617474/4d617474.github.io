@@ -6,14 +6,7 @@
   .btn:hover
   {
     opacity: 85%;
-    outline-offset: -5px;
-    background-color:#FFFFFF10;
-    /*background-color:#000000F0;
-    filter:invert(100%);*/
-  }
-  .btn:hover
-  {
-    background-color:#000000FF;
+    background-color:var(--backgroundClr);
     filter: invert(100%);
     outline-offset:unset;
     outline-offset: 0px;
@@ -130,18 +123,26 @@
   }
   .modalButton
   {
-  outline: 0 solid #000;
+    transition: all var(--speed1) !important;
     
   }
   .modalButton:hover
   {
-    transition: all var(--speed1) !important;
-  outline: 10vw solid #000;
   }
   #vid00
   {
     top:12vh;
     height: 78vh;
+  }
+  .post.pic,.cover
+  {
+    transition: all var(--speed2) !important;
+  }
+  .post.pic:hover,.cover:hover
+  {
+    filter:unset;
+    outline-offset: 7px;
+    transform: scale(.96,.96)
   }
   .post.column
   {

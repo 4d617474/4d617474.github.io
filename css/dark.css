@@ -32,12 +32,12 @@
 	--ABbackgroundClr: #2D2428;
 	
 }
-	
-}
-.themed
-	{
-		background-color:#000 !important; 
-	}
 
+}
+
+	.themed
+	{
+		background-color:var(--backgroundClr) !important; 
+	}
 	
 	
