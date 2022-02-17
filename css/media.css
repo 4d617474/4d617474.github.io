@@ -1,3 +1,52 @@
+@media (max-width:700px){
+    .btn:active
+  {
+    opacity: 85%;
+    background-color:var(--backgroundClr) !important;;
+    filter: invert(100%);
+    outline-offset: 0px;
+  }
+   .navigation.block:active
+  {
+    letter-spacing: 5px;
+
+  }
+
+  #hamburger:active:after
+	{
+		background-position: center calc(8vh - 54px);
+  }
+  #hamburger:active,#closeMenu:active
+	{
+		height: 16vh;
+		background-position: center calc(8vh - 45px);
+  }
+  #hamburger.alt:active:after
+	{
+		background-position: center calc(8vh - 54px);
+  }
+  #hamburger.alt:active
+	{
+		height: 16vh;
+		background-position: center calc(8vh - 45px);
+  }
+    #back:active:after
+	{
+		background-position: calc(25vw - 55px) center;
+    opacity: 1;
+  }
+  #back:active
+	{
+		height: 16vh;
+		background-position: calc(25vw - 40px) center;
+  }
+    .post.pic:active,.cover:active
+  {
+    filter:unset;
+    outline-offset: 7px;
+    transform: scale(.96,.96)
+  }
+}
 @media (min-width: 700px){
 
     .btn
@@ -85,19 +134,7 @@
     bottom:0vh;
     left:0;
   }
-  #back:after
-	{
-		transition: all var(--speed1) !important;
-		position: absolute;
-		height: 100%;
-		width: 100%;
-		background-size: cover;
-		content: '';
-		position: absolute;
-		background: var(--iconPrevious) no-repeat;
-		background-position: center;
-    opacity: 0;
-	}
+
   #back:hover:after
 	{
 		background-position: calc(5vw - 55px) center;

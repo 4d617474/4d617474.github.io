@@ -167,6 +167,19 @@ body
 	width: 0vw;
 	left:-1px;
 }
+  #back:after
+	{
+		transition: all var(--speed1) !important;
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		background-size: cover;
+		content: '';
+		position: absolute;
+		background: var(--iconPrevious) no-repeat;
+		background-position: center;
+    opacity: 0;
+	}
 #hamburger,#back
 {
 	display: block;
@@ -178,6 +191,18 @@ body
 	opacity: 1;
 	outline:1px solid var(--top2Clr);
 	/*! transition: width .12s !important; */
+}
+#hamburger:after
+{
+	transition: all var(--speed1) !important;
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	background-size: cover;
+	content: '';
+	position: absolute;
+	background: var(--iconHamb) no-repeat;
+	background-position: center;
 }
 #hamburger.alt
 {
