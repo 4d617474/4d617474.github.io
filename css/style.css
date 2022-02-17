@@ -4,7 +4,7 @@
   --top2Clr:#11111147;
 	--speed1: .18s;
 	--speed2: .06s;
-	
+	/*
 	--OBbackgroundClr: #E66E6E;
 	
 	--CTbackgroundClr: #E8BB66;
@@ -18,7 +18,20 @@
 	--GIbackgroundClr: #E8D178;
 	
 	--ABbackgroundClr: #F2F4F0;
+	*/
+		--OBbackgroundClr: #E66E6E;
 	
+	--CTbackgroundClr: #E8BB66;
+	
+	--PHbackgroundClr: #80EC6F;
+	
+	--WDbackgroundClr: #EA73BB;
+	
+	--MUbackgroundClr: #74BBE6;
+		
+	--GIbackgroundClr: #E8D178;
+	
+	--ABbackgroundClr: #F2F4F0;
 	--iconHamb:url('../icons/hambLight.svg');
 	--iconBack:url('../icons/backLight.svg');
 	--iconCross:url('../icons/crossLight.svg');
@@ -60,7 +73,7 @@ body
 }
 .on
 {
-  animation:on var(--speed1) infinite !important;
+  animation:on var(--speed1) 1 !important;
 	display: block !important;
 	opacity:1 !important;
  }
@@ -207,6 +220,7 @@ body
 	padding:0%;
 	font-size: 40px;
 	line-height: 11vh;
+	letter-spacing: 1px;
 }
 #closeMenu
 {
@@ -298,8 +312,6 @@ body
 }*/
 .post.pic.wd
 {
-	margin: unset;
-	outline:unset;
 }
 
 

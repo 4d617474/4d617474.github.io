@@ -17,11 +17,12 @@
 	--iconIg:url('../icons/ing.svg');
 	--iconTk:url('../icons/tiktok.svg');
 		
-	--OBbackgroundClr: #4F2A2A;
+	 /*
+	 --OBbackgroundClr: #352A2A;
 	
-	--CTbackgroundClr: #4A3F28;
+	--CTbackgroundClr: #4F4227;
 	
-	--PHbackgroundClr: #20391C;
+	--PHbackgroundClr: #1E371A;
 	
 	--WDbackgroundClr: #392230;
 	
@@ -29,8 +30,16 @@
 		
 	--GIbackgroundClr: #35341D;
 	
-	--ABbackgroundClr: #2D2428;
+	--ABbackgroundClr: #2F272A;
 	
+	*/
+--OBbackgroundClr: #241B1B;
+--CTbackgroundClr: #35332D;
+--PHbackgroundClr: #222821;
+--WDbackgroundClr: #261d23;
+--MUbackgroundClr: #1F323E;
+--GIbackgroundClr: #2B2A20;
+--ABbackgroundClr: #2D2428;
 }
 
 }

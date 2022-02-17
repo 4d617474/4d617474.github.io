@@ -1,4 +1,5 @@
 @media (min-width: 700px){
+
     .btn
   {
     transition: unset !important;
@@ -6,7 +7,7 @@
   .btn:hover
   {
     opacity: 85%;
-    background-color:var(--backgroundClr);
+    background-color:var(--backgroundClr) !important;;
     filter: invert(100%);
     outline-offset:unset;
     outline-offset: 0px;
@@ -93,12 +94,14 @@
 		background-size: cover;
 		content: '';
 		position: absolute;
-		background: var(--iconBack) no-repeat;
+		background: var(--iconPrevious) no-repeat;
 		background-position: center;
+    opacity: 0;
 	}
   #back:hover:after
 	{
 		background-position: calc(5vw - 55px) center;
+    opacity: 1;
   }
   #back:hover
 	{
@@ -225,7 +228,7 @@
 		opacity: 1 !important;
 		animation: menuon var(--speed1) 1 !important;
 	}
-	@keyframes menuon
+	@keyframes menuo
   {
     0%{left:0px;;margin-left:-20px;}
     100%{left:0px;margin-left:0px;}
@@ -241,5 +244,4 @@ body
 {
   font-family: 'Work Sans';
   font-weight: 200;
-  letter-spacing: 5px;
 }

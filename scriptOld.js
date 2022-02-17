@@ -316,3 +316,8 @@ document.getElementById("reload").onclick = function(){
 	document.getElementById('spFrame-In').src = '';
 		document.getElementById('spFrame-In').src = hold
 }
+// function setCover()
+// {
+//   coverPic = document.getElementsByClassName('coverpicture');
+//   coverPic[0].src = "post/ph/arc"
+// }
