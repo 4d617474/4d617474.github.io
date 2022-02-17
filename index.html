@@ -15,8 +15,8 @@
     <meta name="viewport" content="widthumbnail=device-widthumbnail, initial-scale=1.0">
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,200;0,300;1,200;1,300&family=Yeseva+One&display=swap" rel="stylesheet">
-  </head>
+<link href="https://fonts.googleapis.com/css2?family=Redacted&family=Work+Sans:wght@100;200;500&display=swap" rel="stylesheet">
+	</head>
 
 	<body>
 
@@ -60,16 +60,20 @@
 					</div>
 					<div class="separator"></div>
 					<div class="navigation row btn">
-						<div id="mu" class="navigation block" onclick="pickPage(5,this,'music')">music</div>
+						<div id="an" class="navigation block" onclick="pickPage(5,this,'graphicdesign')">graphic design</div>
 					</div>
 					<div class="separator"></div>
 					<div class="navigation row btn">
-						<div id="an" class="navigation block" onclick="pickPage(6,this,'gif')">???</div>
+						<div id="abt" class="navigation block" onclick="pickPage(6,this,'about')">contact me</div>
 					</div>
 					<div class="separator"></div>
 					<div class="navigation row btn">
-						<div id="abt" class="navigation block" onclick="pickPage(7,this,'about')">contact me</div>
+						<div id="an" class="navigation block" onclick="pickPage(7,this,'gif')">???</div>
 					</div>
+					<div class="separator"></div>
+					<!-- <div class="navigation row btn">
+						<div id="mu" class="navigation block" onclick="pickPage(8,this,'music')">music</div>
+					</div> -->
 					<div class="separator"></div>
 					<div id="closeMenu" class="navigation row close btn themed" onclick="toggleMenu(1)"></div>
 		</div>
@@ -285,7 +289,7 @@
 
 		</div>
 
-		<div class="page webdesign">
+		<div class="page webdesign"><!-- 4 -->
 			<div class="row post">
 				<div class="column post large">
 					<!-- <div class="cover wd btn">
@@ -312,16 +316,37 @@
 			</div>
 		</div>
 
-		<div class="page mu">
-			<div class="textBlock btn">
-				<p>Nothing here, yet.<br>
-				Oh wait I got this cool song, it goes like this:<br>
-				<b>du du dudu du du du du dudududu dudu duuuuu du</b></p>
-
+		<div class="page graphicdesign"><!-- 5 -->
+			<div class="row post">
+				<div class="column post large">
+					<img src="posts/gd/gd0000_th.png" class="post pic btn" loading="lazy">
+				</div>
+				<div class="column post large">
+					<video src="posts/gd/gd0001.mp4" class="post pic btn" loading="lazy">
+				</div>
+				<div class="column post large">
+				</div>
 			</div>
 		</div>
 
-		<div class="page gif">
+		<div class="page abt"><!-- 6 -->
+			<div class="textBlock">
+				<p><b>contact me at 4d6174745f@gmail.com</b><br><br>
+				<b>About me</b><br><br></p>
+				<p class="txtSide">
+				Hi, I'm Matt, and I do all kinds of stuff.<br>
+				For any illustrations I use After Effects, Blender, Photoshop/Affinity or Figma.<br><br>
+				I experiment making songs with FL Studio, but also  LMMS.<br><br>
+				When it comes to 3D printing I use Fusion360/OpenSCAD, and print with Cura.<br><br>
+				And for web design, I simply use Atom.<br><br>
+				Yes I do prefer open-source software.<br><br>
+				My current camera equipement is a Nikon D3100, 55-300mm and 18-55mm Nikon lens,
+				 and finally a 105mm 1:2:8 DG Macro HSM Sigma lens.<br><br>
+				</p>
+
+			</div>
+		</div>
+		<div class="page gif"><!-- 7 -->
 
 			<div class="row post">
 				<div class="column post">
@@ -340,23 +365,16 @@
 			</div>
 		</div>
 
-		<div class="page abt">
-			<div class="textBlock">
-				<p><b>contact me at 4d6174745f@gmail.com</b><br><br>
-				<b>About me</b><br><br></p>
-				<p class="txtSide">
-				Hi, I'm Matt, and I do all kinds of stuff.<br>
-				For any illustrations I use After Effects, Blender, Photoshop/Affinity or Figma.<br><br>
-				I experiment making songs with FL Studio, but also  LMMS.<br><br>
-				When it comes to 3D printing I use Fusion360/OpenSCAD, and print with Cura.<br><br>
-				And for web design, I simply use Atom.<br><br>
-				Yes I do prefer open-source software.<br><br>
-				My current camera equipement is a Nikon D3100, 55-300mm and 18-55mm Nikon lens,
-				 and finally a 105mm 1:2:8 DG Macro HSM Sigma lens.<br><br>
-				</p>
+		<div class="page mu">
+			<div class="textBlock btn">
+				<p>Nothing here, yet.<br>
+				Oh wait I got this cool song, it goes like this:<br>
+				<b>du du dudu du du du du dudududu dudu duuuuu du</b></p>
 
 			</div>
 		</div>
+
+
 
 		<script src="script.js" type="text/javascript"></script>
   </body>

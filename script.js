@@ -9,14 +9,17 @@ var isMenuOpen = 0;
 toggleMenu();
 function toggleMenu(state) {
   var menu = document.getElementById("menu");
+  var hamburger = document.getElementById("hamburger");
   // if(state == 1){isMenuOpen = 1}
   if(isMenuOpen == 0) {
     //open
     menu.classList.add("on");
+    hamburger.classList.add("active");
     isMenuOpen = 1;
   } else {
     //close
     menu.classList.remove("on");
+    hamburger.classList.remove("active");
     isMenuOpen = 0;
   }
 }
