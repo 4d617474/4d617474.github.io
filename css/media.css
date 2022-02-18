@@ -265,7 +265,7 @@
 		opacity: 1 !important;
 		animation: menuon var(--speed1) 1 !important;
 	}
-	@keyframes menuo
+	@keyframes menuon
   {
     0%{left:0px;;margin-left:-20px;}
     100%{left:0px;margin-left:0px;}
