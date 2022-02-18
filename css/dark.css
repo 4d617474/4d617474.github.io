@@ -38,15 +38,15 @@
 --PHbackgroundClr: #222821;
 --WDbackgroundClr: #261d23;
 --MUbackgroundClr: #1F323E;
---GIbackgroundClr: #2B2A20;
 --ABbackgroundClr: #2D2428;
+--GDbackgroundClr: #222433;
 }
 
 }
 
 	.themed
 	{
-		background-color:var(--backgroundClr) !important; 
+		/*background-color:var(--backgroundClr) !important; */
 	}
 	
 	

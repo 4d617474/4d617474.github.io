@@ -2,6 +2,7 @@
 	--backgroundClr: #FAF3F1;
   --topClr:#111;
   --top2Clr:#11111147;
+	--speed0: .32s;
 	--speed1: .18s;
 	--speed2: .06s;
 	/*
@@ -19,19 +20,22 @@
 	
 	--ABbackgroundClr: #F2F4F0;
 	*/
-		--OBbackgroundClr: #E66E6E;
+	--OBbackgroundClr: #E66E6E;
 	
 	--CTbackgroundClr: #E8BB66;
 	
 	--PHbackgroundClr: #80EC6F;
 	
-	--WDbackgroundClr: #EA73BB;
+	--WDbackgroundClr: #74BBE6;
 	
 	--MUbackgroundClr: #74BBE6;
-		
-	--GIbackgroundClr: #E8D178;
 	
-	--ABbackgroundClr: #F2F4F0;
+	--GDbackgroundClr: #7883E6;
+		
+	--GIbackgroundClr: #E778CE;
+	
+	--ABbackgroundClr: #B678E7;
+	
 	--iconHamb:url('../icons/hambLight.svg');
 	--iconBack:url('../icons/backLight.svg');
 	--iconCross:url('../icons/crossLight.svg');
@@ -135,6 +139,10 @@ body
 	/*outline: 1px solid var(--WDtop2Clr);
 	color:var(--WDtopClr);*/
 }
+.graphicdesign
+{
+  background-color: var(--GDbackgroundClr) !important;
+}
 .music
 {
   background-color: var(--MUbackgroundClr) !important;
@@ -147,7 +155,72 @@ body
 {
   background-color: var(--ABbackgroundClr) !important;
 }
+.page.gif
+{
+background-color:#00000000 !important;
+}
 
+#menu.gif
+{
+
+	background-image: linear-gradient( 45deg,
+	#E66E6E 0%, 
+	#E66E6E 20%, 
+	#E8BB66 20%, 
+	#E8BB66 40%,
+	#80EC6F 40%,
+	#80EC6F 60%,
+	#74BBE6 60%,
+	#74BBE6 80%,
+	#B678E6 80%,
+	#B678E6 100%
+) !important;
+}
+#secretBackground
+{
+	position: fixed;
+		top:0vw;
+	left:0vw;
+	height: 100vh;
+	width: 100vw;
+			background-image: linear-gradient(
+	#E66E6E 0%, 
+	#E66E6E 20%, 
+	#E8BB66 20%, 
+	#E8BB66 40%,
+	#80EC6F 40%,
+	#80EC6F 60%,
+	#74BBE6 60%,
+	#74BBE6 80%,
+	#B678E6 80%,
+	#B678E6 100%
+) !important;
+	display: none;
+	background-position: 0px 0px;
+	animation: secretAnimation 4s infinite linear;
+}
+#secretBackground.gif
+{
+	display: block;
+}
+@keyframes secretAnimatio
+{
+	0%{transform: rotate(0deg)}
+	100%{transform: rotate(360deg)}
+}
+@keyframes secretAnimation
+{
+	0%{background-position: 0 0;}
+	19.99%{background-position: 0 0;}
+	20%{background-position: 0 20vh;}
+	39.99%{background-position: 0 20vh;}
+	40%{background-position: 0 40vh;}
+	59.99%{background-position: 0 40vh;}
+	60%{background-position: 0 60vh;}
+	79.99%{background-position: 0 60vh;}
+	80%{background-position: 0 80vh;}
+	100%{background-position: 0 80vh}
+}
 /* MENU */
 /* MENU */
 /* MENU */
