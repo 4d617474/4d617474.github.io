@@ -16,6 +16,7 @@
 	--ABbackgroundClr: #B678E7;
 	
 	--MAIbackgroundClr: #F298A8;
+	--INSbackgroundClr: #EAB8BE;
 	--MESbackgroundClr: #D6BAE8;
 	--TELbackgroundClr: #B5D6E6;
 	--WHAbackgroundClr: #97D69F;
@@ -441,8 +442,8 @@ background-color:#00000000 !important;
 {
 	position: relative;
 	float: left;
-	height: 22vh;
-	width: 100vw;
+	height: calc(88vh / 3);
+	width: 50vw;
 	cursor: pointer;
 }
 .social.copied
@@ -488,6 +489,10 @@ background-color:#00000000 !important;
 	font-size: 20px;
 	line-height: 50px;
 }
+.social.block.mail
+{
+	width: 100%;
+}
 .social.name.mail::after
 {
 	content:'click to copy';
@@ -520,6 +525,15 @@ background-color:#00000000 !important;
 {
 	background:url('../icons/messenger.svg') no-repeat center;
 }
+.social.block.instagram
+{
+	background:var(--INSbackgroundClr);
+}
+.social.logo.instagram
+{
+	background:url('../icons/instagram.svg') no-repeat center;
+}
+.social.logo.instagram::after{content:'instagram';}
 .social.block.messenger
 {
 	background:var(--MESbackgroundClr);

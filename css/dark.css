@@ -26,6 +26,7 @@
 	--GDbackgroundClr: #222433;
 		
 	--MAIbackgroundClr: #48313D;
+	--INSbackgroundClr: #34292B;
 	--MESbackgroundClr: #38313D;
 	--TELbackgroundClr: #272B2E;
 	--WHAbackgroundClr: #202A21;
@@ -38,5 +39,45 @@
 	{
 		/*background-color:var(--backgroundClr) !important; */
 	}
-	
-	
+/*
+:root
+{
+	--borderImg:url('../icons/border.png');
+	--ng:url('../icons/ng.png');
+
+}
+	.btn::before
+{
+	content:'';
+	top:0%;
+	left:0%;
+	position: relative;
+	height: 100%;
+	width: 100%;
+	background: var(--ng);
+	opacity: 1.5;
+	z-index: -1;
+}
+.navigation.lol
+{
+    padding-top: calc((50% / 7) - 10px);
+    padding-bottom: calc((50% / 7) - 10px);
+    padding:unset;
+	height: calc((100% / 7) - 1px);
+	font-size: 40px;
+	text-indent: 2vw;
+	line-height: calc((100vh / 7) - 20px);
+}
+
+.btn
+{
+	border-width: 10px;
+	border-style: solid;
+
+  border-image: var(--borderImg) 50% round;
+	border-color:transparent !important;
+	border-image-outset: 1px;
+	border-radius: 0px !important;
+	transition-duration: var(--transitionTer);
+	transition-property:all;
+}

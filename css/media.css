@@ -1,4 +1,8 @@
 @media (max-width:700px){
+  .btn
+  {
+    transition-delay: .5s !important;
+  }
     .btn:active
   {
     opacity: 85%;
@@ -19,7 +23,7 @@
    .navigation.block:active
   {
     letter-spacing: 5px;
-
+    transition: letter-spacing var(--speed1);
   }
 
   #hamburger:active:after
@@ -45,6 +49,11 @@
 		background-position: calc(25vw - 55px) center;
     opacity: 1;
   }
+  #back,#hamburger
+  {
+    transition-delay: 0s !important;
+    
+  }
   #back:active
 	{
 		height: 16vh;
@@ -62,6 +71,16 @@
   {
     background-color:var(--topClr) !important;
     color:var(--backgroundClr) !important;
+  }
+  .btn
+  ,#hamburger:active
+  ,#hamburger:active::after
+  ,#hamburger.alt:active::after
+  ,#back:active
+  ,#back:active::after
+  ,.navigation.block:active
+  {
+    transition-delay: .5s !important;
   }
 }
 @media (min-width: 700px){
@@ -277,8 +296,9 @@
   }
   .social.block
   {
-    height: 25vh;
-    width: 90vw;
+    height: calc(100vh / 3);
+    
+    width: 50%;
   }
 
 }
