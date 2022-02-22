@@ -23,7 +23,7 @@ function toggleMenu(state) {
     isMenuOpen = 0;
   }
 }
-var oldName;
+var oldName = 'first';
 function pickPage(number,elmnt,name)
 {
   // checkY();
@@ -262,4 +262,10 @@ document.getElementById("source").onclick = function(){
 	} else {
 		return
 	}
+}
+
+function cope(block){
+    navigator.clipboard.writeText(block.lastElementChild.innerHTML);
+    setTimeout(function(){block.firstElementChild.classList.remove("copiedOn")},2000);
+    block.firstElementChild.classList.add("copiedOn");
 }

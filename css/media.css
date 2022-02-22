@@ -54,7 +54,14 @@
   {
     filter:unset;
     outline-offset: 7px;
-    transform: scale(.96,.96)
+    outline-offset: unset;
+    outline: 10px solid var(--topClr);
+    transform: scale(.96,.96);
+  }
+    .cover:active
+  {
+    background-color:var(--topClr) !important;
+    color:var(--backgroundClr) !important;
   }
 }
 @media (min-width: 700px){
@@ -71,6 +78,7 @@
     outline-offset:unset;
     outline-offset: 0px;
   }
+
   .navigation.block
   {
     transition: all var(--speed1);
@@ -78,7 +86,11 @@
   .navigation.block:hover
   {
     text-indent:3vw;
-
+  }
+  .navigation.row:hover
+  {
+    transition: padding var(--speed1) !important;
+    padding-right: 0px ;
   }
   #hamburger
   {
@@ -99,6 +111,17 @@
 		background: var(--iconHamb) no-repeat;
 		background-position: center;
 	}
+  #hamburger.first
+  {
+    background-position: center center !important;
+  }
+  #hamburger.first::after
+  {
+    top:40vh;
+    width: 10vw;
+    font-size: 2.5vw;
+    text-indent: unset;
+  }
   #hamburger:hover:after
 	{
 		background-position: center calc(50vh - 54px);
@@ -110,7 +133,9 @@
   }
 	#hamburger.active
 	{
-		width: 50vw;
+		width: 100vw;
+    opacity: .2;
+    transition: none !important;
 	}
   #hamburger.alt
   {
@@ -161,6 +186,7 @@
   {
     width: 88vw;
     left:10vw; 
+    padding:unset;
   }
   .page.on
   {
@@ -201,7 +227,14 @@
   {
     filter:unset;
     outline-offset: 7px;
+    outline-offset: unset;
+    outline: 10px solid var(--topClr);
     transform: scale(.96,.96)
+  }
+  .cover:hover
+  {
+    background-color:var(--topClr) !important;
+    color:var(--backgroundClr) !important;
   }
   .post.column
   {
@@ -238,8 +271,15 @@
 	{
 		transition: all var(--speed1) !important;
 	}
-
-
+  .social.copied
+  {
+    filter:unset !important;
+  }
+  .social.block
+  {
+    height: 25vh;
+    width: 90vw;
+  }
 
 }
 
@@ -268,16 +308,19 @@
     .btn
   {
   }
+  #menu,#closeMenu
+  {
+		width:50vw;    
+  }
   	#menu
 	{
 		display:block !important;
-		width: 50vw;
 		left:-50vw;
 		opacity:0;
 	  outline:100vw solid rgba(0,0,0,.85);
 	  box-shadow: 0px 0px 60px black;
 		transition: all var(--speed1);
-		height: 100vh;
+		height: 88vh;
 	}
   #menu.on
 	{
@@ -291,10 +334,10 @@
     0%{left:0px;;margin-left:-20px;}
     100%{left:0px;margin-left:0px;}
   }
-	#closeMenu
-	{
-		width: 50vw;
-	}
+  .navigation.row
+  {
+    height: calc((100% / 7) - 1px);
+  }
 }
 body
 {
