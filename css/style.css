@@ -343,7 +343,6 @@ background-color:#00000000 !important;
 {
 	padding:5px;
 	padding-top: 0px;
-	flex: 41%;
 	flex: calc(50% - 10px);
   max-width: 50%;
 	float: left;
@@ -358,11 +357,10 @@ background-color:#00000000 !important;
 }
 .post.row
 {
-	display: flex;
+	display:flex;
 	height: auto;
-  width: calc(100% - (var(--spSize) * 2));
-	margin-left:calc(var(--spSize) - 0px);
-	flex-wrap: wrap;
+  width: 100%;
+	flex-wrap:wrap;
 }
 .post.pic,.picdesc
 {
