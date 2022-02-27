@@ -81,6 +81,20 @@
   {
     transition-delay: .5s !important;
   }
+  #hamburger.first
+  {
+    background-position: center !important;
+    height: 100vh !important;
+  }
+  
+  #hamburger.first:after
+  {
+    margin:unset !important;;
+    text-indent: unset;
+    line-height:calc(100vh - 60px) !important;
+    background-position: center !important;
+  }
+
 }
 @media (min-width: 700px){
 
@@ -132,13 +146,23 @@
   #hamburger.first
   {
     background-position: center center !important;
+    width: 100vw;
+   	color:black !important;
+
   }
   #hamburger.first::after
   {
-    top:40vh;
-    width: 10vw;
-    font-size: 2.5vw;
+    top:calc(50vh - 100px);
+    width: 100vw;
+    font-size: 30px;
     text-indent: unset;
+  }
+  #hamburger.first:hover
+  {
+    width: 100vw;
+    background-color:#FD6565 !important;
+    filter:unset;
+		background-position: center calc(50vh - 54px);
   }
   #hamburger:hover:after
 	{
@@ -151,10 +175,12 @@
   }
 	#hamburger.active
 	{
-		width: 100vw;
+		/*
+    width: 100vw;
     opacity: .2;
     transition: none !important;
-	}
+	 */
+  }
   #hamburger.alt
   {
     width: 10vw;
@@ -212,7 +238,7 @@
   }
   @keyframes onAlt
   {
-    0%{margin-left:-20px;}
+    0%{margin-left:-10px;}
     100%{margin-left:0px;}
   }
   #source{
@@ -231,6 +257,16 @@
   }
   .modalButton:hover
   {
+  }
+  #previous:hover,#next:hover,#exit:hover
+	{
+		background-position: calc(50% + 5px) center;
+    box-shadow: 0 0 0 30px var(--backgroundClr);
+  }
+  #previous:hover::after,#next:hover::after,#exit:hover::after
+	{
+		background-position: calc(50% - 5px) center;
+    opacity: 1;
   }
   #vid00
   {
@@ -258,7 +294,12 @@
   }
   .post.column
   {
-    max-width: calc(25% - 0px);
+  	max-width: calc(25% - 2px);
+}
+  
+  .post.column:hover
+  {
+    z-index: 100;
   }
   .post.column.large
   {
@@ -333,15 +374,42 @@
   {
 		width:50vw;    
   }
+  #menuSecretExit
+  {
+    height: 100vh;
+    width: 0vw;
+    right:0;
+    position: fixed;
+    background-color:#000000;
+    opacity:80% !important;
+    z-index: 99;
+    
+  }
+  #menu.first,#closeMenu.first
+  {
+    width: 100vw !important;
+    text-align:center;
+  
+  }
+  .navigation.block
+  {
+    text-align: inherit;
+  }
+  #menuSecretExit.on
+  {
+    width: 100vw;
+  }
   	#menu
 	{
 		display:block !important;
 		left:-50vw;
 		opacity:0;
 	  outline:100vw solid rgba(0,0,0,.85);
-	  box-shadow: 0px 0px 60px black;
-		transition: all var(--speed1);
+	  outline:none;
+	  /*box-shadow: 0px 0px 60px black;*/
+		transition: opacity var(--speed1);
 		height: 88vh;
+    z-index: -1;
 	}
   #menu.on
 	{
@@ -349,6 +417,7 @@
 		margin-left:0px;
 		opacity: 1 !important;
 		animation: menuon var(--speed1) 1 !important;
+    z-index: 100;
 	}
 	@keyframes menuon
   {

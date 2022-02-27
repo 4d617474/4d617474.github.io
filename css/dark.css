@@ -17,9 +17,10 @@
 	--iconIg:url('../icons/ing.svg');
 	--iconTk:url('../icons/tiktok.svg');
 		
-	--OBbackgroundClr: #241B1B;
-	--CTbackgroundClr: #35332D;
-	--PHbackgroundClr: #222821;
+	--FIbackgroundClr: #FD5555;
+	--OBbackgroundClr: #6B3333;
+	--CTbackgroundClr: #754B2F;
+	--PHbackgroundClr: #283832;
 	--WDbackgroundClr: #261d23;
 	--MUbackgroundClr: #1F323E;
 	--ABbackgroundClr: #2D2428;
@@ -34,29 +35,59 @@
 }
 
 }
+/*
+	:root{
+	--backgroundClr: #101010;
+	--topClr:#FAF3F1;
+  --top2Clr:#FAF3F130;
 
-	.themed
-	{
-		/*background-color:var(--backgroundClr) !important; */
-	}
+	--OBbackgroundClr: #101010;
+	--CTbackgroundClr: #101010;
+	--PHbackgroundClr: #101010;
+	--WDbackgroundClr: #101010;
+	--MUbackgroundClr: #101010;
+	--ABbackgroundClr: #101010;
+	--GDbackgroundClr: #101010;
+	
+}*/
+
+/*
+.page
+{
+	margin:20px;
+	width: calc(88vw - 40px);
+}
+*/
 
 .pic
 {
-		display:flex;
-	margin: 0px !important;
-}
-.pic:hover
-{
+	display:flex;
+	margin: 1px !important;
+	outline: 0px solid white !important;
 }
 	.post.column
 {
-	padding: 0;
+	padding: .5px;
 }
+
+
+.pic:hover,.cover:hover
+{
+	transform: none !important;
+	transform: scale(104%) !important;
+	opacity: 99% !important;
+	outline: 14px solid white !important;
+	background-color:white !important;
+	color:black !important;
+	/*box-shadow: 0px 0px 10px 10px black !important;*/
+}
+
 .separator {
 	margin-left: 0vw;
 	width: calc(100% - 0vw);
 	border-bottom: 1px solid var(--top2Clr);
 	height: 0;
+	opacity: .2;
 }
 /*
 :root

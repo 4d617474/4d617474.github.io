@@ -6,10 +6,11 @@
 	--speed1: .18s;
 	--speed2: .06s;
 
+	--FIbackgroundClr: #FD5555;
 	--OBbackgroundClr: #E66E6E;
-	--CTbackgroundClr: #E8BB66;
+	--CTbackgroundClr: #E8955D;
 	--PHbackgroundClr: #80EC6F;
-	--WDbackgroundClr: #74BBE6;
+	--WDbackgroundClr: #80A8E6;
 	--MUbackgroundClr: #74BBE6;
 	--GDbackgroundClr: #7883E6;
 	--GIbackgroundClr: #E778CE;
@@ -60,6 +61,7 @@ body
   font-family: 'Yeseva One', sans-serif;
   background: var(--backgroundClr);
 	color: var(--topClr);
+	overflow-x: hidden;
 }
 a
 {
@@ -104,6 +106,10 @@ a
   /*! transition: background-color .5s !important; */
 }
 /*body.oddbeep,#hamburger.oddbeep,#menu.oddbeep,.page.oddbeep,.modalButton.oddbeep,#closeMenu.oddbeep*/
+.first
+{
+  background-color: var(--FIbackgroundClr) !important;
+}
 .oddbeep
 {
   background-color: var(--OBbackgroundClr) !important;
@@ -145,6 +151,25 @@ a
 .about
 {
   background-color: var(--ABbackgroundClr) !important;
+}
+.first
+{
+	background-color:var(--FIbackgroundClr) !important;
+	color:#290A19 !important;
+}
+.navigation.row:hover
+{
+	color:inherit;
+  background-color:inherit !important;
+}
+#closeMenu.first
+{
+	background-image:url('../icons/crossLight.svg') !important;
+	
+}
+#hamburger
+{
+	background-image:url('../icons/hambLight.svg') !important;
 }
 .page.gif
 {
@@ -244,19 +269,19 @@ background-color:#00000000 !important;
 	width: 0vw;
 	left:-1px;
 }
-  #back:after
-	{
-		transition: all var(--speed1) !important;
-		position: absolute;
-		height: 100%;
-		width: 100%;
-		background-size: cover;
-		content: '';
-		position: absolute;
-		background: var(--iconPrevious) no-repeat;
-		background-position: center;
-    opacity: 0;
-	}
+#back:after
+{
+	transition: all var(--speed1) !important;
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	background-size: cover;
+	content: '';
+	position: absolute;
+	background: var(--iconPrevious) no-repeat;
+	background-position: center;
+	opacity: 0;
+}
 #hamburger,#back
 {
 	display: block;
@@ -663,17 +688,21 @@ background-color:#00000000 !important;
 #mute,#reload,#source{
 	display: none;
 }
-#exit{
+
+#exit,#exit:after
+{
 	background-image:var(--iconCross);
 }
 
-#previous{
+#previous,#previous:after
+{
 
 	background-image:var(--iconPrevious);
 }
 
 
-#next{
+#next,#next:after
+{
 	background-image:var(--iconNext);
 }
 #mute.mute
@@ -700,7 +729,18 @@ background-color:#00000000 !important;
 	font-size: 20px;
 	height: calc(100% - (6vh - 10px));
 }
-
+#previous:after,#next:after,#exit:after
+{
+	transition: all var(--speed1) !important;
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	background-size: auto;
+	content: '';
+	background-position: center;
+	background-repeat: no-repeat;
+	opacity: 0;
+}
 #spFrame-In
 {
 	position: absolute;

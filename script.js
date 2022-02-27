@@ -6,18 +6,21 @@
 // document.getElementById("hamburger").onclick = toggleMenu(0);
 
 var isMenuOpen = 0;
-toggleMenu();
+// toggleMenu();
 function toggleMenu(state) {
+  var menuSE = document.getElementById("menuSecretExit");
   var menu = document.getElementById("menu");
   var hamburger = document.getElementById("hamburger");
   // if(state == 1){isMenuOpen = 1}
   if(isMenuOpen == 0) {
     //open
+    menuSE.classList.add("on");
     menu.classList.add("on");
     hamburger.classList.add("active");
     isMenuOpen = 1;
   } else {
     //close
+    menuSE.classList.remove("on");
     menu.classList.remove("on");
     hamburger.classList.remove("active");
     isMenuOpen = 0;
