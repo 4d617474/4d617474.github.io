@@ -448,7 +448,11 @@
   {
     height: 100vh;
   }
-  #closeMenu
+  #menu.first
+  {
+    left:0;
+  }
+  #closeMenu:not(.first)
   {
 		width:10vw;
     height: 100vh;
@@ -458,6 +462,7 @@
   {
     line-height: calc((100vh / 7) - 15px);
   }
+
 }
 body
 {
