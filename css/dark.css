@@ -1,7 +1,7 @@
 @media (prefers-color-scheme: dark) {
 
 	:root{
-	--backgroundClr: #171912;
+	--backgroundClr: #050C0E;
 	--topClr:#FAF3F1;
   --top2Clr:#FAF3F130;
 
@@ -17,7 +17,7 @@
 	--iconIg:url('../icons/ing.svg');
 	--iconTk:url('../icons/tiktok.svg');
 		
-	--FIbackgroundClr: #FD5555;
+	--FIbackgroundClr: #AD4045;
 	--OBbackgroundClr: #6B3333;
 	--CTbackgroundClr: #754B2F;
 	--PHbackgroundClr: #283832;
@@ -25,6 +25,14 @@
 	--MUbackgroundClr: #1F323E;
 	--ABbackgroundClr: #2D2428;
 	--GDbackgroundClr: #222433;
+		
+	--OBbackgroundClr: #151515;
+	--CTbackgroundClr: #151515;
+	--PHbackgroundClr: #151515;
+	--WDbackgroundClr: #151515;
+	--MUbackgroundClr: #151515;
+	--ABbackgroundClr: #151515;
+	--GDbackgroundClr: #151515;	
 		
 	--MAIbackgroundClr: #48313D;
 	--INSbackgroundClr: #34292B;
@@ -71,16 +79,7 @@
 }
 
 
-.pic:hover,.cover:hover
-{
-	transform: none !important;
-	transform: scale(104%) !important;
-	opacity: 99% !important;
-	outline: 14px solid white !important;
-	background-color:white !important;
-	color:black !important;
-	/*box-shadow: 0px 0px 10px 10px black !important;*/
-}
+
 
 .separator {
 	margin-left: 0vw;

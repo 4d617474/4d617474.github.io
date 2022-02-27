@@ -2,10 +2,14 @@
 	--backgroundClr: #FAF3F1;
   --topClr:#111;
   --top2Clr:#11111147;
+  --hoverClr:#FAF3F1;
 	--speed0: .32s;
 	--speed1: .18s;
 	--speed2: .06s;
 
+	--white:#FAF3F1;
+	--black:#050C0E;
+	
 	--FIbackgroundClr: #FD5555;
 	--OBbackgroundClr: #E66E6E;
 	--CTbackgroundClr: #E8955D;
@@ -15,6 +19,14 @@
 	--GDbackgroundClr: #7883E6;
 	--GIbackgroundClr: #E778CE;
 	--ABbackgroundClr: #B678E7;
+
+	--OBbackgroundClr: #FAF3F1;
+	--CTbackgroundClr: #FAF3F1;
+	--PHbackgroundClr: #FAF3F1;
+	--WDbackgroundClr: #FAF3F1;
+	--MUbackgroundClr: #FAF3F1;
+	--ABbackgroundClr: #FAF3F1;
+	--GDbackgroundClr: #FAF3F1;	
 	
 	--MAIbackgroundClr: #F298A8;
 	--INSbackgroundClr: #EAB8BE;
@@ -155,22 +167,15 @@ a
 .first
 {
 	background-color:var(--FIbackgroundClr) !important;
-	color:#290A19 !important;
 }
 .navigation.row:hover
 {
-	color:inherit;
-  background-color:inherit !important;
 }
 #closeMenu.first
 {
-	background-image:url('../icons/crossLight.svg') !important;
 	
 }
-#hamburger
-{
-	background-image:url('../icons/hambLight.svg') !important;
-}
+
 .page.gif
 {
 background-color:#00000000 !important;
@@ -252,10 +257,11 @@ background-color:#00000000 !important;
 #hamburger.first
 {
 	background-position: 10vw center !important;
+	
 }
 #hamburger.first::after
 {
-	content: 'click here to explore' !important;
+	content: 'click to explore' !important;
 	font-size: 30px;
 	text-align: center;
 	text-indent: 10vw;
@@ -689,7 +695,7 @@ background-color:#00000000 !important;
 	display: none;
 }
 
-#exit,#exit:after
+#exit,#exit:after,#closeMenu,#closeMenu:after
 {
 	background-image:var(--iconCross);
 }
@@ -729,7 +735,7 @@ background-color:#00000000 !important;
 	font-size: 20px;
 	height: calc(100% - (6vh - 10px));
 }
-#previous:after,#next:after,#exit:after
+#previous:after,#next:after,#exit:after,#closeMenu:after
 {
 	transition: all var(--speed1) !important;
 	position: absolute;
@@ -739,7 +745,6 @@ background-color:#00000000 !important;
 	content: '';
 	background-position: center;
 	background-repeat: no-repeat;
-	opacity: 0;
 }
 #spFrame-In
 {
