@@ -122,6 +122,11 @@ a
 {
   background-color: var(--FIbackgroundClr) !important;
 }
+#menu.on.first
+{
+  animation: unset !important;
+	
+}
 .oddbeep
 {
   background-color: var(--OBbackgroundClr) !important;
