@@ -42,7 +42,16 @@
 	--WHAbackgroundClr: #202A21;
 	
 }
-
+#intro
+	{
+		background-color: #151515 !important;
+		
+	}
+#introVideo
+	{
+		filter: unset;
+		background-color: #151515 !important;
+	}
 }
 /*
 	:root{
