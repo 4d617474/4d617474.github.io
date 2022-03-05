@@ -6,6 +6,7 @@
 	--speed0: .32s;
 	--speed1: .18s;
 	--speed2: .06s;
+	--speed3: .5s;
 
 	--white:#FAF3F1;
 	--black:#050C0E;
@@ -142,19 +143,25 @@ a
 	width: 100vw;
 	z-index: 200;
 }
-#introVideo
+
+#introVideo,#introPic
 {
-  background-color: #151515 !important;
 	position: fixed;
 	top:calc(50vh - 200px);
 	left:calc(50vw - 200px);
 	height: 400px;
+	filter: invert(100%);
 	width: 400px;
-	z-index: 200;
+}
+#introVideo
+{
+	z-index: 2;
 	cursor: pointer;
 	transition: all .22s;
-	filter: invert(100%);
-
+}
+#introPic
+{
+	z-index: 1;
 }
 #intro:after
 {

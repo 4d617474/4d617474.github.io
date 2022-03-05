@@ -5,8 +5,14 @@
 // document.getElementById("closeMenu").onclick = toggleMenu(1);
 // document.getElementById("hamburger").onclick = toggleMenu(0);
 var intro = document.getElementById("intro");
+var navBlocks = document.getElementsByClassName("navigation block");
 
 var isMenuOpen = 0;
+function reset(){
+  toggleMenu(1);
+  intro.style.display='block';
+}
+
 // toggleMenu();
 function toggleMenu(state) {
   var menuSE = document.getElementById("menuSecretExit");
@@ -18,12 +24,19 @@ function toggleMenu(state) {
     menuSE.classList.add("on");
     menu.classList.add("on");
     hamburger.classList.add("active");
+    for (i = 0; i < navBlocks.length; i++) {
+        navBlocks[i].classList.add("on");
+    }
+
     isMenuOpen = 1;
   } else {
     //close
     menuSE.classList.remove("on");
     menu.classList.remove("on");
     hamburger.classList.remove("active");
+    for (i = 0; i < navBlocks.length; i++) {
+        navBlocks[i].classList.remove("on");
+    }
     isMenuOpen = 0;
   }
 }
@@ -32,7 +45,6 @@ function pickPage(number,elmnt,name)
 {
   // checkY();
   openFolder(null,1)
-  var navBlocks = document.getElementsByClassName("navigation block");
   var page = document.getElementsByClassName("page");
   var modals = document.getElementsByClassName("modalButton");
 

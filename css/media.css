@@ -6,7 +6,7 @@
     #intro:after
   {
     font-size: 10vw;
-  }#introVideo
+  }#introVideo,#introPic
   {
     width: 100vw;
     height: auto;
@@ -29,8 +29,8 @@
   }
   @keyframes onAlt
   {
-    0%{margin-top:10px;}
-    100%{margin-top:0px;}
+    0%{opacity: 0;}
+    100%{opacity: 1;}
   }
   
    .navigation.block:active
@@ -416,7 +416,7 @@
     right:0;
     position: fixed;
     background-color:#000000;
-    opacity:80% !important;
+    opacity:0% !important;
     z-index: 99;
     
   }
@@ -432,7 +432,9 @@
   }
   #menuSecretExit.on
   {
+    opacity:80% !important;
     width: 100vw;
+    transition: opacity .2s !important;;
   }
   	#menu
 	{
