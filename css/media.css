@@ -1,4 +1,14 @@
-@media (max-width:700px){
+@media (max-width:400px){
+  .navigation.block
+  {
+    font-size: 10vw;
+  }
+    #intro:after
+  {
+    font-size: 10vw;
+  }
+}
+  @media (max-width:700px){
   .btn
   {
   }
@@ -91,6 +101,16 @@
     line-height:calc(100vh - 60px) !important;
     background-position: center !important;
   }
+#introVideo
+  {
+    width: 100vw;
+    left:0;
+  }
+
+  #menu.first
+  {
+    height: 100vh;
+  }
 
 }
 @media (min-width: 700px){
@@ -162,7 +182,6 @@
   #hamburger.first:hover
   {
     width: 100vw;
-    background-color:#FD6565 !important;
     filter:unset;
 		background-position: center calc(50vh - 54px);
   }

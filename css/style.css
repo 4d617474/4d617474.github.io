@@ -20,6 +20,7 @@
 	--GIbackgroundClr: #E778CE;
 	--ABbackgroundClr: #B678E7;
 
+	--FIbackgroundClr: #FAF3F1;
 	--OBbackgroundClr: #FAF3F1;
 	--CTbackgroundClr: #FAF3F1;
 	--PHbackgroundClr: #FAF3F1;
@@ -122,10 +123,65 @@ a
 {
   background-color: var(--FIbackgroundClr) !important;
 }
+#hamburger.first
+{
+	display: none;
+}
 #menu.on.first
 {
   animation: unset !important;
 	
+}
+#intro
+{
+  background-color: var(--FIbackgroundClr) !important;
+	position: fixed;
+	top:0;
+	left:0;
+	height: 100vh;
+	width: 100vw;
+	z-index: 200;
+}
+#introVideo
+{
+  background-color: var(--FIbackgroundClr) !important;
+	position: fixed;
+	top:calc(50vh - 200px);
+	left:calc(50vw - 200px);
+	height: 400px;
+	width: 400px;
+	z-index: 200;
+	cursor: pointer;
+	transition: all .22s;
+}
+#intro:after
+{
+	content: 'click to explore';
+	font-size: 30px;
+	top:10px;
+	position: absolute;
+	text-align: center;
+	width: 100vw;
+	margin-top: calc(50vh + 220px);
+	background:none !important;
+	animation: clic 12s 1;
+}
+@keyframes clic
+{
+	0%{opacity: 0;}
+	80%{opacity: 0;}
+	100%{opacity: 1;}
+}
+@keyframes click
+{
+	0%{content: 'click to explore';} 
+	25%{content: 'クリックして探索';}
+	50%{content: 'cliquez pour explorer';}
+	75%{content: 'clic para explorar';}
+}
+#introVideo:hover
+{
+	transform: scale(110%);
 }
 .oddbeep
 {

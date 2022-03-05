@@ -4,6 +4,7 @@
 
 // document.getElementById("closeMenu").onclick = toggleMenu(1);
 // document.getElementById("hamburger").onclick = toggleMenu(0);
+var intro = document.getElementById("intro");
 
 var isMenuOpen = 0;
 // toggleMenu();
