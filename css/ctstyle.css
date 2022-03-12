@@ -1,0 +1,187 @@
+#backgroundVideo,#background
+{
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+#backgroundVideo
+{
+  transform: scale(200%);
+}
+#background
+{
+  background:url('../icons/ct/background.jpg') center no-repeat;
+  background-size:cover ;
+  z-index: -2;
+}
+#title
+{
+  position: absolute;
+  height: 200px;
+  width: 200px;
+  background:url("../icons/ct/ctlogo.png");
+  background-size: 100%;
+  background-repeat: none;
+  background-position: center;
+  left:calc(50vw - 100px);
+  top:20px;
+  outline:1px solid #AAA;
+  border-radius:100px;
+  animation: title 4s infinite ease-in-out;
+}
+@keyframes title{
+  0%{margin-top:0px;}
+  50%{margin-top:10px;}
+  100%{margin-top:0px;}
+}
+#cards
+{
+  position: absolute;
+  left: 0;
+  top:240px;
+  width:100%;
+}
+.card
+{
+  position: relative;
+  float: left;
+  height: 80px;
+  width: calc(100% - 100px);
+  background:#FFF;
+  box-shadow: 0px 0px 1px #00000020;
+  outline:1px solid #00000020;
+  padding:10px;
+  border-radius: 80px;
+  margin:20px 40px 20px 40px;
+  color:black;
+  max-width: 350px;
+  animation: card 4s infinite;
+  animation-delay: unset;
+  animation-timing-function:linear;
+}
+.card.tiktok{animation-delay: 1s}
+.card.youtube{animation-delay: 2s}
+.card.reddit{animation-delay: 3s}
+@keyframes card{
+  0%{transform: translate(0%,0%)}
+  12.5%{transform: translate(-1%,1%)}
+  25%{transform: translate(-2%,%)}
+  37.5%{transform: translate(-1%,-1%)}
+  50%{transform: translate(0%,0%)}
+  62.5%{transform: translate(1%,1%)}
+  75%{transform: translate(2%,0%)}
+  87.5%{transform: translate(1%,-1%)}
+}
+@keyframes notcard{
+  0%{transform: translate(0%,0%)}
+  12.5%{transform: translate(-2.5%,2.5%)}
+  25%{transform: translate(-5%,0%)}
+  37.5%{transform: translate(-2.5%,-2.5%)}
+  50%{transform: translate(0%,0%)}
+  62.5%{transform: translate(2.5%,2.5%)}
+  75%{transform: translate(5%,0%)}
+  87.5%{transform: translate(2.5%,-2.5%)}
+}
+.card:hover,.card:active
+{
+  filter:invert(100%);
+}
+.logo,.name
+{
+  position: relative;
+  float:left;
+  top:0;
+  height: 100%;
+}
+.logo.instagram{background-image: url('../icons/InstagramMonoWhite.svg');}
+.logo.tiktok{background-image: url('../icons/TikTokMonoWhite.svg')}
+.logo.youtube{background-image: url('../icons/YoutubeMonoWhite.svg')}
+.logo.reddit{background-image: url('../icons/RedditMonoWhite.svg')}
+.logo
+{
+  margin-left: unset;
+  width: 80px;
+  background-repeat: no-repeat;
+  filter:invert(100%);
+  background-position: center;
+  background-size: 50%;
+}
+.name
+{
+  /*width: calc(100% - 100px);*/
+  font-family: 'Work Sans','Arial';
+  font-weight: 400;
+  font-size: 7vw;
+  color:inherit;
+  line-height: 75px;
+  text-align: left;
+  text-indent: 0px;
+}
+.logo.reddit{background-position: center 45%}
+
+@media (max-width:450px){
+  .card
+  {
+   margin:10px 20px 10px 20px;
+   width: calc(100% - 60px);
+  }
+}
+@media (max-width:211px){
+  .card
+  {
+    padding: unset;
+   margin: 10px 0 10px 0;
+   width: 80px;
+   height: 80px;
+    
+  }
+  .name
+  {
+    display: none;
+  }
+  #cards
+  {
+    left:calc(50% - 40px);
+    width: 80px;
+  }
+}
+@media (min-width:450px)
+{
+  #cards
+  {
+    left:calc(50% - 225px);
+    width: 450px;
+  }
+    .logo
+  {
+    margin-left: 65px;
+    background-size: 50%;
+  }
+  .name
+  {
+    font-size: 26px;
+    text-indent: 10px;
+  }
+
+}
+@media (min-aspect-ratio:1/1)
+{
+    #backgroundVideo
+  {
+    transform: scale(400%);
+  }
+}
+@media (prefers-color-scheme: dark) {
+  .card
+  {
+    filter:invert(100%);
+    outline: 1px solid FFF;
+  }
+  .card:hover,.card:active
+  {
+    filter:invert(0%);
+  }
+}
