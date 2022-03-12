@@ -13,7 +13,7 @@
 }
 #background
 {
-  background:url('../icons/ct/background.jpg') center no-repeat;
+  background:url('../icons/ct/backgroundStatic.jpg') center no-repeat;
   background-size:cover ;
   z-index: -2;
 }
@@ -22,7 +22,7 @@
   position: absolute;
   height: 200px;
   width: 200px;
-  background:url("../icons/ct/ctlogo.png");
+  background:url("../icons/ct/ctLogoStatic.png");
   background-size: 100%;
   background-repeat: none;
   background-position: center;
@@ -58,7 +58,7 @@
   margin:20px 40px 20px 40px;
   color:black;
   max-width: 350px;
-  animation: card 4s infinite;
+  animation: card 8s infinite;
   animation-delay: unset;
   animation-timing-function:linear;
 }
@@ -74,6 +74,7 @@
   62.5%{transform: translate(1%,1%)}
   75%{transform: translate(2%,0%)}
   87.5%{transform: translate(1%,-1%)}
+  100%{transform: translate(0%,0%)}
 }
 @keyframes notcard{
   0%{transform: translate(0%,0%)}
