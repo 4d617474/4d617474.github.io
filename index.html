@@ -15,7 +15,7 @@
     <meta name="viewport" content="widthumbnail=device-widthumbnail, initial-scale=1.0">
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Redacted&family=Work+Sans:wght@100;200;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Redacted&family=Work+Sans:wght@100;200;300;400;500&display=swap" rel="stylesheet">
 	</head>
 
 	<body>
@@ -39,13 +39,53 @@
 				<iframe id="spFrame-In" src="none"></iframe>
 		</div>
 
-		<div id="intro" onclick="toggleMenu(0);intro.style.display='none'">
+		<!-- <div id="intro" onclick="toggleMenu(0);intro.style.display='none'">
 			<img id="introPic" src="logo.jpg">
 			<video id="introVideo" src="logo.mp4" loop autoplay muted></video>
-		</div>
+		</div> -->
 		<div id="hamburger" class="menu btn themed first" onclick="toggleMenu(0)"></div>
 		<div id="back" class="menu btn themed" onclick="openFolder(null,1)"></div>
 		<div id="menuSecretExit" onclick="toggleMenu(1)"></div>
+		<div id="nav">
+			<div id="navLogo">
+						<!-- <img  id="navLogoPIC" src="icons/4dNav.svg"> -->
+						<!-- <img  id="navLogoPIC" src="icons/4dNav.png"> -->
+						<span id="navLogoPIC"></span>
+						<!-- <video id="navLogoPIC" src="logo.mp4" loop autoplay muted></video> -->
+					</div>
+					<div id="navTabs">
+						<button class="nav tabs btn" onclick="pickPage(1,this,'oddbeep')">oddbeep</button>
+						<button class="nav tabs btn" onclick="pickPage(2,this,'crustiestthoughts')">crustiest thoughts</button>
+						<button class="nav tabs btn" onclick="pickPage(3,this,'photography')">photography</button>
+						<button class="nav tabs btn" onclick="pickPage(4,this,'webdesign')">web design</button>
+						<button class="nav tabs btn" onclick="pickPage(5,this,'graphicdesign')">graphic design</button>
+						<button class="nav tabs btn" onclick="pickPage(7,this,'gif')">???</</button>
+						<button class="nav tabs btn" onclick="pickPage(6,this,'about')">contact me</button>
+						<!-- <div class="nav row btn">
+							<div id="od" class="nav block" onclick="pickPage(1,this,'oddbeep')">oddbeep</div>
+						</div>
+						<div class="nav row btn">
+							<div id="ct"  class="nav block" onclick="pickPage(2,this,'crustiestthoughts')">crustiestthoughts</div>
+						</div>
+						<div class="nav row btn">
+							<div id="ph" class="nav block" onclick="pickPage(3,this,'photography');openFolder(null,1)">photography</div>
+						</div>
+						<div class="nav row btn">
+							<div id="wd" class="nav block" onclick="pickPage(4,this,'webdesign')">web design</div>
+						</div>
+						<div class="nav row btn">
+							<div id="gd" class="nav block" onclick="pickPage(5,this,'graphicdesign')">graphic design</div>
+						</div>
+						<div class="nav row btn">
+							<div id="an" class="nav block" onclick="pickPage(7,this,'gif')">???</div>
+						</div>
+						<div class="nav row btn">
+							<div id="abt" class="nav block" onclick="pickPage(6,this,'about')">contact me</div>
+						</div> -->
+
+					</div>
+		</div>
+
 		<div id="menu" class="themed first">
 					<!-- <div id="od" class="navigation lol btn" onclick="pickPage(1,this,'oddbeep')">oddbeep</div> -->
 					<div class="navigation row btn">
@@ -83,9 +123,9 @@
 					<div id="closeMenuCover"></div>
 					<div id="closeMenu" class="navigation row close btn themed first" onclick="toggleMenu(1)"></div>
 		</div>
-		<div class="page on main">
+		<div class="page main">
 		</div>
-		<div class="page oddbeep">
+		<div class="page on oddbeep">
 			<div class="row post">
 				<div class="column post">
 					<video src="posts/ob/ob0014.mp4" class="post pic btn" disablepictureinpicture disableremoteplayback></video>
@@ -116,44 +156,60 @@
 		<div class="page crustiestthoughts">
 			<div class="row post">
 				<div class="column post left">
-					<img src="posts/ct/ctB_th.png" class="post pic btn" loading="lazy">
-					<img src="posts/ct/ctD_th.png" class="post pic btn" loading="lazy">
-					<img src="posts/ct/ct0022_th.png" class="post pic btn" loading="lazy">
+					<video src="posts/ct/ct0044.mp4" class="post pic btn" loading="lazy"></video>
+					<video src="posts/ct/ct0040.mp4" class="post pic btn" loading="lazy"></video>
+					<video src="posts/ct/ct0036.mp4" class="post pic btn" loading="lazy"></video>
+					<img src="posts/ct/ct0032_th.png" class="post pic btn" loading="lazy">
+					<img src="posts/ct/ct0028_th.png" class="post pic btn" loading="lazy">
+					<img src="posts/ct/ct0024_th.png" class="post pic btn" loading="lazy">
 					<img src="posts/ct/ct0020_th.png" class="post pic btn" loading="lazy">
-					<img src="posts/ct/ct0018_th.png" class="post pic btn" loading="lazy">
 					<img src="posts/ct/ct0016_th.png" class="post pic btn" loading="lazy">
-					<img src="posts/ct/ct0014_th.png" class="post pic btn" loading="lazy">
-					<img src="posts/ct/ct0001_th.png" class="post pic btn" loading="lazy">
-				</div>
-				<div class="column post right">
-					<img src="posts/ct/ctF_th.png" class="post pic btn" loading="lazy">
-					<img src="posts/ct/ctH_th.png" class="post pic btn" loading="lazy">
 					<img src="posts/ct/ct0012_th.png" class="post pic btn" loading="lazy">
 					<img src="posts/ct/ct0008_th.png" class="post pic btn" loading="lazy">
-					<img src="posts/ct/ct0006_th.png" class="post pic btn" loading="lazy">
 					<img src="posts/ct/ct0004_th.png" class="post pic btn" loading="lazy">
-					<img src="posts/ct/ct0002_th.png" class="post pic btn" loading="lazy">
 					<img src="posts/ct/ct0000_th.png" class="post pic btn" loading="lazy">
 				</div>
-				<div class="column post left">
-					<img src="posts/ct/ctG_th.png" class="post pic btn" loading="lazy">
-					<img src="posts/ct/ctI_th.png" class="post pic btn" loading="lazy">
+				<div class="column post right">
+					<video src="posts/ct/ct0041.mp4" class="post pic btn" loading="lazy"></video>
+					<video src="posts/ct/ct0037.mp4" class="post pic btn" loading="lazy"></video>
+					<img src="posts/ct/ct0033_th.png" class="post pic btn" loading="lazy">
+					<img src="posts/ct/ct0029_th.png" class="post pic btn" loading="lazy">
+					<img src="posts/ct/ct0025_th.png" class="post pic btn" loading="lazy">
+					<img src="posts/ct/ct00_21th.png" class="post pic btn" loading="lazy">
+					<img src="posts/ct/ct0017_th.png" class="post pic btn" loading="lazy">
 					<img src="posts/ct/ct0013_th.png" class="post pic btn" loading="lazy">
-					<img src="posts/ct/ct0011_th.png" class="post pic btn" loading="lazy">
-					<img src="posts/ct/ct0009_th.png" class="post pic btn" loading="lazy">
-					<img src="posts/ct/ct0007_th.png" class="post pic btn" loading="lazy">
-					<img src="posts/ct/ct0005_th.png" class="post pic btn" loading="lazy">
-					<img src="posts/ct/ct0003_th.png" class="post pic btn" loading="lazy">
+					<img src="posts/ct/ct009_th.png" class="post pic btn" loading="lazy">
+					<img src="posts/ct/ct005_th.png" class="post pic btn" loading="lazy">
+					<img src="posts/ct/ct0001_th.png" class="post pic btn" loading="lazy">
+
+				</div>
+				<div class="column post left">
+					<video src="posts/ct/ct0042.mp4" class="post pic btn" loading="lazy"></video>
+					<video src="posts/ct/ct0038.mp4" class="post pic btn" loading="lazy"></video>
+					<img src="posts/ct/ct0034_th.png" class="post pic btn" loading="lazy">
+					<img src="posts/ct/ct0030_th.png" class="post pic btn" loading="lazy">
+					<img src="posts/ct/ct0026_th.png" class="post pic btn" loading="lazy">
+					<img src="posts/ct/ct0022_th.png" class="post pic btn" loading="lazy">
+					<img src="posts/ct/ct0018_th.png" class="post pic btn" loading="lazy">
+					<img src="posts/ct/ct0014_th.png" class="post pic btn" loading="lazy">
+					<img src="posts/ct/ct0010_th.png" class="post pic btn" loading="lazy">
+					<img src="posts/ct/ct0006_th.png" class="post pic btn" loading="lazy">
+					<img src="posts/ct/ct0002_th.png" class="post pic btn" loading="lazy">
+
 				</div>
 				<div class="column post right">
-					<img src="posts/ct/ctA_th.png" class="post pic btn" loading="lazy">
-					<img src="posts/ct/ctC_th.png" class="post pic btn" loading="lazy">
-					<img src="posts/ct/ctE_th.png" class="post pic btn" loading="lazy">
+					<video src="posts/ct/ct0043.mp4" class="post pic btn" loading="lazy"></video>
+					<video src="posts/ct/ct0039.mp4" class="post pic btn" loading="lazy"></video>
+					<video src="posts/ct/ct0035.mp4" class="post pic btn" loading="lazy"></video>
+					<img src="posts/ct/ct0031_th.png" class="post pic btn" loading="lazy">
+					<img src="posts/ct/ct0027_th.png" class="post pic btn" loading="lazy">
 					<img src="posts/ct/ct0023_th.png" class="post pic btn" loading="lazy">
-					<img src="posts/ct/ct0021_th.png" class="post pic btn" loading="lazy">
 					<img src="posts/ct/ct0019_th.png" class="post pic btn" loading="lazy">
-					<img src="posts/ct/ct0017_th.png" class="post pic btn" loading="lazy">
 					<img src="posts/ct/ct0015_th.png" class="post pic btn" loading="lazy">
+					<img src="posts/ct/ct0011_th.png" class="post pic btn" loading="lazy">
+					<img src="posts/ct/ct007_th.png" class="post pic btn" loading="lazy">
+					<img src="posts/ct/ct0003_th.png" class="post pic btn" loading="lazy">
+
 				</div>
 			</div>
 		</div>

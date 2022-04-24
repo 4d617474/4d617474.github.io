@@ -1,7 +1,7 @@
 @media (max-width:400px){
-  .navigation.block
+  .navigation.block,.social.name.mail
   {
-    font-size: 10vw;
+    font-size: 7vw;
   }
     #intro:after
   {
@@ -398,11 +398,213 @@
 	{
 		background-position:center calc(50% - 5px) ;
   }
+  
+  
+  
+  
+  
+  #hamburger,#menu,#menuSecretExit,#back
+  {
+    display: none !important;
+  }
+  .page
+  {
+    position: absolute;
+    top:calc(80px + 40px);
+    width: calc(100% - 80px);
+    height: calc(100vh - 160px);
+    left:40px;
+    overflow-y:scroll;
+    overflow-x: hidden;
+  }
+  /*
+  .page
+  {
+    top:calc(80px + 0px);
+    width: calc(100% - 0px);
+    height: calc(100vh - 80px);
+    left:0px;
+  }
+  */
+  #nav
+  {
+    display: block;
+    position: absolute;
+    top:0;
+    left:0;
+    height: 80px;
+    width: 100%;
+    float: left;
+    outline:1px solid var(--top2Clr);
+    z-index: 100;
+  }
+  .nav.tabs
+  {
+    height: 100%;
+    width: calc(100% / 7);
+    float:left;
+    font-size: 20px;
+    font-size: 15px;
+    text-align: center;
+    border:unset;
+    font-family: inherit;
+    font-weight: inherit;
+    font-weight: 300;
+    background-color:var(--backgroundClr);
+    text-transform: uppercase;
+    color:var(--fontFaded);
+    transition: box-shadow .08s !important;
+    z-index: 3;
+  }
+  .nav.tabs:hover
+  {
+    background-position: calc(50% + 5px) center;
+    box-shadow: 0 -15px 0 15px var(--backgroundClr);
+    box-shadow: 0 -30px 0 30px var(--backgroundClr);
+    color:var(--backgroundColor);
+    z-index: 4;
+  }
+  .nav.tabs.on
+  {
+    /*
+    background-color:var(--topClr);
+    color:var(--backgroundClr);
+    */
+    border-bottom: 1px solid var(--fontFaded);
+    color:var(--backgroundColor);
+    /*
+    background: url('../icons/ng.png');
+    background: url('../icons/ngLight.png');
+    border: 10px solid white;
+    border-image: url('../icons/border.png') 50%;
+    border-image: url('../icons/borderLight.png') 50%;
+    border-spacing: 10px;
+    */
+  }
+  .nav.tabs.on:hover
+  {
+    border:none;
+    color:inherit;
+  }
+  .nav.row
+  {
+    height: 100%;
+    width: calc(100% / 7);
+    float:left;
+  }
+  .nav.block
+  {
+    line-height: 80px;
+    height: 100%;
+    width: 100%;
+    font-size: 20px;
+    text-align: center;
+  }
+  .nav.block.on
+  {
+    animation: unset !important;
+    background-color:var(--topClr);
+    color:var(--backgroundClr);
+  }
+  .nav.block.on:hover
+  {
+    filter:invert(100%);
+  }
+ #navLogo
+  {
+    position: absolute;
+    top:0;
+    left:0;
+    height: 100%;
+    filter:invert(100%);
+    width: 80px;
+    background:var(--backgroundClr);
+    z-index: 5;
+  }
+  #navLogoPIC
+  {
+    position: absolute;
+    top:0;
+    left:0;
+    height: 100%;
+    width: 100%;
+    background: var(--icon4DNav);
+  }
+  #navTabs
+  {
+    position: absolute;
+    top:0;
+    left:80px;
+    height: 100%;
+    width: calc(100% - 80px);
+  }
+  .cover.ph {
+  height: calc(100vh - 160px);
+  margin: none;
+  outline: none;
+  background-color: var(--backgroundClr);
+  margin: -.5px 0 0 0;
+}
+  .cover.ph:hover
+  {
+    outline: unset !important;
+  }
+  .post.pic:hover
+  {
+    outline:1px solid var(--topClr) !important;
+    box-shadow: unset;
+    box-shadow: 0 0px 0 30px var(--backgroundClr);
+    transform: scale(0.999) !important;
+    transform: scale(1.001) !important;
+    
+  }
+  .social.block.mail
+  {
+    width: auto;
+    padding:0 30px 0 30px;
+  }
+  .social.name.mail
+  {
+   color:var(--backgroundClr);
+   line-height: 0 !important;
+   padding-top:40px;
+  }
+  .social.name.mail:after
+  {
+    content: none;
+  }
+  .social.block
+  {
+    background:var(--topClr);
+    background:var(--topClr);
+    width: 80px;
+    height: 80px;    
+    outline: 1px solid var(--backgroundClr);
+  }
+  .social.logo
+  {
+    height: 100%;
+    background-size: 35px !important;
+  }
+  .social.block:hover
+  {
+    background:var(--backgroundColor) !important;
+    outline: none;
+  }
+  .social.logo:after
+  {
+    content: unset !important;
+  }
+  
 }
 @media (max-width:1040px){
   .post.desc
   {
     font-size: 20px;
+  }
+  .nav.block
+  {
+    font-size: 14px;
   }
 }
 @media (min-width: 1100px){
@@ -510,6 +712,12 @@
     line-height: calc((100vh / 7) - 15px);
   }
 
+  
+  
+  #menu
+  {
+    display: none !important;
+  }
 }
 body
 {

@@ -3,9 +3,11 @@
 	:root{
 	--backgroundClr: #050C0E;
 	--backgroundClr: #151515;
+	--fontFaded:#BBB;
 	--topClr:#FAF3F1;
   --top2Clr:#FAF3F130;
-
+		
+	--icon4DNav:url('../icons/4dNav.svg');
 	--iconHamb:url('../icons/hamb.svg');
 	--iconBack:url('../icons/back.svg');
 	--iconCross:url('../icons/cross.svg');
@@ -52,6 +54,13 @@
 	{
 		filter: unset;
 	}
+	.social.logo
+{
+	filter:invert(90%);
+}
+	
+	
+	
 }
 /*
 	:root{
@@ -179,6 +188,7 @@
 {
 	animation: an var(--speed3) 1 !important;
 }
+
 /*
 :root
 {

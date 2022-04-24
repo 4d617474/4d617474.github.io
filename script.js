@@ -4,10 +4,13 @@
 
 // document.getElementById("closeMenu").onclick = toggleMenu(1);
 // document.getElementById("hamburger").onclick = toggleMenu(0);
+// pickPage(1);
 var intro = document.getElementById("intro");
 var navBlocks = document.getElementsByClassName("navigation block");
+var navBlocks2 = document.getElementsByClassName("nav tabs");
 
 var isMenuOpen = 0;
+toggleMenu(1);
 function reset(){
   toggleMenu(1);
   intro.style.display='block';
@@ -52,6 +55,7 @@ function pickPage(number,elmnt,name)
   if (elmnt != null){
   for (i = 0; i < navBlocks.length; i++) {
       navBlocks[i].classList.remove("on");
+      navBlocks2[i].classList.remove("on");
     }
     elmnt.classList.add("on");
   }
@@ -61,7 +65,10 @@ function pickPage(number,elmnt,name)
 	}
   page[number].classList.add("on");
   window.scrollTo(0, 0);
-  toggleMenu(1);
+
+  if(window.innerWidth < 700){
+    toggleMenu(1);
+  }
 
   if(name == oldName){
     return;

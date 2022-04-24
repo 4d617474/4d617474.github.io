@@ -1,6 +1,7 @@
 :root{
 	--backgroundClr: #FAF3F1;
   --topClr:#111;
+	--fontFaded:#555;
   --top2Clr:#11111147;
   --hoverClr:#FAF3F1;
 	--speed0: .32s;
@@ -37,6 +38,7 @@
 	--WHAbackgroundClr: #97D69F;
 	
 	
+	--icon4DNav:url('../icons/4dNavLight.svg');
 	--iconHamb:url('../icons/hambLight.svg');
 	--iconBack:url('../icons/backLight.svg');
 	--iconCross:url('../icons/crossLight.svg');
@@ -110,6 +112,10 @@ a
 	position: absolute;
 	display: none;
 	padding-bottom:12vh;
+}
+#nav
+{
+	display: none;
 }
 
 /* STYLES */
@@ -423,9 +429,10 @@ background-color:#00000000 !important;
 {
 	text-align: center;
 	padding:0%;
-	font-size: 40px;
+	font-size: 25px;
 	line-height: 11vh;
 	letter-spacing: 1px;
+	text-transform: uppercase;
 }
 #closeMenu
 {
@@ -614,8 +621,8 @@ background-color:#00000000 !important;
 }
 .social.block.mail
 {
-	background:#48313D;
-	background:var(--MAIbackgroundClr);
+	/*background:#48313D;
+	background:var(--MAIbackgroundClr);*/
 }
 
 .social.name.mail
@@ -629,40 +636,74 @@ background-color:#00000000 !important;
 }
 .social.block.instagram
 {
+	/*
 	background:var(--INSbackgroundClr);
+	*/
 }
 .social.logo.instagram
 {
-	background:url('../icons/instagram.svg') no-repeat center;
+	background:url('../icons/InstagramMonoWhite.svg') no-repeat center;
 }
-.social.logo.instagram::after{content:'instagram';}
+/*.social.logo.instagram::after{content:'instagram';}*/
 .social.block.messenger
 {
+	/*
 	background:var(--MESbackgroundClr);
+	*/
 }
 .social.logo.messenger
 {
-	background:url('../icons/messenger.svg') no-repeat center;
+	background:url('../icons/MessengerMonoWhite.svg') no-repeat center;
 }
-.social.logo.messenger::after{content:'messenger';}
+/*.social.logo.messenger::after{content:'messenger';}*/
 .social.block.whatsapp
 {
+	/*
 	background:var(--WHAbackgroundClr);
+	*/
 }
 .social.logo.whatsapp
 {
-	background:url('../icons/whatsapp.svg') no-repeat center;
+	background:url('../icons/WhatsappMonoWhite.svg') no-repeat center;
 }
-.social.logo.whatsapp::after{content:'whatsapp';}
+/*.social.logo.whatsapp::after{content:'whatsapp';}*/
 .social.block.telegram
 {
+	/*
 	background:var(--TELbackgroundClr);
+	*/
 }
 .social.logo.telegram
 {
-	background:url('../icons/telegram.svg') no-repeat center;
+	background:url('../icons/TelegramMonoWhite.svg') no-repeat center;
 }
-.social.logo.telegram::after{content:'telegram';}
+/*.social.logo.telegram::after{content:'telegram';}*/
+  .social.block.mail
+  {
+    width: 100%;
+  }
+  .social.name.mail
+  {
+   color:var(--backgroundClr);
+   line-height: 0 !important;
+   padding-top:40px;
+  }
+  .social.name.mail:after
+  {
+    content: none;
+  }
+  .social.block
+  {
+    background:var(--topClr);
+    background:var(--topClr);
+    height: 80px;    
+    outline: 1px solid var(--backgroundClr);
+  }
+  .social.logo
+  {
+    height: 100%;
+    background-size: 35px !important;
+  }
 
 
 /* MODAL */
@@ -863,6 +904,7 @@ background-color:#00000000 !important;
 	background-color:inherit;
 	font-size: 30px;
 	z-index: 2;
+	filter:invert(100%);
 }
 
 .separator.alt
