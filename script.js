@@ -9,8 +9,12 @@ var intro = document.getElementById("intro");
 var navBlocks = document.getElementsByClassName("navigation block");
 var navBlocks2 = document.getElementsByClassName("nav tabs");
 
-var isMenuOpen = 0;
-toggleMenu(1);
+var isMenuOpen = 1;
+// toggleMenu(1);
+// pickPage(0);
+// pickPage(0,null,null);
+// pickPage(1,this,'oddbeep');
+// navBlocks2[0].click();
 function reset(){
   toggleMenu(1);
   intro.style.display='block';
