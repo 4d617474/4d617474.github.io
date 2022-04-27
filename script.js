@@ -169,6 +169,7 @@ this.onclick = function(event) {
       // pane.parentElement.nextElementSibling.firstChild.nextElementSibling.loading="none";
 
 			if (pane.nodeName == "VIDEO") {
+        modalVid.poster = pane.poster;
 				modalVid.src = pane.src;
         modalImg.classList.add("on");
         modalVid.classList.add("on");
