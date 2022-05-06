@@ -1,3 +1,7 @@
+body
+{
+  background:#000;
+}
 #backgroundVideo,#background
 {
   position: fixed;
@@ -6,16 +10,37 @@
   top: 0;
   left: 0;
   z-index: -1;
+  opacity: 1.5;
 }
 #backgroundVideo
 {
+  opacity: .2;
   transform: scale(200%);
 }
 #background
 {
-  background:url('../icons/ct/backgroundStatic.jpg') center no-repeat;
+  background:url('../icons/ct/backgroundStatic.png') center no-repeat;
   background-size:cover ;
   z-index: -2;
+  opacity: 1.5;
+}
+#content
+{
+  top:0;
+  left:0;
+  position: fixed;
+  height: 400px;
+  margin:10px;
+  width: calc(100vw - 20px);
+  background:#333;
+  background:unset;
+  border-radius: 0px;
+  /*
+  outline:2px solid #000;
+  border:2px solid #FFF;
+  */
+  box-shadow: -1px -1px 0px 1px #777, 1px 1px 0px 2px #000;
+  box-shadow: unset;
 }
 #title
 {
@@ -29,8 +54,10 @@
   left:calc(50vw - 100px);
   top:20px;
   outline:1px solid #AAA;
-  border-radius:100px;
+  outline:unset;
+  border-radius:10px;
   animation: title 4s infinite ease-in-out;
+  
 }
 @keyframes title{
   0%{margin-top:0px;}
@@ -48,32 +75,37 @@
 {
   position: relative;
   float: left;
-  height: 80px;
+  height: 100px;
   width: calc(100% - 100px);
+  width: 100px;
+  width: calc(25% - 20px);
   background:#FFF;
-  box-shadow: 0px 0px 1px #00000020;
-  outline:1px solid #00000020;
+  box-shadow: unset;
+  outline:unset;
   padding:10px;
   border-radius: 80px;
   margin:20px 40px 20px 40px;
+  margin:0;
   color:black;
   max-width: 350px;
-  animation: card 8s infinite;
+  animation: card 10s infinite;
   animation-delay: unset;
   animation-timing-function:linear;
+
+  background:#00000000;
 }
 .card.tiktok{animation-delay: 1s}
 .card.youtube{animation-delay: 2s}
 .card.reddit{animation-delay: 3s}
 @keyframes card{
   0%{transform: translate(0%,0%)}
-  12.5%{transform: translate(-1%,1%)}
-  25%{transform: translate(-2%,%)}
-  37.5%{transform: translate(-1%,-1%)}
+  12.5%{transform: translate(-2%,2%)}
+  25%{transform: translate(-4%,%)}
+  37.5%{transform: translate(-2%,-2%)}
   50%{transform: translate(0%,0%)}
-  62.5%{transform: translate(1%,1%)}
-  75%{transform: translate(2%,0%)}
-  87.5%{transform: translate(1%,-1%)}
+  62.5%{transform: translate(2%,2%)}
+  75%{transform: translate(4%,0%)}
+  87.5%{transform: translate(2%,-2%)}
   100%{transform: translate(0%,0%)}
 }
 @keyframes notcard{
@@ -88,7 +120,6 @@
 }
 .card:hover,.card:active
 {
-  filter:invert(100%);
 }
 .logo,.name
 {
@@ -101,14 +132,36 @@
 .logo.tiktok{background-image: url('../icons/TikTokMonoWhite.svg')}
 .logo.youtube{background-image: url('../icons/YoutubeMonoWhite.svg')}
 .logo.reddit{background-image: url('../icons/RedditMonoWhite.svg')}
+.logo.instagram{background-image: url('../icons/ct/instagram.png');}
+.logo.tiktok{background-image: url('../icons/ct/tiktok.png');}
+.logo.youtube{background-image: url('../icons/ct/youtube.png');}
+.logo.reddit{background-image: url('../icons/ct/reddit.png');}
+
+.logo.instagram::after{content: 'instagram';}
+.logo.tiktok::after{content: 'tiktok';}
+.logo.youtube::after{content: 'youtube';}
+.logo.reddit::after{content: 'reddit';}
+
+.logo.instagram::after,.logo.tiktok::after,.logo.youtube::after,.logo.reddit::after
+{
+  content:'';
+  position: absolute;
+  color:white;
+  text-align: center;
+  top:100%;
+  width: 100%;
+  box-shadow: none;
+  text-transform:capitalize;
+  text-shadow: 2px 2px 0 #000;
+}
+
 .logo
 {
   margin-left: unset;
-  width: 80px;
+  width: 100px;
   background-repeat: no-repeat;
-  filter:invert(100%);
   background-position: center;
-  background-size: 50%;
+  background-size: 100%;
 }
 .name
 {
@@ -123,21 +176,39 @@
 }
 .logo.reddit{background-position: center 45%}
 
-@media (max-width:450px){
+@media (max-width:449px){
   .card
   {
    margin:10px 20px 10px 20px;
+    margin:0;
    width: calc(100% - 60px);
+   width: 100px;
+   width: calc(50% - 20px);
+  }
+  .logo,.name
+  {
+    width:100%;
+  }
+  .logo
+  {
+    background-size: 100px;
   }
 }
 @media (max-width:211px){
+  #backgroundVideo
+  {
+    display: none;
+  }
   .card
   {
     padding: unset;
    margin: 10px 0 10px 0;
    width: 80px;
    height: 80px;
-    
+  }
+  .logo,.name
+  {
+    width:100%;
   }
   .name
   {
@@ -159,7 +230,8 @@
     .logo
   {
     margin-left: 65px;
-    background-size: 50%;
+    margin-left: 0px;
+    background-size: 100%;
   }
   .name
   {
@@ -178,11 +250,8 @@
 @media (prefers-color-scheme: dark) {
   .card
   {
-    filter:invert(100%);
-    outline: 1px solid FFF;
   }
   .card:hover,.card:active
   {
-    filter:invert(0%);
   }
 }
