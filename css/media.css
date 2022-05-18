@@ -127,6 +127,10 @@
     background-color:var(--backgroundClr);
     margin:0 0 0 0;
   }
+  #copyright
+  {
+    bottom:12vh;
+  }
 }
 @media (min-width: 700px){
 
@@ -261,11 +265,11 @@
 		background-position: calc(5vw - 40px) center;
   }
 
-  
+
   .page
   {
     width: 88vw;
-    left:10vw; 
+    left:10vw;
     padding:unset;
   }
   .page.on
@@ -289,7 +293,7 @@
   .modalButton
   {
     transition: all var(--speed1) !important;
-    
+
   }
   .modalButton:hover
   {
@@ -344,7 +348,7 @@
   {
   	max-width: calc(25% - 2px);
 }
-  
+
   .post.column:hover
   {
     z-index: 100;
@@ -387,7 +391,7 @@
   .social.block
   {
     height: calc(100vh / 3);
-    
+
     width: 50%;
   }
   #closeMenu
@@ -402,11 +406,11 @@
 	{
 		background-position:center calc(50% - 5px) ;
   }
-  
-  
-  
-  
-  
+
+
+
+
+
   #hamburger,#menu,#menuSecretExit,#back
   {
     display: none !important;
@@ -560,7 +564,7 @@
     box-shadow: 0 0px 0 30px var(--backgroundClr);
     transform: scale(0.999) !important;
     transform: scale(1.001) !important;
-    
+
   }
   .social.block.mail
   {
@@ -583,7 +587,7 @@
     background:var(--topClr);
     background:var(--topClr);
     width: 80px;
-    height: 80px;    
+    height: 80px;
     outline: 1px solid var(--backgroundClr);
   }
   .social.logo
@@ -613,7 +617,7 @@
  .introPIC
   {
     width: calc(50% - 40px);
-    
+
   }
   .introText
   {
@@ -658,7 +662,7 @@
   }
   #menu,#closeMenu
   {
-		width:50vw;    
+		width:50vw;
   }
   #menuSecretExit
   {
@@ -669,13 +673,13 @@
     background-color:#000000;
     opacity:0% !important;
     z-index: 99;
-    
+
   }
   #menu.first,#closeMenu.first
   {
     width: 100vw !important;
     text-align:center;
-  
+
   }
   .navigation.block
   {
@@ -716,7 +720,7 @@
   {
     height: calc((100% / 7) - 1px);
   }
-  
+
   #menu
   {
     height: 100vh;
@@ -736,8 +740,8 @@
     line-height: calc((100vh / 7) - 15px);
   }
 
-  
-  
+
+
   #menu
   {
     display: none !important;

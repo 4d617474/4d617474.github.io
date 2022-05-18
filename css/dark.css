@@ -6,7 +6,7 @@
 	--fontFaded:#BBB;
 	--topClr:#FAF3F1;
   --top2Clr:#FAF3F130;
-		
+
 	--icon4DNav:url('../icons/4dNav.svg');
 	--iconHamb:url('../icons/hamb.svg');
 	--iconBack:url('../icons/back.svg');
@@ -28,7 +28,7 @@
 	--MUbackgroundClr: #1F323E;
 	--ABbackgroundClr: #2D2428;
 	--GDbackgroundClr: #222433;
-		
+
 	--FIbackgroundClr: #151515;
 	--OBbackgroundClr: #151515;
 	--CTbackgroundClr: #151515;
@@ -36,19 +36,19 @@
 	--WDbackgroundClr: #151515;
 	--MUbackgroundClr: #151515;
 	--ABbackgroundClr: #151515;
-	--GDbackgroundClr: #151515;	
-		
+	--GDbackgroundClr: #151515;
+
 	--MAIbackgroundClr: #48313D;
 	--INSbackgroundClr: #34292B;
 	--MESbackgroundClr: #38313D;
 	--TELbackgroundClr: #272B2E;
 	--WHAbackgroundClr: #202A21;
-	
+
 }
 #intro
 	{
 		background-color: #151515 !important;
-		
+
 	}
 #introVideo,#introPic
 	{
@@ -58,9 +58,9 @@
 {
 	filter:invert(90%);
 }
-	
-	
-	
+
+
+
 }
 /*
 	:root{
@@ -75,7 +75,7 @@
 	--MUbackgroundClr: #101010;
 	--ABbackgroundClr: #101010;
 	--GDbackgroundClr: #101010;
-	
+
 }*/
 
 /*
@@ -218,7 +218,7 @@
 #menu
 {
 	box-shadow: var(--shadow-elevation-high);
-	
+
 }
 
 /*
