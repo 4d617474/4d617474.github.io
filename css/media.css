@@ -127,13 +127,24 @@
     background-color:var(--backgroundClr);
     margin:0 0 0 0;
   }
+  .copyright
+  {
+    display:block;
+  }
   #copyright
   {
-    bottom:12vh;
+    display:none;
   }
 }
 @media (min-width: 700px){
-
+  .copyright
+  {
+    display:none;
+  }
+  #copyright
+  {
+    display:block;
+  }
     .btn
   {
     transition: unset !important;
@@ -528,6 +539,7 @@
     width: 80px;
     background:var(--backgroundClr);
     z-index: 5;
+    cursor:pointer;
   }
   #navLogoPIC
   {

@@ -125,6 +125,17 @@ a
 	z-index:1;
 	font-weight:300;
 }
+.copyright
+{
+	position: relative;
+	font-size:15px;
+	color:var(--fontFaded);
+	height: 30px;
+	padding:10px;
+	width: 100%;
+	text-align:center;
+	font-weight:300;
+}
 .btn
 {
 	cursor: pointer;
@@ -137,7 +148,6 @@ a
 	position: absolute;
 	display: none;
 	padding-bottom:12vh;
-	padding-bottom:calc(12vh + 50px);
 }
 #nav
 {
