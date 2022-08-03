@@ -605,7 +605,7 @@ background-color:#00000000 !important;
 }*/
 .desc
 {
-	color:var(--fontFaded);
+	/*! color:var(--fontFaded); */
 	font-size: 20px;
 }
 
@@ -1059,6 +1059,8 @@ background-color:#00000000 !important;
 	background-size:cover;
 	background-repeat: no-repeat;
 	z-index: 1;
+	transition: all var(--speed1);
+	transition-timing-function:ease  !important;
 }
 .post.desc
 {

@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Modak&family=Montserrat:wght@400&display=swap');
 body
 {
   background:#000;
@@ -88,7 +89,7 @@ body
   margin:0;
   color:black;
   max-width: 350px;
-  animation: card 10s infinite;
+  animation: card 4s infinite;
   animation-delay: unset;
   animation-timing-function:linear;
 
@@ -98,15 +99,15 @@ body
 .card.youtube{animation-delay: 2s}
 .card.reddit{animation-delay: 3s}
 @keyframes card{
-  0%{transform: translate(0%,0%)}
-  12.5%{transform: translate(-2%,2%)}
-  25%{transform: translate(-4%,%)}
-  37.5%{transform: translate(-2%,-2%)}
-  50%{transform: translate(0%,0%)}
-  62.5%{transform: translate(2%,2%)}
-  75%{transform: translate(4%,0%)}
-  87.5%{transform: translate(2%,-2%)}
-  100%{transform: translate(0%,0%)}
+  0%{transform: translate(0%,0%) rotate(0deg)}
+  12.5%{transform: translate(-2%,2%) rotate(2deg)}
+  25%{transform: translate(-4%,%) rotate(4deg)}
+  37.5%{transform: translate(-2%,-2%) rotate(2deg)}
+  50%{transform: translate(0%,0%) rotate(0deg)}
+  62.5%{transform: translate(2%,2%) rotate(-2deg)}
+  75%{transform: translate(4%,0%) rotate(-4deg)}
+  87.5%{transform: translate(2%,-2%) rotate(-2deg)}
+  100%{transform: translate(0%,0%) rotate(0deg)}
 }
 @keyframes notcard{
   0%{transform: translate(0%,0%)}
@@ -137,24 +138,33 @@ body
 .logo.youtube{background-image: url('../icons/ct/youtube.png');}
 .logo.reddit{background-image: url('../icons/ct/reddit.png');}
 
-.logo.instagram::after{content: 'instagram';}
-.logo.tiktok::after{content: 'tiktok';}
-.logo.youtube::after{content: 'youtube';}
-.logo.reddit::after{content: 'reddit';}
+.logo.instagram::after{content: 'instagram';color:#FFDEBB;}
+.logo.tiktok::after{content: 'tiktok';color:#9BFFFA;}
+.logo.youtube::after{content: 'youtube';color:#FFB1CB;}
+.logo.reddit::after{content: 'reddit';color:#FFAC97;}
 
 .logo.instagram::after,.logo.tiktok::after,.logo.youtube::after,.logo.reddit::after
 {
-  content:'';
+  content:none;
   position: absolute;
-  color:white;
   text-align: center;
+  margin-left:-1px;
   top:100%;
   width: 100%;
   box-shadow: none;
-  text-transform:capitalize;
+  text-transform:unset;
   text-shadow: 2px 2px 0 #000;
+  font-family: 'Montserrat';
+  text-shadow: unset;
 }
-
+.logo.instagram::after,.logo.tiktok::after,.logo.youtube::after,.logo.reddit::after,.logo
+{
+  border:1px dashed #CCC;
+  border:unset;
+  border-radius:2px;
+  background:#ffffff57;
+  background:unset;
+}
 .logo
 {
   margin-left: unset;
@@ -165,6 +175,7 @@ body
 }
 .name
 {
+  display: none;
   /*width: calc(100% - 100px);*/
   font-family: 'Work Sans','Arial';
   font-weight: 400;
