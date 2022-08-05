@@ -87,21 +87,9 @@ function pickPage(number,elmnt,name)
     themed[i].classList.remove(oldName);
     themed[i].classList.add(name);
   }
-  // document.getElementById("menu").classList.add(name);
-  // document.getElementById("menu").classList.remove(oldName);
-  // document.getElementById("menu").classList.add(name);
-  // document.getElementById("menu").classList.remove(oldName);
-  // document.getElementById("back").classList.add(name);
-  // document.getElementById("back").classList.remove(oldName);
-  // document.getElementById("hamburger").classList.add(name);
-  // document.getElementById("hamburger").classList.remove(oldName);
-  // document.getElementById("closeMenu").classList.add(name);
-  // document.getElementById("closeMenu").classList.remove(oldName);
   document.body.classList.add(name);
   document.body.classList.remove(oldName);
 
-  // document.getElementById("body").classList.add(name);
-  // document.getElementById("body").classList.remove(oldName);
   oldName = name;
   page[number].classList.add(name);
 
