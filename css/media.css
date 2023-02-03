@@ -446,9 +446,9 @@
     padding-top:var(--navHeight);
     position: absolute;
     top:calc(80px + 0px);
-    top:0;
+    top:0px;
     width: calc(100% - 0px);
-    height: calc(100vh - 40px);
+    height: calc(100vh - var(--navHeight));
     left:0px;
     overflow-y:scroll;
     overflow-x: hidden;
