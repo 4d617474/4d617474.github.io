@@ -1,17 +1,22 @@
 :root{
-	--backgroundClr: #FAF3F1;
-  --topClr:#111;
-	--fontFaded:#555;
-  --top2Clr:#11111147;
-  --hoverClr:#FAF3F1;
+
 	--speed0: .32s;
 	--speed1: .18s;
 	--speed2: .06s;
 	--speed3: .5s;
 
+	--backgroundClr: #FAF3F1;
+  --topClr:#111;
+	--fontFaded:#333;
+  --top2Clr:#11111147;
+  --hoverClr:#FAF3F1;
+	
 	--white:#FAF3F1;
 	--black:#050C0E;
-
+	--navColor:#FAF3F1AF;
+	
+	--margin1: 0px;
+	--navHeight:80px;
 
 	--FIbackgroundClr: #FD5555;
 	--OBbackgroundClr: #E66E6E;
@@ -118,12 +123,15 @@ a
 	position: fixed;
 	font-size:15px;
 	color:var(--fontFaded);
-	height: 30px;
-	width: 100%;
+	width:fit-content;
 	bottom:0;
+	right:0;
 	text-align:center;
 	z-index:1;
 	font-weight:300;
+	padding:20px;
+	background: var(--backgroundClr);
+	z-index: 105;
 }
 .copyright
 {
@@ -496,6 +504,7 @@ background-color:#00000000 !important;
 	height: 300px;
 	width: 100%;
 	display: inline-block;
+	/*! margin-top:var(--navHeight); */
 }
 .introTXT,.introPIC
 {
@@ -1071,6 +1080,10 @@ background-color:#00000000 !important;
 	font-size: 30px;
 	z-index: 2;
 	font-weight: 300;
+	/*
+	background-color:#00000080;
+	backdrop-filter: blur(25px) saturate(150%);
+	*/
 }
 
 .separator.alt

@@ -138,6 +138,7 @@
   }
 }
 @media (min-width: 700px){
+  
   .copyright
   {
     display:none;
@@ -261,6 +262,7 @@
   {
     width: 10vw;
     height: 50vh;
+    height: calc(100vh - var(--navHeight));
     top:unset;
     bottom:0vh;
     left:0;
@@ -329,7 +331,11 @@
     top:12vh;
     height: 78vh;
   }
-  .cover.ph:hover
+  .post.row
+  {
+   	/*! margin-top:var(--navHeight); */
+  } 
+   .cover.ph:hover
   {
     background-color:var(--topClr) !important;
     color:var(--backgroundClr) !important;
@@ -437,11 +443,13 @@
   }
   .page
   {
+    padding-top:var(--navHeight);
     position: absolute;
-    top:calc(80px + 40px);
-    width: calc(100% - 80px);
-    height: calc(100vh - 160px);
-    left:40px;
+    top:calc(80px + 0px);
+    top:0;
+    width: calc(100% - 0px);
+    height: calc(100vh - 40px);
+    left:0px;
     overflow-y:scroll;
     overflow-x: hidden;
     
@@ -455,8 +463,8 @@
   } 
   .folder.ph.on
   {
-    width: calc(100% + 40px - 10vw);
-    margin-left:calc(10vw - 40px);
+    width: calc(100% + var(--margin1) - 10vw);
+    margin-left:calc(10vw - var(--margin1));
   }
   /*
   .page
@@ -477,7 +485,7 @@
     width: 100%;
     float: left;
     outline:1px solid var(--top2Clr);
-    z-index: 100;
+    z-index: 105;
   }
   .nav.tabs
   {
@@ -492,6 +500,7 @@
     font-weight: inherit;
     font-weight: 300;
     background-color:var(--backgroundClr);
+    background-color:#15151520;
     text-transform: uppercase;
     color:var(--fontFaded);
     transition: box-shadow .08s !important;
@@ -511,8 +520,7 @@
     background-color:var(--topClr);
     color:var(--backgroundClr);
     */
-    border-bottom: 1px solid var(--fontFaded);
-    color:var(--backgroundColor);
+
     /*
     background: url('../icons/ng.png');
     background: url('../icons/ngLight.png');
@@ -521,6 +529,8 @@
     border-image: url('../icons/borderLight.png') 50%;
     border-spacing: 10px;
     */
+    border-bottom: 1px solid var(--fontFaded);
+    color:var(--backgroundColor);
   }
   .nav.tabs.on:hover
   {
@@ -574,11 +584,13 @@
   }
   #navTabs
   {
+    background-color:var(--navColor);
     position: absolute;
     top:0;
     left:80px;
     height: 100%;
     width: calc(100% - 80px);
+    backdrop-filter: blur(25px) saturate(150%);
   }
   .cover.ph {
   height: calc(100vh - 160px);
@@ -594,11 +606,14 @@
   .post.pic:hover
   {
     outline:1px solid var(--topClr) !important;
+    outline:1px solid var(--topClr) !important;
     box-shadow: unset;
     box-shadow: 0 0px 0 30px var(--backgroundClr);
+    box-shadow: 0 0 25px 10px #00000065;
     transform: scale(0.999) !important;
-    transform: scale(1.001) !important;
-
+    transform: scale(1.021) !important;
+    border-radius:2px; 
+    filter:saturate(120%) brightness(110%);
   }
   .social.block.mail
   {

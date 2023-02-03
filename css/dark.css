@@ -3,6 +3,8 @@
 	:root{
 	--backgroundClr: #050C0E;
 	--backgroundClr: #151515;
+		
+	--navColor:#151515AF;
 	--fontFaded:#BBB;
 	--topClr:#FAF3F1;
   --top2Clr:#FAF3F130;
@@ -90,11 +92,13 @@
 {
 	display:flex;
 	margin: 1px !important;
+	margin: 0px !important;
 	outline: 0px solid white !important;
 }
 	.post.column
 {
 	padding: .5px;
+	padding: 0px;
 }
 
 
