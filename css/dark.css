@@ -1,6 +1,11 @@
 @media (prefers-color-scheme: dark) {
 
 	:root{
+	--black:#FAF3F1;
+	--gray:#151515;
+	--white:#050C0E;
+  --whiteGlass:#050C0EB1;
+
 	--backgroundClr: #050C0E;
 	--backgroundClr: #151515;
 		
@@ -49,7 +54,7 @@
 }
 #intro
 	{
-		background-color: #151515 !important;
+		background-color: var(--white) !important;
 
 	}
 #introVideo,#introPic

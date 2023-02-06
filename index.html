@@ -25,14 +25,25 @@
 			<div id="tst"></div>
 			<div id="modalBtnsA" class="themed">
 
-				<div class="modalButton btn" id="previous"></div>
-				<div class="modalButton btn" id="exit"></div>
-				<div class="modalButton btn" id="next"></div>
+				<div class="modalButton btn" id="previous">
+					<span id="previousIcon" class="icons"></span>
+				</div>
+				<div class="modalButton btn" id="exit">
+					<span id="exitIcon" class="icons"></span>
+				</div>
+				<div class="modalButton btn" id="next">
+					<span id="nextIcon" class="icons"></span>
+				</div>
 			</div>
 			<div id="modalBtnsB" class="themed">
-				<div class="modalButton btn" id="reload"></div>
-				<div class="modalButton btn" id="mute"></div>
-				<div class="modalButton btn" id="source"></div>
+				<div class="modalButton btn" id="reload">
+					<span id="reloadIcon" class="icons"></span>
+				</div>
+				<div class="modalButton btn" id="mute">
+					<span id="muteIcon" class="icons"></span>
+				</div>
+				<div class="modalButton btn" id="source">
+				</div>
 			</div>
 			<div class="modal-content" id="img00" style="background-image:none;">
 				<video class="modal-content" id="vid00" loop></video>
@@ -44,8 +55,15 @@
 			<img id="introPic" src="logo.jpg">
 			<video id="introVideo" src="logo.mp4" loop autoplay muted></video>
 		</div> -->
-		<div id="hamburger" class="menu btn themed first" onclick="toggleMenu(0)"></div>
-		<div id="back" class="menu btn themed" onclick="openFolder(null,1)"></div>
+		<div id="navMobile">
+			<div id="navLogoMobile" onclick="pickPage(0,null,' ')">
+				<span id="navLogoPICMobile"></span>
+			</div>
+			<div id="navTitle" class="themed first"></div>
+			<div id="hamburger" class="menu btn themed first" onclick="toggleMenu(0)"></div>
+
+		</div>
+		<div id="back" class="menu btn themed" onclick="pickPage(3,3,'/photography');"></div>
 		<div id="menuSecretExit" onclick="toggleMenu(1)"></div>
 		<div id="nav">
 					<div id="navLogo" onclick="pickPage(0,this,null)">
@@ -55,13 +73,13 @@
 						<!-- <video id="navLogoPIC" src="logo.mp4" loop autoplay muted></video> -->
 					</div>
 					<div id="navTabs">
-						<button class="nav tabs btn" onclick="pickPage(1,this,'oddbeep')">oddbeep</button>
-						<button class="nav tabs btn" onclick="pickPage(2,this,'crustiestthoughts')">crustiest thoughts</button>
-						<button class="nav tabs btn" onclick="pickPage(3,this,'photography')">photography</button>
-						<button class="nav tabs btn" onclick="pickPage(4,this,'webdesign')">web design</button>
-						<button class="nav tabs btn" onclick="pickPage(5,this,'graphicdesign')">graphic design</button>
-						<button class="nav tabs btn" onclick="pickPage(7,this,'gif')">???</</button>
-						<button class="nav tabs btn" onclick="pickPage(6,this,'about')">contact me</button>
+						<button class="nav tabs btn" onclick="pickPage(1,this,'/oddbeep')">oddbeep</button>
+						<button class="nav tabs btn" onclick="pickPage(2,this,'/crustiest_thoughts')">crustiest thoughts</button>
+						<button class="nav tabs btn" onclick="pickPage(3,this,'/photography')">photography</button>
+						<button class="nav tabs btn" onclick="pickPage(4,this,'/web_design')">web design</button>
+						<button class="nav tabs btn" onclick="pickPage(5,this,'/graphic_design')">graphic design</button>
+						<button class="nav tabs btn" onclick="pickPage(7,this,'/???')">???</</button>
+						<button class="nav tabs btn" onclick="pickPage(6,this,'/contact_me')">contact me</button>
 						<!-- <div class="nav row btn">
 							<div id="od" class="nav block" onclick="pickPage(1,this,'oddbeep')">oddbeep</div>
 						</div>
@@ -87,46 +105,46 @@
 					</div>
 		</div>
 
-		<div id="menu" class="themed on first">
+		<div id="menu" class="themed first">
 					<!-- <div id="od" class="navigation lol btn" onclick="pickPage(1,this,'oddbeep')">oddbeep</div> -->
 					<div class="navigation row btn">
-						<div id="od" class="navigation block" onclick="pickPage(1,this,'oddbeep')">oddbeep</div>
+						<div id="od" class="navigation block" onclick="pickPage(1,this,'/oddbeep')">oddbeep</div>
 					</div>
 					<div class="separator"></div>
 					<div class="navigation row btn">
-						<div id="ct"  class="navigation block" onclick="pickPage(2,this,'crustiestthoughts')">crustiestthoughts</div>
+						<div id="ct"  class="navigation block" onclick="pickPage(2,this,'/crustiest_thoughts')">crustiest_thoughts</div>
 					</div>
 					<div class="separator"></div>
 					<div class="navigation row btn">
-						<div id="ph" class="navigation block" onclick="pickPage(3,this,'photography');openFolder(null,1)">photography</div>
+						<div id="ph" class="navigation block" onclick="pickPage(3,this,'/photography')">photography</div>
 					</div>
 					<div class="separator"></div>
 					<div class="navigation row btn">
-						<div id="wd" class="navigation block" onclick="pickPage(4,this,'webdesign')">web design</div>
+						<div id="wd" class="navigation block" onclick="pickPage(4,this,'/web_design')">web_design</div>
 					</div>
 					<div class="separator"></div>
 					<div class="navigation row btn">
-						<div id="gd" class="navigation block" onclick="pickPage(5,this,'graphicdesign')">graphic design</div>
+						<div id="gd" class="navigation block" onclick="pickPage(5,this,'/graphic_design')">graphic_design</div>
 					</div>
 					<div class="separator"></div>
 					<div class="navigation row btn">
-						<div id="abt" class="navigation block" onclick="pickPage(6,this,'about')">contact me</div>
+						<div id="abt" class="navigation block" onclick="pickPage(6,this,'/contact_me')">contact_me</div>
 					</div>
 					<div class="separator"></div>
 					<div class="navigation row btn">
-						<div id="an" class="navigation block" onclick="pickPage(7,this,'gif')">???</div>
+						<div id="an" class="navigation block" onclick="pickPage(7,this,'/???')">???</div>
 					</div>
 					<div class="separator"></div>
 					<!-- <div class="navigation row btn">
 						<div id="mu" class="navigation block" onclick="pickPage(8,this,'music')">music</div>
 					</div> -->
 					<div class="separator"></div>
-					<div id="closeMenuCover"></div>
-					<div id="closeMenu" class="navigation row close btn themed first" onclick="toggleMenu(1)"></div>
+					<!-- <div id="closeMenuCover"></div> -->
+					<!-- <div id="closeMenu" class="navigation row close btn themed first" onclick="toggleMenu(1)"></div> -->
 		</div>
 		<div class="page on main">
-			<span id="intro">
-				<div class="introPIC">
+			<div id="intro">
+				<!-- <div class="introPIC">
 					<div style="background-image:url('posts/ct/ct0021_th.png')" class="introPics" loading="lazy"></div>
 					<div style="background-image:url('posts/ph/nat/nat0010_th.jpg')" class="introPics" loading="lazy"></div>
 					<div style="background-image:url('posts/ob/ob0014_th.jpg')" class="introPics" loading="lazy"></div>
@@ -150,11 +168,17 @@
 					<div style="background-image:url('posts/ph/ani/ani0007_th.jpg')" class="introPics" loading="lazy"></div>
 					<div style="background-image:url('posts/ph/arc/arc0014_th.jpg')" class="introPics" loading="lazy"></div>
 
-				</div>
-				<span class="introText">
-					<p class="introTXT title">Hi! I'm </p><p class="glitched4D"></p>
+				</div> -->
+				<div class="introText">
+					<!-- <p class="introTXT title">Hi! I'm </p><p class="glitched4D"></p> -->
+					<p class="introTXT title">hi, I'm matt</p>
+					<div class="introTXT undertitleBox">
+						<div class="introTXT undertitleBoxA"></div>
+						<div class="introTXT undertitle">designer of all things</div>
+						<div class="introTXT undertitleBoxB"></div>
+					</div>
 					<!-- <p class="introTXT title">, aspiring do-it-all</p> -->
-					<p class="introTXT desc">
+					<!-- <p class="introTXT desc">
 						Having an growing interrest in digital arts as a child,
 					 it quickly became a passion which drove me towards everything I love and do today.
 					 <br>
@@ -163,9 +187,66 @@
 						<br>
 						<br>
 						You will find a part of my work here, so take a look around.
-					</p>
-				</span>
-			</span>
+					</p> -->
+				</div>
+				<div class="introText desc">
+					<!-- <p class="introTXT title">Hi! I'm </p><p class="glitched4D"></p> -->
+					<!-- <p class="introTXT desc title">take a look</p> -->
+					<div class="introTXT desc undertitleBox">
+						<div class="introTXT desc undertitleBoxA"></div>
+						<div class="introTXT desc undertitle">Using different skills to achieve anything</div>
+						<div class="introTXT desc undertitleBoxB"></div>
+					</div>
+				</div>
+
+				<div class="categories" onclick="pickPage(1,null,'/oddbeep',1)">
+					<img src="posts/ob/ob0011_th.jpg" class="category pics" loading="lazy">
+					<div class="category titlebox">
+						<div class="category titles">oddbeep</div>
+						<!-- <div class="category arrows">>>></div> -->
+					</div>
+					<div class="category descs">experimental & mystical</div>
+				</div>
+
+				<div class="categories" onclick="pickPage(2,null,'/crustiest_thoughts',1)">
+					<img src="posts/ct/ct0029_th.png" class="category pics" loading="lazy">
+					<div class="category titlebox">
+						<div class="category titles">crustiest_thoughts</div>
+					</div>
+					<div class="category descs">I definitely left he oven on</div>
+				</div>
+
+				<div class="categories" onclick="pickPage(3,null,'/photography',1)">
+					<img src="posts/ph/nat/nat0013_th.jpg" class="category pics" loading="lazy">
+					<div class="category titlebox">
+						<div class="category titles">photography</div>
+					</div>
+					<div class="category descs">discovering & framing beauty</div>
+				</div>
+
+				<div class="categories" onclick="pickPage(4,null,'/web_design',1)">
+					<img src="posts/wd/newmay_th.png" class="category pics" loading="lazy">
+					<div class="category titlebox">
+						<div class="category titles">web_design</div>
+					</div>
+					<div class="category descs">clean & efficient way to share</div>
+				</div>
+
+				<div class="categories" onclick="pickPage(5,null,'/graphic_design',1)">
+					<img src="posts/gd/gd0000_th.png" class="category pics" loading="lazy">
+					<div class="category titlebox">
+						<div class="category titles">graphic_design</div>
+					</div>
+					<div class="category descs">imagining a new front</div>
+				</div>
+
+				<!-- <div class="categories" onclick="pickPage(6,null,'/contact_me',1)">
+					<div class="category titlebox">
+						<div class="category titles">contact me</div>
+					</div>
+				</div> -->
+
+			</div>
 		</div>
 		<div class="page oddbeep">
 			<div class="row post">
@@ -263,9 +344,9 @@
 		<div class="page photography">
 			<div class="folders on">
 				<div class="row post ">
-					<div class="column post ">
+					<div class="column post ph">
 
-						<div class="cover ph btn" onclick="openFolder(0)">
+						<div class="cover ph btn" onclick="openFolder(0,null,'/ph/animals')">
 							<div class="coverpicture" loading="lazy" style="background-image:url('posts/ph/ani.jpg')"></div>
 							<div class="post desc">Animals</div>
 						</div>
@@ -274,32 +355,43 @@
 
 
 
-					<div class="column post ">
+					<div class="column post ph">
 
-						<div class="cover ph btn" onclick="openFolder(1)">
+						<div class="cover ph btn" onclick="openFolder(1,null,'/ph/architcture')">
 							<div class="coverpicture" loading="lazy" style="background-image:url('posts/ph/arc.jpg')"></div>
 							<div class="post desc">Architecture</div>
 						</div>
 
 					</div>
 
-					<div class="column post ">
+					<div class="column post ph">
 
-						<div class="cover ph btn" onclick="openFolder(2)">
+						<div class="cover ph btn" onclick="openFolder(2,null,'/ph/world')">
 							<div class="coverpicture" loading="lazy" style="background-image:url('posts/ph/wor.jpg')"></div>
 							<div class="post desc">World</div>
 						</div>
 
 					</div>
 
-					<div class="column post ">
+					<div class="column post ph">
 
-						<div class="cover ph btn" onclick="openFolder(3)">
+						<div class="cover ph btn" onclick="openFolder(3,null,'/ph/nature')">
 							<div class="coverpicture" loading="lazy" style="background-image:url('posts/ph/nat.jpg')"></div>
 							<div class="post desc">Nature</div>
 						</div>
 
 					</div>
+
+
+					<div class="column post ph">
+
+						<div class="cover ph btn" onclick="openFolder(4,null,'/ph/events')">
+							<div class="coverpicture" loading="lazy" style="background-image:url('posts/ph/pep.jpg')"></div>
+							<div class="post desc">Events</div>
+						</div>
+
+					</div>
+
 				</div>
 
 			</div>
@@ -425,6 +517,36 @@
 				<span class="copyright">© COPYRIGHT 4D617474 2023</span>
 			</div>
 
+			<div class="folder ph">
+				<div class="row post">
+					<div class="column post">
+						<!-- <img src="posts/ph/pep/pep0012_th.jpg" class="post pic btn" loading="lazy"> -->
+						<!-- <img src="posts/ph/pep/pep0008_th.jpg" class="post pic btn" loading="lazy"> -->
+						<!-- <img src="posts/ph/pep/pep0004_th.jpg" class="post pic btn" loading="lazy"> -->
+						<!-- <img src="posts/ph/pep/pep0000_th.jpg" class="post pic btn" loading="lazy"> -->
+					</div>
+					<div class="column post">
+						<!-- <img src="posts/ph/pep/pep0013_th.jpg" class="post pic btn" loading="lazy"> -->
+						<!-- <img src="posts/ph/pep/pep0009_th.jpg" class="post pic btn" loading="lazy"> -->
+						<!-- <img src="posts/ph/pep/pep0005_th.jpg" class="post pic btn" loading="lazy"> -->
+						<!-- <img src="posts/ph/pep/pep0001_th.jpg" class="post pic btn" loading="lazy"> -->
+					</div>
+					<div class="column post">
+						<!-- <img src="posts/ph/pep/pep0014_th.jpg" class="post pic btn" loading="lazy"> -->
+						<!-- <img src="posts/ph/pep/pep0010_th.jpg" class="post pic btn" loading="lazy"> -->
+						<!-- <img src="posts/ph/pep/pep0006_th.jpg" class="post pic btn" loading="lazy"> -->
+						<!-- <img src="posts/ph/pep/pep0002_th.jpg" class="post pic btn" loading="lazy"> -->
+					</div>
+					<div class="column post">
+						<!-- <img src="posts/ph/pep/pep0015_th.jpg" class="post pic btn" loading="lazy"> -->
+						<!-- <img src="posts/ph/pep/pep0011_th.jpg" class="post pic btn" loading="lazy"> -->
+						<!-- <img src="posts/ph/pep/pep0007_th.jpg" class="post pic btn" loading="lazy"> -->
+						<!-- <img src="posts/ph/pep/pep0003_th.jpg" class="post pic btn" loading="lazy"> -->
+					</div>
+				</div>
+				<span class="copyright">© COPYRIGHT 4D617474 2023</span>
+			</div>
+
 		</div>
 
 		<div class="page webdesign"><!-- 4 -->
@@ -481,22 +603,22 @@
 			</div>
 			<a href="https://www.instagram.com/4d617474/">
 			<div class="social block instagram btn">
-				<div class="social logo instagram"></div>
+				<div class="social logo instagram icons"></div>
 			</div>
 			</a>
 			<a href="">
 			<div class="social block messenger btn">
-				<div class="social logo messenger"></div>
+				<div class="social logo messenger icons"></div>
 			</div>
 			</a>
 			<a href="https://telegram.me/me4d74">
 			<div class="social block telegram btn">
-				<div class="social logo telegram"></div>
+				<div class="social logo telegram icons"></div>
 			</div>
 			</a>
 			<a href="https://wa.me/message/VPZJRAFY2A6HC1">
 			<div class="social block whatsapp btn">
-				<div class="social logo whatsapp"></div>
+				<div class="social logo whatsapp icons"></div>
 			</div>
 		</a>
 

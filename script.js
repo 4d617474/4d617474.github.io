@@ -9,7 +9,7 @@ var intro = document.getElementById("intro");
 var navBlocks = document.getElementsByClassName("navigation block");
 var navBlocks2 = document.getElementsByClassName("nav tabs");
 
-var isMenuOpen = 1;
+var isMenuOpen = 0;
 // toggleMenu(1);
 // pickPage(0);
 // pickPage(0,null,null);
@@ -26,6 +26,18 @@ function toggleMenu(state) {
   var menu = document.getElementById("menu");
   var hamburger = document.getElementById("hamburger");
   // if(state == 1){isMenuOpen = 1}
+  // if(state == 3) {
+  //   //close
+  //   menuSE.classList.remove("on");
+  //   menu.classList.remove("on");
+  //   hamburger.classList.remove("active");
+  //   for (i = 0; i < navBlocks.length; i++) {
+  //       navBlocks[i].classList.remove("on");
+  //   }
+  //   isMenuOpen = 0;
+  //   return;
+  // }
+
   if(isMenuOpen == 0) {
     //open
     menuSE.classList.add("on");
@@ -48,14 +60,15 @@ function toggleMenu(state) {
   }
 }
 var oldName = 'first';
-function pickPage(number,elmnt,name)
+function pickPage(number,elmnt,name,skip)
 {
+  window.scrollTo(1, 0);
   // checkY();
-  openFolder(null,1)
+  openFolder(null,1);
   var page = document.getElementsByClassName("page");
   var modals = document.getElementsByClassName("modalButton");
 
-
+  document.getElementById("navTitle").innerHTML=name;
   if (elmnt != null){
   for (i = 0; i < navBlocks.length; i++) {
       navBlocks[i].classList.remove("on");
@@ -68,10 +81,15 @@ function pickPage(number,elmnt,name)
 		page[i].classList.remove("on");
 	}
   page[number].classList.add("on");
-  window.scrollTo(0, 0);
+  // window.scrollTo(0, 0);
 
-  if(window.innerWidth < 700){
-    toggleMenu(1);
+  if(skip != 1){
+    if(window.innerWidth < 700){
+      if(number != 0 || number == 0 && isMenuOpen == 1) {
+        // console.log('e');
+        toggleMenu(1);
+      }
+    }
   }
 
   if(name == oldName){
@@ -92,14 +110,13 @@ function pickPage(number,elmnt,name)
 
   oldName = name;
   page[number].classList.add(name);
-
 }
-
-function openFolder(no,state){
+function openFolder(no,state,name){
   folder = document.getElementsByClassName("folder");
   folderS = document.getElementsByClassName("folders");
   hamburger = document.getElementById("hamburger");
   back = document.getElementById("back");
+  document.getElementById("navTitle").innerHTML=name;
   if(state == 1){
     // folderS[0].style.display = "block";
     folderS[0].classList.add("on");
@@ -120,6 +137,7 @@ function openFolder(no,state){
       folder[no].classList.add("on");
     // folder[no].style.display = "block";
   }
+  // pickPage(3,null,name);
 }
 
 
