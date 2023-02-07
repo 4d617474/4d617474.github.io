@@ -475,7 +475,7 @@ background-color:#00000000 !important;
 }
 #back
 {
-	background: var(--iconBack) var(--backgroundClr) no-repeat;
+	background: var(--iconBack) var(--gray) no-repeat;
 	/*! display: none; */
 	width: 0vw;
 	left:-1px;
