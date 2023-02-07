@@ -14,7 +14,7 @@
 	--topClr:#FAF3F1;
   --top2Clr:#FAF3F130;
 
-	--icon4DNav:url('../icons/4dNav.svg');
+	--icon4DNav:url('../icons/4dNavLight.svg');
 	--iconHamb:url('../icons/hamb.svg');
 	--iconBack:url('../icons/back.svg');
 	--iconCross:url('../icons/cross.svg');
@@ -28,6 +28,40 @@
 	--iconTk:url('../icons/tiktok.svg');
 
 }
+	/*// Samsung Browser Forced Dark theme //*/
+	@media (max-width:700px){
+		.introTXT.undertitle
+		{
+			background: var(--white) !important;
+			color: var(--black) !important;
+		}
+		.category.titlebox,
+		.navigation.block:active,
+		.post.desc.mobile:active
+		{
+			background: var(--black) !important;
+			color: var(--white) !important;
+		}
+		#navLogoMobile
+		{
+			background-color: var(--black) !important;
+		}
+		body,
+		#intro
+		{
+			background-color: var(--white) !important;
+		}
+	}
+	@media (min-width: 700px){
+		.social.logo.icons
+		{
+			filter: invert(100%);
+		}
+		.social.logo.icons:hover
+		{
+			filter: invert(0%);
+		}
+	}
 /*
 #intro
 	{

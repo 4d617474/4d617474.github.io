@@ -22,7 +22,7 @@
 	--margin1: 0px;
 	--navHeight:80px;
 
-	--icon4DNav:url('../icons/4dNavLight.svg');
+	--icon4DNav:url('../icons/4dNav.svg');
 	--iconHamb:url('../icons/hambLight.svg');
 	--iconBack:url('../icons/backLight.svg');
 	--iconCross:url('../icons/crossLight.svg');
@@ -171,7 +171,7 @@ a
 	left: 0;
 	height: 100%;
 	width: 100%;
-	filter: invert(100%);
+	/*filter: invert(100%);*/
 	background: var(--icon4DNav);
 	background-position: center;
 }
@@ -514,7 +514,7 @@ background-color:#00000000 !important;
 }
 .navigation.row
 {
-	height: calc(100% / 8);
+	/*! height: calc(100% / 8); */
 	width: 100%;
 }
 .navigation.block

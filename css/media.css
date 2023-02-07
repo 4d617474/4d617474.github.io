@@ -293,8 +293,8 @@
   }
   .introText, .categories {
     position: static;
-    width: 62vw;
-    margin-left:16.5vw;
+    width: calc(62vw + (8px * 2));
+    margin-left:calc((100vw - (62vw + (8px * 2))) / 2);
     padding: 55px 0 55px 0;
     height: fit-content;
   }
@@ -813,7 +813,6 @@
   {
     position: absolute;
     top:0;
-    filter:invert(100%);
     left:0;
     height: 100%;
     width: 100%;
@@ -902,6 +901,7 @@
     background:var(--white) !important;
     color:var(--black) !important;
     outline: none;
+    filter:invert(0) !important;
   }
   .social.logo:after
   {
