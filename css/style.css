@@ -22,32 +22,6 @@
 	--margin1: 0px;
 	--navHeight:80px;
 
-	--FIbackgroundClr: #FD5555;
-	--OBbackgroundClr: #E66E6E;
-	--CTbackgroundClr: #E8955D;
-	--PHbackgroundClr: #80EC6F;
-	--WDbackgroundClr: #80A8E6;
-	--MUbackgroundClr: #74BBE6;
-	--GDbackgroundClr: #7883E6;
-	--GIbackgroundClr: #E778CE;
-	--ABbackgroundClr: #B678E7;
-
-	--FIbackgroundClr: #FAF3F1;
-	--OBbackgroundClr: #FAF3F1;
-	--CTbackgroundClr: #FAF3F1;
-	--PHbackgroundClr: #FAF3F1;
-	--WDbackgroundClr: #FAF3F1;
-	--MUbackgroundClr: #FAF3F1;
-	--ABbackgroundClr: #FAF3F1;
-	--GDbackgroundClr: #FAF3F1;
-
-	--MAIbackgroundClr: #F298A8;
-	--INSbackgroundClr: #EAB8BE;
-	--MESbackgroundClr: #D6BAE8;
-	--TELbackgroundClr: #B5D6E6;
-	--WHAbackgroundClr: #97D69F;
-
-
 	--icon4DNav:url('../icons/4dNavLight.svg');
 	--iconHamb:url('../icons/hambLight.svg');
 	--iconBack:url('../icons/backLight.svg');
@@ -97,8 +71,8 @@ body
   margin:0;
 	width: 100%;
   font-family: 'Yeseva One', sans-serif;
-  background: var(--backgroundClr);
-	color: var(--topClr);
+  background-color: var(--white);
+	color: var(--black);
 	overflow-x: hidden;
 }
 a
@@ -234,12 +208,13 @@ a
 	background-position: center;
 	/*! outline:1px solid var(--top2Clr); */
 	/*! transition: width .12s !important; */
-	background: var(--iconHamb) var(--gray) no-repeat;
+	background: var(--iconHamb)  no-repeat;
+	background-color: var(--gray) !important;
 	background-position: center;
 }
 #hamburger.active
 {
-	background: var(--iconCross) var(--gray) center no-repeat;
+	background: var(--iconCross) var(--gray) no-repeat;
 }
 #hamburger:after
 {
@@ -461,7 +436,7 @@ background-color:#00000000 !important;
 
 #hamburger.first
 {
-	background-position: 10vw center !important;
+	/*! background-position: 10vw center !important; */
 
 }
 #hamburger.first::after
@@ -521,7 +496,7 @@ background-color:#00000000 !important;
 	left:0;
 	height:calc(100vh - 12vh);
 	width:100vw;
-	background:var(--gray);
+	background:var(--gray) !important;
 	display: none;
 }
 
@@ -546,7 +521,7 @@ background-color:#00000000 !important;
 {
 	text-align: center;
 	text-align: left;
-	text-indent: 30px !important;
+	text-indent: 30px;
 	padding:0%;
 	font-size: 30px;
 	line-height: 11vh;

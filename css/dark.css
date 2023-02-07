@@ -26,32 +26,9 @@
 	--iconSound:url('../icons/sound.svg');
 	--iconIg:url('../icons/ing.svg');
 	--iconTk:url('../icons/tiktok.svg');
-		
-	--FIbackgroundClr: #AD4045;
-	--OBbackgroundClr: #6B3333;
-	--CTbackgroundClr: #754B2F;
-	--PHbackgroundClr: #283832;
-	--WDbackgroundClr: #261d23;
-	--MUbackgroundClr: #1F323E;
-	--ABbackgroundClr: #2D2428;
-	--GDbackgroundClr: #222433;
-
-	--FIbackgroundClr: #151515;
-	--OBbackgroundClr: #151515;
-	--CTbackgroundClr: #151515;
-	--PHbackgroundClr: #151515;
-	--WDbackgroundClr: #151515;
-	--MUbackgroundClr: #151515;
-	--ABbackgroundClr: #151515;
-	--GDbackgroundClr: #151515;
-
-	--MAIbackgroundClr: #48313D;
-	--INSbackgroundClr: #34292B;
-	--MESbackgroundClr: #38313D;
-	--TELbackgroundClr: #272B2E;
-	--WHAbackgroundClr: #202A21;
 
 }
+/*
 #intro
 	{
 		background-color: var(--white) !important;
@@ -64,7 +41,7 @@
 	.social.logo
 {
 	filter:invert(90%);
-}
+}*/
 
 
 
@@ -118,55 +95,53 @@
 }
 .navigation.block
 {
-	text-indent:0;
 }
 .navigation.block.on
 {
 	transition: all .8s;
 	transition: unset;
-	text-indent:2vw;
 
 }
 @keyframes od
 {
-	0%{text-indent: -20px;color:transparent;}
-	100%{text-indent: auto;color:var(--topClr);}
+	0%{text-indent: 50px;color:transparent;}
+	100%{text-indent: auto;color:var(--black);}
 }
 @keyframes ct
 {
-	0%{text-indent: -20px;color:transparent;}
-	10%{text-indent: -20px;color:transparent;}
-	100%{text-indent: auto;color:var(--topClr);}
+	0%{text-indent: 50px;color:transparent;}
+	10%{text-indent: 50px;color:transparent;}
+	100%{text-indent: auto;color:var(--black);}
 }
 @keyframes ph
 {
-	0%{text-indent: -20px;color:transparent;}
-	20%{text-indent: -20px;color:transparent;}
-	100%{text-indent: auto;color:var(--topClr);}
+	0%{text-indent: 50px;color:transparent;}
+	20%{text-indent: 50px;color:transparent;}
+	100%{text-indent: auto;color:var(--black);}
 }
 @keyframes wd
 {
-	0%{text-indent: -20px;color:transparent;}
-	30%{text-indent: -20px;color:transparent;}
-	100%{text-indent: auto;color:var(--topClr);}
+	0%{text-indent: 50px;color:transparent;}
+	30%{text-indent: 50px;color:transparent;}
+	100%{text-indent: auto;color:var(--black);}
 }
 @keyframes gd
 {
-	0%{text-indent: -20px;color:transparent;}
-	40%{text-indent: -20px;color:transparent;}
-	100%{text-indent: auto;color:var(--topClr);}
+	0%{text-indent: 50px;color:transparent;}
+	40%{text-indent: 50px;color:transparent;}
+	100%{text-indent: auto;color:var(--black);}
 }
 @keyframes abt
 {
-	0%{text-indent: -20px;color:transparent;}
-	50%{text-indent: -20px;color:transparent;}
-	100%{text-indent: auto;color:var(--topClr);}
+	0%{text-indent: 50px;color:transparent;}
+	50%{text-indent: 50px;color:transparent;}
+	100%{text-indent: auto;color:var(--black);}
 }
 @keyframes an
 {
-	0%{text-indent: -20px;color:transparent;}
-	60%{text-indent: -20px;color:transparent;}
-	100%{text-indent: auto;color:var(--topClr);}
+	0%{text-indent: 50px;color:transparent;}
+	60%{text-indent: 50px;color:transparent;}
+	100%{text-indent: auto;color:var(--black);}
 }
 
 #od.on
@@ -230,6 +205,7 @@
 
 }
 
+*/
 /*
 :root
 {
@@ -264,7 +240,6 @@
 {
 	border-width: 10px;
 	border-style: solid;
-
   border-image: var(--borderImg) 50% round;
 	border-color:transparent !important;
 	border-image-outset: 1px;
