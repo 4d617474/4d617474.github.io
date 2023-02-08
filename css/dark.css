@@ -37,7 +37,7 @@
 		}
 		.category.titlebox,
 		.navigation.block:active,
-		.post.desc.mobile:active
+		.post.desc.desktop:active
 		{
 			background: var(--black) !important;
 			color: var(--white) !important;
@@ -52,11 +52,12 @@
 			background-color: var(--white) !important;
 		}
 	}
+	.social.logo.icons
+	{
+		filter: invert(100%);
+	}
 	@media (min-width: 700px){
-		.social.logo.icons
-		{
-			filter: invert(100%);
-		}
+
 		.social.logo.icons:hover
 		{
 			filter: invert(0%);
