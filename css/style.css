@@ -148,6 +148,7 @@ a
   height: 12vh;
   opacity: 1;
   outline: 1px solid var(--top2Clr);
+	background:var(--gray);
   transition: width .12s !important;
   width: 100vw;
   right: 0;
@@ -1244,7 +1245,10 @@ background-color:#00000000 !important;
 	border-bottom:unset;
 	border-left:1px solid var(--topClr);
 }
-
+.separator.alt2
+{
+	border-bottom:1px solid var(--gray);
+}
 /*
 .post.desc
 {

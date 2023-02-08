@@ -138,6 +138,26 @@
     0%{transform: translateX(-10px);}
     100%{transform: translateX(0px);}
   }
+  .coverpicture.arc
+  {
+    background-image:url('../posts/ph/arcMobile.jpg') !important;
+  }
+  .coverpicture.ani
+  {
+    background-image:url('../posts/ph/aniMobile.jpg') !important;
+  }
+  .coverpicture.wor
+  {
+    background-image:url('../posts/ph/worMobile.jpg') !important;
+  }
+  .coverpicture.nat
+  {
+    background-image:url('../posts/ph/natMobile.jpg') !important;
+  }
+  .coverpicture.pep
+  {
+    background-image:url('../posts/ph/pepMobile.jpg') !important;
+  }
   .post.pic:active,.cover:active
   {
     filter:unset;
@@ -181,7 +201,6 @@
     font-weight: 300 !important;
     width: 100%;
     background: var(--whiteGlass);
-
   }
   .cover:active
   {
@@ -310,9 +329,9 @@
   .category.pics {
     height: calc(100% - calc(20px * 2));
   }
-  .navigation.block,.social.name.mail
+  .navigation.block,.social.name.mail,.post.desc.mobile
   {
-    font-size: 7vw;
+    font-size: 7vw !important;
   }
     #intro:after
   {
