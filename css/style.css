@@ -559,12 +559,12 @@ background-color:#00000000 !important;
 }
 .introTXT,.introPIC
 {
-	float: left;
+	/*! float: left; */
 }
 
 .introText,.introPIC
 {
-	float: left;
+	/*! float: left; */
 }
 
 .introPIC
@@ -590,12 +590,16 @@ background-color:#00000000 !important;
 }
 .introText,.categories
 {
-	position: static;
+	position: relative;
 	top:0;
 	left:0;
 	width: 100%;
 	padding:55px 0 55px 0;
 	height: fit-content;
+}
+.categories
+{
+	padding:calc(55px + 6px/*spacing illusion*/) 0 1px 0;
 }
 .introText.desc,.categories
 {
@@ -656,7 +660,6 @@ background-color:#00000000 !important;
 }
 .category.pics
 {
-	height: 250px;
 	vertical-align: top;   
 }
 .category.pics,.category.titlebox,.category.descs
@@ -690,10 +693,16 @@ background-color:#00000000 !important;
 .category.descs
 {
 	background: inherit;
-	padding-top:20px;
+	padding: 20px 0 20px 0;
 	font-size:16px;
 	text-align: center;
 	font-weight: 500;
+	/*! background:var(--white); */
+}
+.category
+{
+	/*box-shadow: 0 0 0 1px inset var(--black);*/
+	outline: 1px solid var(--black);
 }
 .title,.glitched4D
 {
