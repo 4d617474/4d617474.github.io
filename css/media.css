@@ -776,7 +776,7 @@
     border:unset;
     font-family: inherit;
     font-weight: inherit;
-    font-weight: 300;
+    font-weight: 400;
     background-color:var(--backgroundClr);
     background-color:#15151520;
     color:var(--fontFaded);
@@ -790,6 +790,10 @@
     box-shadow: 0 -30px 0 30px var(--black);
     color:var(--backgroundColor);
     z-index: 4;
+        
+    letter-spacing: -1px;
+    font-size: 17px;
+    font-weight: 500;
   }
   .nav.tabs.on
   {
@@ -811,6 +815,7 @@
   }
   .nav.tabs.on:hover
   {
+
     border:none;
     color:inherit;
   }
