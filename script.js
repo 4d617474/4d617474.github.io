@@ -64,7 +64,7 @@ function pickPage(number,elmnt,name,skip)
 {
   window.scrollTo(1, 0);
   // checkY();
-  openFolder(null,1);
+  // openFolder(null,1);
   var page = document.getElementsByClassName("page");
   var modals = document.getElementsByClassName("modalButton");
 
@@ -72,7 +72,7 @@ function pickPage(number,elmnt,name,skip)
   if (elmnt != null){
   for (i = 0; i < navBlocks.length; i++) {
       navBlocks[i].classList.remove("on");
-      navBlocks2[i].classList.remove("on");
+      // navBlocks2[i].classList.remove("on");
     }
     elmnt.classList.add("on");
   }
