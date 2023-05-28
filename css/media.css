@@ -296,6 +296,12 @@
     height: auto;
     text-align: left;
   }
+   .categories.alt
+  {
+    padding:20px;
+    margin:0;
+    height: 30px;
+  }
 }
 @media (max-width:400px){
   #hamburger,#back
@@ -345,11 +351,10 @@
   {
     padding:20px;
     margin:0;
-    height: fit-content;
+    height: 30px;
   }
   .titles.alt,.descs.alt
   {
-    height: auto;
     text-align: left;
   }
   .introText.desc

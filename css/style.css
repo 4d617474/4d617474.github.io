@@ -596,7 +596,7 @@ background-color:#00000000 !important;
 	left:0;
 	width: ca1c(100% - var(--marginLdng));
 	padding:55px 0 55px 0;
-	height: 40vh;
+	height: auto;
 }
 .categories
 {
@@ -725,6 +725,7 @@ background-color:#00000000 !important;
 	/*box-shadow: 0 0 0 1px inset var(--black);*/
 	/*outline: 1px solid var(--black);*/
 }
+
 .title,.glitched4D
 {
 }
