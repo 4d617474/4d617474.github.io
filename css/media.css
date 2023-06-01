@@ -43,7 +43,7 @@
   .navigation.block:active:before,.post.desc.desktop:active:before
   {
     position: absolute;
-    content:'\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\';
+    content:'4D6174744D6174744D6174744D617474';
     font-size: 80px;
     letter-spacing: 5px;
     height: 100%;
@@ -296,10 +296,12 @@
     height: auto;
     text-align: left;
   }
+  .titles.alt {
+  }
    .categories.alt
   {
-    padding:20px;
-    margin:0;
+    padding:0px;
+    margin:20px;
     height: 30px;
   }
 }
@@ -338,19 +340,21 @@
   .introText, .categories {
     position: relative;
     width: calc(62vw + (8px * 2));
+    width: 100%;
     margin-left:calc((100vw - (62vw + (8px * 2))) / 2);
+    margin-left:0;
     /*! padding: 50px; */
     height: fit-content;
   }
   .categories
   {
+    /*! width: 100%; */
     padding:0px 0 0px 0;
-    margin-top:55px;
   }
   .categories.alt
   {
-    padding:20px;
-    margin:0;
+    padding:0px;
+    margin-bottom:40px;
     height: 30px;
   }
   .titles.alt,.descs.alt
@@ -372,6 +376,12 @@
   }
   .category.pics {
     height: calc(100% - calc(20px * 2));
+    position: relative;
+  }
+  .category.titledesc
+  {
+    position: relative;
+    width: 100%;
   }
   .navigation.block,.social.name.mail,.post.desc.desktop
   {
