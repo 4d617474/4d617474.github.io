@@ -424,6 +424,11 @@
   {
     float:none;
   }
+  #seemore
+  {
+    display: none;
+  }
+  
   .categories
   {
     float: unset;
