@@ -300,8 +300,8 @@
   }
    .categories.alt
   {
-    padding:0px;
-    margin:20px;
+    padding:20px;
+    margin:0px;
     height: 30px;
   }
 }
@@ -353,8 +353,8 @@
   }
   .categories.alt
   {
-    padding:0px;
-    margin-bottom:40px;
+    padding:20px;
+    margin-bottom:20px;
     height: 30px;
   }
   .titles.alt,.descs.alt
@@ -431,7 +431,7 @@
     flex-direction: row;
     width: 100;
     padding:var(--marginLdng);
-    cursor: pointer;
+    /*cursor: pointer;*/
   }
   .category.titles,.category.arrows
   {
