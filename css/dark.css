@@ -195,6 +195,10 @@
 {
 	animation: wd var(--speed3) 1 !important;
 }
+#mu.on
+{
+	animation: wd var(--speed3) 1 !important;
+}
 #gd.on
 {
 	animation: gd var(--speed3) 1 !important;
