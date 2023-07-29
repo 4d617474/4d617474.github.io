@@ -152,7 +152,7 @@ a
 	background:var(--gray);
   transition: width .12s !important;
   width: 100vw;
-  right: 0;
+  left: 0;
 }
 #navLogoMobile
 {
