@@ -691,7 +691,7 @@ background-color:#00000000 !important;
 {
 	/*color: var(--black);*/
 	/*padding:12px;*/
-	font-size: 24px;
+	font-size: 30px;
 	font-weight: 400;
 }
 .category.titles
@@ -708,10 +708,16 @@ background-color:#00000000 !important;
 {
 	background: inherit;
 	padding: 20px 0 20px 0;
-	font-size:25px;
+	font-size:20px;
 	text-align: left;
 	font-weight: 400;
 	/*! background:var(--white); */
+}
+.socialWrapper
+{
+	position: relative;
+	height: 48px;
+	padding: 0 0 20px 0;
 }
 .category.seemore
 {
@@ -899,6 +905,14 @@ background-color:#00000000 !important;
 	width: 50vw;
 	cursor: pointer;
 }
+.social.alt.block
+{
+	width: 48px;
+}
+.social.alt.block.tiktok
+{
+	width: 45px;
+}
 .social.copied
 {
 	position: absolute;
@@ -988,6 +1002,10 @@ background-color:#00000000 !important;
 {
 	background:url('../icons/InstagramMonoWhite.svg') no-repeat center;
 }
+.social.logo.tiktok
+{
+	background:url('../icons/TiktokMonoWhite.svg') no-repeat center;
+}
 /*.social.logo.instagram::after{content:'instagram';}*/
 .social.block.messenger
 {
@@ -1044,12 +1062,29 @@ background-color:#00000000 !important;
     height: 80px;
     outline: 1px solid var(--white);
   }
+  .social.block.alt
+  {
+    background:var(--gray2);
+  }
+  .social.alt.block
+  {
+    height: 48px;
+  }
   .social.logo
   {
     height: 100%;
     background-size: 35px !important;
   }
-
+  .social.logo.alt
+  {
+    height: 100%;
+    background-size: 25px !important;
+  }
+  .social.logo.alt.tiktok
+  {
+    height: 100%;
+    background-size: 25px !important;
+  }
 
 /* MODAL */
 /* MODAL */

@@ -460,7 +460,7 @@
     height: 100%;
     flex:max-content;
   }
-  .category.titles,.category.descs,.category.seemore
+  .category.titles,.category.descs,.category.seemore,.socialWrapper
   {
     margin-left:calc(var(--marginLdng) / 2);
     
