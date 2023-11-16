@@ -13,8 +13,9 @@
 	
 	--white:#eaeaea;
 	--white:#FAF3F1;
-	--whiteGlass:#FAF3F1A1;
+	--whiteGlass:#FFF9F8C9;
 	--gray:#eaeaea;
+	--gray2:#534747;
 	--black:#050C0E;
 	
 	--navColor:#FAF3F1AF;
@@ -1004,7 +1005,7 @@ background-color:#00000000 !important;
 }
 .social.logo.tiktok
 {
-	background:url('../icons/TiktokMonoWhite.svg') no-repeat center;
+	background:url('../icons/TiktokMonoWhite2.svg') no-repeat center;
 }
 /*.social.logo.instagram::after{content:'instagram';}*/
 .social.block.messenger
